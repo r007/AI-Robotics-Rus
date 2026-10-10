@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">PhysicsNeMo physics AI solver card</title>
+  <desc id="desc">A diagram-like card showing data, physics constraints, neural operators, and surrogate inference.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08111f"/>
+      <stop offset="0.55" stop-color="#12312d"/>
+      <stop offset="1" stop-color="#1f2937"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#76b900"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="22" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <g opacity="0.18" stroke="#cbd5e1" stroke-width="1">
+    <path d="M80 110 H1120"/>
+    <path d="M80 220 H1120"/>
+    <path d="M80 330 H1120"/>
+    <path d="M80 440 H1120"/>
+    <path d="M80 550 H1120"/>
+    <path d="M210 70 V605"/>
+    <path d="M410 70 V605"/>
+    <path d="M610 70 V605"/>
+    <path d="M810 70 V605"/>
+    <path d="M1010 70 V605"/>
+  </g>
+  <text x="94" y="88" fill="#f8fafc" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="42" font-weight="800">PhysicsNeMo</text>
+  <text x="95" y="126" fill="#94a3b8" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22">Physics AI solver and surrogate-model toolkit</text>
+  <g filter="url(#shadow)">
+    <rect x="92" y="186" width="260" height="145" rx="18" fill="#020617" fill-opacity="0.82" stroke="#76b900" stroke-opacity="0.65"/>
+    <rect x="470" y="186" width="260" height="145" rx="18" fill="#020617" fill-opacity="0.82" stroke="#38bdf8" stroke-opacity="0.65"/>
+    <rect x="848" y="186" width="260" height="145" rx="18" fill="#020617" fill-opacity="0.82" stroke="#facc15" stroke-opacity="0.65"/>
+    <rect x="188" y="418" width="824" height="108" rx="18" fill="#020617" fill-opacity="0.76" stroke="#ffffff" stroke-opacity="0.2"/>
+  </g>
+  <path d="M352 258 H470" stroke="url(#line)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M730 258 H848" stroke="url(#line)" stroke-width="8" stroke-linecap="round"/>
+  <text x="122" y="235" fill="#f8fafc" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">Data + PDE</text>
+  <text x="122" y="275" fill="#cbd5e1" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20">CFD / meshes / fields</text>
+  <text x="122" y="306" fill="#94a3b8" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18">boundary + residual loss</text>
+  <text x="500" y="235" fill="#f8fafc" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">Physics-ML</text>
+  <text x="500" y="275" fill="#cbd5e1" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20">FNO / GNN / PINN</text>
+  <text x="500" y="306" fill="#94a3b8" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18">PyTorch + distributed</text>
+  <text x="878" y="235" fill="#f8fafc" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">Surrogate</text>
+  <text x="878" y="275" fill="#cbd5e1" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20">fast field prediction</text>
+  <text x="878" y="306" fill="#94a3b8" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18">engineering inference</text>
+  <path d="M230 470 C330 395 450 545 560 462 C675 375 786 530 970 446" fill="none" stroke="url(#line)" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="230" cy="470" r="10" fill="#76b900"/>
+  <circle cx="560" cy="462" r="10" fill="#38bdf8"/>
+  <circle cx="970" cy="446" r="10" fill="#facc15"/>
+  <text x="224" y="586" fill="#cbd5e1" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24">Useful for physics surrogate modeling; not a robot simulator or VLA/world-model core.</text>
+</svg>

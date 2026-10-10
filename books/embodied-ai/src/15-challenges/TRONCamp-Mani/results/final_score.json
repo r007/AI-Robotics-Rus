@@ -1,0 +1,35 @@
+{
+  "competition": "TRONCamp Mani",
+  "track": "T4",
+  "online_submission": {
+    "queue_id": "719",
+    "account_suffix": "a40Cbw",
+    "submission_count": 1,
+    "status": "evaluated"
+  },
+  "scores": {
+    "T1": {
+      "success_rate": 0.6,
+      "passed_gate": true
+    },
+    "T2": {
+      "success_rate": 0.67,
+      "passed_gate": true
+    },
+    "T3": {
+      "success_rate": 0.54,
+      "passed_gate": true
+    },
+    "T4": {
+      "graded": 0.2533333333333333,
+      "score_out_of_100": 25.33333333333333,
+      "passed_gate": false
+    }
+  },
+  "second_submission": {
+    "status": "rejected_before_queue",
+    "reason": "submission deadline had passed",
+    "queue_id": null
+  },
+  "interpretation": "The first T4 job was queued and evaluated. The second exact550 upload did not create a second online evaluation."
+}

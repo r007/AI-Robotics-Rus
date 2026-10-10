@@ -1,0 +1,1688 @@
+{
+  "source_revision": "5ba54ee3d0e11c8690fd414d2343d47e514930dd",
+  "archive_verified": [
+    {
+      "path": "assets/input.png",
+      "sha256": "e4cd3318071ec6583d3e090e34e6da335ce516b9cd74ee7780aeaf78b67c99bd"
+    },
+    {
+      "path": "assets/full-parts.png",
+      "sha256": "6fe261b7dd8a74927cef6a37fbe188b88facc21655743b133b9c65aa429248f9"
+    },
+    {
+      "path": "assets/preview.png",
+      "sha256": "6ac69fa7c8b91e754d627ea72cc1d4e069b2a2eaba35b96c5e543823eb355ade"
+    },
+    {
+      "path": "assets/evidence/basic_info.txt",
+      "sha256": "2624abdd39af714b7d451139770592da98a6904eb557c6dfb106cc4048b796bf"
+    },
+    {
+      "path": "assets/evidence/basic_info.json",
+      "sha256": "c8eac6af24d71bbace9108eeae167adcf256ee9aa20216a91040316d6c7ebefe"
+    },
+    {
+      "path": "assets/evidence/basic.urdf",
+      "sha256": "c07c44915e9093d083c560644d7f18793454b699d2951b75d8568ce70f52b588"
+    },
+    {
+      "path": "assets/evidence/basic.xml",
+      "sha256": "59c4c1e6b6b40d774ba3b2d2b93ebaface5b6467abc3a25043d0318d3ef02206"
+    },
+    {
+      "path": "scripts/render_glb_in_isaac.py",
+      "sha256": "11035fd421a583d89c1d1b7904e3f7b5d5d0b8d641d6b869a281e8a8d245977e"
+    },
+    {
+      "path": "patches/UPSTREAM_LICENSE",
+      "sha256": "68547d681a125a219b114aaa50464f8365d60f2d2949cdfc099477dab5d3af34"
+    }
+  ],
+  "files": [
+    {
+      "path": "pretrain/.cache/huggingface/.gitignore",
+      "bytes": 1,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780237439019077311
+    },
+    {
+      "path": "pretrain/.cache/huggingface/download/.gitattributes.metadata",
+      "bytes": 101,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780237450572957313
+    },
+    {
+      "path": "pretrain/.cache/huggingface/download/IO4xwqmZYzFmxznkwkiNSBwO1H0=.01fb91b3722fdec5766bfc213f41405186e5d64f3fc330872ec39dd4698d2f52.incomplete",
+      "bytes": 0,
+      "allocated_bytes": 0,
+      "mtime_ns": 1780979596482685524
+    },
+    {
+      "path": "pretrain/.cache/huggingface/download/README.md.metadata",
+      "bytes": 100,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780237451763586822
+    },
+    {
+      "path": "pretrain/.cache/huggingface/download/added_tokens.json.metadata",
+      "bytes": 101,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780237453014555698
+    },
+    {
+      "path": "pretrain/.cache/huggingface/download/config.json.metadata",
+      "bytes": 101,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780237454138440254
+    },
+    {
+      "path": "pretrain/.cache/huggingface/download/generation_config.json.metadata",
+      "bytes": 99,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780237455578476975
+    },
+    {
+      "path": "pretrain/.cache/huggingface/download/merges.txt.metadata",
+      "bytes": 101,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780237459521631056
+    },
+    {
+      "path": "pretrain/.cache/huggingface/download/model-00001-of-00004.safetensors.lock",
+      "bytes": 0,
+      "allocated_bytes": 0,
+      "mtime_ns": 1780979596482471306
+    },
+    {
+      "path": "pretrain/.cache/huggingface/download/model-00002-of-00004.safetensors.lock",
+      "bytes": 0,
+      "allocated_bytes": 0,
+      "mtime_ns": 1780976607290656315
+    },
+    {
+      "path": "pretrain/.cache/huggingface/download/model-00003-of-00004.safetensors.lock",
+      "bytes": 0,
+      "allocated_bytes": 0,
+      "mtime_ns": 1780976607308655768
+    },
+    {
+      "path": "pretrain/.cache/huggingface/download/model.safetensors.index.json.metadata",
+      "bytes": 101,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780237763848381933
+    },
+    {
+      "path": "pretrain/.cache/huggingface/download/special_tokens_map.json.metadata",
+      "bytes": 101,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780237766217031923
+    },
+    {
+      "path": "pretrain/.cache/huggingface/download/tokenizer_config.json.metadata",
+      "bytes": 101,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780237764957866443
+    },
+    {
+      "path": "pretrain/.cache/huggingface/download/vocab.json.metadata",
+      "bytes": 101,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780237768335821791
+    },
+    {
+      "path": "pretrain/.gitattributes",
+      "bytes": 1519,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780237450572215550
+    },
+    {
+      "path": "pretrain/README.md",
+      "bytes": 366,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780237451761261958
+    },
+    {
+      "path": "pretrain/added_tokens.json",
+      "bytes": 605,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780237453013186418
+    },
+    {
+      "path": "pretrain/config.json",
+      "bytes": 1491,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780237454137118800
+    },
+    {
+      "path": "pretrain/generation_config.json",
+      "bytes": 260,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780237455577032423
+    },
+    {
+      "path": "pretrain/merges.txt",
+      "bytes": 1671853,
+      "allocated_bytes": 1675264,
+      "mtime_ns": 1780237459519797319
+    },
+    {
+      "path": "pretrain/model-00001-of-00004.safetensors",
+      "bytes": 4968243304,
+      "allocated_bytes": 4968251392,
+      "mtime_ns": 1780986157645309299
+    },
+    {
+      "path": "pretrain/model-00002-of-00004.safetensors",
+      "bytes": 4991495816,
+      "allocated_bytes": 4991500288,
+      "mtime_ns": 1780987365755059661
+    },
+    {
+      "path": "pretrain/model-00003-of-00004.safetensors",
+      "bytes": 4932751040,
+      "allocated_bytes": 4932755456,
+      "mtime_ns": 1780988530601658239
+    },
+    {
+      "path": "pretrain/model-00004-of-00004.safetensors",
+      "bytes": 1691924384,
+      "allocated_bytes": 1691930624,
+      "mtime_ns": 1780252971757536769
+    },
+    {
+      "path": "pretrain/model.safetensors.index.json",
+      "bytes": 57619,
+      "allocated_bytes": 61440,
+      "mtime_ns": 1780237763847454452
+    },
+    {
+      "path": "pretrain/special_tokens_map.json",
+      "bytes": 613,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780237766215823053
+    },
+    {
+      "path": "pretrain/tokenizer_config.json",
+      "bytes": 5758,
+      "allocated_bytes": 8192,
+      "mtime_ns": 1780237764919859821
+    },
+    {
+      "path": "pretrain/vocab.json",
+      "bytes": 3383407,
+      "allocated_bytes": 3387392,
+      "mtime_ns": 1780237768334763198
+    },
+    {
+      "path": "pretrain_trellis/README.md",
+      "bytes": 464,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780255838175312701
+    },
+    {
+      "path": "pretrain_trellis/ckpts/slat_dec_gs_swin8_B_64l8gs32_fp16.json",
+      "bytes": 843,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780255840133387894
+    },
+    {
+      "path": "pretrain_trellis/ckpts/slat_dec_gs_swin8_B_64l8gs32_fp16.safetensors",
+      "bytes": 171450952,
+      "allocated_bytes": 171454464,
+      "mtime_ns": 1780255892102391156
+    },
+    {
+      "path": "pretrain_trellis/ckpts/slat_dec_mesh_swin8_B_64l8m256c_fp16.json",
+      "bytes": 372,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780255893890460332
+    },
+    {
+      "path": "pretrain_trellis/ckpts/slat_dec_mesh_swin8_B_64l8m256c_fp16.safetensors",
+      "bytes": 181903412,
+      "allocated_bytes": 181907456,
+      "mtime_ns": 1780255952894751720
+    },
+    {
+      "path": "pretrain_trellis/ckpts/slat_dec_rf_swin8_B_64l8r16_fp16.json",
+      "bytes": 396,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780255954512814785
+    },
+    {
+      "path": "pretrain_trellis/ckpts/slat_dec_rf_swin8_B_64l8r16_fp16.safetensors",
+      "bytes": 171450488,
+      "allocated_bytes": 171454464,
+      "mtime_ns": 1780256006306839430
+    },
+    {
+      "path": "pretrain_trellis/ckpts/slat_enc_swin8_B_64l8_fp16.json",
+      "bytes": 321,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780256008038907329
+    },
+    {
+      "path": "pretrain_trellis/ckpts/slat_enc_swin8_B_64l8_fp16.safetensors",
+      "bytes": 173242816,
+      "allocated_bytes": 173244416,
+      "mtime_ns": 1780256060026950784
+    },
+    {
+      "path": "pretrain_trellis/ckpts/slat_flow_img_dit_L_64l8p2_fp16.json",
+      "bytes": 442,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780256062098032400
+    },
+    {
+      "path": "pretrain_trellis/ckpts/slat_flow_img_dit_L_64l8p2_fp16.safetensors",
+      "bytes": 1203755136,
+      "allocated_bytes": 1203761152,
+      "mtime_ns": 1780256415940171727
+    },
+    {
+      "path": "pretrain_trellis/ckpts/ss_dec_conv3d_16l8_fp16.json",
+      "bytes": 245,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780256417639098376
+    },
+    {
+      "path": "pretrain_trellis/ckpts/ss_dec_conv3d_16l8_fp16.safetensors",
+      "bytes": 147591972,
+      "allocated_bytes": 147595264,
+      "mtime_ns": 1780256463015278430
+    },
+    {
+      "path": "pretrain_trellis/ckpts/ss_enc_conv3d_16l8_fp16.json",
+      "bytes": 244,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780256464397227106
+    },
+    {
+      "path": "pretrain_trellis/ckpts/ss_enc_conv3d_16l8_fp16.safetensors",
+      "bytes": 119068016,
+      "allocated_bytes": 119070720,
+      "mtime_ns": 1780256503039884159
+    },
+    {
+      "path": "pretrain_trellis/ckpts/ss_flow_img_dit_L_16l8_fp16.json",
+      "bytes": 385,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780256504183847062
+    },
+    {
+      "path": "pretrain_trellis/ckpts/ss_flow_img_dit_L_16l8_fp16.safetensors",
+      "bytes": 1130770840,
+      "allocated_bytes": 1130778624,
+      "mtime_ns": 1780256834570201796
+    },
+    {
+      "path": "pretrain_trellis/pipeline.json",
+      "bytes": 1987,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780255839169350871
+    },
+    {
+      "path": "ours_demo/sample/allind.npy",
+      "bytes": 1068272,
+      "allocated_bytes": 1069056,
+      "mtime_ns": 1780990788989585045
+    },
+    {
+      "path": "ours_demo/sample/basic.urdf",
+      "bytes": 14764,
+      "allocated_bytes": 16384,
+      "mtime_ns": 1780992253193710841
+    },
+    {
+      "path": "ours_demo/sample/basic.xml",
+      "bytes": 16164,
+      "allocated_bytes": 16384,
+      "mtime_ns": 1780992253243532771
+    },
+    {
+      "path": "ours_demo/sample/basic_info.json",
+      "bytes": 9407,
+      "allocated_bytes": 12288,
+      "mtime_ns": 1780992253193101809
+    },
+    {
+      "path": "ours_demo/sample/basic_info.txt",
+      "bytes": 2672,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780989469607806113
+    },
+    {
+      "path": "ours_demo/sample/cond_img.png",
+      "bytes": 767545,
+      "allocated_bytes": 770048,
+      "mtime_ns": 1780989421458597686
+    },
+    {
+      "path": "ours_demo/sample/coord_0.txt",
+      "bytes": 1750,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780989503892847216
+    },
+    {
+      "path": "ours_demo/sample/coord_1.txt",
+      "bytes": 1464,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780989521182727336
+    },
+    {
+      "path": "ours_demo/sample/coord_10.txt",
+      "bytes": 1748,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780989852384961062
+    },
+    {
+      "path": "ours_demo/sample/coord_11.txt",
+      "bytes": 3076,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780989941644062202
+    },
+    {
+      "path": "ours_demo/sample/coord_12.txt",
+      "bytes": 3088,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780990036196914911
+    },
+    {
+      "path": "ours_demo/sample/coord_13.txt",
+      "bytes": 3144,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780990126352547657
+    },
+    {
+      "path": "ours_demo/sample/coord_14.txt",
+      "bytes": 3366,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780990237008515441
+    },
+    {
+      "path": "ours_demo/sample/coord_15.txt",
+      "bytes": 2126,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780990294203392902
+    },
+    {
+      "path": "ours_demo/sample/coord_16.txt",
+      "bytes": 3236,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780990391586317270
+    },
+    {
+      "path": "ours_demo/sample/coord_17.txt",
+      "bytes": 2559,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780990431785350720
+    },
+    {
+      "path": "ours_demo/sample/coord_18.txt",
+      "bytes": 3171,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780990483615918536
+    },
+    {
+      "path": "ours_demo/sample/coord_19.txt",
+      "bytes": 1653,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780990507049766853
+    },
+    {
+      "path": "ours_demo/sample/coord_2.txt",
+      "bytes": 1403,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780989537457975481
+    },
+    {
+      "path": "ours_demo/sample/coord_20.txt",
+      "bytes": 2067,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780990538077277514
+    },
+    {
+      "path": "ours_demo/sample/coord_21.txt",
+      "bytes": 3361,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780990593296882330
+    },
+    {
+      "path": "ours_demo/sample/coord_22.txt",
+      "bytes": 3121,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780990643647945608
+    },
+    {
+      "path": "ours_demo/sample/coord_23.txt",
+      "bytes": 3046,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780990692597157713
+    },
+    {
+      "path": "ours_demo/sample/coord_24.txt",
+      "bytes": 3760,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780990755524570448
+    },
+    {
+      "path": "ours_demo/sample/coord_25.txt",
+      "bytes": 2190,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780990788987576576
+    },
+    {
+      "path": "ours_demo/sample/coord_3.txt",
+      "bytes": 3928,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780989593278142768
+    },
+    {
+      "path": "ours_demo/sample/coord_4.txt",
+      "bytes": 2901,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780989632327779521
+    },
+    {
+      "path": "ours_demo/sample/coord_5.txt",
+      "bytes": 4158,
+      "allocated_bytes": 8192,
+      "mtime_ns": 1780989692330891683
+    },
+    {
+      "path": "ours_demo/sample/coord_6.txt",
+      "bytes": 4215,
+      "allocated_bytes": 8192,
+      "mtime_ns": 1780989754161494958
+    },
+    {
+      "path": "ours_demo/sample/coord_7.txt",
+      "bytes": 2226,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780989784073326864
+    },
+    {
+      "path": "ours_demo/sample/coord_8.txt",
+      "bytes": 1664,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780989806412497697
+    },
+    {
+      "path": "ours_demo/sample/coord_9.txt",
+      "bytes": 1756,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780989829043527236
+    },
+    {
+      "path": "ours_demo/sample/desert.png",
+      "bytes": 1732772,
+      "allocated_bytes": 1736704,
+      "mtime_ns": 1780992253240759547
+    },
+    {
+      "path": "ours_demo/sample/ind_0.npy",
+      "bytes": 40688,
+      "allocated_bytes": 40960,
+      "mtime_ns": 1780989503896100744
+    },
+    {
+      "path": "ours_demo/sample/ind_0.ply",
+      "bytes": 27281,
+      "allocated_bytes": 28672,
+      "mtime_ns": 1780989503896360927
+    },
+    {
+      "path": "ours_demo/sample/ind_1.npy",
+      "bytes": 40712,
+      "allocated_bytes": 40960,
+      "mtime_ns": 1780989521184341472
+    },
+    {
+      "path": "ours_demo/sample/ind_1.ply",
+      "bytes": 27297,
+      "allocated_bytes": 28672,
+      "mtime_ns": 1780989521184537453
+    },
+    {
+      "path": "ours_demo/sample/ind_10.npy",
+      "bytes": 41120,
+      "allocated_bytes": 45056,
+      "mtime_ns": 1780989852386710790
+    },
+    {
+      "path": "ours_demo/sample/ind_10.ply",
+      "bytes": 27569,
+      "allocated_bytes": 28672,
+      "mtime_ns": 1780989852386912397
+    },
+    {
+      "path": "ours_demo/sample/ind_11.npy",
+      "bytes": 46352,
+      "allocated_bytes": 49152,
+      "mtime_ns": 1780989941646287526
+    },
+    {
+      "path": "ours_demo/sample/ind_11.ply",
+      "bytes": 31057,
+      "allocated_bytes": 32768,
+      "mtime_ns": 1780989941646548404
+    },
+    {
+      "path": "ours_demo/sample/ind_12.npy",
+      "bytes": 34760,
+      "allocated_bytes": 36864,
+      "mtime_ns": 1780990036198870067
+    },
+    {
+      "path": "ours_demo/sample/ind_12.ply",
+      "bytes": 23329,
+      "allocated_bytes": 24576,
+      "mtime_ns": 1780990036199056185
+    },
+    {
+      "path": "ours_demo/sample/ind_13.npy",
+      "bytes": 34856,
+      "allocated_bytes": 36864,
+      "mtime_ns": 1780990126354372593
+    },
+    {
+      "path": "ours_demo/sample/ind_13.ply",
+      "bytes": 23393,
+      "allocated_bytes": 24576,
+      "mtime_ns": 1780990126354566216
+    },
+    {
+      "path": "ours_demo/sample/ind_14.npy",
+      "bytes": 46256,
+      "allocated_bytes": 49152,
+      "mtime_ns": 1780990237010663359
+    },
+    {
+      "path": "ours_demo/sample/ind_14.ply",
+      "bytes": 30993,
+      "allocated_bytes": 32768,
+      "mtime_ns": 1780990237010874846
+    },
+    {
+      "path": "ours_demo/sample/ind_15.npy",
+      "bytes": 40688,
+      "allocated_bytes": 40960,
+      "mtime_ns": 1780990294205244495
+    },
+    {
+      "path": "ours_demo/sample/ind_15.ply",
+      "bytes": 27281,
+      "allocated_bytes": 28672,
+      "mtime_ns": 1780990294205438299
+    },
+    {
+      "path": "ours_demo/sample/ind_16.npy",
+      "bytes": 46232,
+      "allocated_bytes": 49152,
+      "mtime_ns": 1780990391589017534
+    },
+    {
+      "path": "ours_demo/sample/ind_16.ply",
+      "bytes": 30977,
+      "allocated_bytes": 32768,
+      "mtime_ns": 1780990391589236205
+    },
+    {
+      "path": "ours_demo/sample/ind_17.npy",
+      "bytes": 46304,
+      "allocated_bytes": 49152,
+      "mtime_ns": 1780990431787506029
+    },
+    {
+      "path": "ours_demo/sample/ind_17.ply",
+      "bytes": 31025,
+      "allocated_bytes": 32768,
+      "mtime_ns": 1780990431787754847
+    },
+    {
+      "path": "ours_demo/sample/ind_18.npy",
+      "bytes": 46280,
+      "allocated_bytes": 49152,
+      "mtime_ns": 1780990483618053568
+    },
+    {
+      "path": "ours_demo/sample/ind_18.ply",
+      "bytes": 31009,
+      "allocated_bytes": 32768,
+      "mtime_ns": 1780990483618264425
+    },
+    {
+      "path": "ours_demo/sample/ind_19.npy",
+      "bytes": 40664,
+      "allocated_bytes": 40960,
+      "mtime_ns": 1780990507051475102
+    },
+    {
+      "path": "ours_demo/sample/ind_19.ply",
+      "bytes": 27265,
+      "allocated_bytes": 28672,
+      "mtime_ns": 1780990507051665430
+    },
+    {
+      "path": "ours_demo/sample/ind_2.npy",
+      "bytes": 40664,
+      "allocated_bytes": 40960,
+      "mtime_ns": 1780989537459564390
+    },
+    {
+      "path": "ours_demo/sample/ind_2.ply",
+      "bytes": 27265,
+      "allocated_bytes": 28672,
+      "mtime_ns": 1780989537459753057
+    },
+    {
+      "path": "ours_demo/sample/ind_20.npy",
+      "bytes": 40616,
+      "allocated_bytes": 40960,
+      "mtime_ns": 1780990538079114455
+    },
+    {
+      "path": "ours_demo/sample/ind_20.ply",
+      "bytes": 27233,
+      "allocated_bytes": 28672,
+      "mtime_ns": 1780990538079342355
+    },
+    {
+      "path": "ours_demo/sample/ind_21.npy",
+      "bytes": 46400,
+      "allocated_bytes": 49152,
+      "mtime_ns": 1780990593299035098
+    },
+    {
+      "path": "ours_demo/sample/ind_21.ply",
+      "bytes": 31089,
+      "allocated_bytes": 32768,
+      "mtime_ns": 1780990593299244753
+    },
+    {
+      "path": "ours_demo/sample/ind_22.npy",
+      "bytes": 46280,
+      "allocated_bytes": 49152,
+      "mtime_ns": 1780990643649974363
+    },
+    {
+      "path": "ours_demo/sample/ind_22.ply",
+      "bytes": 31009,
+      "allocated_bytes": 32768,
+      "mtime_ns": 1780990643650173679
+    },
+    {
+      "path": "ours_demo/sample/ind_23.npy",
+      "bytes": 46448,
+      "allocated_bytes": 49152,
+      "mtime_ns": 1780990692599726453
+    },
+    {
+      "path": "ours_demo/sample/ind_23.ply",
+      "bytes": 31121,
+      "allocated_bytes": 32768,
+      "mtime_ns": 1780990692599928705
+    },
+    {
+      "path": "ours_demo/sample/ind_24.npy",
+      "bytes": 37040,
+      "allocated_bytes": 40960,
+      "mtime_ns": 1780990755527124817
+    },
+    {
+      "path": "ours_demo/sample/ind_24.ply",
+      "bytes": 24849,
+      "allocated_bytes": 28672,
+      "mtime_ns": 1780990755527310757
+    },
+    {
+      "path": "ours_demo/sample/ind_25.npy",
+      "bytes": 34784,
+      "allocated_bytes": 36864,
+      "mtime_ns": 1780990788989184068
+    },
+    {
+      "path": "ours_demo/sample/ind_25.ply",
+      "bytes": 23345,
+      "allocated_bytes": 24576,
+      "mtime_ns": 1780990788989363577
+    },
+    {
+      "path": "ours_demo/sample/ind_3.npy",
+      "bytes": 41120,
+      "allocated_bytes": 45056,
+      "mtime_ns": 1780989593280466629
+    },
+    {
+      "path": "ours_demo/sample/ind_3.ply",
+      "bytes": 27569,
+      "allocated_bytes": 28672,
+      "mtime_ns": 1780989593280668181
+    },
+    {
+      "path": "ours_demo/sample/ind_4.npy",
+      "bytes": 34784,
+      "allocated_bytes": 36864,
+      "mtime_ns": 1780989632329780391
+    },
+    {
+      "path": "ours_demo/sample/ind_4.ply",
+      "bytes": 23345,
+      "allocated_bytes": 24576,
+      "mtime_ns": 1780989632329972625
+    },
+    {
+      "path": "ours_demo/sample/ind_5.npy",
+      "bytes": 40640,
+      "allocated_bytes": 40960,
+      "mtime_ns": 1780989692333110075
+    },
+    {
+      "path": "ours_demo/sample/ind_5.ply",
+      "bytes": 27249,
+      "allocated_bytes": 28672,
+      "mtime_ns": 1780989692333304524
+    },
+    {
+      "path": "ours_demo/sample/ind_6.npy",
+      "bytes": 41120,
+      "allocated_bytes": 45056,
+      "mtime_ns": 1780989754163791177
+    },
+    {
+      "path": "ours_demo/sample/ind_6.ply",
+      "bytes": 27569,
+      "allocated_bytes": 28672,
+      "mtime_ns": 1780989754163989443
+    },
+    {
+      "path": "ours_demo/sample/ind_7.npy",
+      "bytes": 34880,
+      "allocated_bytes": 36864,
+      "mtime_ns": 1780989784075150064
+    },
+    {
+      "path": "ours_demo/sample/ind_7.ply",
+      "bytes": 23409,
+      "allocated_bytes": 24576,
+      "mtime_ns": 1780989784075354746
+    },
+    {
+      "path": "ours_demo/sample/ind_8.npy",
+      "bytes": 41120,
+      "allocated_bytes": 45056,
+      "mtime_ns": 1780989806414170158
+    },
+    {
+      "path": "ours_demo/sample/ind_8.ply",
+      "bytes": 27569,
+      "allocated_bytes": 28672,
+      "mtime_ns": 1780989806414365793
+    },
+    {
+      "path": "ours_demo/sample/ind_9.npy",
+      "bytes": 40664,
+      "allocated_bytes": 40960,
+      "mtime_ns": 1780989829045188798
+    },
+    {
+      "path": "ours_demo/sample/ind_9.ply",
+      "bytes": 27265,
+      "allocated_bytes": 28672,
+      "mtime_ns": 1780989829045380947
+    },
+    {
+      "path": "ours_demo/sample/isaac_render_full_parts.png",
+      "bytes": 1708560,
+      "allocated_bytes": 1712128,
+      "mtime_ns": 1780992634094362249
+    },
+    {
+      "path": "ours_demo/sample/isaac_render_full_parts.usd",
+      "bytes": 96790973,
+      "allocated_bytes": 96792576,
+      "mtime_ns": 1780992630929098015
+    },
+    {
+      "path": "ours_demo/sample/objs/0/0.glb",
+      "bytes": 3014780,
+      "allocated_bytes": 3018752,
+      "mtime_ns": 1780991962465538659
+    },
+    {
+      "path": "ours_demo/sample/objs/0/0.obj",
+      "bytes": 7346147,
+      "allocated_bytes": 7348224,
+      "mtime_ns": 1780991962923540778
+    },
+    {
+      "path": "ours_demo/sample/objs/0/material.mtl",
+      "bytes": 198,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780991962923416428
+    },
+    {
+      "path": "ours_demo/sample/objs/0/material_0.png",
+      "bytes": 620490,
+      "allocated_bytes": 622592,
+      "mtime_ns": 1780991962923166625
+    },
+    {
+      "path": "ours_demo/sample/objs/1/1.glb",
+      "bytes": 3206812,
+      "allocated_bytes": 3207168,
+      "mtime_ns": 1780991971518580408
+    },
+    {
+      "path": "ours_demo/sample/objs/1/1.obj",
+      "bytes": 7761509,
+      "allocated_bytes": 7761920,
+      "mtime_ns": 1780991971964004537
+    },
+    {
+      "path": "ours_demo/sample/objs/1/material.mtl",
+      "bytes": 198,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780991971964004537
+    },
+    {
+      "path": "ours_demo/sample/objs/1/material_0.png",
+      "bytes": 658841,
+      "allocated_bytes": 659456,
+      "mtime_ns": 1780991971963759162
+    },
+    {
+      "path": "ours_demo/sample/objs/10/10.glb",
+      "bytes": 3390232,
+      "allocated_bytes": 3391488,
+      "mtime_ns": 1780992050162931637
+    },
+    {
+      "path": "ours_demo/sample/objs/10/10.obj",
+      "bytes": 7765499,
+      "allocated_bytes": 7766016,
+      "mtime_ns": 1780992050641939918
+    },
+    {
+      "path": "ours_demo/sample/objs/10/material.mtl",
+      "bytes": 198,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780992050641939918
+    },
+    {
+      "path": "ours_demo/sample/objs/10/material_0.png",
+      "bytes": 829745,
+      "allocated_bytes": 831488,
+      "mtime_ns": 1780992050640933712
+    },
+    {
+      "path": "ours_demo/sample/objs/11/11.glb",
+      "bytes": 3588640,
+      "allocated_bytes": 3592192,
+      "mtime_ns": 1780992063297988424
+    },
+    {
+      "path": "ours_demo/sample/objs/11/11.obj",
+      "bytes": 8803463,
+      "allocated_bytes": 8806400,
+      "mtime_ns": 1780992063756495994
+    },
+    {
+      "path": "ours_demo/sample/objs/11/material.mtl",
+      "bytes": 198,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780992063756495994
+    },
+    {
+      "path": "ours_demo/sample/objs/11/material_0.png",
+      "bytes": 719686,
+      "allocated_bytes": 720896,
+      "mtime_ns": 1780992063756274064
+    },
+    {
+      "path": "ours_demo/sample/objs/12/12.glb",
+      "bytes": 2845360,
+      "allocated_bytes": 2846720,
+      "mtime_ns": 1780992072677028666
+    },
+    {
+      "path": "ours_demo/sample/objs/12/12.obj",
+      "bytes": 6646820,
+      "allocated_bytes": 6647808,
+      "mtime_ns": 1780992073140748966
+    },
+    {
+      "path": "ours_demo/sample/objs/12/material.mtl",
+      "bytes": 198,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780992073140748966
+    },
+    {
+      "path": "ours_demo/sample/objs/12/material_0.png",
+      "bytes": 666419,
+      "allocated_bytes": 667648,
+      "mtime_ns": 1780992073140515955
+    },
+    {
+      "path": "ours_demo/sample/objs/13/13.glb",
+      "bytes": 2653820,
+      "allocated_bytes": 2654208,
+      "mtime_ns": 1780992081632066855
+    },
+    {
+      "path": "ours_demo/sample/objs/13/13.obj",
+      "bytes": 5540648,
+      "allocated_bytes": 5541888,
+      "mtime_ns": 1780992082054060908
+    },
+    {
+      "path": "ours_demo/sample/objs/13/material.mtl",
+      "bytes": 198,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780992082054060908
+    },
+    {
+      "path": "ours_demo/sample/objs/13/material_0.png",
+      "bytes": 832267,
+      "allocated_bytes": 835584,
+      "mtime_ns": 1780992082053801457
+    },
+    {
+      "path": "ours_demo/sample/objs/14/14.glb",
+      "bytes": 3626912,
+      "allocated_bytes": 3629056,
+      "mtime_ns": 1780992095331124841
+    },
+    {
+      "path": "ours_demo/sample/objs/14/14.obj",
+      "bytes": 9130196,
+      "allocated_bytes": 9134080,
+      "mtime_ns": 1780992095836960263
+    },
+    {
+      "path": "ours_demo/sample/objs/14/material.mtl",
+      "bytes": 198,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780992095836960263
+    },
+    {
+      "path": "ours_demo/sample/objs/14/material_0.png",
+      "bytes": 689075,
+      "allocated_bytes": 692224,
+      "mtime_ns": 1780992095836747871
+    },
+    {
+      "path": "ours_demo/sample/objs/15/15.glb",
+      "bytes": 3422992,
+      "allocated_bytes": 3424256,
+      "mtime_ns": 1780992104057161510
+    },
+    {
+      "path": "ours_demo/sample/objs/15/15.obj",
+      "bytes": 7782427,
+      "allocated_bytes": 7786496,
+      "mtime_ns": 1780992104617967736
+    },
+    {
+      "path": "ours_demo/sample/objs/15/material.mtl",
+      "bytes": 198,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780992104617967736
+    },
+    {
+      "path": "ours_demo/sample/objs/15/material_0.png",
+      "bytes": 866603,
+      "allocated_bytes": 868352,
+      "mtime_ns": 1780992104617727381
+    },
+    {
+      "path": "ours_demo/sample/objs/16/16.glb",
+      "bytes": 3701752,
+      "allocated_bytes": 3702784,
+      "mtime_ns": 1780992118078220004
+    },
+    {
+      "path": "ours_demo/sample/objs/16/16.obj",
+      "bytes": 9117262,
+      "allocated_bytes": 9117696,
+      "mtime_ns": 1780992118690251503
+    },
+    {
+      "path": "ours_demo/sample/objs/16/material.mtl",
+      "bytes": 198,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780992118690251503
+    },
+    {
+      "path": "ours_demo/sample/objs/16/material_0.png",
+      "bytes": 755537,
+      "allocated_bytes": 757760,
+      "mtime_ns": 1780992118690018633
+    },
+    {
+      "path": "ours_demo/sample/objs/17/17.glb",
+      "bytes": 3462716,
+      "allocated_bytes": 3465216,
+      "mtime_ns": 1780992131552275732
+    },
+    {
+      "path": "ours_demo/sample/objs/17/17.obj",
+      "bytes": 8570877,
+      "allocated_bytes": 8572928,
+      "mtime_ns": 1780992132151903842
+    },
+    {
+      "path": "ours_demo/sample/objs/17/material.mtl",
+      "bytes": 198,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780992132151903842
+    },
+    {
+      "path": "ours_demo/sample/objs/17/material_0.png",
+      "bytes": 706756,
+      "allocated_bytes": 708608,
+      "mtime_ns": 1780992132151663767
+    },
+    {
+      "path": "ours_demo/sample/objs/18/18.glb",
+      "bytes": 3638640,
+      "allocated_bytes": 3641344,
+      "mtime_ns": 1780992146273336091
+    },
+    {
+      "path": "ours_demo/sample/objs/18/18.obj",
+      "bytes": 8608825,
+      "allocated_bytes": 8609792,
+      "mtime_ns": 1780992146868519709
+    },
+    {
+      "path": "ours_demo/sample/objs/18/material.mtl",
+      "bytes": 198,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780992146868519709
+    },
+    {
+      "path": "ours_demo/sample/objs/18/material_0.png",
+      "bytes": 849128,
+      "allocated_bytes": 851968,
+      "mtime_ns": 1780992146868250039
+    },
+    {
+      "path": "ours_demo/sample/objs/19/19.glb",
+      "bytes": 3027924,
+      "allocated_bytes": 3031040,
+      "mtime_ns": 1780992153785366685
+    },
+    {
+      "path": "ours_demo/sample/objs/19/19.obj",
+      "bytes": 7318308,
+      "allocated_bytes": 7319552,
+      "mtime_ns": 1780992154366319615
+    },
+    {
+      "path": "ours_demo/sample/objs/19/material.mtl",
+      "bytes": 198,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780992154366319615
+    },
+    {
+      "path": "ours_demo/sample/objs/19/material_0.png",
+      "bytes": 660452,
+      "allocated_bytes": 663552,
+      "mtime_ns": 1780992154366074732
+    },
+    {
+      "path": "ours_demo/sample/objs/2/2.glb",
+      "bytes": 2982104,
+      "allocated_bytes": 2985984,
+      "mtime_ns": 1780991980533621699
+    },
+    {
+      "path": "ours_demo/sample/objs/2/2.obj",
+      "bytes": 7454736,
+      "allocated_bytes": 7458816,
+      "mtime_ns": 1780991980989808894
+    },
+    {
+      "path": "ours_demo/sample/objs/2/material.mtl",
+      "bytes": 198,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780991980989808894
+    },
+    {
+      "path": "ours_demo/sample/objs/2/material_0.png",
+      "bytes": 553106,
+      "allocated_bytes": 557056,
+      "mtime_ns": 1780991980989559692
+    },
+    {
+      "path": "ours_demo/sample/objs/20/20.glb",
+      "bytes": 3314176,
+      "allocated_bytes": 3317760,
+      "mtime_ns": 1780992162674402710
+    },
+    {
+      "path": "ours_demo/sample/objs/20/20.obj",
+      "bytes": 7691856,
+      "allocated_bytes": 7692288,
+      "mtime_ns": 1780992163217551940
+    },
+    {
+      "path": "ours_demo/sample/objs/20/material.mtl",
+      "bytes": 198,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780992163217551940
+    },
+    {
+      "path": "ours_demo/sample/objs/20/material_0.png",
+      "bytes": 807414,
+      "allocated_bytes": 811008,
+      "mtime_ns": 1780992163217289193
+    },
+    {
+      "path": "ours_demo/sample/objs/21/21.glb",
+      "bytes": 3350928,
+      "allocated_bytes": 3354624,
+      "mtime_ns": 1780992173657446961
+    },
+    {
+      "path": "ours_demo/sample/objs/21/21.obj",
+      "bytes": 8259725,
+      "allocated_bytes": 8261632,
+      "mtime_ns": 1780992174278921334
+    },
+    {
+      "path": "ours_demo/sample/objs/21/material.mtl",
+      "bytes": 198,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780992174278921334
+    },
+    {
+      "path": "ours_demo/sample/objs/21/material_0.png",
+      "bytes": 674608,
+      "allocated_bytes": 675840,
+      "mtime_ns": 1780992174278449455
+    },
+    {
+      "path": "ours_demo/sample/objs/22/22.glb",
+      "bytes": 3653632,
+      "allocated_bytes": 3653632,
+      "mtime_ns": 1780992189077508614
+    },
+    {
+      "path": "ours_demo/sample/objs/22/22.obj",
+      "bytes": 9082035,
+      "allocated_bytes": 9084928,
+      "mtime_ns": 1780992189632244039
+    },
+    {
+      "path": "ours_demo/sample/objs/22/material.mtl",
+      "bytes": 198,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780992189632244039
+    },
+    {
+      "path": "ours_demo/sample/objs/22/material_0.png",
+      "bytes": 707519,
+      "allocated_bytes": 708608,
+      "mtime_ns": 1780992189632003985
+    },
+    {
+      "path": "ours_demo/sample/objs/23/23.glb",
+      "bytes": 3478372,
+      "allocated_bytes": 3481600,
+      "mtime_ns": 1780992202189560614
+    },
+    {
+      "path": "ours_demo/sample/objs/23/23.obj",
+      "bytes": 8700661,
+      "allocated_bytes": 8704000,
+      "mtime_ns": 1780992202721230022
+    },
+    {
+      "path": "ours_demo/sample/objs/23/material.mtl",
+      "bytes": 198,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780992202721230022
+    },
+    {
+      "path": "ours_demo/sample/objs/23/material_0.png",
+      "bytes": 637406,
+      "allocated_bytes": 638976,
+      "mtime_ns": 1780992202720992673
+    },
+    {
+      "path": "ours_demo/sample/objs/24/24.glb",
+      "bytes": 2953568,
+      "allocated_bytes": 2957312,
+      "mtime_ns": 1780992214141607682
+    },
+    {
+      "path": "ours_demo/sample/objs/24/24.obj",
+      "bytes": 7195222,
+      "allocated_bytes": 7196672,
+      "mtime_ns": 1780992214634834012
+    },
+    {
+      "path": "ours_demo/sample/objs/24/material.mtl",
+      "bytes": 198,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780992214634834012
+    },
+    {
+      "path": "ours_demo/sample/objs/24/material_0.png",
+      "bytes": 615833,
+      "allocated_bytes": 618496,
+      "mtime_ns": 1780992214634602835
+    },
+    {
+      "path": "ours_demo/sample/objs/25/25.glb",
+      "bytes": 2818204,
+      "allocated_bytes": 2822144,
+      "mtime_ns": 1780992223179643070
+    },
+    {
+      "path": "ours_demo/sample/objs/25/25.obj",
+      "bytes": 6540879,
+      "allocated_bytes": 6541312,
+      "mtime_ns": 1780992223731454906
+    },
+    {
+      "path": "ours_demo/sample/objs/25/material.mtl",
+      "bytes": 198,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780992223731454906
+    },
+    {
+      "path": "ours_demo/sample/objs/25/material_0.png",
+      "bytes": 689516,
+      "allocated_bytes": 692224,
+      "mtime_ns": 1780992223731198420
+    },
+    {
+      "path": "ours_demo/sample/objs/3/3.glb",
+      "bytes": 3073492,
+      "allocated_bytes": 3076096,
+      "mtime_ns": 1780991987454653211
+    },
+    {
+      "path": "ours_demo/sample/objs/3/3.obj",
+      "bytes": 7238007,
+      "allocated_bytes": 7241728,
+      "mtime_ns": 1780991988061198863
+    },
+    {
+      "path": "ours_demo/sample/objs/3/material.mtl",
+      "bytes": 198,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780991988061198863
+    },
+    {
+      "path": "ours_demo/sample/objs/3/material_0.png",
+      "bytes": 722757,
+      "allocated_bytes": 724992,
+      "mtime_ns": 1780991988060972916
+    },
+    {
+      "path": "ours_demo/sample/objs/4/4.glb",
+      "bytes": 2781188,
+      "allocated_bytes": 2785280,
+      "mtime_ns": 1780991997359698029
+    },
+    {
+      "path": "ours_demo/sample/objs/4/4.obj",
+      "bytes": 6602110,
+      "allocated_bytes": 6602752,
+      "mtime_ns": 1780991997848231563
+    },
+    {
+      "path": "ours_demo/sample/objs/4/material.mtl",
+      "bytes": 198,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780991997848231563
+    },
+    {
+      "path": "ours_demo/sample/objs/4/material_0.png",
+      "bytes": 633276,
+      "allocated_bytes": 634880,
+      "mtime_ns": 1780991997848009623
+    },
+    {
+      "path": "ours_demo/sample/objs/5/5.glb",
+      "bytes": 3330228,
+      "allocated_bytes": 3334144,
+      "mtime_ns": 1780992006306738234
+    },
+    {
+      "path": "ours_demo/sample/objs/5/5.obj",
+      "bytes": 7707805,
+      "allocated_bytes": 7708672,
+      "mtime_ns": 1780992006898820080
+    },
+    {
+      "path": "ours_demo/sample/objs/5/material.mtl",
+      "bytes": 198,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780992006898820080
+    },
+    {
+      "path": "ours_demo/sample/objs/5/material_0.png",
+      "bytes": 818763,
+      "allocated_bytes": 819200,
+      "mtime_ns": 1780992006898570618
+    },
+    {
+      "path": "ours_demo/sample/objs/6/6.glb",
+      "bytes": 2985596,
+      "allocated_bytes": 2985984,
+      "mtime_ns": 1780992013364769767
+    },
+    {
+      "path": "ours_demo/sample/objs/6/6.obj",
+      "bytes": 7283323,
+      "allocated_bytes": 7286784,
+      "mtime_ns": 1780992013877959806
+    },
+    {
+      "path": "ours_demo/sample/objs/6/material.mtl",
+      "bytes": 198,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780992013877959806
+    },
+    {
+      "path": "ours_demo/sample/objs/6/material_0.png",
+      "bytes": 602860,
+      "allocated_bytes": 606208,
+      "mtime_ns": 1780992013877745470
+    },
+    {
+      "path": "ours_demo/sample/objs/7/7.glb",
+      "bytes": 2799664,
+      "allocated_bytes": 2801664,
+      "mtime_ns": 1780992023625815327
+    },
+    {
+      "path": "ours_demo/sample/objs/7/7.obj",
+      "bytes": 6586524,
+      "allocated_bytes": 6590464,
+      "mtime_ns": 1780992024063902914
+    },
+    {
+      "path": "ours_demo/sample/objs/7/material.mtl",
+      "bytes": 198,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780992024063902914
+    },
+    {
+      "path": "ours_demo/sample/objs/7/material_0.png",
+      "bytes": 640329,
+      "allocated_bytes": 643072,
+      "mtime_ns": 1780992024062817260
+    },
+    {
+      "path": "ours_demo/sample/objs/8/8.glb",
+      "bytes": 3054404,
+      "allocated_bytes": 3055616,
+      "mtime_ns": 1780992032044852460
+    },
+    {
+      "path": "ours_demo/sample/objs/8/8.obj",
+      "bytes": 7404122,
+      "allocated_bytes": 7405568,
+      "mtime_ns": 1780992032534003372
+    },
+    {
+      "path": "ours_demo/sample/objs/8/material.mtl",
+      "bytes": 198,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780992032534003372
+    },
+    {
+      "path": "ours_demo/sample/objs/8/material_0.png",
+      "bytes": 632117,
+      "allocated_bytes": 634880,
+      "mtime_ns": 1780992032530203742
+    },
+    {
+      "path": "ours_demo/sample/objs/9/9.glb",
+      "bytes": 3284624,
+      "allocated_bytes": 3284992,
+      "mtime_ns": 1780992041255892837
+    },
+    {
+      "path": "ours_demo/sample/objs/9/9.obj",
+      "bytes": 7658272,
+      "allocated_bytes": 7659520,
+      "mtime_ns": 1780992041829308488
+    },
+    {
+      "path": "ours_demo/sample/objs/9/material.mtl",
+      "bytes": 198,
+      "allocated_bytes": 4096,
+      "mtime_ns": 1780992041829308488
+    },
+    {
+      "path": "ours_demo/sample/objs/9/material_0.png",
+      "bytes": 769587,
+      "allocated_bytes": 770048,
+      "mtime_ns": 1780992041829089022
+    },
+    {
+      "path": "ours_demo/sample/sample_full_parts.glb",
+      "bytes": 83435456,
+      "allocated_bytes": 83435520,
+      "mtime_ns": 1780992295588193974
+    },
+    {
+      "path": "ours_demo/sample/textures/sample_full_parts_texture0.png",
+      "bytes": 620492,
+      "allocated_bytes": 622592,
+      "mtime_ns": 1780992630264095814
+    },
+    {
+      "path": "ours_demo/sample/textures/sample_full_parts_texture1.png",
+      "bytes": 658844,
+      "allocated_bytes": 659456,
+      "mtime_ns": 1780992630280095867
+    },
+    {
+      "path": "ours_demo/sample/textures/sample_full_parts_texture10.png",
+      "bytes": 829748,
+      "allocated_bytes": 831488,
+      "mtime_ns": 1780992630431096367
+    },
+    {
+      "path": "ours_demo/sample/textures/sample_full_parts_texture11.png",
+      "bytes": 719688,
+      "allocated_bytes": 720896,
+      "mtime_ns": 1780992630448096423
+    },
+    {
+      "path": "ours_demo/sample/textures/sample_full_parts_texture12.png",
+      "bytes": 666420,
+      "allocated_bytes": 667648,
+      "mtime_ns": 1780992630464096476
+    },
+    {
+      "path": "ours_demo/sample/textures/sample_full_parts_texture13.png",
+      "bytes": 832268,
+      "allocated_bytes": 835584,
+      "mtime_ns": 1780992630252095775
+    },
+    {
+      "path": "ours_demo/sample/textures/sample_full_parts_texture14.png",
+      "bytes": 689076,
+      "allocated_bytes": 692224,
+      "mtime_ns": 1780992629630093716
+    },
+    {
+      "path": "ours_demo/sample/textures/sample_full_parts_texture15.png",
+      "bytes": 866604,
+      "allocated_bytes": 868352,
+      "mtime_ns": 1780992629590093583
+    },
+    {
+      "path": "ours_demo/sample/textures/sample_full_parts_texture16.png",
+      "bytes": 755540,
+      "allocated_bytes": 757760,
+      "mtime_ns": 1780992629570093517
+    },
+    {
+      "path": "ours_demo/sample/textures/sample_full_parts_texture17.png",
+      "bytes": 706756,
+      "allocated_bytes": 708608,
+      "mtime_ns": 1780992629551093454
+    },
+    {
+      "path": "ours_demo/sample/textures/sample_full_parts_texture18.png",
+      "bytes": 849128,
+      "allocated_bytes": 851968,
+      "mtime_ns": 1780992629536093405
+    },
+    {
+      "path": "ours_demo/sample/textures/sample_full_parts_texture19.png",
+      "bytes": 660452,
+      "allocated_bytes": 663552,
+      "mtime_ns": 1780992629517093342
+    },
+    {
+      "path": "ours_demo/sample/textures/sample_full_parts_texture2.png",
+      "bytes": 553108,
+      "allocated_bytes": 557056,
+      "mtime_ns": 1780992630296095920
+    },
+    {
+      "path": "ours_demo/sample/textures/sample_full_parts_texture20.png",
+      "bytes": 807416,
+      "allocated_bytes": 811008,
+      "mtime_ns": 1780992629501093289
+    },
+    {
+      "path": "ours_demo/sample/textures/sample_full_parts_texture21.png",
+      "bytes": 674608,
+      "allocated_bytes": 675840,
+      "mtime_ns": 1780992629484093232
+    },
+    {
+      "path": "ours_demo/sample/textures/sample_full_parts_texture22.png",
+      "bytes": 707520,
+      "allocated_bytes": 708608,
+      "mtime_ns": 1780992629468093180
+    },
+    {
+      "path": "ours_demo/sample/textures/sample_full_parts_texture23.png",
+      "bytes": 637408,
+      "allocated_bytes": 638976,
+      "mtime_ns": 1780992629451093123
+    },
+    {
+      "path": "ours_demo/sample/textures/sample_full_parts_texture24.png",
+      "bytes": 615836,
+      "allocated_bytes": 618496,
+      "mtime_ns": 1780992629446093107
+    },
+    {
+      "path": "ours_demo/sample/textures/sample_full_parts_texture25.png",
+      "bytes": 689516,
+      "allocated_bytes": 692224,
+      "mtime_ns": 1780992629395092938
+    },
+    {
+      "path": "ours_demo/sample/textures/sample_full_parts_texture3.png",
+      "bytes": 722760,
+      "allocated_bytes": 724992,
+      "mtime_ns": 1780992630313095976
+    },
+    {
+      "path": "ours_demo/sample/textures/sample_full_parts_texture4.png",
+      "bytes": 633276,
+      "allocated_bytes": 634880,
+      "mtime_ns": 1780992630330096033
+    },
+    {
+      "path": "ours_demo/sample/textures/sample_full_parts_texture5.png",
+      "bytes": 818764,
+      "allocated_bytes": 819200,
+      "mtime_ns": 1780992630347096089
+    },
+    {
+      "path": "ours_demo/sample/textures/sample_full_parts_texture6.png",
+      "bytes": 602860,
+      "allocated_bytes": 606208,
+      "mtime_ns": 1780992630369096162
+    },
+    {
+      "path": "ours_demo/sample/textures/sample_full_parts_texture7.png",
+      "bytes": 640332,
+      "allocated_bytes": 643072,
+      "mtime_ns": 1780992630381096202
+    },
+    {
+      "path": "ours_demo/sample/textures/sample_full_parts_texture8.png",
+      "bytes": 632120,
+      "allocated_bytes": 634880,
+      "mtime_ns": 1780992630398096258
+    },
+    {
+      "path": "ours_demo/sample/textures/sample_full_parts_texture9.png",
+      "bytes": 769588,
+      "allocated_bytes": 770048,
+      "mtime_ns": 1780992630414096311
+    },
+    {
+      "path": "ours_demo/trellis_visual_sample_mesh_preview/isaac_render.png",
+      "bytes": 1820351,
+      "allocated_bytes": 1822720,
+      "mtime_ns": 1780987408972111580
+    },
+    {
+      "path": "ours_demo/trellis_visual_sample_mesh_preview/isaac_render.usd",
+      "bytes": 81050861,
+      "allocated_bytes": 81051648,
+      "mtime_ns": 1780987407187870848
+    },
+    {
+      "path": "ours_demo/trellis_visual_sample_mesh_preview/mesh_raw.npz",
+      "bytes": 36419656,
+      "allocated_bytes": 36421632,
+      "mtime_ns": 1780985227012765675
+    },
+    {
+      "path": "ours_demo/trellis_visual_sample_mesh_preview/preview_vertex_color.png",
+      "bytes": 761755,
+      "allocated_bytes": 761856,
+      "mtime_ns": 1780985284048406447
+    },
+    {
+      "path": "ours_demo/trellis_visual_sample_mesh_preview/preview_vertex_color_points.png",
+      "bytes": 2981843,
+      "allocated_bytes": 2981888,
+      "mtime_ns": 1780985321469929375
+    },
+    {
+      "path": "ours_demo/trellis_visual_sample_mesh_preview/sample_mesh.obj",
+      "bytes": 106127982,
+      "allocated_bytes": 106135552,
+      "mtime_ns": 1780985225550122838
+    },
+    {
+      "path": "ours_demo/trellis_visual_sample_mesh_preview/sample_vertex_color.glb",
+      "bytes": 37006736,
+      "allocated_bytes": 37007360,
+      "mtime_ns": 1780985244619942304
+    },
+    {
+      "path": "ours_demo/trellis_visual_sample_mesh_preview/sample_vertex_color.ply",
+      "bytes": 38856151,
+      "allocated_bytes": 38862848,
+      "mtime_ns": 1780985223779602853
+    }
+  ],
+  "action": "deleted_local_no_upload",
+  "upstream": {
+    "pretrain": "https://huggingface.co/PhysX-Omni/PhysX-Omni",
+    "pretrain_trellis": "https://huggingface.co/microsoft/TRELLIS-image-large"
+  },
+  "note": "Generated geometry is deleted, not uploaded. Small evidence is retained.",
+  "deleted_allocated_bytes": 20701843456
+}

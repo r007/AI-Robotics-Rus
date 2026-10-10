@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-08",
+  "deleted_file_count": 746903,
+  "deleted_logical_bytes": 589848940875,
+  "filesystem_available_delta_bytes": 586670075904,
+  "deleted_categories": [
+    "Official VLNVerse scene payloads",
+    "Official training trajectory payloads",
+    "Unsuccessful local trial weight binaries",
+    "Invalid June 20 distributed-training export binaries"
+  ],
+  "preserved_categories": [
+    "Source code and environments",
+    "Raw dataset splits and custom evaluation subsets",
+    "Training and evaluation metadata",
+    "Submission archives",
+    "Official base model",
+    "Valid June 22 adapter"
+  ],
+  "data_recovery_sources": [
+    "https://huggingface.co/datasets/Eyz/VLNVerse_data",
+    "https://huggingface.co/datasets/Eyz/VLNVerse_scene"
+  ],
+  "final_rank_verified": false
+}

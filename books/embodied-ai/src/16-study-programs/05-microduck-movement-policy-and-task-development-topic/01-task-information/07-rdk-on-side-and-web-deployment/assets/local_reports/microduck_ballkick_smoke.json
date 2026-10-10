@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-05",
+  "purpose": "BallKick training pipeline smoke test; this is not a converged policy result.",
+  "upstream": {
+    "repository": "https://github.com/pollen-robotics/microduck_rl",
+    "commit": "29e887ecfbf5d37144759e5a9f8a176dfb83d547"
+  },
+  "environment": {
+    "os": "Windows 11",
+    "python": "3.12.3",
+    "torch": "2.9.1+cu128",
+    "cuda_available": true,
+    "accelerator": "CUDA device"
+  },
+  "training": {
+    "task": "Mjlab-BallKick-Flat-MicroDuck",
+    "kick_foot": "right",
+    "num_envs": 64,
+    "max_iterations": 5,
+    "save_interval": 5,
+    "wandb_mode": "offline"
+  },
+  "result": {
+    "exit_code": 0,
+    "total_steps": 7680,
+    "final_iteration": 4,
+    "final_steps_per_second": 506,
+    "final_mean_reward": 1.31,
+    "final_mean_episode_length": 34.89,
+    "checkpoints": [
+      {
+        "file": "model_0.pt",
+        "bytes": 4867711
+      },
+      {
+        "file": "model_4.pt",
+        "bytes": 4867711,
+        "sha256": "3f043aaec0e8f3de46e41a7ce25b8fd15b16c071cc0bdffdd57ac8a52b1fa5fd"
+      }
+    ],
+    "exported_onnx": {
+      "file": "ball_kick_right.onnx",
+      "bytes": 793716,
+      "sha256": "a25d99bf1b163e9a1a56862fdebcd9b33f8628e651c360df7f910c7f1896353b"
+    }
+  }
+}

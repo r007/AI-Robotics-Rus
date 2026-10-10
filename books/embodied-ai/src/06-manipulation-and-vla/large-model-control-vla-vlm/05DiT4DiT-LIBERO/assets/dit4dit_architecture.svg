@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">DiT4DiT LIBERO training and evaluation architecture</title>
+  <desc id="desc">A layered architecture diagram showing data preparation, DiT4DiT model training, policy server evaluation, and LIBERO simulation loop.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f9fc; }
+      .panel { fill: #ffffff; stroke: #d8e0ea; stroke-width: 2; rx: 16; }
+      .panelTitle { font: 700 24px Arial, sans-serif; fill: #1f2937; }
+      .label { font: 600 18px Arial, sans-serif; fill: #263244; }
+      .small { font: 15px Arial, sans-serif; fill: #4b5563; }
+      .tiny { font: 13px Arial, sans-serif; fill: #6b7280; }
+      .box { fill: #eef6ff; stroke: #7db7ea; stroke-width: 2; rx: 12; }
+      .box2 { fill: #f2fbf6; stroke: #70bf8f; stroke-width: 2; rx: 12; }
+      .box3 { fill: #fff7ed; stroke: #f4a261; stroke-width: 2; rx: 12; }
+      .box4 { fill: #f5f3ff; stroke: #a78bfa; stroke-width: 2; rx: 12; }
+      .arrow { stroke: #334155; stroke-width: 2.4; fill: none; marker-end: url(#arrow); }
+      .dashed { stroke-dasharray: 8 7; }
+      .badge { fill: #111827; rx: 12; }
+      .badgeText { font: 700 13px Arial, sans-serif; fill: #ffffff; }
+      .caption { font: 16px Arial, sans-serif; fill: #374151; }
+      .mono { font: 13px Consolas, monospace; fill: #334155; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#334155" />
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1280" height="760"/>
+  <text x="64" y="54" style="font: 800 32px Arial, sans-serif; fill:#111827;">Минимальная архитектура воспроизведения DiT4DiT-LIBERO</text>
+  <text x="64" y="84" class="caption">На одном сервере L40 smoke-тест обучения и симуляционная оценка используют общие модель, кэш и каталог данных, но выход и логи записываются на бесплатный диск данных.</text>
+
+  <rect x="52" y="116" width="360" height="258" class="panel"/>
+  <text x="78" y="154" class="panelTitle">1. Данные и планировка каталогов</text>
+  <rect x="82" y="184" width="276" height="56" class="box2"/>
+  <text x="104" y="207" class="label">Данные LIBERO spatial</text>
+  <text x="104" y="229" class="small">LeRobot v2.1, 432 episodes</text>
+  <rect x="82" y="260" width="276" height="56" class="box2"/>
+  <text x="104" y="283" class="label">Бесплатный диск данных</text>
+  <text x="104" y="305" class="mono">/root/gpufree-data</text>
+  <rect x="82" y="330" width="276" height="28" class="badge"/>
+  <text x="100" y="349" class="badgeText">Оставить только данные, логи и скрипты; удалить final_model (20 ГБ)</text>
+
+  <rect x="462" y="116" width="360" height="258" class="panel"/>
+  <text x="488" y="154" class="panelTitle">2. Путь обучения DiT4DiT</text>
+  <rect x="492" y="184" width="276" height="56" class="box"/>
+  <text x="514" y="207" class="label">Cosmos-Predict2.5-2B</text>
+  <text x="514" y="229" class="small">Видео-языковой backbone</text>
+  <rect x="492" y="260" width="276" height="56" class="box4"/>
+  <text x="514" y="283" class="label">DiT action head</text>
+  <text x="514" y="305" class="small">Предсказание последовательности действий диффузией</text>
+  <rect x="492" y="330" width="276" height="28" class="badge"/>
+  <text x="514" y="349" class="badgeText">smoke test: 2 steps, batch=1, action loss</text>
+
+  <rect x="872" y="116" width="356" height="258" class="panel"/>
+  <text x="898" y="154" class="panelTitle">3. Путь оценки LIBERO</text>
+  <rect x="902" y="184" width="274" height="56" class="box3"/>
+  <text x="924" y="207" class="label">Policy server</text>
+  <text x="924" y="229" class="small">WebSocket принимает наблюдения и возвращает действия</text>
+  <rect x="902" y="260" width="274" height="56" class="box3"/>
+  <text x="924" y="283" class="label">LIBERO client</text>
+  <text x="924" y="305" class="small">Офлайн-симуляция MuJoCo / robosuite</text>
+  <rect x="902" y="330" width="274" height="28" class="badge"/>
+  <text x="924" y="349" class="badgeText">libero_spatial: 10/10 success in 1-trial smoke eval</text>
+
+  <rect x="52" y="426" width="1176" height="244" class="panel"/>
+  <text x="78" y="464" class="panelTitle">4. Поток данных в одном rollout</text>
+
+  <rect x="92" y="505" width="180" height="74" class="box2"/>
+  <text x="113" y="532" class="label">Видеонаблюдение</text>
+  <text x="113" y="555" class="small">primary / wrist image</text>
+
+  <rect x="332" y="505" width="180" height="74" class="box"/>
+  <text x="360" y="532" class="label">Кодирование Cosmos</text>
+  <text x="360" y="555" class="small">Извлечение визуально-языковых токенов</text>
+
+  <rect x="572" y="505" width="180" height="74" class="box4"/>
+  <text x="594" y="532" class="label">Action DiT</text>
+  <text x="594" y="555" class="small">Предсказание окна будущих действий</text>
+
+  <rect x="812" y="505" width="180" height="74" class="box3"/>
+  <text x="846" y="532" class="label">Действие робота</text>
+  <text x="846" y="555" class="small">Непрерывные управляющие величины, 7/8 измерений</text>
+
+  <rect x="1052" y="505" width="136" height="74" class="box3"/>
+  <text x="1082" y="532" class="label">Обратная связь среды</text>
+  <text x="1077" y="555" class="small">success / next obs</text>
+
+  <path d="M272 542 H326" class="arrow"/>
+  <path d="M512 542 H566" class="arrow"/>
+  <path d="M752 542 H806" class="arrow"/>
+  <path d="M992 542 H1046" class="arrow"/>
+  <path d="M1120 505 C1120 448 180 448 180 505" class="arrow dashed"/>
+
+  <text x="92" y="625" class="tiny">При обучении: наблюдение, языковая инструкция и метка действия поступают в модель, обратное распространение обновляет action head.</text>
+  <text x="92" y="649" class="tiny">При оценке: клиент LIBERO отправляет текущее наблюдение policy server, сервер возвращает действие, среда симуляции выполняет его и считает успешность.</text>
+</svg>

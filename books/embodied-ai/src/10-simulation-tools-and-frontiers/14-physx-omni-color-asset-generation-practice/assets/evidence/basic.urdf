@@ -1,0 +1,506 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="scene">
+  <link name="l_world">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <link name="l_0">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./objs/0/0.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="l_4">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./objs/4/4.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="l_12">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./objs/12/12.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="l_13">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./objs/13/13.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="l_15">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./objs/15/15.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="l_19">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./objs/19/19.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="l_20">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./objs/20/20.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="l_25">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./objs/25/25.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <joint name="joint_fixed_0_4" type="fixed">
+    <parent link="l_0" />
+    <child link="l_4" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_fixed_4_12" type="fixed">
+    <parent link="l_4" />
+    <child link="l_12" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_fixed_12_13" type="fixed">
+    <parent link="l_12" />
+    <child link="l_13" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_fixed_13_15" type="fixed">
+    <parent link="l_13" />
+    <child link="l_15" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_fixed_15_19" type="fixed">
+    <parent link="l_15" />
+    <child link="l_19" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_fixed_19_20" type="fixed">
+    <parent link="l_19" />
+    <child link="l_20" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_fixed_20_25" type="fixed">
+    <parent link="l_20" />
+    <child link="l_25" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_fixed_world0" type="fixed">
+    <parent link="l_world" />
+    <child link="l_0" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="l_5">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./objs/5/5.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="l_1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./objs/1/1.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="l_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./objs/2/2.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="l_3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./objs/3/3.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="l_6">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./objs/6/6.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="l_7">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./objs/7/7.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="l_8">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./objs/8/8.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="l_9">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./objs/9/9.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="l_10">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./objs/10/10.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <joint name="joint_fixed_5_1" type="fixed">
+    <parent link="l_5" />
+    <child link="l_1" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_fixed_1_2" type="fixed">
+    <parent link="l_1" />
+    <child link="l_2" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_fixed_2_3" type="fixed">
+    <parent link="l_2" />
+    <child link="l_3" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_fixed_3_6" type="fixed">
+    <parent link="l_3" />
+    <child link="l_6" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_fixed_6_7" type="fixed">
+    <parent link="l_6" />
+    <child link="l_7" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_fixed_7_8" type="fixed">
+    <parent link="l_7" />
+    <child link="l_8" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_fixed_8_9" type="fixed">
+    <parent link="l_8" />
+    <child link="l_9" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_fixed_9_10" type="fixed">
+    <parent link="l_9" />
+    <child link="l_10" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="abstract_0_5">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_0_5" type="fixed">
+    <parent link="abstract_0_5" />
+    <child link="l_5" />
+    <origin xyz="0.5 -0.0 -0.0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_revolute_l_0_abstract_0_5" type="continuous">
+    <parent link="l_0" />
+    <child link="abstract_0_5" />
+    <origin xyz="-0.5 0.0 0.0" rpy="0 0 0" />
+    <axis xyz="1.0 0.0 0.0" />
+    <limit effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_18">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./objs/18/18.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="l_17">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./objs/17/17.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="l_16">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./objs/16/16.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="l_11">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./objs/11/11.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="l_14">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./objs/14/14.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="l_21">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./objs/21/21.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="l_22">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./objs/22/22.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="l_23">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./objs/23/23.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="l_24">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./objs/24/24.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <joint name="joint_fixed_18_17" type="fixed">
+    <parent link="l_18" />
+    <child link="l_17" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_fixed_17_16" type="fixed">
+    <parent link="l_17" />
+    <child link="l_16" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_fixed_16_11" type="fixed">
+    <parent link="l_16" />
+    <child link="l_11" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_fixed_11_14" type="fixed">
+    <parent link="l_11" />
+    <child link="l_14" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_fixed_14_21" type="fixed">
+    <parent link="l_14" />
+    <child link="l_21" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_fixed_21_22" type="fixed">
+    <parent link="l_21" />
+    <child link="l_22" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_fixed_22_23" type="fixed">
+    <parent link="l_22" />
+    <child link="l_23" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_fixed_23_24" type="fixed">
+    <parent link="l_23" />
+    <child link="l_24" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="abstract_0_18">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_0_18" type="fixed">
+    <parent link="abstract_0_18" />
+    <child link="l_18" />
+    <origin xyz="0.5 -0.0 -0.0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_revolute_l_0_abstract_0_18" type="continuous">
+    <parent link="l_0" />
+    <child link="abstract_0_18" />
+    <origin xyz="-0.5 0.0 0.0" rpy="0 0 0" />
+    <axis xyz="1.0 0.0 0.0" />
+    <limit effort="2000.0" velocity="2.0" />
+  </joint>
+</robot>

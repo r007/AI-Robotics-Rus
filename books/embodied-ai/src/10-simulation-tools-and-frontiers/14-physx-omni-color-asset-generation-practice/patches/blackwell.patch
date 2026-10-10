@@ -1,0 +1,297 @@
+diff --git a/1vlm_demo.py b/1vlm_demo.py
+index 8931bd1..6956ab3 100644
+--- a/1vlm_demo.py
++++ b/1vlm_demo.py
+@@ -630,7 +630,7 @@ def addmessage(message,before,after):
+ 
+ 
+ 
+-def generate_save(model,messages,save_dir,save_name='test',save=True):
++def generate_save(model, messages, save_dir, save_name='test', save=True, max_new_tokens=4096):
+ 
+ # Preparation for inference
+     text = processor.apply_chat_template(
+@@ -647,7 +647,7 @@ def generate_save(model,messages,save_dir,save_name='test',save=True):
+     inputs = inputs.to(model.device)
+ 
+     # Inference: Generation of the output
+-    generated_ids = model.generate(**inputs, do_sample=False,temperature=0,max_length=32768)
++    generated_ids = model.generate(**inputs, do_sample=False, max_new_tokens=max_new_tokens)
+     generated_ids_trimmed = [
+         out_ids[len(in_ids) :] for in_ids, out_ids in zip(inputs.input_ids, generated_ids)
+     ]
+@@ -679,10 +679,16 @@ if __name__ == '__main__':
+     modelpath=args.modelpath
+     savedir='ours_demo'
+ 
++    try:
++        import flash_attn  # noqa: F401
++        attn_implementation = "flash_attention_2"
++    except ImportError:
++        attn_implementation = "sdpa"
++
+     model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
+                 modelpath,
+                 torch_dtype=torch.bfloat16,
+-                attn_implementation="flash_attention_2",
++                attn_implementation=attn_implementation,
+                 device_map="auto",
+             )
+     min_pixels = 65536
+@@ -737,7 +743,7 @@ if __name__ == '__main__':
+         try:
+ 
+ 
+-            basicoutput=generate_save(model,messages,save_dir,'basic_info')
++            basicoutput=generate_save(model, messages, save_dir, 'basic_info', max_new_tokens=2048)
+             index=0
+             while 'l_'+str(index) in basicoutput:
+                 index+=1
+@@ -748,7 +754,7 @@ if __name__ == '__main__':
+ 
+                 question="Based on the structured description of l_"+str(part)+", generate its 3D voxel (grid=64) in the 3D RLE (linear scan) format. Output one run per line as: start_index length"
+                 messages1=addmessage(messages,basicoutput,question)
+-                output1=generate_save(model,messages1,save_dir,'coord_'+str(part),save=True)
++                output1=generate_save(model, messages1, save_dir, 'coord_'+str(part), save=True, max_new_tokens=8192)
+                 print(len(messages1))
+ 
+                 runs_by_z2 = string_to_runs_by_z_lossless_robust(output1, D=64)
+@@ -764,5 +770,5 @@ if __name__ == '__main__':
+ 
+             np.save(os.path.join(save_dir,'allind.npy'),np.concatenate(allcoord))
+             logger.info('success: '+name)
+-        except:
+-            logger.info('error: '+name)
++        except Exception:
++            logger.exception('error: '+name)
+diff --git a/2infer_geo.py b/2infer_geo.py
+index 2e95391..6d3a48f 100644
+--- a/2infer_geo.py
++++ b/2infer_geo.py
+@@ -46,8 +46,7 @@ def get_logger(filename, verbosity=1, name=None):
+     return logger
+ 
+ def decoder(name,basepath,imgpath):
+-    
+-    os.system('python decoder_each.py  --name {} --basepath {} --imgpath {}'.format(name,basepath,imgpath)) 
++    os.system('{} decoder_each.py  --name {} --basepath {} --imgpath {}'.format(sys.executable,name,basepath,imgpath)) 
+ 
+ 
+ if __name__ == '__main__':
+@@ -86,4 +85,3 @@ if __name__ == '__main__':
+                 logger.info('error: '+name)
+ 
+ 
+-
+diff --git a/decoder_each.py b/decoder_each.py
+index d8fd1a0..5d42d5f 100644
+--- a/decoder_each.py
++++ b/decoder_each.py
+@@ -1,5 +1,6 @@
+ import os
+-# os.environ['ATTN_BACKEND'] = 'xformers'   # Can be 'flash-attn' or 'xformers', default is 'flash-attn'
++os.environ.setdefault('ATTN_BACKEND', 'xformers')   # Can be 'flash-attn' or 'xformers', default is 'flash-attn'
++os.environ.setdefault('XFORMERS_DISABLED', '1')
+ os.environ['SPCONV_ALGO'] = 'native'        # Can be 'native' or 'auto', default is 'auto'.
+                                             # 'auto' is faster but will do benchmarking at the beginning.
+                                             # Recommended to set to 'native' if run only once.
+@@ -35,6 +36,21 @@ def get_sorted_npy_list(folder_path):
+     return count, sorted_list
+ 
+ 
++def save_base_color_texture(mesh, out_path):
++    material = getattr(getattr(mesh, "visual", None), "material", None)
++    texture = getattr(material, "baseColorTexture", None)
++    if texture is None:
++        return False
++    if isinstance(texture, Image.Image):
++        texture.save(out_path)
++        return True
++    texture = np.asarray(texture)
++    if texture.size == 0:
++        return False
++    Image.fromarray(texture.astype(np.uint8)).save(out_path)
++    return True
++
++
+ import argparse
+ 
+ parser = argparse.ArgumentParser()
+@@ -43,7 +59,11 @@ parser.add_argument("--imgpath", type=str, default='render')
+ parser.add_argument("--basepath", type=str, default='demo')
+ args = parser.parse_args()
+ 
+-pipeline = TrellisImageTo3DPipeline.from_pretrained("microsoft/TRELLIS-image-large")
++trellis_model_path = os.environ.get(
++    "TRELLIS_MODEL_PATH",
++    "pretrain_trellis" if os.path.exists("pretrain_trellis/pipeline.json") else "microsoft/TRELLIS-image-large",
++)
++pipeline = TrellisImageTo3DPipeline.from_pretrained(trellis_model_path)
+ pipeline.cuda()
+ 
+ 
+@@ -98,11 +118,8 @@ if os.path.exists(os.path.join(qwenpath,'allind.npy')):
+             )
+ 
+             glb.export(os.path.join(objfilepath,str(i)+'.glb'))
++            save_base_color_texture(glb, os.path.join(objfilepath, 'material_0.png'))
+ 
+             R = trimesh.transformations.rotation_matrix(np.deg2rad(90), [1, 0, 0])
+             glb.apply_transform(R)
+             glb.export(os.path.join(objfilepath,str(i)+'.obj'))
+-
+-
+-
+-
+diff --git a/trellis/modules/attention/full_attn.py b/trellis/modules/attention/full_attn.py
+index d9ebf63..5e13165 100644
+--- a/trellis/modules/attention/full_attn.py
++++ b/trellis/modules/attention/full_attn.py
+@@ -5,6 +5,7 @@ from . import DEBUG, BACKEND
+ 
+ if BACKEND == 'xformers':
+     import xformers.ops as xops
++    from xformers.ops import fmha
+ elif BACKEND == 'flash_attn':
+     import flash_attn
+ elif BACKEND == 'sdpa':
+@@ -110,7 +111,7 @@ def scaled_dot_product_attention(*args, **kwargs):
+             q, k, v = qkv.unbind(dim=2)
+         elif num_all_args == 2:
+             k, v = kv.unbind(dim=2)
+-        out = xops.memory_efficient_attention(q, k, v)
++        out = xops.memory_efficient_attention(q, k, v, op=(fmha.cutlass.FwOp, fmha.cutlass.BwOp))
+     elif BACKEND == 'flash_attn':
+         if num_all_args == 1:
+             out = flash_attn.flash_attn_qkvpacked_func(qkv)
+diff --git a/trellis/modules/sparse/attention/full_attn.py b/trellis/modules/sparse/attention/full_attn.py
+index e9e27ae..ef0c47b 100644
+--- a/trellis/modules/sparse/attention/full_attn.py
++++ b/trellis/modules/sparse/attention/full_attn.py
+@@ -5,6 +5,7 @@ from .. import DEBUG, ATTN
+ 
+ if ATTN == 'xformers':
+     import xformers.ops as xops
++    from xformers.ops import fmha
+ elif ATTN == 'flash_attn':
+     import flash_attn
+ else:
+@@ -195,7 +196,7 @@ def sparse_scaled_dot_product_attention(*args, **kwargs):
+         k = k.unsqueeze(0)
+         v = v.unsqueeze(0)
+         mask = xops.fmha.BlockDiagonalMask.from_seqlens(q_seqlen, kv_seqlen)
+-        out = xops.memory_efficient_attention(q, k, v, mask)[0]
++        out = xops.memory_efficient_attention(q, k, v, mask, op=(fmha.cutlass.FwOp, fmha.cutlass.BwOp))[0]
+     elif ATTN == 'flash_attn':
+         cu_seqlens_q = torch.cat([torch.tensor([0]), torch.cumsum(torch.tensor(q_seqlen), dim=0)]).int().to(device)
+         if num_all_args in [2, 3]:
+diff --git a/trellis/modules/sparse/attention/serialized_attn.py b/trellis/modules/sparse/attention/serialized_attn.py
+index 5950b75..bc1d51d 100644
+--- a/trellis/modules/sparse/attention/serialized_attn.py
++++ b/trellis/modules/sparse/attention/serialized_attn.py
+@@ -7,6 +7,7 @@ from .. import DEBUG, ATTN
+ 
+ if ATTN == 'xformers':
+     import xformers.ops as xops
++    from xformers.ops import fmha
+ elif ATTN == 'flash_attn':
+     import flash_attn
+ else:
+@@ -165,7 +166,7 @@ def sparse_serialized_scaled_dot_product_self_attention(
+         qkv_feats = qkv_feats.reshape(B, N, 3, H, C)
+         if ATTN == 'xformers':
+             q, k, v = qkv_feats.unbind(dim=2)                       # [B, N, H, C]
+-            out = xops.memory_efficient_attention(q, k, v)          # [B, N, H, C]
++            out = xops.memory_efficient_attention(q, k, v, op=(fmha.cutlass.FwOp, fmha.cutlass.BwOp))          # [B, N, H, C]
+         elif ATTN == 'flash_attn':
+             out = flash_attn.flash_attn_qkvpacked_func(qkv_feats)   # [B, N, H, C]
+         else:
+@@ -178,7 +179,7 @@ def sparse_serialized_scaled_dot_product_self_attention(
+             k = k.unsqueeze(0)                                      # [1, M, H, C]
+             v = v.unsqueeze(0)                                      # [1, M, H, C]
+             mask = xops.fmha.BlockDiagonalMask.from_seqlens(seq_lens)
+-            out = xops.memory_efficient_attention(q, k, v, mask)[0] # [M, H, C]
++            out = xops.memory_efficient_attention(q, k, v, mask, op=(fmha.cutlass.FwOp, fmha.cutlass.BwOp))[0] # [M, H, C]
+         elif ATTN == 'flash_attn':
+             cu_seqlens = torch.cat([torch.tensor([0]), torch.cumsum(torch.tensor(seq_lens), dim=0)], dim=0) \
+                         .to(qkv.device).int()
+diff --git a/trellis/modules/sparse/attention/windowed_attn.py b/trellis/modules/sparse/attention/windowed_attn.py
+index cd642c5..05c4e9b 100644
+--- a/trellis/modules/sparse/attention/windowed_attn.py
++++ b/trellis/modules/sparse/attention/windowed_attn.py
+@@ -6,6 +6,7 @@ from .. import DEBUG, ATTN
+ 
+ if ATTN == 'xformers':
+     import xformers.ops as xops
++    from xformers.ops import fmha
+ elif ATTN == 'flash_attn':
+     import flash_attn
+ else:
+@@ -107,7 +108,7 @@ def sparse_windowed_scaled_dot_product_self_attention(
+         qkv_feats = qkv_feats.reshape(B, N, 3, H, C)
+         if ATTN == 'xformers':
+             q, k, v = qkv_feats.unbind(dim=2)                       # [B, N, H, C]
+-            out = xops.memory_efficient_attention(q, k, v)          # [B, N, H, C]
++            out = xops.memory_efficient_attention(q, k, v, op=(fmha.cutlass.FwOp, fmha.cutlass.BwOp))          # [B, N, H, C]
+         elif ATTN == 'flash_attn':
+             out = flash_attn.flash_attn_qkvpacked_func(qkv_feats)   # [B, N, H, C]
+         else:
+@@ -120,7 +121,7 @@ def sparse_windowed_scaled_dot_product_self_attention(
+             k = k.unsqueeze(0)                                      # [1, M, H, C]
+             v = v.unsqueeze(0)                                      # [1, M, H, C]
+             mask = xops.fmha.BlockDiagonalMask.from_seqlens(seq_lens)
+-            out = xops.memory_efficient_attention(q, k, v, mask)[0] # [M, H, C]
++            out = xops.memory_efficient_attention(q, k, v, mask, op=(fmha.cutlass.FwOp, fmha.cutlass.BwOp))[0] # [M, H, C]
+         elif ATTN == 'flash_attn':
+             cu_seqlens = torch.cat([torch.tensor([0]), torch.cumsum(torch.tensor(seq_lens), dim=0)], dim=0) \
+                         .to(qkv.device).int()
+diff --git a/trellis/utils/postprocessing_utils.py b/trellis/utils/postprocessing_utils.py
+index 4edc4a6..5978625 100644
+--- a/trellis/utils/postprocessing_utils.py
++++ b/trellis/utils/postprocessing_utils.py
+@@ -7,8 +7,14 @@ from tqdm import tqdm
+ import trimesh
+ import trimesh.visual
+ import xatlas
+-import pyvista as pv
+-from pymeshfix import _meshfix
++try:
++    import pyvista as pv
++except ImportError:
++    pv = None
++try:
++    from pymeshfix import _meshfix
++except ImportError:
++    _meshfix = None
+ import igraph
+ import cv2
+ from PIL import Image
+@@ -230,15 +236,17 @@ def postprocess_mesh(
+         tqdm.write(f'Before postprocess: {vertices.shape[0]} vertices, {faces.shape[0]} faces')
+ 
+     # Simplify
+-    if simplify and simplify_ratio > 0:
++    if simplify and simplify_ratio > 0 and pv is not None:
+         mesh = pv.PolyData(vertices, np.concatenate([np.full((faces.shape[0], 1), 3), faces], axis=1))
+         mesh = mesh.decimate(simplify_ratio, progress_bar=verbose)
+         vertices, faces = mesh.points, mesh.faces.reshape(-1, 4)[:, 1:]
+         if verbose:
+             tqdm.write(f'After decimate: {vertices.shape[0]} vertices, {faces.shape[0]} faces')
++    elif simplify and simplify_ratio > 0 and verbose:
++        tqdm.write('Skipping mesh decimation because pyvista is not installed')
+ 
+     # Remove invisible faces
+-    if fill_holes:
++    if fill_holes and _meshfix is not None:
+         vertices, faces = torch.tensor(vertices).cuda(), torch.tensor(faces.astype(np.int32)).cuda()
+         vertices, faces = _fill_holes(
+             vertices, faces,
+@@ -252,6 +260,8 @@ def postprocess_mesh(
+         vertices, faces = vertices.cpu().numpy(), faces.cpu().numpy()
+         if verbose:
+             tqdm.write(f'After remove invisible faces: {vertices.shape[0]} vertices, {faces.shape[0]} faces')
++    elif fill_holes and verbose:
++        tqdm.write('Skipping mesh hole filling because pymeshfix is not installed')
+ 
+     return vertices, faces
+ 

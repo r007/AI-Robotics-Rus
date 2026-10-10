@@ -1,0 +1,23 @@
+task: ATEC2026-TaskB
+robot: Unitree-B2-Piper
+policy_observations:
+  - proprioception
+  - lidar
+  - head_rgb
+  - head_depth
+  - ee_rgb
+  - ee_depth
+debug_only:
+  - privileged_object_pose
+  - privileged_robot_pose
+  - object_id
+  - object_list
+  - third_person_environment_camera
+forbidden_policy_dependencies:
+  - simulator_ground_truth
+  - random_seed_object_lookup
+  - evaluator_internal_state
+notes:
+  - Use the checked-out official task version to confirm exact key names and shapes.
+  - A debug camera may be rendered for video but must not affect actions.
+  - Grasp and placement require independent physical-state verification.

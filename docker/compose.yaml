@@ -1,0 +1,9 @@
+services:
+  book:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: embodied-ai-book:local
+    ports:
+      - "8080:80"
+    restart: unless-stopped

@@ -1,0 +1,10 @@
+# Markdown style for the book pages. Line length and inline HTML are allowed:
+# the books use long Russian sentences, tables and the occasional <br> in tables.
+default: true
+MD013: false
+MD024: false
+MD028: false
+MD033: false
+MD036: false
+MD041: false
+MD046: false

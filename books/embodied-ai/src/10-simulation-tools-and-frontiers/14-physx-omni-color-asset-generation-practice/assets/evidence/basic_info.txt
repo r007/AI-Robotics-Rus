@@ -1,0 +1,34 @@
+Name: Rubik's Cube
+Category: Puzzle Toy
+Dimension: 5.7*5.7*5.7
+Parts: 
+l_0: Magic Cube (1)| 3| ABS Plastic| 1.05 g/cm^3| 2.3| 0.35| Magic Cube (1).
+l_1: Magic Cube (2)| 3| ABS Plastic| 1.05 g/cm^3| 2.3| 0.35| Magic Cube (2).
+l_2: Magic Cube (3)| 3| ABS Plastic| 1.05 g/cm^3| 2.3| 0.35| Magic Cube (3).
+l_3: Magic Cube (4)| 3| ABS Plastic| 1.05 g/cm^3| 2.3| 0.35| Magic Cube (4).
+l_4: Magic Cube (5)| 3| ABS Plastic| 1.05 g/cm^3| 2.3| 0.35| Magic Cube (5).
+l_5: Magic Cube (6)| 3| ABS Plastic| 1.05 g/cm^3| 2.3| 0.35| Magic Cube (6).
+l_6: Magic Cube (7)| 3| ABS Plastic| 1.05 g/cm^3| 2.3| 0.35| Magic Cube (7).
+l_7: Magic Cube (8)| 3| ABS Plastic| 1.05 g/cm^3| 2.3| 0.35| Magic Cube (8).
+l_8: Magic Cube (9)| 3| ABS Plastic| 1.05 g/cm^3| 2.3| 0.35| Magic Cube (9).
+l_9: Magic Cube (10)| 3| ABS Plastic| 1.05 g/cm^3| 2.3| 0.35| Magic Cube (10).
+l_10: Magic Cube (11)| 3| ABS Plastic| 1.05 g/cm^3| 2.3| 0.35| Magic Cube (11).
+l_11: Magic Cube (12)| 3| ABS Plastic| 1.05 g/cm^3| 2.3| 0.35| Magic Cube (12).
+l_12: Magic Cube (13)| 3| ABS Plastic| 1.05 g/cm^3| 2.3| 0.35| Magic Cube (13).
+l_13: Magic Cube (14)| 3| ABS Plastic| 1.05 g/cm^3| 2.3| 0.35| Magic Cube (14).
+l_14: Magic Cube (15)| 3| ABS Plastic| 1.05 g/cm^3| 2.3| 0.35| Magic Cube (15).
+l_15: Magic Cube (16)| 3| ABS Plastic| 1.05 g/cm^3| 2.3| 0.35| Magic Cube (16).
+l_16: Magic Cube (17)| 3| ABS Plastic| 1.05 g/cm^3| 2.3| 0.35| Magic Cube (17).
+l_17: Magic Cube (18)| 3| ABS Plastic| 1.05 g/cm^3| 2.3| 0.35| Magic Cube (18).
+l_18: Magic Cube (19)| 3| ABS Plastic| 1.05 g/cm^3| 2.3| 0.35| Magic Cube (19).
+l_19: Magic Cube (20)| 3| ABS Plastic| 1.05 g/cm^3| 2.3| 0.35| Magic Cube (20).
+l_20: Magic Cube (21)| 3| ABS Plastic| 1.05 g/cm^3| 2.3| 0.35| Magic Cube (21).
+l_21: Magic Cube (22)| 3| ABS Plastic| 1.05 g/cm^3| 2.3| 0.35| Magic Cube (22).
+l_22: Magic Cube (23)| 3| ABS Plastic| 1.05 g/cm^3| 2.3| 0.35| Magic Cube (23).
+l_23: Magic Cube (24)| 3| ABS Plastic| 1.05 g/cm^3| 2.3| 0.35| Magic Cube (24).
+l_24: Magic Cube (25)| 3| ABS Plastic| 1.05 g/cm^3| 2.3| 0.35| Magic Cube (25).
+l_25: Magic Cube (26)| 3| ABS Plastic| 1.05 g/cm^3| 2.3| 0.35| Magic Cube (26).
+Group_info: 
+group_0: ['l_0', 'l_4', 'l_12', 'l_13', 'l_15', 'l_19', 'l_20', 'l_25']; Type: E; Param: N/A
+group_1: ['l_5', 'l_1', 'l_2', 'l_3', 'l_6', 'l_7', 'l_8', 'l_9', 'l_10']; Type: C relative to group_0; Param: direction: [1, 0, 0], axis position (in voxel grid): [0, 32.0, 32.0], revolute range (degree): [-180, 180]
+group_2: ['l_18', 'l_17', 'l_16', 'l_11', 'l_14', 'l_21', 'l_22', 'l_23', 'l_24']; Type: C relative to group_0; Param: direction: [1, 0, 0], axis position (in voxel grid): [0, 32.0, 32.0], revolute range (degree): [-180, 180]

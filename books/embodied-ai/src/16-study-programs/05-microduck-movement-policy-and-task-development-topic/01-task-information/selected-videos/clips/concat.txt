@@ -1,0 +1,8 @@
+# Порядок склейки клипов для ffmpeg (concat demuxer); пути относительны к этому файлу.
+file '00_title.mp4'
+file '01_obstacle_walk.mp4'
+file '02_physical_perturbation.mp4'
+file '03_ball_balance.mp4'
+file '04_swing_contact.mp4'
+file '05_ladder_contact.mp4'
+file '06_end_card.mp4'

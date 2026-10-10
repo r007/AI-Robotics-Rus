@@ -1,0 +1,7 @@
+error: unexpected argument '--no-sync' found
+
+  tip: a similar argument exists: '--no-system-certs'
+
+Usage: uv.exe [OPTIONS] <COMMAND>
+
+For more information, try '--help'.

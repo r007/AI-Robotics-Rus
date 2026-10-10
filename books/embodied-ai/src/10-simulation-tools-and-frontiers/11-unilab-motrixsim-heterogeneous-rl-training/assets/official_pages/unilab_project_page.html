@@ -1,0 +1,1079 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UniLab — A Heterogeneous Training Framework for Embodied Reinforcement Learning</title>
+  <meta name="description" content="UniLab decouples CPU simulation, GPU learning, and runtime buffering to deliver 3–10× end-to-end speedups for embodied RL across NVIDIA, AMD, Intel, and Apple Silicon.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="UniLab — Heterogeneous Training Framework for Embodied RL">
+  <meta property="og:description" content="CPU simulation · GPU learning · runtime buffering. Cross-platform, multi-algorithm, end-to-end efficient.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="/styles/main.css">
+<!-- motrix-prefetch:begin -->
+<script>window.__motrixPrefetch=["./examples/static/index-BKQK3CPB.js", "./examples/static/motrixsim_web_bg-sPmxagIr.wasm", "./examples/static/ort-wasm-simd-threaded.jsep-B7eiw-bo.mjs", "./examples/static/ort-wasm-simd-threaded.jsep-C887KxcQ.wasm", "./examples/static/render-app-qy6Lfqvl.js", "./examples/static/run-CFw4Yu1E.js", "./examples/static/unilab_runner-CHDclw03.js"];</script>
+<!-- motrix-prefetch:end -->
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="#top" aria-label="UniLab home">
+      <span class="nav__logo" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="6" width="10" height="10" rx="1.5"/>
+          <rect x="18" y="6" width="10" height="10" rx="1.5"/>
+          <rect x="11" y="18" width="10" height="8" rx="1.5"/>
+        </svg>
+      </span>
+      <span class="nav__name">UniLab</span>
+    </a>
+    <nav class="nav__links" aria-label="Sections">
+      <a href="#highlights">Highlights</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#support">Support</a>
+      <a href="#comparison">Comparison</a>
+      <a href="#demos">Demos</a>
+      <a href="#bibtex">BibTeX</a>
+      <a href="#authors">Authors</a>
+    </nav>
+    <div class="nav__cta">
+      <a class="btn btn--ghost" href="paper/" data-link="paper-html">Paper</a>
+      <a class="btn btn--ghost" href="https://arxiv.org/abs/2605.30313" data-link="arxiv">Arxiv</a>
+      <a class="btn btn--solid" href="https://github.com/unilabsim/UniLab" data-link="github">GitHub</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============================== HERO ============================== -->
+  <section class="hero" id="hero">
+    <canvas id="heroCanvas" class="hero__canvas" aria-hidden="true"></canvas>
+    <div id="heroHud" class="hero__hud" aria-hidden="true">idle</div>
+    <div class="container">
+      <p class="eyebrow">Embodied Reinforcement Learning</p>
+      <h1 class="hero__title">
+        UniLab
+        <span class="hero__title-sub">A Heterogeneous Architecture for Robot RL<br>Beyond GPU-Dominant Paradigms</span>
+      </h1>
+      <p class="hero__lede">
+        UniLab decouples <strong>CPU simulation</strong>, <strong>GPU learning</strong>, and a <strong>shared-memory runtime</strong>
+        so that simulators and learners stop waiting on each other. The result is an end-to-end pipeline that runs unchanged on
+        <strong>Apple Silicon (MPS / MLX)</strong> — a first-class target where prior training stacks force a Linux/CUDA detour —
+        plus NVIDIA, AMD, and Intel, and reaches policy targets <strong>3–10× faster</strong> than tightly-coupled GPU-centric baselines.
+      </p>
+      <div class="hero__ctas">
+        <a class="btn btn--solid btn--lg" href="https://arxiv.org/abs/2605.30313" data-link="arxiv">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
+          </svg>
+          Arxiv
+        </a>
+        <a class="btn btn--ghost btn--lg" href="https://github.com/unilabsim/UniLab" data-link="github">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+            <path d="M12 .5C5.7.5.5 5.7.5 12.1c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2 1-.3 2-.4 3-.4s2 .1 3 .4c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.5-1.5 7.8-5.8 7.8-10.9C23.5 5.7 18.3.5 12 .5z"/>
+          </svg>
+          GitHub
+        </a>
+        <a class="btn btn--ghost btn--lg" href="https://github.com/unilabsim/UniLab-doc" data-link="docs">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+          </svg>
+          Docs
+        </a>
+        <a class="btn btn--ghost btn--lg" href="paper/" data-link="paper-html">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          </svg>
+          Paper
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== TEASER ============================== -->
+  <section class="teaser">
+    <div class="container">
+      <video class="teaser__video" controls preload="metadata" playsinline
+             poster="/assets/teaser/teaser.png" aria-label="UniLab teaser video">
+        <source src="/assets/video/intro.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <!-- ============================== AT A GLANCE ============================== -->
+  <section class="glance" aria-label="At a glance">
+    <div class="container">
+      <div class="metric-grid">
+        <div class="metric">
+          <div class="metric__value">3–10×</div>
+          <div class="metric__label">End-to-end speedup</div>
+        </div>
+        <div class="metric">
+          <div class="metric__value">2</div>
+          <div class="metric__label">Physics backends<br><span><strong>MotrixSim</strong> · MuJoCo</span></div>
+        </div>
+        <div class="metric">
+          <div class="metric__value">4</div>
+          <div class="metric__label">Platforms<br><span><strong>macOS</strong> · CUDA · ROCm · Intel Arc</span></div>
+        </div>
+        <div class="metric">
+          <div class="metric__value">5</div>
+          <div class="metric__label">Robot categories<br><span>arms · quadrupeds · humanoids · hands · wheeled-leg</span></div>
+        </div>
+        <div class="metric">
+          <div class="metric__value">7</div>
+          <div class="metric__label">Algorithms<br><span>PPO · APPO · SAC · TD3 · FastSAC · HORA · HIM-PPO</span></div>
+        </div>
+        <div class="metric">
+          <div class="metric__value">8</div>
+          <div class="metric__label">Task families<br><span>walk · parkour · dance · flip · skate · stairs · transport · dex-manip<br><em>14 tasks shipped</em></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== HIGHLIGHTS ============================== -->
+  <section class="section" id="highlights">
+    <div class="container">
+      <p class="section-eyebrow">Contributions</p>
+      <h2 class="section-title">What UniLab brings to embodied RL</h2>
+
+      <div class="points">
+        <div class="point">
+          <p class="point__num">01</p>
+          <h3 class="point__title">CPU sim, GPU learn — no waiting</h3>
+          <p class="point__body">
+            Independent CPU rollout workers stream transitions through a lock-free shared-memory buffer to a GPU learner.
+            Asynchronous weight sync removes the simulator–learner stall that dominates tightly-coupled pipelines.
+          </p>
+        </div>
+
+        <div class="point">
+          <p class="point__num">02</p>
+          <h3 class="point__title">macOS as a first-class target</h3>
+          <p class="point__body">
+            Train end-to-end on <strong>Apple Silicon (MPS / MLX)</strong> — no Linux box required —
+            with the same stack also running on NVIDIA (CUDA), AMD (ROCm), and Intel (Arc / XPU).
+            Match your hardware, not the framework's assumptions.
+          </p>
+        </div>
+
+        <div class="point">
+          <p class="point__num">03</p>
+          <h3 class="point__title">Broad algorithm coverage</h3>
+          <p class="point__body">
+            On-policy (PPO, APPO, HIM-PPO), off-policy (SAC, TD3, FastSAC, FlashSAC), and distillation (HORA) all
+            ride the same heterogeneous runtime — including async PPO adapted for decoupled execution.
+          </p>
+        </div>
+      </div>
+
+      <figure class="figure figure--paper" style="margin-top: var(--space-7)">
+        <img src="/assets/figures/system-architecture.png" width="1893" height="660"
+             alt="UniLab system architecture: a unified RL workflow assembly feeds CPU-side batched physics backends (MuJoCoUni / MotrixSim); a heterogeneous simulation-and-learning core (CPU workers, host IPC, GPU device learner) coordinates data, scheduling, and parameter sync; and the trained policies drive real-robot applications.">
+        <figcaption>
+          <strong>UniLab system architecture.</strong> One pipeline answers all three: CPU workers feed a host
+          shared-memory buffer that a GPU learner consumes (decoupled CPU-sim / GPU-learn), the same runtime hosts
+          PPO · APPO · FastSAC · FlashSAC, and the whole stack runs across CUDA, Apple, AMD, and Intel.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================== ARCHITECTURE ============================== -->
+  <section class="section section--alt" id="architecture">
+    <div class="container">
+      <p class="section-eyebrow">Architecture</p>
+      <h2 class="section-title">How the pipeline stays busy</h2>
+      <p class="section-lede">
+        UniLab is built around two ideas: <strong>spatial decoupling</strong> of simulation and learning across heterogeneous
+        devices, and <strong>temporal overlap</strong> of trajectory collection, gradient steps, and weight sync.
+      </p>
+
+      <div class="arch">
+        <figure class="figure figure--paper figure--narrow">
+          <img src="/assets/figures/pipeline-timeline.png" width="1990" height="940"
+               alt="One-cycle pipeline timeline showing CPU collection overlapping GPU learning in wall-clock time, with parameter synchronization near rollout boundaries.">
+          <figcaption>
+            <strong>Collection–update timing and overlap.</strong> CPU collection and GPU
+            learning overlap in wall-clock time, with parameter synchronization near rollout boundaries —
+            so the learner is not stalled behind rollout generation.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="arch__notes">
+        <div class="note">
+          <h4>Algorithm runtimes</h4>
+          <p>
+            PPO and APPO use trajectory-oriented runners. Each algorithm declares its sync requirement and
+            buffer usage; the runtime schedules accordingly.
+          </p>
+        </div>
+        <div class="note">
+          <h4>Shared-memory IPC</h4>
+          <p>
+            A single shared buffer holds rollouts and replay slices; weight sync is a lock-free publication channel.
+            No serialization, no per-step round-trip — workers and learner only meet through memory.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== SUPPORT MATRIX ============================== -->
+  <section class="section" id="support">
+    <div class="container">
+      <p class="section-eyebrow">Coverage</p>
+      <h2 class="section-title">Backends, platforms, robots, algorithms, tasks</h2>
+
+      <div class="matrix">
+        <div class="matrix__row">
+          <div class="matrix__label">Physics backends</div>
+          <div class="matrix__chips">
+            <a class="chip chip--featured" href="https://github.com/Motphys/motrixsim-docs" target="_blank" rel="noopener">MotrixSim</a>
+            <a class="chip chip--featured" href="https://arxiv.org/abs/2605.24922" target="_blank" rel="noopener">MuJoCoUni</a>
+          </div>
+        </div>
+        <div class="matrix__row">
+          <div class="matrix__label">Platforms</div>
+          <div class="matrix__chips">
+            <span class="chip chip--with-icon">
+              <img class="chip__icon" src="/assets/platform/Apple.svg" alt="">
+              Apple Silicon (MPS / MLX)
+            </span>
+            <span class="chip chip--with-icon">
+              <img class="chip__icon" src="/assets/platform/Nvidia.svg" alt="">
+              NVIDIA CUDA
+            </span>
+            <span class="chip chip--with-icon">
+              <img class="chip__icon" src="/assets/platform/AMD_ROCm.png" alt="">
+              AMD ROCm
+            </span>
+            <span class="chip chip--with-icon">
+              <img class="chip__icon" src="/assets/platform/Intel_Arc.svg" alt="">
+              Intel Arc / XPU
+            </span>
+          </div>
+        </div>
+        <div class="matrix__row">
+          <div class="matrix__label">Robots</div>
+          <div class="matrix__chips">
+            <span class="chip">Quadrupeds (Go1 / Go2)</span>
+            <span class="chip">Humanoids (G1)</span>
+            <span class="chip">Dexterous hands (Allegro / Sharpa)</span>
+            <span class="chip">Wheeled-leg (Go2w)</span>
+          </div>
+        </div>
+        <div class="matrix__row">
+          <div class="matrix__label">Algorithms</div>
+          <div class="matrix__chips">
+            <span class="chip">PPO</span>
+            <span class="chip">APPO</span>
+            <span class="chip">SAC</span>
+            <span class="chip">TD3</span>
+            <span class="chip">FlashSAC</span>
+            <span class="chip">HORA</span>
+            <span class="chip">HIM-PPO</span>
+          </div>
+        </div>
+        <div class="matrix__row">
+          <div class="matrix__label">Task families</div>
+          <div class="matrix__chips">
+            <span class="chip">Walking</span>
+            <span class="chip">Parkour</span>
+            <span class="chip">Dancing</span>
+            <span class="chip">Flipping</span>
+            <span class="chip">Skating</span>
+            <span class="chip">loco-manip</span>
+            <span class="chip">Dexterous manipulation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== COMPARISON ============================== -->
+  <section class="section section--alt" id="comparison">
+    <div class="container">
+      <p class="section-eyebrow">Comparison</p>
+      <h2 class="section-title">UniLab vs. GPU-centric stacks</h2>
+      <p class="section-lede">
+        UniLab is not another GPU-resident simulator. It is a heterogeneous runtime that lets the simulator and the
+        learner each run on the hardware they are best at.
+      </p>
+
+      <div class="table-wrap">
+        <table class="ctable">
+          <thead>
+            <tr>
+              <th scope="col">Framework</th>
+              <th scope="col">GPU-resident sim</th>
+              <th scope="col">Heterogeneous runtime</th>
+              <th scope="col">PPO / SAC / TD3</th>
+              <th scope="col">Hardware / backend support</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">IsaacLab</th>
+              <td><span class="mark yes" title="Yes">●</span></td>
+              <td><span class="mark no" title="No">○</span></td>
+              <td><span class="mark partial" title="Partial">◐</span></td>
+              <td>
+                <span class="platform-icons" aria-label="NVIDIA CUDA">
+                  <span class="platform-icon" title="NVIDIA CUDA">
+                    <img src="/assets/platform/Nvidia.svg" alt="">
+                  </span>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">IsaacGym</th>
+              <td><span class="mark yes">●</span></td>
+              <td><span class="mark no">○</span></td>
+              <td><span class="mark partial">◐</span></td>
+              <td>
+                <span class="platform-icons" aria-label="NVIDIA CUDA">
+                  <span class="platform-icon" title="NVIDIA CUDA">
+                    <img src="/assets/platform/Nvidia.svg" alt="">
+                  </span>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">mjlab</th>
+              <td><span class="mark yes">●</span></td>
+              <td><span class="mark no">○</span></td>
+              <td><span class="mark partial">◐</span></td>
+              <td>
+                <span class="platform-icons" aria-label="Apple Silicon evaluation only; NVIDIA CUDA">
+                  <span class="platform-icon platform-icon--partial" title="Apple Silicon (evaluation only)">
+                    <img src="/assets/platform/Apple.svg" alt="">
+                  </span>
+                  <span class="platform-icon" title="NVIDIA CUDA">
+                    <img src="/assets/platform/Nvidia.svg" alt="">
+                  </span>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Genesis</th>
+              <td><span class="mark yes">●</span></td>
+              <td><span class="mark no">○</span></td>
+              <td><span class="mark partial">◐</span></td>
+              <td>
+                <span class="platform-icons" aria-label="Apple Silicon, NVIDIA CUDA, AMD GPU, and Intel GPU">
+                  <span class="platform-icon" title="Apple Silicon">
+                    <img src="/assets/platform/Apple.svg" alt="">
+                  </span>
+                  <span class="platform-icon" title="NVIDIA CUDA">
+                    <img src="/assets/platform/Nvidia.svg" alt="">
+                  </span>
+                  <span class="platform-icon" title="AMD GPU">
+                    <img src="/assets/platform/AMD_ROCm.png" alt="">
+                  </span>
+                  <span class="platform-icon" title="Intel GPU">
+                    <img src="/assets/platform/Intel_Arc.svg" alt="">
+                  </span>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">IsaacSim</th>
+              <td><span class="mark yes">●</span></td>
+              <td><span class="mark no">○</span></td>
+              <td><span class="mark partial">◐</span></td>
+              <td>
+                <span class="platform-icons" aria-label="NVIDIA RTX">
+                  <span class="platform-icon" title="NVIDIA RTX">
+                    <img src="/assets/platform/Nvidia.svg" alt="">
+                  </span>
+                </span>
+              </td>
+            </tr>
+            <tr class="ctable__highlight">
+              <th scope="row">UniLab</th>
+              <td><span class="mark no">○</span></td>
+              <td><span class="mark yes">●</span></td>
+              <td><span class="mark yes">●</span></td>
+              <td>
+                <span class="platform-icons" aria-label="Apple Silicon, NVIDIA CUDA, AMD ROCm, and Intel XPU">
+                  <span class="platform-icon" title="Apple Silicon">
+                    <img src="/assets/platform/Apple.svg" alt="">
+                  </span>
+                  <span class="platform-icon" title="NVIDIA CUDA">
+                    <img src="/assets/platform/Nvidia.svg" alt="">
+                  </span>
+                  <span class="platform-icon" title="AMD ROCm">
+                    <img src="/assets/platform/AMD_ROCm.png" alt="">
+                  </span>
+                  <span class="platform-icon" title="Intel XPU">
+                    <img src="/assets/platform/Intel_Arc.svg" alt="">
+                  </span>
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="table-caption">
+          ● supported &nbsp; ◐ partial &nbsp; ○ not supported. Platform icons denote supported hardware/backend
+          targets; the amber outline indicates evaluation-only or limited support.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== RESULTS ============================== -->
+  <section class="section" id="results">
+    <div class="container">
+      <p class="section-eyebrow">Results</p>
+      <h2 class="section-title">End-to-end efficiency, on matched hardware</h2>
+
+      <div class="results-evidence">
+        <figure class="figure figure--paper figure--headline">
+          <img src="/assets/figures/training-efficiency.png" width="1975" height="378"
+               alt="End-to-end training efficiency on representative robot control tasks, comparing UniLab against GPU-centric baselines on matched hardware.">
+          <figcaption>
+            <strong>End-to-end training efficiency.</strong> The headline result on representative robot-control
+            tasks — <strong>3–10× wall-clock speedup</strong> on the same single-GPU / single-CPU workstation
+            (3.3× on G1 Flip, 8.4× on G1 Walk Flat, 11.0× on G1 Motion Tracking).
+          </figcaption>
+        </figure>
+
+        <figure class="figure figure--paper">
+          <img src="/assets/figures/cpu-throughput.png" width="2000" height="545"
+               alt="CPU simulation throughput across representative robot-control scenes for MuJoCoUni and MotrixSim backends.">
+          <figcaption>
+            <strong>Can CPU simulation keep up?</strong> Batched CPU rigid-body simulation (MuJoCoUni / MotrixSim)
+            sustains the simulator-side throughput the heterogeneous split needs — CPU physics is not the
+            dominant bottleneck for these workloads.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== SIM → REAL ============================== -->
+  <section class="section" id="to-real">
+    <div class="container">
+      <p class="section-eyebrow">From sim to real</p>
+      <h2 class="section-title">Policies that leave the simulator</h2>
+      <p class="section-lede">
+        The same heterogeneous training stack produces policies that transfer to hardware. Below is an
+        overview of UniLab's to-real experiments across six real-robot tasks — and right after it, you can
+        drive the trained policies yourself in the browser.
+      </p>
+      <figure class="figure figure--paper" style="margin-top: var(--space-6)">
+        <video class="teaser__video" controls preload="metadata" playsinline
+               aria-label="UniLab to-real experiments across six real-robot tasks">
+          <source src="/assets/video/to_real.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption>
+          <strong>To-real overview.</strong> Six real-robot tasks trained in UniLab and deployed to hardware,
+          complementing the end-to-end simulation results with deployment-side coverage.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================== DEMOS / TASK GALLERY ============================== -->
+  <section class="section section--alt" id="demos">
+    <div class="container">
+      <p class="section-eyebrow">Task Gallery</p>
+      <h2 class="section-title">Try the policies in your browser</h2>
+      <p class="section-lede">
+        Each card opens a
+        <a class="inline-link" href="https://github.com/Motphys/motrixsim-docs" target="_blank" rel="noopener"><strong>MotrixSim</strong></a>
+        demo for a UniLab-trained policy, with compact notes on training time and behavior.
+      </p>
+
+      <!-- ---------- Quadruped ---------- -->
+      <h3 class="subhead">Locomotion — Quadruped</h3>
+      <div class="task-grid">
+
+        <article class="task" data-task-id="go1-joystick-flat">
+          <header class="task__head">
+            <h4 class="task__title">Go1 — Joystick (flat)</h4>
+            <div class="task__meta">
+            <span class="meta-chip">Quadruped · Go1</span>
+            <span class="meta-chip">PPO (torch)</span>
+          </div>
+          </header>
+          <div class="task__sims">
+            <figure class="sim">
+              <div class="iframe-slot ratio-16x9" data-iframe-id="sim-motrix-go1-joystick-flat" data-motrix-key="unilab/go1_joystick_flat_ppo" data-motrix-title="MotrixSim — Go1 joystick (flat) · PPO"><img class="slot-preview" src="/assets/previews/go1_joystick_flat_ppo.jpg" alt="MotrixSim — Go1 joystick (flat) · PPO preview" loading="lazy" decoding="async"/><button class="slot-play" type="button" aria-label="Play MotrixSim — Go1 joystick (flat) · PPO"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button><span class="slot-spinner" aria-hidden="true"></span></div>
+            </figure>
+          </div>
+        </article>
+
+        <article class="task" data-task-id="go2-joystick-flat">
+          <header class="task__head">
+            <h4 class="task__title">Go2 — Joystick (flat)</h4>
+            <div class="task__meta">
+            <span class="meta-chip">Quadruped · Go2</span>
+            <span class="meta-chip">PPO (torch)</span>
+          </div>
+          </header>
+          <div class="task__sims">
+            <figure class="sim">
+              <div class="iframe-slot ratio-16x9" data-iframe-id="sim-motrix-go2-joystick-flat" data-motrix-key="unilab/go2_joystick_flat" data-motrix-title="MotrixSim — Go2 joystick (flat)"><img class="slot-preview" src="/assets/previews/go2_joystick_flat.jpg" alt="MotrixSim — Go2 joystick (flat) preview" loading="lazy" decoding="async"/><button class="slot-play" type="button" aria-label="Play MotrixSim — Go2 joystick (flat)"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button><span class="slot-spinner" aria-hidden="true"></span></div>
+            </figure>
+          </div>
+        </article>
+
+        <article class="task" data-task-id="go2-handstand">
+          <header class="task__head">
+            <h4 class="task__title">Go2 — Handstand</h4>
+            <div class="task__meta">
+            <span class="meta-chip">Quadruped · Go2</span>
+            <span class="meta-chip">PPO (torch)</span>
+          </div>
+          </header>
+          <div class="task__sims">
+            <figure class="sim">
+              <div class="iframe-slot ratio-16x9" data-iframe-id="sim-motrix-go2-handstand" data-motrix-key="unilab/go2_handstand" data-motrix-title="MotrixSim — Go2 handstand"><img class="slot-preview" src="/assets/previews/go2_handstand.jpg" alt="MotrixSim — Go2 handstand preview" loading="lazy" decoding="async"/><button class="slot-play" type="button" aria-label="Play MotrixSim — Go2 handstand"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button><span class="slot-spinner" aria-hidden="true"></span></div>
+            </figure>
+          </div>
+        </article>
+
+        <article class="task" data-task-id="go2-joystick-rough">
+          <header class="task__head">
+            <h4 class="task__title">Go2 — Joystick (rough)</h4>
+            <div class="task__meta">
+            <span class="meta-chip">Quadruped · Go2</span>
+            <span class="meta-chip">PPO (torch)</span>
+          </div>
+          </header>
+          <div class="task__sims">
+            <figure class="sim">
+              <div class="iframe-slot ratio-16x9" data-iframe-id="sim-motrix-go2-joystick-rough" data-motrix-key="unilab/go2_joystick_rough" data-motrix-title="MotrixSim — Go2 joystick (rough terrain)"><img class="slot-preview" src="/assets/previews/go2_joystick_rough.jpg" alt="MotrixSim — Go2 joystick (rough terrain) preview" loading="lazy" decoding="async"/><button class="slot-play" type="button" aria-label="Play MotrixSim — Go2 joystick (rough terrain)"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button><span class="slot-spinner" aria-hidden="true"></span></div>
+            </figure>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ---------- Wheeled-leg ---------- -->
+      <h3 class="subhead">Locomotion — Wheeled-Leg</h3>
+      <div class="task-grid">
+
+        <article class="task" data-task-id="go2w-joystick-rough-tiles">
+          <header class="task__head">
+            <h4 class="task__title">Go2w — Joystick rough tiles</h4>
+            <div class="task__meta">
+            <span class="meta-chip">Wheeled-leg · Go2w</span>
+            <span class="meta-chip">PPO (torch)</span>
+          </div>
+          </header>
+          <div class="task__sims">
+            <figure class="sim">
+              <div class="iframe-slot ratio-16x9" data-iframe-id="sim-motrix-go2w-rough-tiles" data-motrix-key="unilab/go2w_rough_tiles" data-motrix-title="MotrixSim — Go2W tiles (rough)"><img class="slot-preview" src="/assets/previews/go2w_rough_tiles.jpg" alt="MotrixSim — Go2W tiles (rough) preview" loading="lazy" decoding="async"/><button class="slot-play" type="button" aria-label="Play MotrixSim — Go2W tiles (rough)"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button><span class="slot-spinner" aria-hidden="true"></span></div>
+            </figure>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ---------- Humanoid walking ---------- -->
+      <h3 class="subhead">Humanoid — Walking</h3>
+      <div class="task-grid">
+
+        <article class="task" data-task-id="g1-walk-flat-sac">
+          <header class="task__head">
+            <h4 class="task__title">G1 — Walk (flat) · SAC</h4>
+            <div class="task__meta">
+            <span class="meta-chip">Humanoid · G1</span>
+            <span class="meta-chip">SAC (torch)</span>
+          </div>
+          </header>
+          <div class="task__sims">
+            <figure class="sim">
+              <div class="iframe-slot ratio-16x9" data-iframe-id="sim-motrix-g1-walk-flat-sac" data-motrix-key="unilab/g1_walk_flat_sac" data-motrix-title="MotrixSim — G1 walk (flat) · SAC"><img class="slot-preview" src="/assets/previews/g1_walk_flat_sac.jpg" alt="MotrixSim — G1 walk (flat) · SAC preview" loading="lazy" decoding="async"/><button class="slot-play" type="button" aria-label="Play MotrixSim — G1 walk (flat) · SAC"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button><span class="slot-spinner" aria-hidden="true"></span></div>
+            </figure>
+          </div>
+        </article>
+
+        <article class="task" data-task-id="g1-walk-rough">
+          <header class="task__head">
+            <h4 class="task__title">G1 — Walk (rough)</h4>
+            <div class="task__meta">
+            <span class="meta-chip">Humanoid · G1</span>
+            <span class="meta-chip">SAC (torch)</span>
+          </div>
+          </header>
+          <div class="task__sims">
+            <figure class="sim">
+              <div class="iframe-slot ratio-16x9" data-iframe-id="sim-motrix-g1-walk-rough" data-motrix-key="unilab/g1_walk_rough" data-motrix-title="MotrixSim — G1 walk (rough)"><img class="slot-preview" src="/assets/previews/g1_walk_rough.jpg" alt="MotrixSim — G1 walk (rough) preview" loading="lazy" decoding="async"/><button class="slot-play" type="button" aria-label="Play MotrixSim — G1 walk (rough)"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button><span class="slot-spinner" aria-hidden="true"></span></div>
+            </figure>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ---------- Humanoid skills ---------- -->
+      <h3 class="subhead">Humanoid — Whole-Body Skills</h3>
+      <div class="task-grid">
+
+        <article class="task" data-task-id="g1-sac-wbt-dance">
+          <header class="task__head">
+            <h4 class="task__title">G1 — Dance (SAC WBT)</h4>
+            <div class="task__meta">
+            <span class="meta-chip">Humanoid · G1</span>
+            <span class="meta-chip">SAC (torch)</span>
+          </div>
+          </header>
+          <div class="task__sims">
+            <figure class="sim">
+              <div class="iframe-slot ratio-16x9" data-iframe-id="sim-motrix-g1-sac-wbt-dance" data-motrix-key="unilab/g1_sac_wbt_dance" data-motrix-title="MotrixSim — G1 dance (SAC WBT)"><img class="slot-preview" src="/assets/previews/g1_sac_wbt_dance.jpg" alt="MotrixSim — G1 dance (SAC WBT) preview" loading="lazy" decoding="async"/><button class="slot-play" type="button" aria-label="Play MotrixSim — G1 dance (SAC WBT)"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button><span class="slot-spinner" aria-hidden="true"></span></div>
+            </figure>
+          </div>
+        </article>
+
+        <article class="task" data-task-id="g1-motion-tracking-dance">
+          <header class="task__head">
+            <h4 class="task__title">G1 — Dance (motion tracking)</h4>
+            <div class="task__meta">
+            <span class="meta-chip">Humanoid · G1</span>
+            <span class="meta-chip">PPO (torch)</span>
+          </div>
+          </header>
+          <div class="task__sims">
+            <figure class="sim">
+              <div class="iframe-slot ratio-16x9" data-iframe-id="sim-motrix-g1-motion-tracking-dance" data-motrix-key="unilab/g1_motion_tracking_dance" data-motrix-title="MotrixSim — G1 dance (motion tracking)"><img class="slot-preview" src="/assets/previews/g1_motion_tracking_dance.jpg" alt="MotrixSim — G1 dance (motion tracking) preview" loading="lazy" decoding="async"/><button class="slot-play" type="button" aria-label="Play MotrixSim — G1 dance (motion tracking)"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button><span class="slot-spinner" aria-hidden="true"></span></div>
+            </figure>
+          </div>
+        </article>
+
+        <article class="task" data-task-id="g1-motion-tracking-shuttle">
+          <header class="task__head">
+            <h4 class="task__title">G1 — Shuttle run (motion tracking)</h4>
+            <div class="task__meta">
+            <span class="meta-chip">Humanoid · G1</span>
+            <span class="meta-chip">PPO (torch)</span>
+          </div>
+          </header>
+          <div class="task__sims">
+            <figure class="sim">
+              <div class="iframe-slot ratio-16x9" data-iframe-id="sim-motrix-g1-motion-tracking-shuttle" data-motrix-key="unilab/g1_motion_tracking_shuttle" data-motrix-title="MotrixSim — G1 shuttle run (motion tracking)"><img class="slot-preview" src="/assets/previews/g1_motion_tracking_shuttle.jpg" alt="MotrixSim — G1 shuttle run (motion tracking) preview" loading="lazy" decoding="async"/><button class="slot-play" type="button" aria-label="Play MotrixSim — G1 shuttle run (motion tracking)"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button><span class="slot-spinner" aria-hidden="true"></span></div>
+            </figure>
+          </div>
+        </article>
+
+        <article class="task" data-task-id="g1-box-tracking">
+          <header class="task__head">
+            <h4 class="task__title">G1 — Box tracking</h4>
+            <div class="task__meta">
+            <span class="meta-chip">Humanoid · G1</span>
+            <span class="meta-chip">Motion tracking</span>
+            <span class="meta-chip">Object: large box</span>
+          </div>
+          </header>
+          <div class="task__sims">
+            <figure class="sim">
+              <div class="iframe-slot ratio-16x9" data-iframe-id="sim-motrix-g1-box-tracking" data-motrix-key="unilab/g1_box_tracking" data-motrix-title="MotrixSim — G1 box tracking"><img class="slot-preview" src="/assets/previews/g1_box_tracking.jpg" alt="MotrixSim — G1 box tracking preview" loading="lazy" decoding="async"/><button class="slot-play" type="button" aria-label="Play MotrixSim — G1 box tracking"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button><span class="slot-spinner" aria-hidden="true"></span></div>
+            </figure>
+          </div>
+        </article>
+
+        <article class="task" data-task-id="g1-flip-tracking-backflip">
+          <header class="task__head">
+            <h4 class="task__title">G1 — Backflip (flip tracking)</h4>
+            <div class="task__meta">
+            <span class="meta-chip">Humanoid · G1</span>
+            <span class="meta-chip">PPO (torch)</span>
+          </div>
+          </header>
+          <div class="task__sims">
+            <figure class="sim">
+              <div class="iframe-slot ratio-16x9" data-iframe-id="sim-motrix-g1-flip-tracking" data-motrix-key="unilab/g1_flip_tracking" data-motrix-title="MotrixSim — G1 backflip (flip tracking)"><img class="slot-preview" src="/assets/previews/g1_flip_tracking.jpg" alt="MotrixSim — G1 backflip (flip tracking) preview" loading="lazy" decoding="async"/><button class="slot-play" type="button" aria-label="Play MotrixSim — G1 backflip (flip tracking)"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button><span class="slot-spinner" aria-hidden="true"></span></div>
+            </figure>
+          </div>
+        </article>
+
+        <article class="task" data-task-id="g1-wall-flip-tracking">
+          <header class="task__head">
+            <h4 class="task__title">G1 — Wall back-flip (flip tracking)</h4>
+            <div class="task__meta">
+            <span class="meta-chip">Humanoid · G1</span>
+            <span class="meta-chip">PPO (torch)</span>
+          </div>
+          </header>
+          <div class="task__sims">
+            <figure class="sim">
+              <div class="iframe-slot ratio-16x9" data-iframe-id="sim-motrix-g1-wall-flip-tracking" data-motrix-key="unilab/g1_wall_flip_tracking" data-motrix-title="MotrixSim — G1 wall back-flip (flip tracking)"><img class="slot-preview" src="/assets/previews/g1_wall_flip_tracking.jpg" alt="MotrixSim — G1 wall back-flip (flip tracking) preview" loading="lazy" decoding="async"/><button class="slot-play" type="button" aria-label="Play MotrixSim — G1 wall back-flip (flip tracking)"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button><span class="slot-spinner" aria-hidden="true"></span></div>
+            </figure>
+          </div>
+        </article>
+
+        <article class="task" data-task-id="g1-climb-tracking">
+          <header class="task__head">
+            <h4 class="task__title">G1 — Climb (motion tracking)</h4>
+            <div class="task__meta">
+            <span class="meta-chip">Humanoid · G1</span>
+            <span class="meta-chip">Motion tracking</span>
+            <span class="meta-chip">PPO (torch)</span>
+          </div>
+          </header>
+          <div class="task__sims">
+            <figure class="sim">
+              <div class="iframe-slot ratio-16x9" data-iframe-id="sim-motrix-g1-climb-tracking" data-motrix-key="unilab/g1_climb_tracking" data-motrix-title="MotrixSim — G1 climb (motion tracking)"><img class="slot-preview" src="/assets/previews/g1_climb_tracking.jpg" alt="MotrixSim — G1 climb (motion tracking) preview" loading="lazy" decoding="async"/><button class="slot-play" type="button" aria-label="Play MotrixSim — G1 climb (motion tracking)"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button><span class="slot-spinner" aria-hidden="true"></span></div>
+            </figure>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ---------- Manipulation (planned) ---------- -->
+      <h3 class="subhead">Manipulation <span class="subhead__tag">planned</span></h3>
+      <div class="task-grid">
+
+        <article class="task task--planned" data-task-id="allegro-inhand">
+          <header class="task__head">
+            <h4 class="task__title">Allegro — In-hand reorient</h4>
+            <div class="task__meta">
+            <span class="meta-chip">Dexterous hand · Allegro</span>
+            <span class="meta-chip">PPO / APPO</span>
+          </div>
+          </header>
+          <div class="task__sims">
+            <figure class="sim">
+              <div class="iframe-slot ratio-16x9" data-iframe-id="sim-motrix-allegro-inhand" data-motrix-key="unilab/allegro_inhand" data-motrix-title="MotrixSim — Allegro in-hand reorientation"><img class="slot-preview" src="/assets/previews/allegro_inhand.jpg" alt="MotrixSim — Allegro in-hand reorientation preview" loading="lazy" decoding="async"/><button class="slot-play" type="button" aria-label="Play MotrixSim — Allegro in-hand reorientation"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button><span class="slot-spinner" aria-hidden="true"></span></div>
+            </figure>
+          </div>
+        </article>
+
+        <article class="task task--planned" data-task-id="sharpa-inhand">
+          <header class="task__head">
+            <h4 class="task__title">Sharpa — In-hand reorient</h4>
+            <div class="task__meta">
+            <span class="meta-chip">Dexterous hand · Sharpa</span>
+            <span class="meta-chip">PPO / APPO</span>
+          </div>
+          </header>
+          <div class="task__sims">
+            <figure class="sim">
+              <div class="iframe-slot ratio-16x9" data-iframe-id="sim-motrix-sharpa-inhand" data-motrix-key="unilab/sharpa_inhand" data-motrix-title="MotrixSim — Sharpa in-hand reorientation"><img class="slot-preview" src="/assets/previews/sharpa_inhand.jpg" alt="MotrixSim — Sharpa in-hand reorientation preview" loading="lazy" decoding="async"/><button class="slot-play" type="button" aria-label="Play MotrixSim — Sharpa in-hand reorientation"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button><span class="slot-spinner" aria-hidden="true"></span></div>
+            </figure>
+          </div>
+        </article>
+
+        <article class="task task--planned" data-task-id="loco-manip">
+          <header class="task__head">
+            <h4 class="task__title">Loco-manipulation</h4>
+            <div class="task__meta">
+            <span class="meta-chip">Quadruped · Go2+airbot</span>
+            <span class="meta-chip">PPO</span>
+          </div>
+          </header>
+          <div class="task__sims">
+            <figure class="sim">
+              <div class="iframe-slot ratio-16x9" data-iframe-id="sim-motrix-loco-manip" data-motrix-key="unilab/go2_arm_manip_loco" data-motrix-title="MotrixSim — Go2 + arm manipulation/locomotion"><img class="slot-preview" src="/assets/previews/go2_arm_manip_loco.jpg" alt="MotrixSim — Go2 + arm manipulation/locomotion preview" loading="lazy" decoding="async"/><button class="slot-play" type="button" aria-label="Play MotrixSim — Go2 + arm manipulation/locomotion"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button><span class="slot-spinner" aria-hidden="true"></span></div>
+            </figure>
+          </div>
+        </article>
+
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- ============================== CROSS-PLATFORM ============================== -->
+  <section class="section" id="platforms">
+    <div class="container">
+      <p class="section-eyebrow">Cross-Platform</p>
+      <h2 class="section-title">One pipeline, four vendors — including macOS</h2>
+      <p class="section-lede">
+        Almost every robot-RL stack today ships Linux/CUDA-first; Apple Silicon is
+        an after-thought, if it works at all. UniLab is the opposite: <strong>macOS is
+        a first-class target</strong>, running the same code on MPS and MLX as it
+        does on CUDA, ROCm, and Intel XPU.
+      </p>
+
+      <div class="table-wrap">
+        <table class="ptable">
+          <thead>
+            <tr>
+              <th>Platform</th>
+              <th>Hardware</th>
+              <th>Backend</th>
+              <th>Representative task</th>
+              <th>Trained</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span class="platform-name">
+                  <span class="platform-icon platform-icon--sm" title="Apple Silicon">
+                    <img src="/assets/platform/Apple.svg" alt="">
+                  </span>
+                  <strong>macOS · MPS / MLX</strong>
+                </span>
+              </td>
+              <td>M3 / M5 Max, MacBookNeo</td>
+              <td><strong>MotrixSim</strong> / <strong>MuJoCo</strong></td>
+              <td>Go2 joystick (PPO), G1 walk-flat (FastSAC)</td>
+              <td><span class="mark yes">●</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="platform-name">
+                  <span class="platform-icon platform-icon--sm" title="NVIDIA CUDA">
+                    <img src="/assets/platform/Nvidia.svg" alt="">
+                  </span>
+                  Linux · CUDA
+                </span>
+              </td>
+              <td>RTX 4090 + R9-9950X3D</td>
+              <td><strong>MotrixSim</strong> / <strong>MuJoCo</strong></td>
+              <td>G1 walk-flat, Go2 joystick, Allegro in-hand</td>
+              <td><span class="mark yes">●</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="platform-name">
+                  <span class="platform-icon platform-icon--sm" title="AMD ROCm">
+                    <img src="/assets/platform/AMD_ROCm.png" alt="">
+                  </span>
+                  Linux · ROCm
+                </span>
+              </td>
+              <td>AMD GPU</td>
+              <td><strong>MotrixSim</strong> / <strong>MuJoCo</strong></td>
+              <td>G1 walk-flat (ROCm AMP)</td>
+              <td><span class="mark yes">●</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="platform-name">
+                  <span class="platform-icon platform-icon--sm" title="Intel XPU">
+                    <img src="/assets/platform/Intel_Arc.svg" alt="">
+                  </span>
+                  Linux · XPU
+                </span>
+              </td>
+              <td>Intel Arc</td>
+              <td><strong>MotrixSim</strong> / <strong>MuJoCo</strong></td>
+              <td>Go2 joystick</td>
+              <td><span class="mark yes">●</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="table-caption">
+          See the paper appendix for full per-platform setup, seeds, and wall-clock numbers.
+        </p>
+      </div>
+
+      <figure class="figure figure--paper" style="margin-top: var(--space-6)">
+        <img src="/assets/figures/platform-reward.png" width="1985" height="494"
+             alt="Cross-platform training curves and final performance on representative devices including Apple M5 Max, AMD, and Intel.">
+        <figcaption>
+          <strong>Trainable across vendors, not just benchmarked.</strong> Training curves and final
+          performance on representative devices — including <strong>Apple Silicon (M5 Max)</strong>, AMD, and
+          Intel — showing practical trainability outside a single CUDA-centric setup.
+        </figcaption>
+      </figure>
+
+      <div class="logo-row" aria-label="Platform logos">
+        <div class="logo-slot platform-logo-slot" title="Apple Silicon">
+          <img src="/assets/platform/Apple.svg" alt="">
+        </div>
+        <div class="logo-slot platform-logo-slot" title="NVIDIA CUDA">
+          <img src="/assets/platform/Nvidia.svg" alt="">
+        </div>
+        <div class="logo-slot platform-logo-slot" title="AMD ROCm">
+          <img src="/assets/platform/AMD_ROCm.png" alt="">
+        </div>
+        <div class="logo-slot platform-logo-slot" title="Intel XPU">
+          <img src="/assets/platform/Intel_Arc.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== BIBTEX ============================== -->
+  <section class="section section--alt" id="bibtex">
+    <div class="container">
+      <p class="section-eyebrow">Cite</p>
+      <h2 class="section-title">BibTeX</h2>
+      <div class="bibtex-grid">
+        <section class="bibtex" aria-labelledby="bibtex-unilab">
+          <div class="bibtex__head">
+            <div class="bibtex__label">
+              <h3 class="bibtex__group-title" id="bibtex-unilab">UniLab</h3>
+              <p class="bibtex__meta">Primary paper</p>
+            </div>
+            <span class="bibtex__badge">arXiv</span>
+            <button class="bibtex__copy" type="button" data-copy-target="#bibtex-unilab-block" aria-label="Copy UniLab BibTeX">
+              <svg class="bibtex__copy-icon" aria-hidden="true"><use href="#icon-copy"></use></svg>
+              <span class="bibtex__copy-text">Copy</span>
+            </button>
+          </div>
+          <pre id="bibtex-unilab-block"><code>@article{jia2026unilab,
+  title         = {UniLab: A Heterogeneous Architecture for Robot RL Beyond GPU-Dominant Paradigms},
+  author        = {Yufei Jia and Zhanxiang Cao and Mingrui Yu and Heng Zhang and Shenyu Chen and Dixuan Jiang and Meng Li and Xiaofan Li and Yiyang Liu and Junzhe Wu and Zheng Li and XiLin Fang and Ting-Yu Tsui and Shengcheng Fu and Haoyang Li and Anqi Wang and Zifan Wang and Dongjie Zhu and Chenyu Cao and Zhenbiao Huang and Ziang Zheng and Jie Lu and Xin Ma and Zhengyang Wei and Xiang Zhao and Tianyue Zhan and Ye He and Yuxiang Chen and Yizhou Jiang and Yue Li and Haizhou Ge and Yuhang Dong and Fan Jia and Ziheng Zhang and Meng Zhang and Xiwa Deng and Zhixing Chen and Hanyang Shao and Chenxin Dong and Yixuan Li and Yizhi Chen and Bokui Chen and Kaifeng Zhang and Hanqing Cui and Yusen Qin and Ruqi Huang and Lei Han and Tiancai Wang and Xiang Li and Yue Gao and Guyue Zhou},
+  journal       = {arXiv preprint arXiv:2605.30313},
+  year          = {2026},
+  url           = {https://arxiv.org/abs/2605.30313}
+}</code></pre>
+        </section>
+
+        <section class="bibtex" aria-labelledby="bibtex-backends">
+          <div class="bibtex__head">
+            <div class="bibtex__label">
+              <h3 class="bibtex__group-title" id="bibtex-backends">Physics Backends</h3>
+              <p class="bibtex__meta">Runtime dependencies</p>
+            </div>
+            <span class="bibtex__badge">2 refs</span>
+            <button class="bibtex__copy" type="button" data-copy-target="#bibtex-backends-block" aria-label="Copy Physics Backends BibTeX">
+              <svg class="bibtex__copy-icon" aria-hidden="true"><use href="#icon-copy"></use></svg>
+              <span class="bibtex__copy-text">Copy</span>
+            </button>
+          </div>
+          <pre id="bibtex-backends-block"><code>@article{jia2026mujocouni,
+  title={MuJoCoUni: Persistent Batched Runtime Primitives for MuJoCo},
+  author={Jia, Yufei and Wu, Junzhe},
+  journal={arXiv preprint arXiv:2605.24922},
+  year={2026}
+}
+
+@software{motrixsim2026,
+  title  = {MotrixSim: A Physics Simulation Engine for Robotics and Embodied AI},
+  author = {{Motphys Team}},
+  year   = {2026},
+  url    = {https://motrixsim.readthedocs.io/},
+  note   = {Python binary package}
+}</code></pre>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== AUTHORS ============================== -->
+  <section class="section" id="authors">
+    <div class="container container--narrow">
+      <p class="section-eyebrow">Acknowledgments</p>
+      <h2 class="section-title">Joint Contributors</h2>
+      <div class="authors__text" aria-label="UniLab authors">
+        <p>
+          Yufei Jia<sup class="author-dagger">*</sup>, Zhanxiang Cao<sup class="author-dagger">*</sup>, Mingrui Yu<sup class="author-dagger">*</sup>, Heng Zhang<sup class="author-dagger">*</sup>, Shenyu Chen<sup class="author-dagger">*</sup>, Dixuan Jiang<sup class="author-dagger">*</sup>,<br>
+          Meng Li, Xiaofan Li, Yiyang Liu, Junzhe Wu, Zheng Li, XiLin Fang, Ting-Yu Tsui,<br>
+          Shengcheng Fu, Haoyang Li, Anqi Wang, Zifan Wang, Dongjie Zhu, Chenyu Cao,<br>
+          Zhenbiao Huang, Ziang Zheng, Jie Lu, Xin Ma, Zhengyang Wei, Xiang Zhao, Tianyue Zhan,<br>
+          Ye He, Yuxiang Chen, Yizhou Jiang, Yue Li, Haizhou Ge, Yuhang Dong, Fan Jia,<br>
+          Ziheng Zhang, Meng Zhang, Xiwa Deng, Zhixing Chen, Hanyang Shao, Chenxin Dong, Yixuan Li,<br>
+          Yizhi Chen, Bokui Chen, Kaifeng Zhang, Hanqing Cui, Yusen Qin, Ruqi Huang,<br>
+          Lei Han<sup class="author-dagger">†</sup>, Tiancai Wang<sup class="author-dagger">†</sup>, Xiang Li<sup class="author-dagger">†</sup>, Yue Gao<sup class="author-dagger">†</sup>, Guyue Zhou<sup class="author-dagger">†</sup>
+        </p>
+        <p class="authors__note">
+          <sup class="author-dagger">*</sup> Core contributors. <sup class="author-dagger">†</sup> Advising. Correspondence to: Yufei Jia &lt;<a href="mailto:jyf23@mails.tsinghua.edu.cn">jyf23@mails.tsinghua.edu.cn</a>&gt;.
+        </p>
+      </div>
+      <div class="authors__logos" aria-label="Contributing organizations">
+        <img src="/assets/logos/partners/tsinghua-university.png" alt="Tsinghua University" loading="lazy" decoding="async">
+        <img src="/assets/logos/partners/air.png" alt="Institute for AI Industry Research, Tsinghua University" loading="lazy" decoding="async">
+        <img src="/assets/logos/partners/sjtu.png" alt="Shanghai Jiao Tong University" loading="lazy" decoding="async">
+        <img class="logo--invert" src="/assets/logos/partners/logo/SII.svg" alt="Shanghai Innovation Institute" loading="lazy" decoding="async">
+        <img src="/assets/logos/partners/hitsz.png" alt="Harbin Institute of Technology, Shenzhen" loading="lazy" decoding="async">
+        <img src="/assets/logos/partners/bit.png" alt="Beijing Institute of Technology" loading="lazy" decoding="async">
+        <div class="logo-break"></div>
+        <img class="logo--row3" src="/assets/logos/partners/logo/NEU.png" alt="Northeastern University" loading="lazy" decoding="async">
+        <img src="/assets/logos/partners/logo/SUSTech.png" alt="Southern University of Science and Technology" loading="lazy" decoding="async">
+        <img src="/assets/logos/partners/logo/TJU.png" alt="Tongji University" loading="lazy" decoding="async">
+        <img src="/assets/logos/partners/hkust-gz.png" alt="The Hong Kong University of Science and Technology (Guangzhou)" loading="lazy" decoding="async">
+        <img src="/assets/logos/partners/nus.png" alt="National University of Singapore" loading="lazy" decoding="async">
+        <div class="logo-break"></div>
+        <img class="logo--row3" src="/assets/logos/partners/logo/HBUT.png" alt="Hubei University of Technology" loading="lazy" decoding="async">
+        <img class="logo--row3" src="/assets/logos/partners/logo/WTU.png" alt="Wuhan Textile University" loading="lazy" decoding="async">
+        <img class="logo--row3" src="/assets/logos/partners/nju.png" alt="Nanjing University" loading="lazy" decoding="async">
+        <img class="logo--row3" src="/assets/logos/partners/logo/ZJU.svg" alt="Zhejiang University" loading="lazy" decoding="async">
+        <div class="logo-break"></div>
+        <img class="logo--invert logo--sm logo--row4" src="/assets/logos/partners/logo/AMD.svg" alt="AMD" loading="lazy" decoding="async">
+        <img class="logo--sm logo--row4" src="/assets/logos/partners/logo/sharpa.svg" alt="Sharpa" loading="lazy" decoding="async">
+        <img class="logo--drobot logo--row4" src="/assets/logos/partners/d-robotics.png" alt="D-Robotics" loading="lazy" decoding="async">
+        <img class="logo--galbot logo--row4" src="/assets/logos/partners/logo/galbot.png" alt="Galbot" loading="lazy" decoding="async">
+        <div class="logo-break"></div>
+        <img class="logo--sm" src="/assets/logos/partners/motphys.png" alt="Motphys" loading="lazy" decoding="async">
+        <img src="/assets/logos/partners/discover-robotics.png" alt="DISCOVER Robotics" loading="lazy" decoding="async">
+        <img class="logo--sm" src="/assets/logos/partners/dexmal.png" alt="Dexmal" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__col">
+      <p class="footer__brand">UniLab</p>
+      <p class="footer__tag">Heterogeneous training for embodied RL.</p>
+    </div>
+    <div class="footer__col">
+      <p class="footer__heading">Project</p>
+      <ul>
+        <li><a href="https://arxiv.org/abs/2605.30313" data-link="arxiv">Arxiv</a></li>
+        <li><a href="https://github.com/unilabsim/UniLab" data-link="github">GitHub</a></li>
+        <li><a href="https://github.com/unilabsim/UniLab-doc" data-link="docs">Documentation</a></li>
+        <li><a href="paper/" data-link="paper-html">Paper</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <p class="footer__heading">Related projects</p>
+      <ul>
+        <li><a href="https://github.com/Motphys/motrixsim-docs" target="_blank" rel="noopener">MotrixSim</a> — physics engine</li>
+        <li><a href="https://arxiv.org/abs/2605.24922" target="_blank" rel="noopener">MuJoCoUni</a> — physics backend</li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <p class="footer__heading">Acknowledgments</p>
+      <div class="logo-row footer__logos">
+        <div class="platform-logo-slot">
+          <img src="/assets/platform/Apple.svg" alt="Apple">
+        </div>
+        <div class="platform-logo-slot">
+          <img src="/assets/logos/partners/logo/AMD.svg" alt="AMD">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom container">
+    <span>© 2026 UniLab Contributors.</span>
+    <span>Built as a static page, hosted on a CDN.</span>
+  </div>
+</footer>
+
+<svg width="0" height="0" aria-hidden="true" focusable="false">
+  <symbol id="icon-copy" viewBox="0 0 24 24">
+    <rect x="9" y="9" width="13" height="13" rx="2"></rect>
+    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+  </symbol>
+</svg>
+
+<script src="/scripts/hero.js" defer></script>
+<script src="/scripts/main.js" defer></script>
+<script src="/scripts/motrixsim_roving.js" defer></script>
+
+<!-- motrix-stage — the single live demo, embedded inline (no iframe). There is
+     one Bevy/wasm context: motrixsim_roving.js loads the examples app once,
+     reparents this stage into whichever card the user hits Play on (it fills the
+     slot and scrolls natively with the page), and switches scenes in-place over
+     postMessage. The canvas keeps its WebGL context across card moves, so
+     switching is instant with no reload. -->
+<div id="motrix-stage" aria-hidden="true">
+  <canvas id="bevy" tabindex="0" aria-label="MotrixRender"></canvas>
+  <div id="perf-stats"></div>
+  <div id="error-message"></div>
+</div>
+
+</body>
+</html>

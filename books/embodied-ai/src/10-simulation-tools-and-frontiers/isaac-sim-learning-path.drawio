@@ -1,0 +1,246 @@
+<mxfile host="65bd71144e">
+    <diagram id="cQaFLQl4Q_mRGJ6EGBM0" name="Путь обучения Isaac Sim">
+        <mxGraphModel dx="1323" dy="778" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Путь обучения NVIDIA Isaac Sim&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="444.5" y="20" width="280" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Этап: введение" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="70" width="200" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="1. Установка и настройка" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="3" vertex="1">
+                    <mxGeometry x="20" y="40" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="2. Знакомство с интерфейсом GUI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="3" vertex="1">
+                    <mxGeometry x="20" y="80" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="3. Создание базовой сцены" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="3" vertex="1">
+                    <mxGeometry x="20" y="120" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="4. Добавление базовых объектов" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="3" vertex="1">
+                    <mxGeometry x="20" y="160" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="5. Запуск простой симуляции" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="3" vertex="1">
+                    <mxGeometry x="20" y="190" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Симуляция роботов" style="swimlane;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="70" width="200" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="1. Импорт модели робота" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="9" vertex="1">
+                    <mxGeometry x="20" y="40" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="2. Импорт и настройка URDF" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="9" vertex="1">
+                    <mxGeometry x="20" y="80" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="3. Управление суставами и приводами" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="9" vertex="1">
+                    <mxGeometry x="20" y="120" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="4. Кинематика и динамика" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="9" vertex="1">
+                    <mxGeometry x="20" y="160" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="5. Столкновения и физическое взаимодействие" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="9" vertex="1">
+                    <mxGeometry x="20" y="190" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Окружение и датчики" style="swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="70" width="200" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="1. Импорт ассетов окружения" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="15" vertex="1">
+                    <mxGeometry x="20" y="40" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="2. Освещение и материалы" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="15" vertex="1">
+                    <mxGeometry x="20" y="80" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="3. Камера и изображения" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="15" vertex="1">
+                    <mxGeometry x="20" y="120" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="4. Настройка лидара" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="15" vertex="1">
+                    <mxGeometry x="20" y="160" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="5. Интеграция нескольких датчиков" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="15" vertex="1">
+                    <mxGeometry x="20" y="190" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Программирование и расширения" style="swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="760" y="70" width="200" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="1. Основы Python API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="21" vertex="1">
+                    <mxGeometry x="20" y="40" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="2. Узлы OmniGraph" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="21" vertex="1">
+                    <mxGeometry x="20" y="80" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="3. Разработка собственных расширений" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="21" vertex="1">
+                    <mxGeometry x="20" y="120" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="4. Написание сценарных скриптов" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="21" vertex="1">
+                    <mxGeometry x="20" y="160" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="5. Интеграция рабочего процесса USD" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="21" vertex="1">
+                    <mxGeometry x="20" y="190" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="Продвинутые применения" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="340" width="200" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="1. Интеграция ROS/ROS2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="27" vertex="1">
+                    <mxGeometry x="20" y="40" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="2. Совместная работа нескольких роботов" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="27" vertex="1">
+                    <mxGeometry x="20" y="80" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="3. Продвинутая навигация и управление" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="27" vertex="1">
+                    <mxGeometry x="20" y="120" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="4. Применения цифровых двойников" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="27" vertex="1">
+                    <mxGeometry x="20" y="160" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="5. Симуляция складов и заводов" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="27" vertex="1">
+                    <mxGeometry x="20" y="190" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="Искусственный интеллект и обучение" style="swimlane;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="340" width="200" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="1. Генерация синтетических данных" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="33" vertex="1">
+                    <mxGeometry x="20" y="40" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="2. Настройка Replicator" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="33" vertex="1">
+                    <mxGeometry x="20" y="80" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="3. Интеграция обучения с подкреплением" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="33" vertex="1">
+                    <mxGeometry x="20" y="120" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="4. Реализация имитационного обучения" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="33" vertex="1">
+                    <mxGeometry x="20" y="160" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="5. Развёртывание политик обучения с подкреплением" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="33" vertex="1">
+                    <mxGeometry x="20" y="190" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="Проекты и практика" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="340" width="200" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="1. Задача интеллектуального захвата" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="39" vertex="1">
+                    <mxGeometry x="20" y="40" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="2. Навигация мобильного робота" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="39" vertex="1">
+                    <mxGeometry x="20" y="80" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="3. Применение коллаборативных роботов" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="39" vertex="1">
+                    <mxGeometry x="20" y="120" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="4. Симуляция домашних роботов" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="39" vertex="1">
+                    <mxGeometry x="20" y="160" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="5. От симуляции к реальному развёртыванию" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="39" vertex="1">
+                    <mxGeometry x="20" y="190" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="3" target="9" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="560" y="330" as="sourcePoint"/>
+                        <mxPoint x="610" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="46" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="9" target="15" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="560" y="330" as="sourcePoint"/>
+                        <mxPoint x="610" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="47" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="15" target="21" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="560" y="330" as="sourcePoint"/>
+                        <mxPoint x="610" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="48" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="21" target="33" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="560" y="330" as="sourcePoint"/>
+                        <mxPoint x="610" y="280" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="860" y="320"/>
+                            <mxPoint x="500" y="320"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="49" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="9" target="27" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="560" y="330" as="sourcePoint"/>
+                        <mxPoint x="610" y="280" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="380" y="320"/>
+                            <mxPoint x="260" y="320"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="50" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="27" target="33" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="560" y="330" as="sourcePoint"/>
+                        <mxPoint x="610" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="51" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="33" target="39" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="560" y="330" as="sourcePoint"/>
+                        <mxPoint x="610" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="52" value="Ресурсы проекта" style="swimlane;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="590" width="200" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="1. Готовые модели роботов" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="52" vertex="1">
+                    <mxGeometry x="20" y="40" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="2. Ассеты окружения и сцен" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="52" vertex="1">
+                    <mxGeometry x="20" y="80" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="3. Примеры кода и руководства" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="52" vertex="1">
+                    <mxGeometry x="20" y="110" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" parent="1" source="27" target="52" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="550" y="530" as="sourcePoint"/>
+                        <mxPoint x="600" y="480" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="260" y="665"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="57" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;" parent="1" source="33" target="52" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="550" y="530" as="sourcePoint"/>
+                        <mxPoint x="600" y="480" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="58" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" parent="1" source="39" target="52" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="550" y="530" as="sourcePoint"/>
+                        <mxPoint x="600" y="480" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="740" y="665"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="59" value="Рекомендуемый порядок изучения" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="90" y="30" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="&lt;b&gt;1&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="160" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="&lt;b&gt;2&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="160" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="&lt;b&gt;3&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="740" y="160" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="&lt;b&gt;4A&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="140" y="430" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="&lt;b&gt;4B&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="430" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="&lt;b&gt;5&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="620" y="430" width="20" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile> 

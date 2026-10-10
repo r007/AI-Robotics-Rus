@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" role="img" aria-label="Isaac Lab HIMLoco reproduction flow">
+  <defs>
+    <marker id="arrow2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    </marker>
+    <style>
+      .env{fill:#dcfce7;stroke:#15803d;stroke-width:2;rx:12}
+      .runner{fill:#e0f2fe;stroke:#0369a1;stroke-width:2;rx:12}
+      .algo{fill:#fef3c7;stroke:#b45309;stroke-width:2;rx:12}
+      .model{fill:#f8fafc;stroke:#334155;stroke-width:2;rx:12}
+      .text{font-family:Arial,'Noto Sans CJK SC',sans-serif;font-size:22px;fill:#0f172a}
+      .small{font-family:Arial,'Noto Sans CJK SC',sans-serif;font-size:17px;fill:#475569}
+      .line{stroke:#334155;stroke-width:2.3;fill:none;marker-end:url(#arrow2)}
+    </style>
+  </defs>
+  <rect x="25" y="25" width="1150" height="420" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" rx="18"/>
+  <rect class="env" x="60" y="165" width="230" height="100"/>
+  <text class="text" x="175" y="202" text-anchor="middle">Isaac Lab Env</text>
+  <text class="small" x="175" y="232" text-anchor="middle">Unitree A1 rough terrain</text>
+  <rect class="runner" x="365" y="165" width="210" height="100"/>
+  <text class="text" x="470" y="203" text-anchor="middle">HIMOnPolicyRunner</text>
+  <text class="small" x="470" y="233" text-anchor="middle">collect rollout</text>
+  <rect class="algo" x="650" y="165" width="190" height="100"/>
+  <text class="text" x="745" y="203" text-anchor="middle">HIMPPO</text>
+  <text class="small" x="745" y="233" text-anchor="middle">PPO + estimator update</text>
+  <rect class="model" x="925" y="70" width="205" height="72"/>
+  <text class="text" x="1028" y="100" text-anchor="middle">HIMEstimator</text>
+  <text class="small" x="1028" y="126" text-anchor="middle">270 -> vel + latent</text>
+  <rect class="model" x="925" y="190" width="205" height="72"/>
+  <text class="text" x="1028" y="220" text-anchor="middle">Actor</text>
+  <text class="small" x="1028" y="246" text-anchor="middle">64 -> 12 actions</text>
+  <rect class="model" x="925" y="310" width="205" height="72"/>
+  <text class="text" x="1028" y="340" text-anchor="middle">Critic</text>
+  <text class="small" x="1028" y="366" text-anchor="middle">238 -> value</text>
+  <path class="line" d="M 290 215 L 357 215"/>
+  <path class="line" d="M 575 215 L 642 215"/>
+  <path class="line" d="M 840 215 C 880 215 880 110 917 106"/>
+  <path class="line" d="M 840 215 L 917 226"/>
+  <path class="line" d="M 840 215 C 880 215 880 340 917 346"/>
+  <path class="line" d="M 925 226 C 760 420 210 400 165 272"/>
+  <text class="small" x="110" y="315">Среда формирует группу наблюдений policy / critic</text>
+  <text class="small" x="380" y="315">runner сохраняет transition</text>
+  <text class="small" x="650" y="315">storage дополнительно сохраняет next critic obs</text>
+</svg>

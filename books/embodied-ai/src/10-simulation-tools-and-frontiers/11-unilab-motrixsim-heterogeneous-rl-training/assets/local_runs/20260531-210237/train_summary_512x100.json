@@ -1,0 +1,19 @@
+﻿{
+    "status":  "completed",
+    "algo":  "ppo",
+    "task":  "Go2JoystickFlat",
+    "sim_backend":  "motrix",
+    "num_envs":  512,
+    "max_iterations":  100,
+    "total_env_steps":  1228800,
+    "training_wall_time_sec":  132.89514231681824,
+    "final_mean_reward":  34.968692016601565,
+    "best_mean_reward":  37.396293640136719,
+    "mean_episode_length":  1000,
+    "hardware":  {
+                     "gpu_name":  "NVIDIA GeForce RTX 3060 Laptop GPU",
+                     "gpu_memory_mib":  6144,
+                     "cpu":  "AMD Ryzen 7 5800H with Radeon Graphics",
+                     "memory_gib":  63.4
+                 }
+}

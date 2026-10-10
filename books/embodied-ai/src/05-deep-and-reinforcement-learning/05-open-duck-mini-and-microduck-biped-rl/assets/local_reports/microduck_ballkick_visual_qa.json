@@ -1,0 +1,94 @@
+{
+  "training": {
+    "upstream_commit": "29e887ecfbf5d37144759e5a9f8a176dfb83d547",
+    "task": "Mjlab-BallKick-Flat-MicroDuck",
+    "side": "right",
+    "parallel_envs": 4096,
+    "iterations": 6000,
+    "transitions": 589824000,
+    "wall_time": "02:06:15",
+    "final_mean_reward": 89.42,
+    "final_mean_episode_length": 250.0,
+    "final_ball_forward_velocity_reward": 11.4758,
+    "checkpoint_sha256": "cf3f34ed68dec9137260d20f4e2cfdd507415df651d86fe31f2ac9daa8073c7c",
+    "onnx_sha256": "bd03168c2554de6f95a69903143997c3ff85fec73c28a010225868216d3ea518"
+  },
+  "browser_demo": {
+    "simulator": "Microduck Sandbox / MuJoCo WASM / ONNX Runtime Web",
+    "control_frequency_hz": 50,
+    "initial_ball_robot_frame_m": [0.42, -0.11],
+    "ball_placement_count": 1,
+    "same_ball_continuous_chase": true,
+    "selected_feet": ["right", "right", "right"],
+    "state_path": [
+      "searching",
+      "aligning",
+      "approaching",
+      "aligning-foot",
+      "approaching-foot",
+      "kick-ready",
+      "kicking",
+      "complete"
+    ],
+    "camera_sequence": ["first", "second", "third"],
+    "default_camera": "third",
+    "single_player_by_default": true,
+    "multiplayer_opt_in_query": "?multiplayer=1",
+    "kick_results": [
+      {
+        "index": 1,
+        "ball_world_start_m": [-0.1802143213784806, -0.11601836677379232],
+        "ball_world_end_m": [-0.06986084914220488, -0.13388242012631077],
+        "ball_displacement_m": 0.11179004086583072
+      },
+      {
+        "index": 2,
+        "ball_world_start_m": [0.051879211075484474, -0.14995843387997135],
+        "ball_world_end_m": [0.33701402287757265, -0.19310563506444428],
+        "ball_displacement_m": 0.2883808972027544
+      },
+      {
+        "index": 3,
+        "ball_world_start_m": [0.5526756226837304, -0.22107813393364542],
+        "ball_world_end_m": [0.9253985475158674, -0.27236959633572544],
+        "ball_displacement_m": 0.37623555495296673
+      }
+    ],
+    "fall_injected": false,
+    "final_mode": "walk",
+    "final_recovery_state": null,
+    "final_projected_gravity_z": -0.999960720539093,
+    "video": {
+      "codec": "H.264",
+      "resolution": "1440x900",
+      "fps": 25,
+      "duration_s": 19.84,
+      "sha256": "2d6ad20f97b078caef3d682b9a668a3b73b976792988cec1d0235be773fdd4f6"
+    }
+  },
+  "physical_recovery_demo": {
+    "disturbance": "floating-base generalized velocity impulse",
+    "lateral_velocity_impulse_m_s": 1.55,
+    "roll_velocity_impulse_rad_s": 5.4,
+    "pose_teleported": false,
+    "recovery_latency_s": 1.957,
+    "final_mode": "walk",
+    "final_projected_gravity_z": -0.9999786615371704,
+    "final_base_height_m": 0.11651060192225239,
+    "video": {
+      "codec": "H.264",
+      "resolution": "1440x900",
+      "fps": 25,
+      "duration_s": 4.08,
+      "sha256": "200800aab30167ba5c99ebdd4e22b65faa2cf2d9f05b92775a87af873b7c3935"
+    }
+  },
+  "contact_sweep": {
+    "grid_x_m": [0.08, 0.10, 0.12, 0.14, 0.16],
+    "grid_y_m": [-0.08, -0.04, 0.0, 0.04, 0.08],
+    "best_left": {"x_m": 0.08, "y_m": 0.08, "displacement_m": 1.03},
+    "best_right": {"x_m": 0.08, "y_m": -0.08, "displacement_m": 0.93},
+    "controller_target": {"x_m": 0.095, "left_y_m": 0.043, "right_y_m": -0.043}
+  },
+  "detector_note": "The browser bounding box is obtained by projecting MuJoCo ground truth through the first- and second-person debug cameras. The third-person presentation camera suppresses the box when the ball may be occluded by the robot. This validates the detector/controller interface and closed-loop state machine, but it is not a learned detector benchmark."
+}

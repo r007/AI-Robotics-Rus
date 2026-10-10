@@ -1,0 +1,49 @@
+{
+  "safe_mode": true,
+  "model": "/home/sunrise/microduck_policy/export/microduck_policy_5999.onnx",
+  "sha256": "216fff94da1b88159327c426686fcfcca4763f571b4d123be6b2ca549042f9f0",
+  "providers": [
+    "CPUExecutionProvider"
+  ],
+  "contract": {
+    "input_name": "obs",
+    "input_shape": [
+      1,
+      61
+    ],
+    "output_name": "actions",
+    "output_shape": [
+      1,
+      14
+    ]
+  },
+  "unpaced": {
+    "iterations": 2000,
+    "throughput_hz": 2651.7860279422807,
+    "latency": {
+      "mean_ms": 0.3150730995,
+      "p50_ms": 0.309084,
+      "p90_ms": 0.32527180000000006,
+      "p99_ms": 0.4365440099999999,
+      "max_ms": 0.662794
+    }
+  },
+  "paced": {
+    "target_hz": 50.0,
+    "steps": 250,
+    "effective_hz": 50.19610350690495,
+    "deadline_misses": 0,
+    "deadline_miss_rate": 0.0,
+    "latency": {
+      "mean_ms": 0.434921692,
+      "p50_ms": 0.39943850000000003,
+      "p90_ms": 0.5412475,
+      "p99_ms": 0.78517258,
+      "max_ms": 0.809461
+    }
+  },
+  "action_range": [
+    -1.5792089700698853,
+    1.184692144393921
+  ]
+}

@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Table of contents is up to date
+        run: |
+          python3 scripts/make_summary.py books/embodied-ai
+          git diff --exit-code -- books/embodied-ai/src/SUMMARY.md
+
+      - name: Relative links resolve
+        run: python3 scripts/check_links.py books/embodied-ai/src
+
+      - name: Python sources compile
+        run: python3 -c "import ast, pathlib; [ast.parse(p.read_text(encoding='utf-8'), str(p)) for p in pathlib.Path('.').rglob('*.py') if '.git' not in p.parts]"
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - uses: Swatinem/rust-cache@v2
+
+      - name: Install mdBook and plugins
+        run: cargo install --locked mdbook@0.5.4 mdbook-mermaid@0.17.1 mdbook-katex@0.10.0
+
+      - name: Build site
+        run: python3 scripts/build_site.py

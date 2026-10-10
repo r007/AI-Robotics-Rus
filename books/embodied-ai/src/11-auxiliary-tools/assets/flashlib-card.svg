@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">FlashLib GPU classical ML operators</title>
+  <desc id="desc">A compact card showing GPU-accelerated classical machine learning operators.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="0.55" stop-color="#12343b"/>
+      <stop offset="1" stop-color="#1f2937"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#a3e635"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000000" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <g opacity="0.24">
+    <path d="M40 120 H1160" stroke="#94a3b8" stroke-width="1"/>
+    <path d="M40 240 H1160" stroke="#94a3b8" stroke-width="1"/>
+    <path d="M40 360 H1160" stroke="#94a3b8" stroke-width="1"/>
+    <path d="M40 480 H1160" stroke="#94a3b8" stroke-width="1"/>
+    <path d="M180 40 V635" stroke="#94a3b8" stroke-width="1"/>
+    <path d="M360 40 V635" stroke="#94a3b8" stroke-width="1"/>
+    <path d="M540 40 V635" stroke="#94a3b8" stroke-width="1"/>
+    <path d="M720 40 V635" stroke="#94a3b8" stroke-width="1"/>
+    <path d="M900 40 V635" stroke="#94a3b8" stroke-width="1"/>
+  </g>
+  <g filter="url(#softShadow)">
+    <rect x="88" y="86" width="1024" height="503" rx="28" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.22"/>
+    <rect x="126" y="128" width="322" height="174" rx="18" fill="#020617" fill-opacity="0.78" stroke="#38bdf8" stroke-opacity="0.45"/>
+    <rect x="482" y="128" width="322" height="174" rx="18" fill="#020617" fill-opacity="0.78" stroke="#a3e635" stroke-opacity="0.45"/>
+    <rect x="838" y="128" width="236" height="174" rx="18" fill="#020617" fill-opacity="0.78" stroke="#facc15" stroke-opacity="0.45"/>
+    <rect x="126" y="346" width="948" height="188" rx="18" fill="#020617" fill-opacity="0.72" stroke="#ffffff" stroke-opacity="0.18"/>
+  </g>
+  <text x="126" y="92" fill="#e2e8f0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">FlashLib</text>
+  <text x="126" y="176" fill="#f8fafc" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="48" font-weight="800">KMeans</text>
+  <text x="126" y="224" fill="#bae6fd" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="28">KNN / ANN / HDBSCAN</text>
+  <text x="126" y="266" fill="#94a3b8" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20">GPU-resident embedding pipelines</text>
+  <text x="482" y="176" fill="#f8fafc" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="48" font-weight="800">PCA + SVD</text>
+  <text x="482" y="224" fill="#d9f99d" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="28">UMAP / t-SNE / GEMM</text>
+  <text x="482" y="266" fill="#94a3b8" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20">Hardware-aware Triton kernels</text>
+  <text x="838" y="176" fill="#f8fafc" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="48" font-weight="800">info</text>
+  <text x="838" y="224" fill="#fde68a" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="28">cost API</text>
+  <text x="838" y="266" fill="#94a3b8" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20">GPU-free estimates</text>
+  <path d="M175 442 C300 372 404 482 532 414 C655 350 742 444 868 382 C947 344 1012 360 1050 402" fill="none" stroke="url(#accent)" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="175" cy="442" r="12" fill="#22d3ee"/>
+  <circle cx="532" cy="414" r="12" fill="#67e8f9"/>
+  <circle cx="868" cy="382" r="12" fill="#bef264"/>
+  <text x="126" y="580" fill="#cbd5e1" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24">Fast classical ML operators for retrieval, clustering, compression, visualization, and agent loops.</text>
+</svg>

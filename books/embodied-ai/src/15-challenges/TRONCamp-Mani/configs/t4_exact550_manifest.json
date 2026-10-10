@@ -1,0 +1,30 @@
+{
+  "dataset_label": "canonical_official550",
+  "task": "stack_bowls_three",
+  "track": "T4",
+  "episodes": 550,
+  "machine_shards": {
+    "C2": 186,
+    "C3": 182,
+    "C4": 182
+  },
+  "raw_total_bytes": 67546203544,
+  "source_counts": {
+    "stock": 290,
+    "alignment_retry": 3,
+    "rescue": 257
+  },
+  "manifest_sha256": "eeca954a7e64dda818a0cca86534e34f6ffa1a8055bd37810f9781a264199901",
+  "processed": {
+    "state_dim": 16,
+    "action_dim": 16,
+    "cameras": [
+      "cam_high",
+      "cam_left_wrist",
+      "cam_right_wrist"
+    ],
+    "finite": true,
+    "next_state_max_error": 0.0
+  },
+  "public_release_note": "This is an identity and audit summary. It does not contain HDF5 data, paths, credentials, or checkpoints."
+}

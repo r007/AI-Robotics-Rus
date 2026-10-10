@@ -1,0 +1,45 @@
+{
+  "records": [
+    {
+      "model": "ACT",
+      "stage": "protected repair15 continuation",
+      "current_step": 2500,
+      "total_steps": 2500,
+      "progress": "2500/2500 continuation steps; selected eval checkpoint step1500",
+      "loss": 0.040088,
+      "physical_success": "15/30",
+      "note": "Дообучение с низкой скоростью обучения из защищённых весов stable61 step2500; chunk20/n10; по замкнутому циклу выбран step1500; три панели: 3/10 + 4/10 + 8/10."
+    },
+    {
+      "model": "SmolVLA",
+      "stage": "weighted blue2 step500",
+      "current_step": 500,
+      "total_steps": 1000,
+      "progress": "selected step 500/1000",
+      "loss": null,
+      "physical_success": "53/60",
+      "note": "Баланс красной и синей чаш на step500 лучше, чем на step1000, поэтому промежуточный checkpoint сохранён"
+    },
+    {
+      "model": "pi0",
+      "stage": "public raw baseline",
+      "current_step": 1500,
+      "total_steps": 1500,
+      "progress": "1500/1500 steps",
+      "loss": 0.046,
+      "physical_success": "0/20",
+      "note": "loss снизился с примерно 0.179 на step500 до примерно 0.046 на step1500, но raw closed-loop успеха не дал"
+    },
+    {
+      "model": "pi0 learned head",
+      "stage": "visual/history GRU",
+      "current_step": 20,
+      "total_steps": 20,
+      "progress": "best epoch 20",
+      "loss": null,
+      "physical_success": "fixed 6/12; random 1/4",
+      "note": "Используются только изображение, язык, proprio и история выполненных действий; это не основная модель raw pi0"
+    }
+  ],
+  "source": "Журнал экспериментов AMD ROCm и сводка строгой оценки в замкнутом цикле; результаты ACT repair15 измерены на AMD395 и сохранены в защищённом виде."
+}

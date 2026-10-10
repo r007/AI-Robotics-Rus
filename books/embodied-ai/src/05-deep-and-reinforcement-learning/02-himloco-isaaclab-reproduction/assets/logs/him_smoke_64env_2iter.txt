@@ -1,0 +1,41 @@
+Command:
+./scripts/train_himloco_isaaclab_him.sh --num_envs 64 --max_iterations 2
+
+Runtime:
+GPU: NVIDIA RTX PRO 6000 Blackwell Workstation Edition, sm_120
+Torch: 2.7.0+cu128
+Isaac Sim: 5.1
+rsl-rl-lib: 3.0.1
+
+Key environment shapes:
+Policy observation: 270 = 45 x 6
+Critic observation: 238 = 45 + 3 + 3 + 187
+Action: 12
+Actor input: 64 = 45 + 3 + 16
+Estimator input: 270
+
+Iteration 0/2:
+Computation: 2630 steps/s
+Mean value_function loss: 0.3333
+Mean surrogate loss: 0.0228
+Mean entropy loss: 17.0127
+Mean estimation loss: 0.7230
+Mean swap loss: 0.1080
+Mean reward: -2.80
+Mean episode length: 68.71
+Total timesteps: 6400
+Iteration time: 2.43s
+
+Iteration 1/2:
+Computation: 4110 steps/s
+Mean value_function loss: 0.1658
+Mean surrogate loss: -0.0045
+Mean entropy loss: 17.0122
+Mean estimation loss: 0.6086
+Mean swap loss: 0.1079
+Mean reward: -3.24
+Mean episode length: 83.98
+Total timesteps: 12800
+Iteration time: 1.56s
+
+Training time: 4.21 seconds

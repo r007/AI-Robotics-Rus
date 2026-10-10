@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="test">
+    <compiler angle="radian" autolimits="true" />
+    <option timestep="0.002" gravity="0 0 -9.81" wind="0 0 0" integrator="implicitfast" density="1.225" viscosity="1.8e-05" />
+    <visual>
+        <global realtime="1" />
+        <quality shadowsize="16384" numslices="28" offsamples="4" />
+        <headlight diffuse="2 2 2" specular="0.5 0.5 0.5" active="1" />
+        <rgba fog="0 1 0 1" haze="1 0 0 1" />
+    </visual>
+    <asset>
+        <mesh name="l_0_Magic Cube (1)" file="./objs/0/0.obj" scale="0.07 0.07 0.07" />
+        <texture type="2d" name="l_0_Magic Cube (1)_tex" file="./objs/0/material_0.png" />
+        <material name="l_0_Magic Cube (1)_img" texture="l_0_Magic Cube (1)_tex" />
+        <mesh name="l_1_Magic Cube (2)" file="./objs/1/1.obj" scale="0.07 0.07 0.07" />
+        <texture type="2d" name="l_1_Magic Cube (2)_tex" file="./objs/1/material_0.png" />
+        <material name="l_1_Magic Cube (2)_img" texture="l_1_Magic Cube (2)_tex" />
+        <mesh name="l_2_Magic Cube (3)" file="./objs/2/2.obj" scale="0.07 0.07 0.07" />
+        <texture type="2d" name="l_2_Magic Cube (3)_tex" file="./objs/2/material_0.png" />
+        <material name="l_2_Magic Cube (3)_img" texture="l_2_Magic Cube (3)_tex" />
+        <mesh name="l_3_Magic Cube (4)" file="./objs/3/3.obj" scale="0.07 0.07 0.07" />
+        <texture type="2d" name="l_3_Magic Cube (4)_tex" file="./objs/3/material_0.png" />
+        <material name="l_3_Magic Cube (4)_img" texture="l_3_Magic Cube (4)_tex" />
+        <mesh name="l_4_Magic Cube (5)" file="./objs/4/4.obj" scale="0.07 0.07 0.07" />
+        <texture type="2d" name="l_4_Magic Cube (5)_tex" file="./objs/4/material_0.png" />
+        <material name="l_4_Magic Cube (5)_img" texture="l_4_Magic Cube (5)_tex" />
+        <mesh name="l_5_Magic Cube (6)" file="./objs/5/5.obj" scale="0.07 0.07 0.07" />
+        <texture type="2d" name="l_5_Magic Cube (6)_tex" file="./objs/5/material_0.png" />
+        <material name="l_5_Magic Cube (6)_img" texture="l_5_Magic Cube (6)_tex" />
+        <mesh name="l_6_Magic Cube (7)" file="./objs/6/6.obj" scale="0.07 0.07 0.07" />
+        <texture type="2d" name="l_6_Magic Cube (7)_tex" file="./objs/6/material_0.png" />
+        <material name="l_6_Magic Cube (7)_img" texture="l_6_Magic Cube (7)_tex" />
+        <mesh name="l_7_Magic Cube (8)" file="./objs/7/7.obj" scale="0.07 0.07 0.07" />
+        <texture type="2d" name="l_7_Magic Cube (8)_tex" file="./objs/7/material_0.png" />
+        <material name="l_7_Magic Cube (8)_img" texture="l_7_Magic Cube (8)_tex" />
+        <mesh name="l_8_Magic Cube (9)" file="./objs/8/8.obj" scale="0.07 0.07 0.07" />
+        <texture type="2d" name="l_8_Magic Cube (9)_tex" file="./objs/8/material_0.png" />
+        <material name="l_8_Magic Cube (9)_img" texture="l_8_Magic Cube (9)_tex" />
+        <mesh name="l_9_Magic Cube (10)" file="./objs/9/9.obj" scale="0.07 0.07 0.07" />
+        <texture type="2d" name="l_9_Magic Cube (10)_tex" file="./objs/9/material_0.png" />
+        <material name="l_9_Magic Cube (10)_img" texture="l_9_Magic Cube (10)_tex" />
+        <mesh name="l_10_Magic Cube (11)" file="./objs/10/10.obj" scale="0.07 0.07 0.07" />
+        <texture type="2d" name="l_10_Magic Cube (11)_tex" file="./objs/10/material_0.png" />
+        <material name="l_10_Magic Cube (11)_img" texture="l_10_Magic Cube (11)_tex" />
+        <mesh name="l_11_Magic Cube (12)" file="./objs/11/11.obj" scale="0.07 0.07 0.07" />
+        <texture type="2d" name="l_11_Magic Cube (12)_tex" file="./objs/11/material_0.png" />
+        <material name="l_11_Magic Cube (12)_img" texture="l_11_Magic Cube (12)_tex" />
+        <mesh name="l_12_Magic Cube (13)" file="./objs/12/12.obj" scale="0.07 0.07 0.07" />
+        <texture type="2d" name="l_12_Magic Cube (13)_tex" file="./objs/12/material_0.png" />
+        <material name="l_12_Magic Cube (13)_img" texture="l_12_Magic Cube (13)_tex" />
+        <mesh name="l_13_Magic Cube (14)" file="./objs/13/13.obj" scale="0.07 0.07 0.07" />
+        <texture type="2d" name="l_13_Magic Cube (14)_tex" file="./objs/13/material_0.png" />
+        <material name="l_13_Magic Cube (14)_img" texture="l_13_Magic Cube (14)_tex" />
+        <mesh name="l_14_Magic Cube (15)" file="./objs/14/14.obj" scale="0.07 0.07 0.07" />
+        <texture type="2d" name="l_14_Magic Cube (15)_tex" file="./objs/14/material_0.png" />
+        <material name="l_14_Magic Cube (15)_img" texture="l_14_Magic Cube (15)_tex" />
+        <mesh name="l_15_Magic Cube (16)" file="./objs/15/15.obj" scale="0.07 0.07 0.07" />
+        <texture type="2d" name="l_15_Magic Cube (16)_tex" file="./objs/15/material_0.png" />
+        <material name="l_15_Magic Cube (16)_img" texture="l_15_Magic Cube (16)_tex" />
+        <mesh name="l_16_Magic Cube (17)" file="./objs/16/16.obj" scale="0.07 0.07 0.07" />
+        <texture type="2d" name="l_16_Magic Cube (17)_tex" file="./objs/16/material_0.png" />
+        <material name="l_16_Magic Cube (17)_img" texture="l_16_Magic Cube (17)_tex" />
+        <mesh name="l_17_Magic Cube (18)" file="./objs/17/17.obj" scale="0.07 0.07 0.07" />
+        <texture type="2d" name="l_17_Magic Cube (18)_tex" file="./objs/17/material_0.png" />
+        <material name="l_17_Magic Cube (18)_img" texture="l_17_Magic Cube (18)_tex" />
+        <mesh name="l_18_Magic Cube (19)" file="./objs/18/18.obj" scale="0.07 0.07 0.07" />
+        <texture type="2d" name="l_18_Magic Cube (19)_tex" file="./objs/18/material_0.png" />
+        <material name="l_18_Magic Cube (19)_img" texture="l_18_Magic Cube (19)_tex" />
+        <mesh name="l_19_Magic Cube (20)" file="./objs/19/19.obj" scale="0.07 0.07 0.07" />
+        <texture type="2d" name="l_19_Magic Cube (20)_tex" file="./objs/19/material_0.png" />
+        <material name="l_19_Magic Cube (20)_img" texture="l_19_Magic Cube (20)_tex" />
+        <mesh name="l_20_Magic Cube (21)" file="./objs/20/20.obj" scale="0.07 0.07 0.07" />
+        <texture type="2d" name="l_20_Magic Cube (21)_tex" file="./objs/20/material_0.png" />
+        <material name="l_20_Magic Cube (21)_img" texture="l_20_Magic Cube (21)_tex" />
+        <mesh name="l_21_Magic Cube (22)" file="./objs/21/21.obj" scale="0.07 0.07 0.07" />
+        <texture type="2d" name="l_21_Magic Cube (22)_tex" file="./objs/21/material_0.png" />
+        <material name="l_21_Magic Cube (22)_img" texture="l_21_Magic Cube (22)_tex" />
+        <mesh name="l_22_Magic Cube (23)" file="./objs/22/22.obj" scale="0.07 0.07 0.07" />
+        <texture type="2d" name="l_22_Magic Cube (23)_tex" file="./objs/22/material_0.png" />
+        <material name="l_22_Magic Cube (23)_img" texture="l_22_Magic Cube (23)_tex" />
+        <mesh name="l_23_Magic Cube (24)" file="./objs/23/23.obj" scale="0.07 0.07 0.07" />
+        <texture type="2d" name="l_23_Magic Cube (24)_tex" file="./objs/23/material_0.png" />
+        <material name="l_23_Magic Cube (24)_img" texture="l_23_Magic Cube (24)_tex" />
+        <mesh name="l_24_Magic Cube (25)" file="./objs/24/24.obj" scale="0.07 0.07 0.07" />
+        <texture type="2d" name="l_24_Magic Cube (25)_tex" file="./objs/24/material_0.png" />
+        <material name="l_24_Magic Cube (25)_img" texture="l_24_Magic Cube (25)_tex" />
+        <mesh name="l_25_Magic Cube (26)" file="./objs/25/25.obj" scale="0.07 0.07 0.07" />
+        <texture type="2d" name="l_25_Magic Cube (26)_tex" file="./objs/25/material_0.png" />
+        <material name="l_25_Magic Cube (26)_img" texture="l_25_Magic Cube (26)_tex" />
+        <texture type="skybox" file="./desert.png" gridsize="3 4" gridlayout=".U..LFRB.D.." />
+        <texture name="plane" type="2d" builtin="checker" rgb1=".1 .1 .1" rgb2=".5 .5 .5" width="512" height="512" mark="cross" markrgb=".8 .8 .8" />
+        <material name="plane" reflectance="0.3" texture="plane" texrepeat="1 1" texuniform="true" />
+    </asset>
+    <default>
+        <geom solref=".5e-4" solimp="0.9 0.99 1e-4" fluidcoef="0.5 0.25 0.5 2.0 1.0" />
+        <default class="l_0_Magic Cube (1)">
+            <geom type="mesh" mesh="l_0_Magic Cube (1)" contype="1" conaffinity="1" density="1050.0" fluidshape="ellipsoid" />
+        </default>
+        <default class="l_1_Magic Cube (2)">
+            <geom type="mesh" mesh="l_1_Magic Cube (2)" contype="1" conaffinity="1" density="1050.0" fluidshape="ellipsoid" />
+        </default>
+        <default class="l_2_Magic Cube (3)">
+            <geom type="mesh" mesh="l_2_Magic Cube (3)" contype="1" conaffinity="1" density="1050.0" fluidshape="ellipsoid" />
+        </default>
+        <default class="l_3_Magic Cube (4)">
+            <geom type="mesh" mesh="l_3_Magic Cube (4)" contype="1" conaffinity="1" density="1050.0" fluidshape="ellipsoid" />
+        </default>
+        <default class="l_4_Magic Cube (5)">
+            <geom type="mesh" mesh="l_4_Magic Cube (5)" contype="1" conaffinity="1" density="1050.0" fluidshape="ellipsoid" />
+        </default>
+        <default class="l_5_Magic Cube (6)">
+            <geom type="mesh" mesh="l_5_Magic Cube (6)" contype="1" conaffinity="1" density="1050.0" fluidshape="ellipsoid" />
+        </default>
+        <default class="l_6_Magic Cube (7)">
+            <geom type="mesh" mesh="l_6_Magic Cube (7)" contype="1" conaffinity="1" density="1050.0" fluidshape="ellipsoid" />
+        </default>
+        <default class="l_7_Magic Cube (8)">
+            <geom type="mesh" mesh="l_7_Magic Cube (8)" contype="1" conaffinity="1" density="1050.0" fluidshape="ellipsoid" />
+        </default>
+        <default class="l_8_Magic Cube (9)">
+            <geom type="mesh" mesh="l_8_Magic Cube (9)" contype="1" conaffinity="1" density="1050.0" fluidshape="ellipsoid" />
+        </default>
+        <default class="l_9_Magic Cube (10)">
+            <geom type="mesh" mesh="l_9_Magic Cube (10)" contype="1" conaffinity="1" density="1050.0" fluidshape="ellipsoid" />
+        </default>
+        <default class="l_10_Magic Cube (11)">
+            <geom type="mesh" mesh="l_10_Magic Cube (11)" contype="1" conaffinity="1" density="1050.0" fluidshape="ellipsoid" />
+        </default>
+        <default class="l_11_Magic Cube (12)">
+            <geom type="mesh" mesh="l_11_Magic Cube (12)" contype="1" conaffinity="1" density="1050.0" fluidshape="ellipsoid" />
+        </default>
+        <default class="l_12_Magic Cube (13)">
+            <geom type="mesh" mesh="l_12_Magic Cube (13)" contype="1" conaffinity="1" density="1050.0" fluidshape="ellipsoid" />
+        </default>
+        <default class="l_13_Magic Cube (14)">
+            <geom type="mesh" mesh="l_13_Magic Cube (14)" contype="1" conaffinity="1" density="1050.0" fluidshape="ellipsoid" />
+        </default>
+        <default class="l_14_Magic Cube (15)">
+            <geom type="mesh" mesh="l_14_Magic Cube (15)" contype="1" conaffinity="1" density="1050.0" fluidshape="ellipsoid" />
+        </default>
+        <default class="l_15_Magic Cube (16)">
+            <geom type="mesh" mesh="l_15_Magic Cube (16)" contype="1" conaffinity="1" density="1050.0" fluidshape="ellipsoid" />
+        </default>
+        <default class="l_16_Magic Cube (17)">
+            <geom type="mesh" mesh="l_16_Magic Cube (17)" contype="1" conaffinity="1" density="1050.0" fluidshape="ellipsoid" />
+        </default>
+        <default class="l_17_Magic Cube (18)">
+            <geom type="mesh" mesh="l_17_Magic Cube (18)" contype="1" conaffinity="1" density="1050.0" fluidshape="ellipsoid" />
+        </default>
+        <default class="l_18_Magic Cube (19)">
+            <geom type="mesh" mesh="l_18_Magic Cube (19)" contype="1" conaffinity="1" density="1050.0" fluidshape="ellipsoid" />
+        </default>
+        <default class="l_19_Magic Cube (20)">
+            <geom type="mesh" mesh="l_19_Magic Cube (20)" contype="1" conaffinity="1" density="1050.0" fluidshape="ellipsoid" />
+        </default>
+        <default class="l_20_Magic Cube (21)">
+            <geom type="mesh" mesh="l_20_Magic Cube (21)" contype="1" conaffinity="1" density="1050.0" fluidshape="ellipsoid" />
+        </default>
+        <default class="l_21_Magic Cube (22)">
+            <geom type="mesh" mesh="l_21_Magic Cube (22)" contype="1" conaffinity="1" density="1050.0" fluidshape="ellipsoid" />
+        </default>
+        <default class="l_22_Magic Cube (23)">
+            <geom type="mesh" mesh="l_22_Magic Cube (23)" contype="1" conaffinity="1" density="1050.0" fluidshape="ellipsoid" />
+        </default>
+        <default class="l_23_Magic Cube (24)">
+            <geom type="mesh" mesh="l_23_Magic Cube (24)" contype="1" conaffinity="1" density="1050.0" fluidshape="ellipsoid" />
+        </default>
+        <default class="l_24_Magic Cube (25)">
+            <geom type="mesh" mesh="l_24_Magic Cube (25)" contype="1" conaffinity="1" density="1050.0" fluidshape="ellipsoid" />
+        </default>
+        <default class="l_25_Magic Cube (26)">
+            <geom type="mesh" mesh="l_25_Magic Cube (26)" contype="1" conaffinity="1" density="1050.0" fluidshape="ellipsoid" />
+        </default>
+    </default>
+    <worldbody>
+        <geom name="floor" pos="0 0 0" size="0 0 .25" type="plane" material="plane" condim="6" />
+        <light directional="true" ambient=".3 .3 .3" pos="30 30 30" dir="0 -2 -1" diffuse=".5 .5 .5" specular=".5 .5 .5" />
+        <body name="base" pos="0 0 1" euler="0 0 0">
+            <freejoint />
+            <geom class="l_0_Magic Cube (1)" material="l_0_Magic Cube (1)_img" />
+            <geom class="l_4_Magic Cube (5)" material="l_4_Magic Cube (5)_img" />
+            <geom class="l_12_Magic Cube (13)" material="l_12_Magic Cube (13)_img" />
+            <geom class="l_13_Magic Cube (14)" material="l_13_Magic Cube (14)_img" />
+            <geom class="l_15_Magic Cube (16)" material="l_15_Magic Cube (16)_img" />
+            <geom class="l_19_Magic Cube (20)" material="l_19_Magic Cube (20)_img" />
+            <geom class="l_20_Magic Cube (21)" material="l_20_Magic Cube (21)_img" />
+            <geom class="l_25_Magic Cube (26)" material="l_25_Magic Cube (26)_img" />
+            <body name="grouppart_1" pos="0 0 0">
+                <joint type="hinge" name="pivot_1" axis="1.0 0.0 0.0" pos="-0.035 0.0 0.0" range="-9424.77796076938 9424.77796076938" damping="0.001" frictionloss="0.0" stiffness="0" />
+                <geom class="l_5_Magic Cube (6)" material="l_5_Magic Cube (6)_img" />
+                <geom class="l_1_Magic Cube (2)" material="l_1_Magic Cube (2)_img" />
+                <geom class="l_2_Magic Cube (3)" material="l_2_Magic Cube (3)_img" />
+                <geom class="l_3_Magic Cube (4)" material="l_3_Magic Cube (4)_img" />
+                <geom class="l_6_Magic Cube (7)" material="l_6_Magic Cube (7)_img" />
+                <geom class="l_7_Magic Cube (8)" material="l_7_Magic Cube (8)_img" />
+                <geom class="l_8_Magic Cube (9)" material="l_8_Magic Cube (9)_img" />
+                <geom class="l_9_Magic Cube (10)" material="l_9_Magic Cube (10)_img" />
+                <geom class="l_10_Magic Cube (11)" material="l_10_Magic Cube (11)_img" />
+            </body>
+            <body name="grouppart_2" pos="0 0 0">
+                <joint type="hinge" name="pivot_2" axis="1.0 0.0 0.0" pos="-0.035 0.0 0.0" range="-9424.77796076938 9424.77796076938" damping="0.001" frictionloss="0.0" stiffness="0" />
+                <geom class="l_18_Magic Cube (19)" material="l_18_Magic Cube (19)_img" />
+                <geom class="l_17_Magic Cube (18)" material="l_17_Magic Cube (18)_img" />
+                <geom class="l_16_Magic Cube (17)" material="l_16_Magic Cube (17)_img" />
+                <geom class="l_11_Magic Cube (12)" material="l_11_Magic Cube (12)_img" />
+                <geom class="l_14_Magic Cube (15)" material="l_14_Magic Cube (15)_img" />
+                <geom class="l_21_Magic Cube (22)" material="l_21_Magic Cube (22)_img" />
+                <geom class="l_22_Magic Cube (23)" material="l_22_Magic Cube (23)_img" />
+                <geom class="l_23_Magic Cube (24)" material="l_23_Magic Cube (24)_img" />
+                <geom class="l_24_Magic Cube (25)" material="l_24_Magic Cube (25)_img" />
+            </body>
+        </body>
+    </worldbody>
+</mujoco>

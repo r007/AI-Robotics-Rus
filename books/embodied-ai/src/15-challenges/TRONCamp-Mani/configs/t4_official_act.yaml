@@ -1,0 +1,29 @@
+# Обезличенная основная конфигурация ACT для TRONCamp Mani T4 exact550.
+# Официальные ассеты робота, конфигурация задачи и данные в этот файл не входят.
+task: stack_bowls_three
+track: T4
+dataset_label: canonical_official550
+model: ACT
+parameter_count_approx: 83900000
+backbone: resnet18
+encoder_layers: 4
+decoder_layers: 7
+hidden_dim: 512
+dim_feedforward: 3200
+attention_heads: 8
+chunk_size: 50
+kl_weight: 10
+state_dim: 16
+action_dim: 16
+batch_size: 8
+learning_rate: 1.0e-5
+backbone_learning_rate: 1.0e-5
+seed: 120
+action_shift: 0
+gripper_loss_weight: 1
+augmentation: false
+num_epochs: 6000
+save_frequency_epochs: 250
+evaluator_policy: official_act
+evaluator_process: persistent_single_process
+required_environment: organizer_matched_roboTwin_act

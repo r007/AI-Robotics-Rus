@@ -1,0 +1,67 @@
+{
+  "platform": "RDK X5",
+  "safe_mode": "MuJoCo simulation only; no servo commands",
+  "mujoco_version": "3.10.0",
+  "onnxruntime_version": "1.24.4",
+  "policy_backend": "RDK TCP policy server 192.168.8.128:8765",
+  "onnx_sha256": "216fff94da1b88159327c426686fcfcca4763f571b4d123be6b2ca549042f9f0",
+  "onnx_contract": [
+    [
+      1,
+      61
+    ],
+    [
+      1,
+      14
+    ]
+  ],
+  "actuator_model": "BAM M6 XL330",
+  "formation": {
+    "rows": 1,
+    "cols": 1,
+    "ducks": 1
+  },
+  "simulation": {
+    "duration_s": 12.0,
+    "control_hz": 50.0,
+    "control_steps": 600,
+    "wall_seconds": 3.959288253,
+    "realtime_factor": 3.0308477769729083
+  },
+  "policy_batch_or_roundtrip_latency_ms": {
+    "mean": 4.169962808333333,
+    "p50": 2.636348,
+    "p90": 5.387990800000001,
+    "p99": 26.263148789999967,
+    "max": 88.214775
+  },
+  "video": {
+    "path": "/home/ubuntu/workspaces/microduck_rdk_demo/videos/microduck_rdk_brain_single_12s.mp4",
+    "frames": 360,
+    "fps": 30,
+    "resolution": [
+      960,
+      540
+    ],
+    "bytes": 2741938
+  },
+  "ducks": [
+    {
+      "name": "duck0",
+      "start_xy_m": [
+        0.0,
+        0.0
+      ],
+      "end_xy_m": [
+        1.456174282265575,
+        0.8299752801256864
+      ],
+      "displacement_xy_m": [
+        1.456174282265575,
+        0.8299752801256864
+      ],
+      "forward_speed_mps": 0.12134785685546458,
+      "minimum_trunk_height_m": 0.11426124957376964
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "date": "2026-09-05",
+  "simulator_commit": "e81974b932c7ca1819843b7bb3dcd42e2993e98e",
+  "microduck_rl_commit": "29e887ecfbf5d37144759e5a9f8a176dfb83d547",
+  "viewport": [1440, 900],
+  "policy": "ball_kick_right.onnx",
+  "policy_input": [1, 61],
+  "policy_output": [1, 14],
+  "kick_launched": true,
+  "ball_xy_before_m": [-0.5087608622, -0.0423798705],
+  "ball_xy_after_m": [0.5789032583, -0.2785605350],
+  "ball_xy_displacement_m": 1.1130114759,
+  "canvas_colored_pixel_ratio": 0.0333463542,
+  "observed_control_hz": 42,
+  "notes": [
+    "The headless browser reached a working MuJoCo WASM and ONNX Runtime Web loop.",
+    "The ball was placed at the task's nominal right-foot offset before triggering the episodic policy.",
+    "A public Nostr relay failure only disabled multiplayer ghosts; local physics and policy inference remained available."
+  ]
+}

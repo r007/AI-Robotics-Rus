@@ -1,0 +1,29 @@
+﻿{
+    "monitor_samples":  26,
+    "elapsed_last_sec":  141.94,
+    "gpu_mem_used_mib":  {
+                             "min":  0,
+                             "avg":  233,
+                             "max":  263
+                         },
+    "gpu_util_pct":  {
+                         "min":  0,
+                         "avg":  13.54,
+                         "max":  60
+                     },
+    "cpu_total_pct":  {
+                          "min":  40.27,
+                          "avg":  62.8,
+                          "max":  81.05
+                      },
+    "sys_mem_used_gib":  {
+                             "min":  29.18,
+                             "avg":  31.22,
+                             "max":  32.24
+                         },
+    "python_rss_mib":  {
+                           "min":  0,
+                           "avg":  1397.35,
+                           "max":  1537.7
+                       }
+}

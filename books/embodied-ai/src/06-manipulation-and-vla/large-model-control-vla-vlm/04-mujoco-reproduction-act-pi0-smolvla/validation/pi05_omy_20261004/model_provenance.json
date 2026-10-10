@@ -1,0 +1,8 @@
+{
+  "source_weights": "/data/Data14TB/robotics_shared/checkpoints/openpi/openpi-assets/checkpoints/pi05_libero_pytorch/model.safetensors",
+  "source_variant": "official OpenPi pi05_libero_pytorch, BF16",
+  "adapter": "LeRobot 0.6.1 config and processors; original OpenPi tensor keys remapped by official PI05Policy loader",
+  "tensor_count": 812,
+  "strict_pretrained_load": true,
+  "note": "Uses the cached LIBERO-finetuned pretrained policy, not generic lerobot/pi05_base weights."
+}

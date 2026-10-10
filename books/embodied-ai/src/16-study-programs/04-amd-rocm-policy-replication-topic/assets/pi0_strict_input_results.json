@@ -1,0 +1,37 @@
+{
+  "fixed_scene": {
+    "environment_seed": 0,
+    "policy_sampling_seeds": [3, 8, 13, 18, 33, 34, 35, 36, 37, 38, 39, 40],
+    "raw_pi0": {
+      "success": 0,
+      "total": 12
+    },
+    "pi0_visual_history_gru": {
+      "success": 6,
+      "total": 12,
+      "success_policy_seeds": [3, 8, 18, 33, 34, 40]
+    }
+  },
+  "randomized_environment_gate": {
+    "environment_and_policy_seeds": [41, 42, 43, 44],
+    "pi0_visual_history_gru": {
+      "success": 1,
+      "total": 4,
+      "success_seed": 44
+    }
+  },
+  "strict_predicate": {
+    "min_lift_m": 0.03,
+    "min_lift_steps": 3,
+    "min_upright_cos": 0.7,
+    "max_plate_z_gap_m": 0.08,
+    "max_plate_xy_displacement_m": 0.05,
+    "stable_place_steps": 5
+  },
+  "seed_bug": {
+    "old_code": "if seed != None: np.random.seed(seed=0)",
+    "fixed_code": "if seed is not None: np.random.seed(seed=seed)",
+    "impact": "Старая панель из 30 seed меняла только случайность сэмплирования политики, среда всегда была seed 0, поэтому она не может служить доказательством пространственного обобщения"
+  },
+  "interpretation": "Собственные полные траектории задачи в сочетании с головой strict-input visual/history заметно улучшают фиксированную сцену, но гейт случайной позиции проходит лишь 1/4; следующий шаг — собрать данные из нескольких позиций с исправленным seed среды."
+}

@@ -1,0 +1,7 @@
+experiment_id,stage,input_boundary,what_was_checked,result,evidence,status,follow_up
+task_b_definition,definition,official_task_readme,Task B identity and robot platform,Garbage Collection on B2-Piper,official source link,confirmed,keep runner version with every run
+observation_audit,interface,official_observations,Legal sensor groups and no global camera,proprio LiDAR head RGB-D EE RGB-D are the working contract,official source plus config,confirmed,verify exact keys after checkout
+debug_third_person,debug_only,third_person_camera,Whole-scene visual diagnosis,Useful for video and fault localization but not policy input,local debug convention,confirmed,run A/B action invariance test
+near_field_debug,debug_only,privileged_state,Distance/contact diagnosis near an object,Proximity or contact does not prove physical grasp,local debug observation,confirmed,add lift and placement checks
+external_slam_review,reference,public_fork,Closest public Task B-style pipeline,Search plus EE lock plus classifier plus navigation docs,public repository links,reviewed,run official evaluator before claiming success
+public_release_scan,release,public_tree,Secrets paths and oversized files,Use scan script and manifest before commit,local release tooling,pending,run before each push

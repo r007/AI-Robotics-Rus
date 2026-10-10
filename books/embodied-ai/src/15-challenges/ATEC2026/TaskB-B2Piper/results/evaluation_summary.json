@@ -1,0 +1,14 @@
+{
+  "task": "ATEC2026-TaskB",
+  "robot": "Unitree-B2-Piper",
+  "scope": "public_postmortem_and_reproducibility_scaffold",
+  "verified_full_pick_and_place_score": null,
+  "verified_official_leaderboard_rank": null,
+  "local_debug_camera_is_policy_input": false,
+  "external_complete_solution_claim": false,
+  "notes": [
+    "This archive does not claim a final Task B score without official evaluator evidence.",
+    "Proximity, touch, or contact proxy metrics are not physical grasp verification.",
+    "The closest public reference is linked with attribution instead of vendored wholesale."
+  ]
+}

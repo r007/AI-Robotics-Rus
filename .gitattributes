@@ -1,0 +1,16 @@
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.mp4 binary
+*.webm binary
+*.pdf binary
+*.onnx binary
+*.safetensors binary
+*.npz binary
+*.pt binary
+*.pth binary
+*.bin binary

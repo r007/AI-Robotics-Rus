@@ -1,0 +1,874 @@
+{
+  "official_base_fine_50": {
+    "actual_count": 50,
+    "successes": 23.0,
+    "mean": {
+      "success": 0.46,
+      "osr": 0.56,
+      "spl": 0.40471483447411116,
+      "NE": 4.092635510205231,
+      "TL": 6.8266061904335364
+    },
+    "episodes": [
+      {
+        "NE": 5.727411060637608,
+        "success": 0.0,
+        "osr": 1.0,
+        "spl": 0.0,
+        "TL": 10.437032320032566,
+        "steps": 606,
+        "episode_id": "kujiale_0272_27_1",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 0.2975517363279816,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 0.9190466957935899,
+        "TL": 5.168398974437758,
+        "steps": 540,
+        "episode_id": "kujiale_0272_28_4",
+        "fail_reason": "success"
+      },
+      {
+        "NE": 2.687245741845041,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 0.8707791934456446,
+        "TL": 5.167785397115022,
+        "steps": 553,
+        "episode_id": "kujiale_0272_48_1",
+        "fail_reason": "success"
+      },
+      {
+        "NE": 7.758184851312588,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 3.668293242000253,
+        "steps": 533,
+        "episode_id": "kujiale_0272_45_0",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 0.2994600652952154,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 0.8869548658081615,
+        "TL": 5.919128697959604,
+        "steps": 575,
+        "episode_id": "kujiale_0272_47_3",
+        "fail_reason": "success"
+      },
+      {
+        "NE": 3.0094127498330727,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 6.9045500071020465,
+        "steps": 575,
+        "episode_id": "kujiale_0272_12_2",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 5.5528757508463995,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 7.390634548599348,
+        "steps": 593,
+        "episode_id": "kujiale_0272_60_4",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 0.691243650137412,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 1.0,
+        "TL": 6.682452141117532,
+        "steps": 669,
+        "episode_id": "kujiale_0272_51_4",
+        "fail_reason": "success"
+      },
+      {
+        "NE": 1.132441187977577,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 0.6685999410379896,
+        "TL": 13.460964393786304,
+        "steps": 647,
+        "episode_id": "kujiale_0272_54_0",
+        "fail_reason": "success"
+      },
+      {
+        "NE": 0.9337880534143144,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 0.8214177534825912,
+        "TL": 5.173981183120451,
+        "steps": 542,
+        "episode_id": "kujiale_0272_35_2",
+        "fail_reason": "success"
+      },
+      {
+        "NE": 0.802230078891107,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 0.9183875618746586,
+        "TL": 11.160865440160347,
+        "steps": 575,
+        "episode_id": "kujiale_0272_58_3",
+        "fail_reason": "success"
+      },
+      {
+        "NE": 3.20316188224578,
+        "success": 0.0,
+        "osr": 1.0,
+        "spl": 0.0,
+        "TL": 5.897530866088863,
+        "steps": 545,
+        "episode_id": "kujiale_0272_46_3",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 0.5206820473720851,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 1.0,
+        "TL": 6.676247971331838,
+        "steps": 560,
+        "episode_id": "kujiale_0272_34_0",
+        "fail_reason": "success"
+      },
+      {
+        "NE": 2.8884862974004926,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 1.0,
+        "TL": 7.162642081019803,
+        "steps": 552,
+        "episode_id": "kujiale_0272_22_3",
+        "fail_reason": "success"
+      },
+      {
+        "NE": 3.869390163240984,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 0.1437281107215104,
+        "steps": 528,
+        "episode_id": "kujiale_0272_20_1",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 8.496796241765667,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 3.9162378606557513,
+        "steps": 539,
+        "episode_id": "kujiale_0272_39_2",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 1.120467759344367,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 1.0,
+        "TL": 6.446240885039353,
+        "steps": 580,
+        "episode_id": "kujiale_0272_0_0",
+        "fail_reason": "success"
+      },
+      {
+        "NE": 1.6002918679736775,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 0.7545307060695753,
+        "TL": 8.945957991771353,
+        "steps": 577,
+        "episode_id": "kujiale_0272_10_0",
+        "fail_reason": "success"
+      },
+      {
+        "NE": 5.773025480566468,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 2.1569152766887405,
+        "steps": 536,
+        "episode_id": "kujiale_0272_49_3",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 2.3290303510603887,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 0.8454123796019595,
+        "TL": 9.167123864035307,
+        "steps": 561,
+        "episode_id": "kujiale_0272_62_4",
+        "fail_reason": "success"
+      },
+      {
+        "NE": 2.663516753392751,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 1.0,
+        "TL": 6.1735132217722395,
+        "steps": 543,
+        "episode_id": "kujiale_0272_23_4",
+        "fail_reason": "success"
+      },
+      {
+        "NE": 1.486433712367582,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 0.769333519652202,
+        "TL": 6.17417528115422,
+        "steps": 556,
+        "episode_id": "kujiale_0272_26_1",
+        "fail_reason": "success"
+      },
+      {
+        "NE": 5.979987841400445,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 0.17733284556054865,
+        "steps": 720,
+        "episode_id": "kujiale_0243_58_4",
+        "fail_reason": "exceed_total_max_step"
+      },
+      {
+        "NE": 7.219496145675554,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 2.2158500837384576,
+        "steps": 541,
+        "episode_id": "kujiale_0243_10_3",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 4.888799549593403,
+        "success": 0.0,
+        "osr": 1.0,
+        "spl": 0.0,
+        "TL": 9.927182496112767,
+        "steps": 566,
+        "episode_id": "kujiale_0243_29_2",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 11.674534172959193,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 18.66864548877397,
+        "steps": 641,
+        "episode_id": "kujiale_0234_10_0",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 6.7391765442638505,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 0.17320686531110055,
+        "steps": 720,
+        "episode_id": "kujiale_0234_40_1",
+        "fail_reason": "exceed_total_max_step"
+      },
+      {
+        "NE": 1.3357670718834147,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 0.7752634968788445,
+        "TL": 9.674130189534857,
+        "steps": 566,
+        "episode_id": "kujiale_0234_33_2",
+        "fail_reason": "success"
+      },
+      {
+        "NE": 11.78481864141911,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 6.940445415519964,
+        "steps": 549,
+        "episode_id": "kujiale_0234_7_4",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 3.194350776835359,
+        "success": 0.0,
+        "osr": 1.0,
+        "spl": 0.0,
+        "TL": 7.929810107448782,
+        "steps": 570,
+        "episode_id": "kujiale_0234_63_3",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 10.597162818109208,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 0.19345504353922852,
+        "steps": 523,
+        "episode_id": "kujiale_0234_64_0",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 0.7720837495432143,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 0.8821587122212744,
+        "TL": 9.918850064936183,
+        "steps": 566,
+        "episode_id": "kujiale_0234_35_0",
+        "fail_reason": "success"
+      },
+      {
+        "NE": 3.0578050913943033,
+        "success": 0.0,
+        "osr": 1.0,
+        "spl": 0.0,
+        "TL": 3.167261173728833,
+        "steps": 550,
+        "episode_id": "kujiale_0234_26_0",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 5.297450604689734,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 3.670969950197303,
+        "steps": 612,
+        "episode_id": "kujiale_0234_27_4",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 0.49602845841178356,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 0.9742120767177138,
+        "TL": 6.672058533599385,
+        "steps": 575,
+        "episode_id": "kujiale_0234_9_1",
+        "fail_reason": "success"
+      },
+      {
+        "NE": 1.0086006753403218,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 0.5804572110176064,
+        "TL": 8.183204394468154,
+        "steps": 570,
+        "episode_id": "kujiale_0234_56_3",
+        "fail_reason": "success"
+      },
+      {
+        "NE": 6.563837387037612,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 3.7240684885718087,
+        "steps": 553,
+        "episode_id": "kujiale_0234_2_3",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 7.418310026257109,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 2.690583256017216,
+        "steps": 534,
+        "episode_id": "kujiale_0234_3_0",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 4.442188062086787,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 10.460523662438982,
+        "steps": 585,
+        "episode_id": "kujiale_0234_12_3",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 8.758031946316002,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 9.171939034385684,
+        "steps": 561,
+        "episode_id": "kujiale_0234_34_4",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 8.20083044283996,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 6.691180863644071,
+        "steps": 600,
+        "episode_id": "kujiale_0234_28_3",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 1.0728042621316012,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 0.8236523623855794,
+        "TL": 5.159943920625148,
+        "steps": 537,
+        "episode_id": "kujiale_0234_8_3",
+        "fail_reason": "success"
+      },
+      {
+        "NE": 0.27322682314780217,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 0.9436436589259438,
+        "TL": 7.418054404103568,
+        "steps": 579,
+        "episode_id": "kujiale_0234_0_4",
+        "fail_reason": "success"
+      },
+      {
+        "NE": 8.652749797097657,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 9.175201360278948,
+        "steps": 589,
+        "episode_id": "kujiale_0234_57_0",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 4.646549523149256,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 4.17796723300814,
+        "steps": 559,
+        "episode_id": "kujiale_0234_23_1",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 0.9395441974959604,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 0.8645163762234579,
+        "TL": 17.929099351142433,
+        "steps": 620,
+        "episode_id": "kujiale_0234_36_0",
+        "fail_reason": "success"
+      },
+      {
+        "NE": 1.3595521538894737,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 0.9373752125687667,
+        "TL": 7.200958495053879,
+        "steps": 569,
+        "episode_id": "kujiale_0234_31_4",
+        "fail_reason": "success"
+      },
+      {
+        "NE": 9.789814394183953,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 10.431625051574155,
+        "steps": 610,
+        "episode_id": "kujiale_0234_47_1",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 5.425536203667408,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 4.67145665097356,
+        "steps": 545,
+        "episode_id": "kujiale_0234_4_3",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 0.19961066619355028,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 1.0,
+        "TL": 10.92090534167952,
+        "steps": 582,
+        "episode_id": "kujiale_0234_21_2",
+        "fail_reason": "success"
+      }
+    ]
+  },
+  "adapter_coarse_10": {
+    "actual_count": 10,
+    "successes": 4.0,
+    "mean": {
+      "success": 0.4,
+      "osr": 0.4,
+      "spl": 0.38558585251302097,
+      "NE": 4.674261389342526,
+      "TL": 2.4057638423586463
+    },
+    "episodes": [
+      {
+        "NE": 2.5619217497243585,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 1.0,
+        "TL": 3.7303459855000196,
+        "steps": 557,
+        "episode_id": "kujiale_0272_33_2",
+        "fail_reason": "success"
+      },
+      {
+        "NE": 7.0473094400674405,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 0.175032118692088,
+        "steps": 506,
+        "episode_id": "kujiale_0272_53_1",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 3.470641664390939,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 5.933582031463074,
+        "steps": 534,
+        "episode_id": "kujiale_0272_55_0",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 9.272766726807394,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 0.4280875651582074,
+        "steps": 514,
+        "episode_id": "kujiale_0272_1_0",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 6.335603412682353,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 3.6788399173873105,
+        "steps": 515,
+        "episode_id": "kujiale_0272_52_2",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 0.6303035817935453,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 0.8558585251302095,
+        "TL": 4.673669634115573,
+        "steps": 521,
+        "episode_id": "kujiale_0272_38_4",
+        "fail_reason": "success"
+      },
+      {
+        "NE": 7.375275886959841,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 0.3937098749024617,
+        "steps": 520,
+        "episode_id": "kujiale_0272_9_0",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 5.415955403648939,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 0.18743640668017267,
+        "steps": 510,
+        "episode_id": "kujiale_0272_11_0",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 2.882508128620608,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 1.0,
+        "TL": 0.17601323842212166,
+        "steps": 522,
+        "episode_id": "kujiale_0272_32_1",
+        "fail_reason": "success"
+      },
+      {
+        "NE": 1.7503278987298405,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 1.0,
+        "TL": 4.680921651265431,
+        "steps": 525,
+        "episode_id": "kujiale_0272_21_3",
+        "fail_reason": "success"
+      }
+    ]
+  },
+  "adapter_coarse_planned50": {
+    "actual_count": 12,
+    "successes": 1.0,
+    "mean": {
+      "success": 0.08333333333333333,
+      "osr": 0.08333333333333333,
+      "spl": 0.08333333333333333,
+      "NE": 5.6018477625878065,
+      "TL": 1.7293589466130275
+    },
+    "episodes": [
+      {
+        "NE": 5.642044008746232,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 0.9250584674367435,
+        "steps": 517,
+        "episode_id": "kujiale_0272_31_1",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 6.64973949432155,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 0.1671603307473012,
+        "steps": 504,
+        "episode_id": "kujiale_0272_4_4",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 6.748252353460273,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 0.9022494948545238,
+        "steps": 510,
+        "episode_id": "kujiale_0272_43_3",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 3.7978121979466413,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 2.650726288223888,
+        "steps": 514,
+        "episode_id": "kujiale_0272_7_0",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 2.2096447539918076,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 1.0,
+        "TL": 2.8942512383940207,
+        "steps": 524,
+        "episode_id": "kujiale_0272_36_2",
+        "fail_reason": "success"
+      },
+      {
+        "NE": 3.323110372620908,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 5.411592591628613,
+        "steps": 530,
+        "episode_id": "kujiale_0272_59_2",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 6.298513631135627,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 1.6662267306505396,
+        "steps": 514,
+        "episode_id": "kujiale_0272_3_2",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 4.798667112569975,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 0.41780539773081293,
+        "steps": 516,
+        "episode_id": "kujiale_0272_2_4",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 4.077598296225331,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 0.6730629584644591,
+        "steps": 522,
+        "episode_id": "kujiale_0272_33_2",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 5.673797482503888,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 3.1926938667497575,
+        "steps": 519,
+        "episode_id": "kujiale_0272_53_1",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 8.938336898694018,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 1.6692284967061048,
+        "steps": 514,
+        "episode_id": "kujiale_0272_55_0",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 9.064656548837432,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 0.18225149776956417,
+        "steps": 515,
+        "episode_id": "kujiale_0272_1_0",
+        "fail_reason": "not_reach_goal"
+      }
+    ]
+  },
+  "adapter_fine_10": {
+    "actual_count": 10,
+    "successes": 3.0,
+    "mean": {
+      "success": 0.3,
+      "osr": 0.5,
+      "spl": 0.2451289345627865,
+      "NE": 4.039257640980151,
+      "TL": 3.84382974340443
+    },
+    "episodes": [
+      {
+        "NE": 4.684726393532004,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 1.4526310919475536,
+        "steps": 523,
+        "episode_id": "kujiale_0272_34_0",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 3.1687059709750005,
+        "success": 0.0,
+        "osr": 1.0,
+        "spl": 0.0,
+        "TL": 6.666450318507445,
+        "steps": 540,
+        "episode_id": "kujiale_0272_22_3",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 3.5926917585676823,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 0.8982634478583464,
+        "steps": 522,
+        "episode_id": "kujiale_0272_20_1",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 5.896078789674893,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 1.6692118256160038,
+        "steps": 534,
+        "episode_id": "kujiale_0272_39_2",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 6.8422962611727804,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 0.17166063043187715,
+        "steps": 522,
+        "episode_id": "kujiale_0272_0_0",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 5.5412904703489705,
+        "success": 0.0,
+        "osr": 0.0,
+        "spl": 0.0,
+        "TL": 0.4165323349683639,
+        "steps": 516,
+        "episode_id": "kujiale_0272_10_0",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 2.386949607824515,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 0.6494612739253813,
+        "TL": 6.158950749786464,
+        "steps": 554,
+        "episode_id": "kujiale_0272_49_3",
+        "fail_reason": "success"
+      },
+      {
+        "NE": 1.0796073408361984,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 1.0,
+        "TL": 6.438202518071241,
+        "steps": 544,
+        "episode_id": "kujiale_0272_62_4",
+        "fail_reason": "success"
+      },
+      {
+        "NE": 5.84777575944922,
+        "success": 0.0,
+        "osr": 1.0,
+        "spl": 0.0,
+        "TL": 8.642431303752549,
+        "steps": 538,
+        "episode_id": "kujiale_0272_23_4",
+        "fail_reason": "not_reach_goal"
+      },
+      {
+        "NE": 1.3524540574202397,
+        "success": 1.0,
+        "osr": 1.0,
+        "spl": 0.8018280717024838,
+        "TL": 5.923963213104461,
+        "steps": 534,
+        "episode_id": "kujiale_0272_26_1",
+        "fail_reason": "success"
+      }
+    ]
+  }
+}

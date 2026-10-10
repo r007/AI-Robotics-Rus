@@ -1,0 +1,93 @@
+{
+  "status": "passed",
+  "host": "Ubuntu workstation",
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+  "source_weights": "/data/Data14TB/robotics_shared/checkpoints/openpi/openpi-assets/checkpoints/pi05_libero_pytorch/model.safetensors",
+  "source_variant": "official OpenPi pi05_libero_pytorch, BF16",
+  "source_tensor_count": 812,
+  "saved_tensor_count": 813,
+  "complete_pretrained_load": true,
+  "dataset": "/data/Data14TB/robotics_shared/experiments/omy-pi05-notebook-20261004/short_finetune_20261004/real_omy_v3",
+  "collection": "real MuJoCo OMY tiny joint-command trajectories, not successful grasp demonstrations",
+  "total_frames": 60,
+  "train_frames": 40,
+  "train_episodes": [
+    0,
+    1
+  ],
+  "heldout_episodes": [
+    2
+  ],
+  "fps": 20,
+  "state_semantics": "six-dimensional EEF pose",
+  "action_semantics": "six absolute commanded joint targets plus normalized gripper",
+  "steps": 5,
+  "batch_size": 1,
+  "chunk_size": 50,
+  "n_action_steps": 5,
+  "train_expert_only": true,
+  "freeze_vision_encoder": true,
+  "gradient_checkpointing": true,
+  "dtype": "bfloat16",
+  "metrics": [
+    {
+      "step": 1,
+      "loss": 1.332,
+      "gradient_norm": 11.55,
+      "peak_allocated_memory_gib": 12.85
+    },
+    {
+      "step": 2,
+      "loss": 1.446,
+      "gradient_norm": 6.752,
+      "peak_allocated_memory_gib": 12.85
+    },
+    {
+      "step": 3,
+      "loss": 1.1,
+      "gradient_norm": 9.364,
+      "peak_allocated_memory_gib": 12.85
+    },
+    {
+      "step": 4,
+      "loss": 0.979,
+      "gradient_norm": 3.011,
+      "peak_allocated_memory_gib": 12.85
+    },
+    {
+      "step": 5,
+      "loss": 0.922,
+      "gradient_norm": 3.35,
+      "peak_allocated_memory_gib": 12.85
+    }
+  ],
+  "parameter_update_checks": {
+    "action_in_proj.weight": {
+      "changed_elements": 32763,
+      "elements": 32768,
+      "max_abs_delta": 8.015334606170654e-05
+    },
+    "action_out_proj.weight": {
+      "changed_elements": 32768,
+      "elements": 32768,
+      "max_abs_delta": 7.999688386917114e-05
+    },
+    "paligemma_with_expert.paligemma.model.vision_tower.vision_model.embeddings.patch_embedding.weight": {
+      "changed_elements": 0,
+      "elements": 677376,
+      "max_abs_delta": 0.0
+    }
+  },
+  "checkpoint": "/data/Data14TB/robotics_shared/experiments/omy-pi05-notebook-20261004/short_finetune_20261004/train-5steps/checkpoints/last/pretrained_model",
+  "saved_training_step": 5,
+  "checkpoint_reload": true,
+  "saved_processor_action_round_trip": true,
+  "inference_shape": [
+    1,
+    50,
+    7
+  ],
+  "inference_finite": true,
+  "inference_seconds_first_call": 0.8596163550391793,
+  "grasp_success_evaluated": false
+}
