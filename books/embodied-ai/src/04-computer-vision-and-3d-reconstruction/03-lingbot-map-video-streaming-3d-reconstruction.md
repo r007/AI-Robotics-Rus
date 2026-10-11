@@ -177,7 +177,7 @@ python demo_render/batch_demo.py \
 Учебный репозиторий содержит простую веб-обёртку, которая находится в каталоге:
 
 ```text
-tools/lingbot_map_web_demo/
+books/embodied-ai/tools/lingbot_map_web_demo/
 ```
 
 Веса LingBot-Map в ней не встроены, и результаты работы в учебный репозиторий она не записывает. Чтобы указать расположение проекта LingBot-Map и файла весов, задайте переменные окружения:
@@ -188,7 +188,7 @@ export LINGBOT_MAP_CKPT=/path/to/lingbot-map/checkpoints/lingbot-map-long.pt
 export LINGBOT_MAP_PYTHON=/path/to/mamba/envs/lingbot-map/bin/python
 export LINGBOT_MAP_RUN_ROOT=/path/to/lingbot_map_runs
 
-cd /path/to/every-embodied/tools/lingbot_map_web_demo
+cd /path/to/AI-Robotics-Rus/books/embodied-ai/tools/lingbot_map_web_demo
 pip install -r requirements.txt
 python app.py
 ```

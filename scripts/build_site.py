@@ -32,8 +32,8 @@ BUILD = ROOT / "build"
 SRC = BUILD / "src"
 ASSETS = BUILD / "assets"
 
-# The mermaid runtime lives with the embodied-ai book and is shared by all books.
-MERMAID_SOURCE = BOOKS / "embodied-ai"
+# The mermaid runtime is shared by all books and lives in assets/vendor/.
+VENDOR = ROOT / "assets" / "vendor"
 MERMAID_FILES = ["mermaid.min.js", "mermaid-init.js"]
 
 # Markdown link target: [text](target). External, anchor and absolute targets are left alone.
@@ -134,7 +134,7 @@ def assemble() -> list[str]:
 
     ASSETS.mkdir(parents=True)
     for name in MERMAID_FILES:
-        shutil.copy2(MERMAID_SOURCE / name, ASSETS / name)
+        shutil.copy2(VENDOR / name, ASSETS / name)
     return slugs
 
 

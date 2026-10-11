@@ -1,0 +1,15 @@
+# Метаданные для каталога книг. Заголовок и описание берутся из book.toml.
+# Файл проверяет scripts/check_books.py, страница каталога будет строиться из него.
+
+order = 1
+status = "in-progress"
+status_label = "Перевод в работе"
+# generated: src/SUMMARY.md создаёт scripts/make_summary.py и проверяет CI
+summary = "generated"
+license = "CC BY 4.0"
+
+[source]
+title = "every-embodied"
+author = "Datawhale и соавторы"
+url = "https://github.com/datawhalechina/every-embodied"
+license = "CC BY 4.0"

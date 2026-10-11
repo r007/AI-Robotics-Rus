@@ -18,13 +18,14 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Table of contents is up to date
-        run: |
-          python3 scripts/make_summary.py books/embodied-ai
-          git diff --exit-code -- books/embodied-ai/src/SUMMARY.md
+      - name: Books have the required layout
+        run: python3 scripts/check_books.py
 
       - name: Relative links resolve
-        run: python3 scripts/check_links.py books/embodied-ai/src
+        run: |
+          for book in books/*/; do
+            python3 scripts/check_links.py "${book}src"
+          done
 
       - name: Python sources compile
         run: python3 -c "import ast, pathlib; [ast.parse(p.read_text(encoding='utf-8'), str(p)) for p in pathlib.Path('.').rglob('*.py') if '.git' not in p.parts]"
