@@ -39,10 +39,10 @@
 - **Ashby** (1956). An Introduction to Cybernetics. *Chapman \& Hall.*
 <a id="astrom2006advanced"></a>
 
-- **{\AA}str{\"o}m and H{\"a}gglund** (2006). Advanced PID Control. *ISA-The Instrumentation, Systems, and Automation Society.*
+- **Åström and Hägglund** (2006). Advanced PID Control. *ISA-The Instrumentation, Systems, and Automation Society.*
 <a id="astrom2021feedback"></a>
 
-- **{\AA}str{\"o}m and Murray** (2021). Feedback systems: an introduction for scientists and engineers. *Princeton university press.*
+- **Åström and Murray** (2021). Feedback systems: an introduction for scientists and engineers. *Princeton university press.*
 <a id="bainbridge1983ironies"></a>
 
 - **Bainbridge** (1983). Ironies of Automation. *Automatica.*
@@ -300,7 +300,7 @@
 - **Liu et al.** (2024). {OK-Robot}: What Really Matters in Integrating Open-Knowledge Models for Robotics. *arXiv preprint arXiv:2401.12202.*
 <a id="lozanoperez1983spatial"></a>
 
-- **Lozano-P{\'e}rez** (1983). Spatial Planning: A Configuration Space Approach. *IEEE Transactions on Computers.*
+- **Lozano-Pérez** (1983). Spatial Planning: A Configuration Space Approach. *IEEE Transactions on Computers.*
 <a id="lynch2017modern"></a>
 
 - **Lynch and Park** (2017). Modern Robotics: Mechanics, Planning, and Control. *Cambridge University Press.*
