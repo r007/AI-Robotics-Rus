@@ -1,0 +1,16 @@
+# Метаданные для каталога книг. Заголовок и описание берутся из book.toml.
+# Файл проверяет scripts/check_books.py, страница каталога будет строиться из него.
+
+order = 3
+status = "in-progress"
+status_label = "Перевод готов, требуется вычитка"
+# manual: src/SUMMARY.md написан вручную и повторяет структуру оригинала
+summary = "manual"
+# Книга не под общей лицензией репозитория, см. NOTICE.md
+license = "CC BY-NC-SA 4.0"
+
+[source]
+title = "Machine Learning Systems, Vol. IV: Physical AI Systems"
+author = "Vijay Janapa Reddi и соавторы (Harvard University)"
+url = "https://mlsysbook.ai"
+license = "CC BY-NC-SA 4.0"
