@@ -21,7 +21,7 @@
   <!-- 0. Sensors -->
   <rect x="24" y="65" width="105" height="66" rx="3" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
   <text x="76" y="94" text-anchor="middle" class="box-title">Датчики</text>
-  <text x="76" y="112" text-anchor="middle" class="box-sub">Фотоны &amp; IMU</text>
+  <text x="76" y="112" text-anchor="middle" class="box-sub">Фотоны и IMU</text>
 
   <!-- Arrow -->
   <line x1="129" y1="98" x2="149" y2="98" stroke="#64748B" stroke-width="1.2" marker-end="url(#arrow-slate)" />

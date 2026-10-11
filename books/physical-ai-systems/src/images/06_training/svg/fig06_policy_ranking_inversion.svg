@@ -87,6 +87,6 @@
     <rect x="20" y="168" width="345" height="54" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" />
     <line x1="20" y1="168" x2="20" y2="222" stroke="#DC2626" stroke-width="4" />
     <text x="35" y="190" class="card-title">3. Идеальный привод: дребезг</text>
-    <text x="35" y="209" class="math-code">f<tspan baseline-shift="sub" font-size="8">act</tspan> &#8776; &#969;<tspan baseline-shift="sub" font-size="8">res</tspan> (срабатывание термозащиты)</text>
+    <text x="35" y="209" class="math-code">f<tspan baseline-shift="sub" font-size="8">факт</tspan> &#8776; &#969;<tspan baseline-shift="sub" font-size="8">рез</tspan> (срабатывание термозащиты)</text>
   </g>
 </svg>

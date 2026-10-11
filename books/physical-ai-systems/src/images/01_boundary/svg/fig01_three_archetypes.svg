@@ -38,7 +38,7 @@
     <!-- Card Header -->
     <path d="M 0 4 Q 0 0 4 0 L 261 0 Q 265 0 265 4 L 265 38 L 0 38 Z" fill="#1F407A"/>
     <text x="132.5" y="17" class="header-title">1. ДОМИНИРУЕМЫЙ МАССОЙ</text>
-    <text x="132.5" y="30" class="header-sub">Мобильность &amp; навигация</text>
+    <text x="132.5" y="30" class="header-sub">Мобильность и навигация</text>
 
     <!-- Technical Schematic Box -->
     <rect x="12" y="48" width="241" height="88" rx="3" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
@@ -98,7 +98,7 @@
     <!-- Card Header -->
     <path d="M 0 4 Q 0 0 4 0 L 261 0 Q 265 0 265 4 L 265 38 L 0 38 Z" fill="#A51C30"/>
     <text x="132.5" y="17" class="header-title">2. ДОМИНИРУЕМЫЙ КОНТАКТОМ</text>
-    <text x="132.5" y="30" class="header-sub">Манипуляция &amp; сборка</text>
+    <text x="132.5" y="30" class="header-sub">Манипуляция и сборка</text>
 
     <!-- Technical Schematic Box -->
     <rect x="12" y="48" width="241" height="88" rx="3" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
@@ -144,12 +144,12 @@
       <line x1="144" y1="38" x2="152" y2="46" stroke="#64748B" stroke-width="1"/>
 
       <text x="160" y="24" class="tech-label" fill="#DC2626">F = k<tspan baseline-shift="sub" font-size="78%">c</tspan>·Δx</text>
-      <text x="160" y="38" class="tech-label" fill="#334155">J<tspan baseline-shift="sub" font-size="78%">ref</tspan> = N²·J<tspan baseline-shift="sub" font-size="78%">r</tspan></text>
+      <text x="160" y="38" class="tech-label" fill="#334155">J<tspan baseline-shift="sub" font-size="78%">пр</tspan> = N²·J<tspan baseline-shift="sub" font-size="78%">r</tspan></text>
     </g>
 
     <!-- Formula Box -->
     <rect x="12" y="142" width="241" height="24" rx="3" fill="#FEF2F2" stroke="#FECACA" stroke-width="1"/>
-    <text x="132.5" y="158" class="math-box-text" fill="#B91C1C">F<tspan baseline-shift="sub" font-size="78%">контакт</tspan> = k<tspan baseline-shift="sub" font-size="78%">c</tspan>·Δx,  J<tspan baseline-shift="sub" font-size="78%">ref</tspan> = N²·J<tspan baseline-shift="sub" font-size="78%">rotor</tspan></text>
+    <text x="132.5" y="158" class="math-box-text" fill="#B91C1C">F<tspan baseline-shift="sub" font-size="78%">контакт</tspan> = k<tspan baseline-shift="sub" font-size="78%">c</tspan>·Δx,  J<tspan baseline-shift="sub" font-size="78%">пр</tspan> = N²·J<tspan baseline-shift="sub" font-size="78%">ротор</tspan></text>
 
     <!-- Bottom Takeaway Strip -->
     <rect x="12" y="186" width="241" height="22" rx="3" fill="#F1F5F9"/>
@@ -166,7 +166,7 @@
     <!-- Card Header -->
     <path d="M 0 4 Q 0 0 4 0 L 261 0 Q 265 0 265 4 L 265 38 L 0 38 Z" fill="#B45309"/>
     <text x="132.5" y="17" class="header-title">3. ДОМИНИРУЕМЫЙ ПОТОКОМ</text>
-    <text x="132.5" y="30" class="header-sub">Процессы, тепло &amp; энергия</text>
+    <text x="132.5" y="30" class="header-sub">Процессы, тепло и энергия</text>
 
     <!-- Technical Schematic Box -->
     <rect x="12" y="48" width="241" height="88" rx="3" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
@@ -202,7 +202,7 @@
 
     <!-- Formula Box -->
     <rect x="12" y="142" width="241" height="24" rx="3" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
-    <text x="132.5" y="158" class="math-box-text" fill="#B45309">dT/dt = (P<tspan baseline-shift="sub" font-size="78%">in</tspan> - P<tspan baseline-shift="sub" font-size="78%">out</tspan>) / C<tspan baseline-shift="sub" font-size="78%">th</tspan></text>
+    <text x="132.5" y="158" class="math-box-text" fill="#B45309">dT/dt = (P<tspan baseline-shift="sub" font-size="78%">вх</tspan> - P<tspan baseline-shift="sub" font-size="78%">вых</tspan>) / C<tspan baseline-shift="sub" font-size="78%">тепл</tspan></text>
 
     <!-- Bottom Takeaway Strip -->
     <rect x="12" y="186" width="241" height="22" rx="3" fill="#F1F5F9"/>

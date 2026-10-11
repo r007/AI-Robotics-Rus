@@ -42,7 +42,7 @@
       <text x="14" y="17" text-anchor="middle" class="font-mono" font-size="9" font-weight="700" fill="#ffffff">1</text>
       <text x="26" y="17" class="font-sans" font-size="9.5" font-weight="700" fill="#1e40af">Фотодиод</text>
       <text x="8" y="32" class="font-sans" font-size="8.5" fill="#475569">Экспозиция CMOS</text>
-      <text x="8" y="44" class="font-sans" font-size="8" fill="#64748b">τ<tspan baseline-shift="sub" font-size="78%">exp</tspan> середина</text>
+      <text x="8" y="44" class="font-sans" font-size="8" fill="#64748b">τ<tspan baseline-shift="sub" font-size="78%">эксп</tspan> середина</text>
       
       <rect x="6" y="52" width="104" height="20" rx="4" fill="#ffffff" stroke="#bfdbfe" stroke-width="1"/>
       <text x="58" y="66" text-anchor="middle" class="font-sans" font-size="9.5" font-weight="700" fill="#1d4ed8">Экспозиция</text>
@@ -96,7 +96,7 @@
       <text x="14" y="17" text-anchor="middle" class="font-mono" font-size="9" font-weight="700" fill="#ffffff">4</text>
       <text x="26" y="17" class="font-sans" font-size="9.5" font-weight="700" fill="#1e40af">Ядро V4L2</text>
       <text x="8" y="32" class="font-sans" font-size="8.5" fill="#475569">Кольцевой буфер</text>
-      <text x="8" y="44" class="font-sans" font-size="8" fill="#64748b">Диспетчеризация user-space</text>
+      <text x="8" y="44" class="font-sans" font-size="8" fill="#64748b">Диспетчеризация в пользовательском пространстве</text>
 
       <rect x="6" y="52" width="104" height="20" rx="4" fill="#ffffff" stroke="#bfdbfe" stroke-width="1"/>
       <text x="58" y="66" text-anchor="middle" class="font-sans" font-size="9.5" font-weight="700" fill="#1d4ed8">Очередь</text>
@@ -114,7 +114,7 @@
       <text x="14" y="17" text-anchor="middle" class="font-mono" font-size="9" font-weight="700" fill="#ffffff">5</text>
       <text x="26" y="17" class="font-sans" font-size="9.5" font-weight="700" fill="#065f46">Периферийный NPU / GPU</text>
       <text x="8" y="32" class="font-sans" font-size="8.5" fill="#047857">Инференс политики</text>
-      <text x="8" y="44" class="font-sans" font-size="8" fill="#64748b">Transformer / CNN</text>
+      <text x="8" y="44" class="font-sans" font-size="8" fill="#64748b">Трансформер / CNN</text>
 
       <rect x="6" y="52" width="112" height="20" rx="4" fill="#ffffff" stroke="#a7f3d0" stroke-width="1"/>
       <text x="62" y="66" text-anchor="middle" class="font-sans" font-size="9.5" font-weight="700" fill="#047857">Инференс</text>
@@ -138,7 +138,7 @@
       <text x="58" y="66" text-anchor="middle" class="font-sans" font-size="9.5" font-weight="700" fill="#1d4ed8">Диспетчеризация</text>
 
       <text x="8" y="86" class="font-sans" font-size="8" fill="#64748b">Seqlock без блокировок</text>
-      <text x="8" y="96" class="font-sans" font-size="8" fill="#0284c7">Детерминированный IRQ</text>
+      <text x="8" y="96" class="font-sans" font-size="8" fill="#0284c7">Детерминированное прерывание IRQ</text>
     </g>
 
     <path d="M 822 89 L 834 89" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr-gray)"/>
@@ -196,28 +196,28 @@
 
       <!-- Ticks & Labels: 0 to 80 ms (8 px/ms) -->
       <line x1="185" y1="0" x2="185" y2="175" stroke="#e2e8f0" stroke-width="1"/>
-      <text x="185" y="-8" text-anchor="middle" class="font-sans" font-size="10" fill="#64748b">0 ms</text>
+      <text x="185" y="-8" text-anchor="middle" class="font-sans" font-size="10" fill="#64748b">0 мс</text>
 
       <line x1="265" y1="0" x2="265" y2="175" stroke="#f1f5f9" stroke-width="1"/>
-      <text x="265" y="-8" text-anchor="middle" class="font-sans" font-size="10" fill="#64748b">10 ms</text>
+      <text x="265" y="-8" text-anchor="middle" class="font-sans" font-size="10" fill="#64748b">10 мс</text>
 
       <line x1="345" y1="0" x2="345" y2="175" stroke="#f1f5f9" stroke-width="1"/>
-      <text x="345" y="-8" text-anchor="middle" class="font-sans" font-size="10" fill="#64748b">20 ms</text>
+      <text x="345" y="-8" text-anchor="middle" class="font-sans" font-size="10" fill="#64748b">20 мс</text>
 
       <line x1="425" y1="0" x2="425" y2="175" stroke="#f1f5f9" stroke-width="1"/>
-      <text x="425" y="-8" text-anchor="middle" class="font-sans" font-size="10" fill="#64748b">30 ms</text>
+      <text x="425" y="-8" text-anchor="middle" class="font-sans" font-size="10" fill="#64748b">30 мс</text>
 
       <line x1="585" y1="0" x2="585" y2="175" stroke="#f1f5f9" stroke-width="1"/>
-      <text x="585" y="-8" text-anchor="middle" class="font-sans" font-size="10" fill="#64748b">50 ms</text>
+      <text x="585" y="-8" text-anchor="middle" class="font-sans" font-size="10" fill="#64748b">50 мс</text>
 
       <line x1="665" y1="0" x2="665" y2="175" stroke="#f1f5f9" stroke-width="1"/>
-      <text x="665" y="-8" text-anchor="middle" class="font-sans" font-size="10" fill="#64748b">60 ms</text>
+      <text x="665" y="-8" text-anchor="middle" class="font-sans" font-size="10" fill="#64748b">60 мс</text>
 
       <line x1="745" y1="0" x2="745" y2="175" stroke="#f1f5f9" stroke-width="1"/>
-      <text x="745" y="-8" text-anchor="middle" class="font-sans" font-size="10" fill="#64748b">70 ms</text>
+      <text x="745" y="-8" text-anchor="middle" class="font-sans" font-size="10" fill="#64748b">70 мс</text>
 
       <line x1="825" y1="0" x2="825" y2="175" stroke="#e2e8f0" stroke-width="1"/>
-      <text x="825" y="-8" text-anchor="middle" class="font-sans" font-size="10" fill="#64748b">80 ms</text>
+      <text x="825" y="-8" text-anchor="middle" class="font-sans" font-size="10" fill="#64748b">80 мс</text>
 
       <!-- FRESHNESS DEADLINE (20.0 ms = x:345) -->
       <line x1="345" y1="0" x2="345" y2="175" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="5,4"/>

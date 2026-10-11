@@ -68,7 +68,7 @@
     <!-- Reflex Ingress -->
     <g transform="translate(20, 42)">
       <rect width="335" height="48" rx="4" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1.2" />
-      <text x="167" y="29" class="box-title" fill="#166534" text-anchor="middle">Рефлекторные датчики &amp; энкодеры (1000 Гц)</text>
+      <text x="167" y="29" class="box-title" fill="#166534" text-anchor="middle">Рефлекторные датчики и энкодеры (1000 Гц)</text>
     </g>
 
     <!-- Downward Arrow from Reflex Sensors to Safety Enforcer -->

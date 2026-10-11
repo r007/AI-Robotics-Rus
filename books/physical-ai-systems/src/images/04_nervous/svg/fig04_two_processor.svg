@@ -100,7 +100,7 @@
   <!-- ==================== TIER 4: ACTUATORS & PLANT ==================== -->
   <g transform="translate(40, 460)">
     <rect width="760" height="55" rx="4" fill="#FEF2F2" stroke="#FECACA" stroke-width="1.2"/>
-    <text x="380" y="33" class="box-lbl" font-size="13px" fill="#991B1B">Актуаторы &amp; объект управления</text>
+    <text x="380" y="33" class="box-lbl" font-size="13px" fill="#991B1B">Актуаторы и объект управления</text>
   </g>
 
   <!-- Flow: Actuator Reflex -> Actuators & Plant -->

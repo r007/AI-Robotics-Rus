@@ -54,11 +54,11 @@
     <!-- Time Axis -->
     <line x1="52" y1="132" x2="280" y2="132" stroke="#64748b" stroke-width="1" marker-end="url(#arr-axis)"/>
     <text x="52" y="142" font-size="7.5" font-weight="600" fill="#334155">t = 0 (остановка VLA)</text>
-    <text x="190" y="142" font-size="7.5" font-weight="700" fill="#14532d" text-anchor="middle">t = 2.18 s</text>
+    <text x="190" y="142" font-size="7.5" font-weight="700" fill="#14532d" text-anchor="middle">t = 2.18 с</text>
 
     <!-- Recovery Delta Dimension Line -->
     <line x1="56" y1="152" x2="186" y2="152" stroke="#334155" stroke-width="0.8" marker-start="url(#arr-dim-left)" marker-end="url(#arr-dim-right)"/>
-    <text x="121" y="150" font-size="7.5" font-weight="700" fill="#1e293b" text-anchor="middle">Δt_recov = 2.18 с (2,175 тактов гистерезиса)</text>
+    <text x="121" y="150" font-size="7.5" font-weight="700" fill="#1e293b" text-anchor="middle">Δt_recov = 2.18 с (2 175 тактов гистерезиса)</text>
   </g>
 
   <!-- ==================================================================== -->
@@ -84,7 +84,7 @@
 
     <!-- Nominal Execution Bar: 250 us (width 45px) -->
     <rect x="316" y="56" width="45" height="18" rx="2" fill="#d4edda" stroke="#3d9e5a" stroke-width="0.75"/>
-    <text x="338.5" y="68" font-size="7.5" font-weight="600" fill="#14532d" text-anchor="middle">250 µs</text>
+    <text x="338.5" y="68" font-size="7.5" font-weight="600" fill="#14532d" text-anchor="middle">250 мкс</text>
 
     <!-- Slack Bar: 150 us (width 27px) -->
     <rect x="361" y="56" width="27" height="18" rx="2" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.75"/>

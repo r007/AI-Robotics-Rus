@@ -81,7 +81,7 @@
   <!-- T_amb (Ambient baseline) -->
   <line x1="690" y1="390" x2="1110" y2="390" class="subtle-line"/>
   <line x1="685" y1="390" x2="690" y2="390" stroke="#334155" stroke-width="1.5"/>
-  <text x="680" y="394" class="tick-label" text-anchor="end">T<tspan font-size="9.5" dy="2">amb</tspan></text>
+  <text x="680" y="394" class="tick-label" text-anchor="end">T<tspan font-size="9.5" dy="2">окр</tspan></text>
 
   <!-- Temperature Trajectory Curves (2 Cycles) -->
   <!-- Cycle 1: Burst heating -->
@@ -97,7 +97,7 @@
   <!-- Time Brackets below X-Axis -->
   <!-- t_on (Burst): 690 to 770 -->
   <path d="M 690 442 v 6 h 80 v -6" fill="none" stroke="#64748B" stroke-width="1.2"/>
-  <text x="730" y="464" class="bracket-label" text-anchor="middle">t<tspan font-size="8.5" dy="2">on</tspan><tspan font-size="11.5" dy="-2" dx="4">(Всплеск)</tspan></text>
+  <text x="730" y="464" class="bracket-label" text-anchor="middle">t<tspan font-size="8.5" dy="2">вкл</tspan><tspan font-size="11.5" dy="-2" dx="4">(Всплеск)</tspan></text>
 
   <!-- t_off (Recovery): 770 to 910 -->
   <path d="M 770 442 v 6 h 140 v -6" fill="none" stroke="#64748B" stroke-width="1.2"/>

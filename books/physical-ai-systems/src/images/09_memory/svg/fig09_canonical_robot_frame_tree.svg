@@ -65,7 +65,7 @@
 
     <!-- Angular deflection and tool error annotation -->
     <path d="M 348 95 C 370 105, 380 125, 375 145" fill="none" stroke="#DC2626" stroke-width="1.3" stroke-dasharray="3,3" marker-end="url(#arr-red)"/>
-    <text x="382" y="130" font-size="9.5" font-weight="600" fill="#DC2626">e<tspan baseline-shift="sub" font-size="78%">tool</tspan> ≈ ℓ · Δθ</text>
+    <text x="382" y="130" font-size="9.5" font-weight="600" fill="#DC2626">e<tspan baseline-shift="sub" font-size="78%">инстр</tspan> ≈ ℓ · Δθ</text>
   </g>
 
   <!-- ==================================================================== -->
@@ -96,7 +96,7 @@
 
     <!-- Node: wrist -->
     <rect x="170" y="195" width="105" height="34" rx="3" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1.2"/>
-    <text x="222" y="216" font-family="'Menlo', 'Courier New', monospace" font-size="10" font-weight="600" fill="#166534" text-anchor="middle">wrist</text>
+    <text x="222" y="216" font-family="'Menlo', 'Courier New', monospace" font-size="10" font-weight="600" fill="#166534" text-anchor="middle">запястье</text>
 
     <!-- Branch Left: wrist -> wrist_cam -->
     <path d="M 170 212 L 80 212 L 80 260" fill="none" stroke="#2563EB" stroke-width="1.2" marker-end="url(#arr-blue)"/>

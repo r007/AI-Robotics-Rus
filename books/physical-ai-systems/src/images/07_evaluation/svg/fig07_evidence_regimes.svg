@@ -59,10 +59,10 @@
     <!-- Branch A: Active Baseline Loop -->
     <path d="M 203 135 L 222 135 L 222 115 L 242 115" fill="none" stroke="#475569" stroke-width="1.3" marker-end="url(#arr-dark)"/>
     <rect x="245" y="100" width="75" height="30" rx="4" fill="#F1F5F9" stroke="#64748B" stroke-width="1.2"/>
-    <text x="282" y="119" font-size="10.5" font-weight="700" fill="#334155" text-anchor="middle">π<tspan baseline-shift="sub" font-size="8">base</tspan></text>
+    <text x="282" y="119" font-size="10.5" font-weight="700" fill="#334155" text-anchor="middle">π<tspan baseline-shift="sub" font-size="8">осн</tspan></text>
 
     <line x1="320" y1="115" x2="355" y2="115" stroke="#059669" stroke-width="1.3" marker-end="url(#arr-green)"/>
-    <text x="337" y="110" font-size="8.5" font-weight="600" fill="#059669" text-anchor="middle">a<tspan baseline-shift="sub" font-size="8">base</tspan></text>
+    <text x="337" y="110" font-size="8.5" font-weight="600" fill="#059669" text-anchor="middle">a<tspan baseline-shift="sub" font-size="8">осн</tspan></text>
 
     <rect x="358" y="100" width="70" height="30" rx="4" fill="#F0FDF4" stroke="#15803D" stroke-width="1.2"/>
     <text x="393" y="119" font-size="10" font-weight="700" fill="#15803D" text-anchor="middle">Моторы</text>
@@ -83,7 +83,7 @@
 
     <!-- Bottom State Notation -->
     <rect x="225" y="222" width="170" height="20" rx="4" fill="#FFFFFF" stroke="#FDE68A" stroke-width="0.9"/>
-    <text x="310" y="236" font-size="9.5" font-weight="600" fill="#B45309" text-anchor="middle">s<tspan baseline-shift="sub" font-size="8">t</tspan> ∼ d(π<tspan baseline-shift="sub" font-size="8">base</tspan>)</text>
+    <text x="310" y="236" font-size="9.5" font-weight="600" fill="#B45309" text-anchor="middle">s<tspan baseline-shift="sub" font-size="8">t</tspan> ∼ d(π<tspan baseline-shift="sub" font-size="8">осн</tspan>)</text>
   </g>
 
   <!-- ==================================================================== -->

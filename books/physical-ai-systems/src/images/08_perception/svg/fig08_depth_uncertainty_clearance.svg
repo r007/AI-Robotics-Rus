@@ -74,7 +74,7 @@
     <line x1="244" y1="200" x2="244" y2="250" stroke="#dc2626" stroke-width="1" stroke-dasharray="2,2"/>
     <circle cx="244" cy="200" r="3.5" fill="#dc2626"/>
     <rect x="162" y="180" width="124" height="17" rx="3" fill="#ffffff" stroke="#fecdd3" stroke-width="0.8"/>
-    <text x="224" y="192" font-size="8.5px" font-weight="600" fill="#be123c" text-anchor="middle">z = 10 m → σz ≈ 313 mm</text>
+    <text x="224" y="192" font-size="8.5px" font-weight="600" fill="#be123c" text-anchor="middle">z = 10 м → σz ≈ 313 мм</text>
 
     <!-- Stereo Curve Pill -->
     <rect x="250" y="80" width="128" height="20" rx="4" fill="#fef2f2" stroke="#fecdd3" stroke-width="1"/>

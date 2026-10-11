@@ -44,7 +44,7 @@
       <text x="47" y="24" font-size="9" font-weight="600" fill="#475569">X<tspan baseline-shift="sub" font-size="78%">b</tspan></text>
       <text x="-4" y="-27" font-size="9" font-weight="600" fill="#475569">Z<tspan baseline-shift="sub" font-size="78%">b</tspan></text>
       <text x="-32" y="48" font-size="9" font-weight="600" fill="#475569">Y<tspan baseline-shift="sub" font-size="78%">b</tspan></text>
-      <text x="-28" y="14" font-size="9.5" font-weight="600" fill="#64748B">F<tspan baseline-shift="sub" font-size="78%">base</tspan></text>
+      <text x="-28" y="14" font-size="9.5" font-weight="600" fill="#64748B">F<tspan baseline-shift="sub" font-size="78%">осн</tspan></text>
     </g>
 
     <!-- Nominal Standoff Vector p_0 -->

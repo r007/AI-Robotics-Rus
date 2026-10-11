@@ -57,7 +57,7 @@
   <!-- Signal 2 Path: a_cmd across Boundary -->
   <line x1="435" y1="164" x2="550" y2="164" stroke="#334155" stroke-width="1.4" marker-end="url(#arrow-slate)" />
   <rect x="506" y="138" width="48" height="20" rx="4" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1" />
-  <text x="530" y="152" class="math-label" fill="#1E40AF">a<tspan baseline-shift="sub" font-size="9">cmd</tspan></text>
+  <text x="530" y="152" class="math-label" fill="#1E40AF">a<tspan baseline-shift="sub" font-size="9">кмд</tspan></text>
 
   <!-- Block 3: Safety Barrier -->
   <rect x="550" y="135" width="160" height="58" rx="3" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1.2" />
@@ -66,7 +66,7 @@
   <!-- Signal 3 Path: a_enf -->
   <line x1="710" y1="164" x2="775" y2="164" stroke="#334155" stroke-width="1.4" marker-end="url(#arrow-slate)" />
   <rect x="724" y="138" width="46" height="20" rx="4" fill="#FFFFFF" stroke="#BBF7D0" stroke-width="1" />
-  <text x="747" y="152" class="math-label" fill="#15803D">a<tspan baseline-shift="sub" font-size="9">enf</tspan></text>
+  <text x="747" y="152" class="math-label" fill="#15803D">a<tspan baseline-shift="sub" font-size="9">прин</tspan></text>
 
   <!-- Block 4: Physical Plant -->
   <rect x="775" y="135" width="165" height="58" rx="3" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2" />

@@ -110,7 +110,7 @@
     <g transform="translate(18, 52)">
       <!-- Camera Origin O_cam -->
       <circle cx="16" cy="98" r="3.5" fill="#0f172a"/>
-      <text x="16" y="115" class="code-tag" fill="#475569" text-anchor="middle">O<tspan baseline-shift="sub">cam</tspan></text>
+      <text x="16" y="115" class="code-tag" fill="#475569" text-anchor="middle">O<tspan baseline-shift="sub">кам</tspan></text>
 
       <!-- Frustum Volume Boundary -->
       <polygon points="16,98 174,42 174,154" fill="url(#grad-frustum)" stroke="#93c5fd" stroke-width="1" stroke-dasharray="3,3"/>
@@ -191,7 +191,7 @@
     <!-- Extrinsics Annotation -->
     <g transform="translate(32, 184)">
       <rect x="8" y="16" width="144" height="24" rx="4" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
-      <text x="80" y="32" class="annot-text" fill="#166534" text-anchor="middle">Внешнее преобразование <tspan class="math-sym">T</tspan><tspan baseline-shift="sub" font-size="8">base</tspan><tspan baseline-shift="super" font-size="8">cam</tspan></text>
+      <text x="80" y="32" class="annot-text" fill="#166534" text-anchor="middle">Внешнее преобразование <tspan class="math-sym">T</tspan><tspan baseline-shift="sub" font-size="8">осн</tspan><tspan baseline-shift="super" font-size="8">кам</tspan></text>
     </g>
 
     <!-- Bottom Math Capsule -->
@@ -222,7 +222,7 @@
 
       <!-- Near depth hypothesis, not a calibrated covariance -->
       <circle cx="40" cy="36" r="5" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.2"/>
-      <text x="40" y="52" class="code-tag" fill="#2563eb" text-anchor="middle">Z=1m</text>
+      <text x="40" y="52" class="code-tag" fill="#2563eb" text-anchor="middle">Z=1м</text>
 
       <!-- Far depth hypothesis; metric error needs external validation -->
       <g transform="translate(126, 36) rotate(-10)">
@@ -230,7 +230,7 @@
         <circle cx="0" cy="0" r="2" fill="#dc2626"/>
       </g>
       <text x="126" y="20" class="code-tag" fill="#dc2626" font-weight="700" text-anchor="middle">Глубина оценивается</text>
-      <text x="126" y="52" class="code-tag" fill="#dc2626" text-anchor="middle">Z=8m</text>
+      <text x="126" y="52" class="code-tag" fill="#dc2626" text-anchor="middle">Z=8м</text>
 
       <!-- Defended Obstacle & Clearance Boundaries -->
       <g transform="translate(6, 82)">

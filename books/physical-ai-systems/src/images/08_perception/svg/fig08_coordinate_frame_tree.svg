@@ -74,8 +74,8 @@
     <tspan class="math-var">Σ</tspan><tspan baseline-shift="sub" font-size="10.5">карта</tspan> &#8776; 
     <tspan class="math-var">J</tspan><tspan baseline-shift="sub" font-size="10">odom</tspan>&#8201;<tspan class="math-var">Σ</tspan><tspan baseline-shift="sub" font-size="10">дрейф</tspan>&#8201;<tspan class="math-var">J</tspan><tspan baseline-shift="sub" font-size="10">odom</tspan><tspan baseline-shift="super" font-size="9.5">&#8868;</tspan>
     &#160;+&#160;
-    <tspan class="math-var">R</tspan><tspan baseline-shift="sub" font-size="10">body</tspan>&#8201;<tspan class="math-var">Σ</tspan><tspan baseline-shift="sub" font-size="10">ext</tspan>&#8201;<tspan class="math-var">R</tspan><tspan baseline-shift="sub" font-size="10">body</tspan><tspan baseline-shift="super" font-size="9.5">&#8868;</tspan>
+    <tspan class="math-var">R</tspan><tspan baseline-shift="sub" font-size="10">body</tspan>&#8201;<tspan class="math-var">Σ</tspan><tspan baseline-shift="sub" font-size="10">внеш</tspan>&#8201;<tspan class="math-var">R</tspan><tspan baseline-shift="sub" font-size="10">body</tspan><tspan baseline-shift="super" font-size="9.5">&#8868;</tspan>
     &#160;+&#160;
-    <tspan class="math-var">R</tspan><tspan baseline-shift="sub" font-size="10">tot</tspan>&#8201;<tspan class="math-var">Σ</tspan><tspan baseline-shift="sub" font-size="10">z</tspan>&#8201;<tspan class="math-var">R</tspan><tspan baseline-shift="sub" font-size="10">tot</tspan><tspan baseline-shift="super" font-size="9.5">&#8868;</tspan>
+    <tspan class="math-var">R</tspan><tspan baseline-shift="sub" font-size="10">полн</tspan>&#8201;<tspan class="math-var">Σ</tspan><tspan baseline-shift="sub" font-size="10">z</tspan>&#8201;<tspan class="math-var">R</tspan><tspan baseline-shift="sub" font-size="10">полн</tspan><tspan baseline-shift="super" font-size="9.5">&#8868;</tspan>
   </text>
 </svg>

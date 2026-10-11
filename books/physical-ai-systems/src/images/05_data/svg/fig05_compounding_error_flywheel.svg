@@ -94,7 +94,7 @@
   <circle cx="825" cy="280" r="3.5" fill="#2563EB" />
 
   <!-- Timestamps -->
-  <text x="635" y="298" class="tick-text">t<tspan baseline-shift="sub" font-size="8">div</tspan></text>
+  <text x="635" y="298" class="tick-text">t<tspan baseline-shift="sub" font-size="8">расх</tspan></text>
   <text x="735" y="298" class="tick-text">t<tspan baseline-shift="sub" font-size="8">перехват</tspan></text>
   <text x="825" y="298" class="tick-text">t<tspan baseline-shift="sub" font-size="8">восст.</tspan></text>
 
