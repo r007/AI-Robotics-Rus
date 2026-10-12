@@ -120,9 +120,14 @@ paddle.ones([4], dtype='float32')
 
 1. Найдите документацию по любой функции или классу в фреймворке глубокого обучения. Попробуйте найти её на официальном сайте этого фреймворка.
 
-**Обсуждение:**
+**MXNet:**
+[Обсуждение](https://discuss.d2l.ai/t/1764)
 
-* MXNet: [discuss.d2l.ai/t/1764](https://discuss.d2l.ai/t/1764)
-* PyTorch: [discuss.d2l.ai/t/1765](https://discuss.d2l.ai/t/1765)
-* TensorFlow: [discuss.d2l.ai/t/1763](https://discuss.d2l.ai/t/1763)
-* PaddlePaddle: [discuss.d2l.ai/t/11686](https://discuss.d2l.ai/t/11686)
+**PyTorch:**
+[Обсуждение](https://discuss.d2l.ai/t/1765)
+
+**TensorFlow:**
+[Обсуждение](https://discuss.d2l.ai/t/1763)
+
+**PaddlePaddle:**
+[Обсуждение](https://discuss.d2l.ai/t/11686)

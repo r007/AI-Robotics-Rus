@@ -1,6 +1,9 @@
 # Содержание
 
 [О книге](README.md)
+[Предисловие](fm_preface.md)
+[Установка](fm_installation.md)
+[Обозначения](fm_notation.md)
 
 - [1. Введение](01_introduction.md)
 - [2. Предварительные знания](02_preliminaries.md)
@@ -131,3 +134,11 @@
   - [15.5 Логический вывод на естественном языке: внимание](15_05_natural_language_inference_attention.md)
   - [15.6 Дообучение BERT для приложений уровня последовательности и уровня токенов](15_06_finetuning_bert.md)
   - [15.7 Логический вывод на естественном языке: дообучение BERT](15_07_natural_language_inference_bert.md)
+- [16. Приложение: инструменты для глубокого обучения](16_appendix_tools.md)
+  - [16.1 Использование Jupyter Notebook](16_01_jupyter.md)
+  - [16.2 Использование Amazon SageMaker](16_02_sagemaker.md)
+  - [16.3 Использование экземпляров Amazon EC2](16_03_aws.md)
+  - [16.4 Выбор серверов и GPU](16_04_selecting_servers_gpus.md)
+  - [16.5 Вклад в развитие книги](16_05_contributing.md)
+  - [16.6 Документация по API пакета `d2l`](16_06_d2l.md)
+- [Литература](references.md)

@@ -155,7 +155,7 @@ loss = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
 
 ## 3.7.3 Алгоритм оптимизации
 
-Здесь **используем мини-батчевый стохастический градиентный спуск с скоростью обучения 0.1**.
+Здесь **используем минибатчевый стохастический градиентный спуск со скоростью обучения 0.1**.
 Это тот же алгоритм, что и в примере линейной регрессии, что показывает универсальность оптимизаторов.
 
 **MXNet:**
@@ -203,11 +203,17 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 1. Попробуйте подобрать гиперпараметры, например размер батча, число эпох и скорость обучения, и посмотрите, как меняются результаты.
 1. Увеличьте число эпох. Почему через некоторое время точность на тестовых данных начинает снижаться? Как можно решить эту проблему?
 
-* MXNet: [discuss.d2l.ai/t/1794](https://discuss.d2l.ai/t/1794)
-* PyTorch: [discuss.d2l.ai/t/1793](https://discuss.d2l.ai/t/1793)
-* TensorFlow: [discuss.d2l.ai/t/1792](https://discuss.d2l.ai/t/1792)
-* PaddlePaddle: [discuss.d2l.ai/t/11761](https://discuss.d2l.ai/t/11761)
+**MXNet:**
+[Обсуждение](https://discuss.d2l.ai/t/1794)
 
+**PyTorch:**
+[Обсуждение](https://discuss.d2l.ai/t/1793)
+
+**TensorFlow:**
+[Обсуждение](https://discuss.d2l.ai/t/1792)
+
+**PaddlePaddle:**
+[Обсуждение](https://discuss.d2l.ai/t/11761)
 ## Литература
 
 * LeCun, Y., Bottou, L., Bengio, Y., & Haffner, P. (1998). Gradient-based learning applied to document recognition. *Proceedings of the IEEE*, 86(11), 2278–2324.

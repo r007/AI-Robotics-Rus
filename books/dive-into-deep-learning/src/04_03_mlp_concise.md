@@ -129,7 +129,14 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 1. Попробуйте разные функции активации. Какая из них работает лучше всего?
 1. Попробуйте разные способы инициализации весов. Какой метод работает лучше всего?
 
-* MXNet: [discuss.d2l.ai/t/1803](https://discuss.d2l.ai/t/1803)
-* PyTorch: [discuss.d2l.ai/t/1802](https://discuss.d2l.ai/t/1802)
-* TensorFlow: [discuss.d2l.ai/t/1801](https://discuss.d2l.ai/t/1801)
-* PaddlePaddle: [discuss.d2l.ai/t/11770](https://discuss.d2l.ai/t/11770)
+**MXNet:**
+[Обсуждение](https://discuss.d2l.ai/t/1803)
+
+**PyTorch:**
+[Обсуждение](https://discuss.d2l.ai/t/1802)
+
+**TensorFlow:**
+[Обсуждение](https://discuss.d2l.ai/t/1801)
+
+**PaddlePaddle:**
+[Обсуждение](https://discuss.d2l.ai/t/11770)
