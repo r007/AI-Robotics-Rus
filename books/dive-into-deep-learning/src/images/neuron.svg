@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 340" width="700" height="340" font-family="Arial, sans-serif" font-size="16">
+  <!-- Схема биологического нейрона (оригинальный рисунок, подписи на русском языке) -->
+  <g stroke="#000" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M182,150 Q130,112 90,74"/>
+    <path d="M185,168 Q120,162 62,140"/>
+    <path d="M186,196 Q130,222 74,262"/>
+    <path d="M200,128 Q176,88 150,40"/>
+    <path d="M118,120 Q110,100 88,98"/>
+  </g>
+  <ellipse cx="250" cy="180" rx="70" ry="58" fill="#CDBFEA" stroke="#000" stroke-width="3"/>
+  <circle cx="245" cy="178" r="24" fill="#5B9974" stroke="#000" stroke-width="2"/>
+  <line x1="320" y1="180" x2="600" y2="180" stroke="#000" stroke-width="4"/>
+  <g fill="#F9D566" stroke="#000" stroke-width="2">
+    <rect x="335" y="168" width="60" height="24" rx="10"/>
+    <rect x="430" y="168" width="60" height="24" rx="10"/>
+    <rect x="525" y="168" width="60" height="24" rx="10"/>
+  </g>
+  <g stroke="#000" stroke-width="4" fill="none">
+    <line x1="585" y1="180" x2="620" y2="150"/>
+    <line x1="585" y1="180" x2="630" y2="180"/>
+    <line x1="585" y1="180" x2="620" y2="210"/>
+  </g>
+  <g fill="#F9D566" stroke="#000" stroke-width="2">
+    <circle cx="624" cy="150" r="6"/>
+    <circle cx="634" cy="180" r="6"/>
+    <circle cx="624" cy="210" r="6"/>
+  </g>
+  <g stroke="#000" stroke-width="1.5" fill="none" stroke-dasharray="4,3">
+    <line x1="112" y1="30" x2="146" y2="38"/>
+    <line x1="268" y1="164" x2="298" y2="128"/>
+    <line x1="365" y1="108" x2="365" y2="166"/>
+    <line x1="412" y1="68" x2="412" y2="166"/>
+    <line x1="624" y1="218" x2="600" y2="282"/>
+  </g>
+  <g>
+    <text x="20" y="28">Дендриты</text>
+    <text x="300" y="122">Ядро</text>
+    <text x="290" y="100">Аксон</text>
+    <text x="400" y="60">Перехват Ранвье</text>
+    <text x="340" y="232">Миелиновая оболочка</text>
+    <text x="480" y="300">Окончания аксона</text>
+    <text x="190" y="272">Тело клетки</text>
+  </g>
+</svg>

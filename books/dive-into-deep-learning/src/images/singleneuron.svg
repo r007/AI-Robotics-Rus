@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" width="520" height="300">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#000"/>
+    </marker>
+  </defs>
+  <text x="10" y="246" font-family="Arial, sans-serif" font-size="18">Входной слой</text>
+  <text x="10" y="76" font-family="Arial, sans-serif" font-size="18">Выходной слой</text>
+  <g stroke="#000" stroke-width="3" fill="none">
+    <line x1="216.2" y1="212.4" x2="281.7" y2="101.0" marker-end="url(#arrow)"/>
+    <line x1="308.1" y1="208.1" x2="302.1" y2="105.9" marker-end="url(#arrow)"/>
+    <line x1="447.4" y1="217.4" x2="325.5" y2="95.5" marker-end="url(#arrow)"/>
+  </g>
+  <g stroke="#000" stroke-width="3" fill="#B9D9FA">
+    <circle cx="200" cy="240" r="32"/>
+    <circle cx="310" cy="240" r="32"/>
+    <circle cx="470" cy="240" r="32"/>
+  </g>
+  <g stroke="#000" stroke-width="3" fill="#7FBFFA">
+    <circle cx="300" cy="70" r="32"/>
+  </g>
+  <text x="390" y="250" font-family="Arial, sans-serif" font-size="30" text-anchor="middle">…</text>
+  <g font-family="Times New Roman, serif" font-size="26" text-anchor="middle">
+    <text x="200" y="250"><tspan font-style="italic">x</tspan><tspan font-size="16" dy="6">1</tspan></text>
+    <text x="310" y="250"><tspan font-style="italic">x</tspan><tspan font-size="16" dy="6">2</tspan></text>
+    <text x="470" y="250"><tspan font-style="italic">x</tspan><tspan font-size="16" dy="6">d</tspan></text>
+    <text x="300" y="80"><tspan font-style="italic">o</tspan><tspan font-size="16" dy="6">1</tspan></text>
+  </g>
+</svg>

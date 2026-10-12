@@ -3,7 +3,7 @@
 
 order = 4
 status = "in-progress"
-status_label = "Главы 1–2 переведены, остальные главы в работе"
+status_label = "Главы 1–3 переведены, остальные главы в работе"
 # manual: src/SUMMARY.md написан вручную и не генерируется
 summary = "manual"
 # Текст оригинала распространяется по CC BY-SA 4.0, код — по MIT-0, см. NOTICE.md
