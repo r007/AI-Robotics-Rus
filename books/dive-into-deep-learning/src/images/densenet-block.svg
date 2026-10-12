@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="320" viewBox="0 0 500 320">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker></defs>
+<rect x="45" y="220" width="150" height="40" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="120.0" y="240.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">A</text>
+<rect x="45" y="130" width="150" height="40" fill="#FFFFFF" stroke="#000" stroke-width="1.5"/>
+<text x="120.0" y="150.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">B</text>
+<line x1="120" y1="300" x2="120" y2="262" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="120" y1="220" x2="120" y2="172" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="120" cy="50" r="14" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<path d="M114 50 H126 M120 44 V56" stroke="#000" stroke-width="1.5"/>
+<line x1="120" y1="130" x2="120" y2="66" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="120" y1="36" x2="120" y2="8" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M120 300 H230 V50 H134" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="295" y="220" width="150" height="40" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="370.0" y="240.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">A</text>
+<rect x="295" y="130" width="150" height="40" fill="#FFFFFF" stroke="#000" stroke-width="1.5"/>
+<text x="370.0" y="150.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">B</text>
+<line x1="370" y1="300" x2="370" y2="262" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="370" y1="220" x2="370" y2="172" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="336" y="36" width="68" height="28" rx="12" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="370.0" y="50.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">[ , ]</text>
+<line x1="370" y1="130" x2="370" y2="66" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="370" y1="36" x2="370" y2="8" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M370 300 H480 V50 H404" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+</svg>

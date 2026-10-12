@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="760" viewBox="0 0 1080 760">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker></defs>
+<rect x="10.0" y="620" width="240" height="40" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="130.0" y="640.0" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Свёртка 3×3, заполнение 1</text>
+<text x="130" y="587.0" text-anchor="middle" dominant-baseline="central" font-size="18" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">…</text>
+<rect x="10.0" y="514" width="240" height="40" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="130.0" y="534.0" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Свёртка 3×3, заполнение 1</text>
+<rect x="10.0" y="454" width="240" height="40" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="130.0" y="474.0" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Максимальный пулинг 2×2, шаг 2</text>
+<line x1="130" y1="620" x2="130" y2="600" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="130" y1="574" x2="130" y2="554" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="130" y1="514" x2="130" y2="494" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="130" y="430" text-anchor="middle" dominant-baseline="central" font-size="16" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Блок VGG</text>
+<rect x="280.0" y="620" width="240" height="40" fill="#FFFFFF" stroke="#000" stroke-width="1.5"/>
+<text x="400.0" y="640.0" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Полносвязный (1000)</text>
+<rect x="280.0" y="560" width="240" height="40" fill="#FFFFFF" stroke="#000" stroke-width="1.5"/>
+<text x="400.0" y="580.0" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Полносвязный (4096)</text>
+<rect x="280.0" y="500" width="240" height="40" fill="#FFFFFF" stroke="#000" stroke-width="1.5"/>
+<text x="400.0" y="520.0" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Полносвязный (4096)</text>
+<rect x="280.0" y="440" width="240" height="40" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="400.0" y="460.0" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Блок VGG 5</text>
+<text x="400" y="407.0" text-anchor="middle" dominant-baseline="central" font-size="18" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">…</text>
+<rect x="280.0" y="334" width="240" height="40" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="400.0" y="354.0" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Блок VGG 1</text>
+<line x1="400" y1="620" x2="400" y2="600" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="400" y1="560" x2="400" y2="540" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="400" y1="500" x2="400" y2="480" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="400" y1="440" x2="400" y2="420" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="400" y1="394" x2="400" y2="374" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="400" y="310" text-anchor="middle" dominant-baseline="central" font-size="16" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">VGG</text>
+<rect x="560.0" y="620" width="240" height="40" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="680.0" y="640.0" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Свёртка k×k</text>
+<rect x="560.0" y="560" width="240" height="40" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="680.0" y="580.0" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Свёртка 1×1</text>
+<rect x="560.0" y="500" width="240" height="40" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="680.0" y="520.0" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Свёртка 1×1</text>
+<line x1="680" y1="620" x2="680" y2="600" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="680" y1="560" x2="680" y2="540" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="680" y="476" text-anchor="middle" dominant-baseline="central" font-size="16" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Блок NiN</text>
+<rect x="830.0" y="620" width="260" height="40" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="960.0" y="640.0" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Свёртка 11×11, 96, шаг 4 (NiN-блок)</text>
+<rect x="830.0" y="560" width="260" height="40" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="960.0" y="580.0" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Максимальный пулинг 3×3, шаг 2</text>
+<rect x="830.0" y="500" width="260" height="40" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="960.0" y="520.0" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Свёртка 5×5, 256, заполнение 2 (NiN-блок)</text>
+<rect x="830.0" y="440" width="260" height="40" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="960.0" y="460.0" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Максимальный пулинг 3×3, шаг 2</text>
+<rect x="830.0" y="380" width="260" height="40" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="960.0" y="400.0" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Свёртка 3×3, 384, заполнение 1 (NiN-блок)</text>
+<rect x="830.0" y="320" width="260" height="40" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="960.0" y="340.0" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Максимальный пулинг 3×3, шаг 2</text>
+<rect x="830.0" y="260" width="260" height="40" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="960.0" y="280.0" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Свёртка 3×3, 10, заполнение 1 (NiN-блок)</text>
+<rect x="830.0" y="200" width="260" height="40" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="960.0" y="220.0" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Глобальный средний пулинг</text>
+<line x1="960" y1="620" x2="960" y2="600" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="960" y1="560" x2="960" y2="540" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="960" y1="500" x2="960" y2="480" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="960" y1="440" x2="960" y2="420" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="960" y1="380" x2="960" y2="360" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="960" y1="320" x2="960" y2="300" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="960" y1="260" x2="960" y2="240" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="960" y="176" text-anchor="middle" dominant-baseline="central" font-size="16" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">NiN</text>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="420" viewBox="0 0 740 420">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker></defs>
+<rect x="70" y="300" width="200" height="44" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="170.0" y="322.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Весовой слой</text>
+<rect x="70" y="230" width="200" height="44" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="170.0" y="252.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Функция активации</text>
+<rect x="70" y="160" width="200" height="44" fill="#FFFFFF" stroke="#000" stroke-width="1.5"/>
+<text x="170.0" y="182.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Весовой слой</text>
+<line x1="170" y1="384" x2="170" y2="344" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="170" y1="300" x2="170" y2="274" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="170" y1="230" x2="170" y2="204" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="170" y="396" text-anchor="middle" dominant-baseline="central" font-size="16" font-style="italic" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">x</text>
+<rect x="70" y="90" width="200" height="44" fill="#FFFFFF" stroke="#000" stroke-width="1.5"/>
+<text x="170.0" y="112.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Функция активации</text>
+<line x1="170" y1="90" x2="170" y2="40" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="170" y1="160" x2="170" y2="134" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="154" y="146" text-anchor="end" dominant-baseline="central" font-size="16" font-style="italic" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">f(x)</text>
+<rect x="52" y="146" width="236" height="230" fill="none" stroke="#000" stroke-width="1.5" stroke-dasharray="6 4"/>
+<rect x="460" y="300" width="200" height="44" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="560.0" y="322.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Весовой слой</text>
+<rect x="460" y="230" width="200" height="44" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="560.0" y="252.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Функция активации</text>
+<rect x="460" y="160" width="200" height="44" fill="#FFFFFF" stroke="#000" stroke-width="1.5"/>
+<text x="560.0" y="182.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Весовой слой</text>
+<line x1="560" y1="384" x2="560" y2="344" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="560" y1="300" x2="560" y2="274" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="560" y1="230" x2="560" y2="204" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="560" y="396" text-anchor="middle" dominant-baseline="central" font-size="16" font-style="italic" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">x</text>
+<line x1="560" y1="160" x2="560" y2="134" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="560" cy="118" r="12" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<path d="M554 118 H566 M560 112 V124" stroke="#000" stroke-width="1.5"/>
+<text x="540" y="150" text-anchor="end" dominant-baseline="central" font-size="16" font-style="italic" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">f(x) − x</text>
+<line x1="560" y1="106" x2="560" y2="86" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="460" y="40" width="200" height="44" fill="#FFFFFF" stroke="#000" stroke-width="1.5"/>
+<text x="560.0" y="62.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Функция активации</text>
+<line x1="560" y1="40" x2="560" y2="14" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="542" y="96" text-anchor="end" dominant-baseline="central" font-size="16" font-style="italic" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">f(x)</text>
+<path d="M560 364 H700 V118 H574" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="710" y="240" text-anchor="start" dominant-baseline="central" font-size="16" font-style="italic" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">x</text>
+<rect x="442" y="146" width="236" height="230" fill="none" stroke="#000" stroke-width="1.5" stroke-dasharray="6 4"/>
+</svg>
