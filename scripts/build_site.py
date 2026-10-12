@@ -1,154 +1,208 @@
 #!/usr/bin/env python3
-"""Merge every book under books/ into one mdBook and build it into site/.
+"""Build the site: every book as its own mdBook plus the directory page.
 
-A book is a directory in books/ that has a book.toml. The build:
+A book is a folder in books/ that has a book.toml and a meta.toml. The build:
 
-1. links each book's src/ tree into build/src/<book>/ (hard links, falling
-   back to copies), so the books keep their own files and nothing is moved;
-2. merges each book's SUMMARY.md into build/src/SUMMARY.md, rewriting the
-   links to point at the book's folder;
-3. copies directory/ into build/src/, so its README.md is the front page;
-4. runs `mdbook build` with the root book.toml, writing to site/.
+1. runs `mdbook build books/<slug>` for every book, writing site/<slug>/;
+2. renders directory/index.html into site/index.html: one card per book,
+   filled from the book's book.toml and meta.toml;
+3. copies covers/<slug>.svg into site/covers/.
+
+Each book is also a normal mdBook, so `mdbook serve books/<slug>` works on its own.
 
 Usage:
-    python3 scripts/build_site.py              # assemble and build
-    python3 scripts/build_site.py --assemble   # only assemble build/src
+    python3 scripts/build_site.py                      # all books and the directory page
+    python3 scripts/build_site.py --book embodied-ai   # only the named book(s), then the directory page
+    python3 scripts/build_site.py --directory-only     # only the directory page (no mdBook needed)
+    python3 scripts/build_site.py --out /tmp/site      # another output folder
 """
 
 from __future__ import annotations
 
-import os
-import re
+import argparse
+import html
 import shutil
 import subprocess
 import sys
 import tomllib
+from dataclasses import dataclass
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 BOOKS = ROOT / "books"
 DIRECTORY = ROOT / "directory"
-BUILD = ROOT / "build"
-SRC = BUILD / "src"
-ASSETS = BUILD / "assets"
+COVERS = ROOT / "covers"
 
-# The mermaid runtime is shared by all books and lives in assets/vendor/.
-VENDOR = ROOT / "assets" / "vendor"
-MERMAID_FILES = ["mermaid.min.js", "mermaid-init.js"]
-
-# Markdown link target: [text](target). External, anchor and absolute targets are left alone.
-LINK = re.compile(r"\]\(([^)\s]+)\)")
-EXTERNAL = re.compile(r"^(?:[a-zA-Z][a-zA-Z0-9+.-]*:|#|/)")
+# Short labels for the "С чего начать" block, by book slug.
+START_HINTS = {
+    "dive-into-deep-learning": "Вы только начинаете с машинного обучения и хотите понять нейронные сети с кодом.",
+    "embodied-ai": "Вас интересуют роботы, модели VLA и симуляция, и нужен маршрут от основ до практики.",
+    "physical-ai-systems": "Вы строите системы, в которых обученная модель управляет железом, и вас волнует безопасность.",
+}
 
 
-def read_book_config(book_dir: Path) -> dict:
-    with (book_dir / "book.toml").open("rb") as handle:
-        return tomllib.load(handle)["book"]
+@dataclass
+class Book:
+    slug: str
+    title: str
+    tagline: str
+    order: int
+    status: str
+    status_label: str
+    license: str
+    accent: str
+    tags: list[str]
+    learn: list[str]
+    source_title: str
+    source_author: str
+    source_url: str
+
+    @property
+    def path(self) -> Path:
+        return BOOKS / self.slug
 
 
-def is_skipped(relative: Path) -> bool:
-    return any(part.startswith(".") or part == "__pycache__" for part in relative.parts)
-
-
-def link_tree(src: Path, dst: Path, skip_names: set[str], transform=None) -> int:
-    """Link every file from src into dst. Markdown goes through transform when given."""
-    count = 0
-    for path in sorted(src.rglob("*")):
-        if not path.is_file():
+def load_books() -> list[Book]:
+    books = []
+    for folder in sorted(BOOKS.iterdir()):
+        if not (folder / "book.toml").is_file():
             continue
-        relative = path.relative_to(src)
-        if is_skipped(relative) or path.name in skip_names:
-            continue
-        target = dst / relative
-        target.parent.mkdir(parents=True, exist_ok=True)
-        if transform and path.suffix == ".md":
-            target.write_text(transform(path.read_text(encoding="utf-8")), encoding="utf-8")
-        else:
-            try:
-                os.link(path, target)
-            except OSError:
-                shutil.copy2(path, target)
-        count += 1
-    return count
+        with (folder / "book.toml").open("rb") as handle:
+            config = tomllib.load(handle)["book"]
+        with (folder / "meta.toml").open("rb") as handle:
+            meta = tomllib.load(handle)
+        source = meta["source"]
+        books.append(
+            Book(
+                slug=folder.name,
+                title=config["title"],
+                tagline=meta["tagline"],
+                order=meta["order"],
+                status=meta["status"],
+                status_label=meta["status_label"],
+                license=meta["license"],
+                accent=meta.get("accent", "#ea580c"),
+                tags=list(meta["tags"]),
+                learn=list(meta["learn"]),
+                source_title=source["title"],
+                source_author=source["author"],
+                source_url=source.get("url", ""),
+            )
+        )
+    return sorted(books, key=lambda book: book.order)
 
 
-def rewrite_links(text: str, prefix: str) -> str:
-    def replace(match: re.Match[str]) -> str:
-        target = match.group(1)
-        if EXTERNAL.match(target):
-            return match.group(0)
-        return f"]({prefix}/{target})"
-
-    return LINK.sub(replace, text)
+def esc(value: str) -> str:
+    return html.escape(value, quote=True)
 
 
-def point_readmes_at_index(text: str) -> str:
-    """mdBook renders a folder's README.md as index.html, so links must point there."""
+def render_card(book: Book) -> str:
+    learn = "\n".join(f"              <li>{esc(item)}</li>" for item in book.learn)
+    tags = "".join(f"<li>{esc(tag)}</li>" for tag in book.tags)
+    source = esc(book.source_title)
+    if book.source_url:
+        source = f'<a href="{esc(book.source_url)}">{source}</a>'
+    original = ""
+    if book.source_url:
+        original = f'\n              <a class="btn" href="{esc(book.source_url)}">Оригинал</a>'
+    return f"""        <article class="card" style="--accent: {esc(book.accent)}">
+          <a class="cover" href="{book.slug}/" tabindex="-1" aria-hidden="true"><img src="covers/{book.slug}.svg" alt="" width="800" height="450" loading="lazy"></a>
+          <div class="body">
+            <p class="status">{esc(book.status_label)}</p>
+            <h3><a href="{book.slug}/">{esc(book.title)}</a></h3>
+            <p class="tagline">{esc(book.tagline)}</p>
+            <p class="learn-title">Вы узнаете</p>
+            <ul class="learn">
+{learn}
+            </ul>
+            <ul class="tags">{tags}</ul>
+            <dl class="meta">
+              <div><dt>Оригинал: </dt><dd>{source}, {esc(book.source_author)}</dd></div>
+              <div><dt>Лицензия: </dt><dd>{esc(book.license)}</dd></div>
+            </dl>
+            <div class="actions">
+              <a class="btn primary" href="{book.slug}/">Читать онлайн</a>{original}
+            </div>
+          </div>
+        </article>"""
 
-    def replace(match: re.Match[str]) -> str:
-        target = match.group(1)
-        if EXTERNAL.match(target):
-            return match.group(0)
-        return f"]({re.sub(r'README\.md(?=#|$)', 'index.html', target)})"
 
-    return LINK.sub(replace, text)
-
-
-def book_summary(book_dir: Path, slug: str, title: str) -> str:
-    """Return one book's SUMMARY entries under a part heading, with links rebased."""
-    summary = (book_dir / "src" / "SUMMARY.md").read_text(encoding="utf-8").strip().splitlines()
-    # The book's own "# Содержание" title would clash with the merged summary's structure.
-    if summary and summary[0].startswith("# "):
-        summary = summary[1:]
-    body = rewrite_links("\n".join(summary).strip(), slug)
-    return f"# {title}\n\n{body}\n"
-
-
-def assemble() -> list[str]:
-    if BUILD.exists():
-        shutil.rmtree(BUILD)
-    SRC.mkdir(parents=True)
-
-    books = sorted(
-        path for path in BOOKS.iterdir() if path.is_dir() and (path / "book.toml").is_file()
+def render_start(book: Book) -> str:
+    hint = START_HINTS.get(book.slug, book.tagline)
+    return (
+        f'        <li style="--accent: {esc(book.accent)}">'
+        f'<a href="{book.slug}/"><strong>{esc(book.title)}</strong></a>'
+        f"<span>{esc(hint)}</span></li>"
     )
-    parts = ["[Каталог книг](README.md)", ""]
-    slugs = []
-    for book_dir in books:
-        config = read_book_config(book_dir)
-        slug = book_dir.name
-        src = book_dir / config.get("src", "src")
-        if not (src / "SUMMARY.md").is_file():
-            sys.exit(f"error: {src / 'SUMMARY.md'} is missing")
-        files = link_tree(src, SRC / slug, skip_names={"SUMMARY.md"}, transform=point_readmes_at_index)
-        parts.append(book_summary(book_dir, slug, config["title"]))
-        slugs.append(slug)
-        print(f"{slug}: {files} files")
-
-    if DIRECTORY.is_dir():
-        link_tree(DIRECTORY, SRC, skip_names=set(), transform=point_readmes_at_index)
-    else:
-        sys.exit(f"error: {DIRECTORY} is missing")
-
-    (SRC / "SUMMARY.md").write_text("\n".join(parts).rstrip() + "\n", encoding="utf-8")
-
-    ASSETS.mkdir(parents=True)
-    for name in MERMAID_FILES:
-        shutil.copy2(VENDOR / name, ASSETS / name)
-    return slugs
 
 
-def build() -> None:
-    subprocess.run(["mdbook", "build"], cwd=ROOT, check=True)
+def render_directory(books: list[Book], out: Path) -> None:
+    template = (DIRECTORY / "index.html").read_text(encoding="utf-8")
+    licenses = "Лицензии книг: " + "; ".join(
+        f"{esc(book.title)} — {esc(book.license)}" for book in books
+    ) + "."
+    page = (
+        template.replace("{{START}}", "\n".join(render_start(book) for book in books))
+        .replace("{{CARDS}}", "\n".join(render_card(book) for book in books))
+        .replace("{{LICENSES}}", licenses)
+    )
+    out.mkdir(parents=True, exist_ok=True)
+    (out / "index.html").write_text(page, encoding="utf-8")
+    covers_out = out / "covers"
+    covers_out.mkdir(exist_ok=True)
+    for book in books:
+        cover = COVERS / f"{book.slug}.svg"
+        if not cover.is_file():
+            sys.exit(f"error: cover {cover.relative_to(ROOT)} is missing")
+        shutil.copy2(cover, covers_out / cover.name)
+    # GitHub Pages must serve the book folders as they are.
+    (out / ".nojekyll").write_text("", encoding="utf-8")
+    print(f"directory page: {out / 'index.html'}")
+
+
+def require_tools(book: Book) -> None:
+    needed = ["mdbook", "mdbook-katex"]
+    if "mermaid" in (book.path / "book.toml").read_text(encoding="utf-8"):
+        needed.append("mdbook-mermaid")
+    missing = [tool for tool in needed if shutil.which(tool) is None]
+    if missing:
+        sys.exit(f"error: {', '.join(missing)} not found; see README.md for the required versions")
+
+
+def build_book(book: Book, out: Path) -> None:
+    require_tools(book)
+    destination = out / book.slug
+    if destination.exists():
+        shutil.rmtree(destination)
+    print(f"building {book.slug} ...", flush=True)
+    subprocess.run(
+        ["mdbook", "build", str(book.path), "--dest-dir", str(destination)],
+        cwd=ROOT,
+        check=True,
+    )
 
 
 def main(argv: list[str]) -> int:
-    slugs = assemble()
-    print(f"assembled {len(slugs)} books into {SRC}")
-    if "--assemble" not in argv:
-        build()
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--book", action="append", default=[], metavar="SLUG", help="build only this book (repeatable)")
+    parser.add_argument("--directory-only", action="store_true", help="render only the directory page")
+    parser.add_argument("--out", type=Path, default=ROOT / "site", help="output folder (default: site/)")
+    args = parser.parse_args(argv[1:])
+
+    books = load_books()
+    known = {book.slug for book in books}
+    unknown = [slug for slug in args.book if slug not in known]
+    if unknown:
+        sys.exit(f"error: unknown book(s): {', '.join(unknown)}; known: {', '.join(sorted(known))}")
+
+    out = args.out.resolve()
+    if not args.directory_only:
+        for book in books:
+            if not args.book or book.slug in args.book:
+                build_book(book, out)
+    render_directory(books, out)
     return 0
 
 
 if __name__ == "__main__":
-    raise SystemExit(main(sys.argv[1:]))
+    raise SystemExit(main(sys.argv))

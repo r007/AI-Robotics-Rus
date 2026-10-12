@@ -22,4 +22,4 @@ jobs:
           context: .
           file: docker/Dockerfile
           push: false
-          tags: embodied-ai-book:ci
+          tags: ai-robotics-rus:ci

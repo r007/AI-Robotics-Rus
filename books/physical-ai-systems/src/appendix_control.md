@@ -243,16 +243,16 @@ $$ \mathbf{J}_m \ddot{\boldsymbol{\theta}} + \mathbf{B}_m \dot{\boldsymbol{\thet
 
 #### Сингулярная возмущенная постановка и разделение временных масштабов
 
-Когда жесткость шарниров высока относительно инерции звеньев ($k_i \gg 1$), система обнаруживает разделение двух временных масштабов между медленной динамикой твердого тела и быстрыми крутильными колебаниями. Определим скалярный параметр возмущения $\epsilon = 1 / \sqrt{k_{\min}}$, где $k_{\min} = \min_i(k_i)$, и выразим жесткость как $\mathbf{K} = (1/\epsilon^2) \tilde{\mathbf{K}}$ с $\tilde{\mathbf{K}} = \mathcal{O}(1)$.
+Когда жесткость шарниров высока относительно инерции звеньев ($k_i \gg 1$), система обнаруживает разделение двух временных масштабов между медленной динамикой твердого тела и быстрыми крутильными колебаниями. Определим скалярный параметр возмущения $\epsilon = 1 / \sqrt{k_{\min}}$, где $k_{\min} = \min_i(k_i)$, и выразим жесткость как $\mathbf{K} = (1/\epsilon^2) \widetilde{\mathbf{K}}$ с $\widetilde{\mathbf{K}} = \mathcal{O}(1)$.
 
 Определим быструю переменную состояния упругого момента $\mathbf{z} \in \mathbb{R}^n$:
-$$ \mathbf{z} = \frac{1}{\epsilon^2} \tilde{\mathbf{K}} (\boldsymbol{\theta} - \mathbf{q}) = \mathbf{K} (\boldsymbol{\theta} - \mathbf{q}) $$
+$$ \mathbf{z} = \frac{1}{\epsilon^2} \widetilde{\mathbf{K}} (\boldsymbol{\theta} - \mathbf{q}) = \mathbf{K} (\boldsymbol{\theta} - \mathbf{q}) $$
 Двойное дифференцирование $\mathbf{z}$ по непрерывному времени $t$ дает:
 $$ \ddot{\mathbf{z}} = \mathbf{K} (\ddot{\boldsymbol{\theta}} - \ddot{\mathbf{q}}) = \mathbf{K} \left[ \mathbf{J}_m^{-1} (\boldsymbol{\tau} - \mathbf{B}_m \dot{\boldsymbol{\theta}} - \mathbf{z}) - \mathbf{M}(\mathbf{q})^{-1} (\mathbf{z} - \mathbf{C}(\mathbf{q}, \dot{\mathbf{q}}) \dot{\mathbf{q}} - \mathbf{g}(\mathbf{q})) \right] $$
 Умножение на $\epsilon^2$ обнаруживает сингулярно возмущенный граничный слой:
-$$ \epsilon^2 \ddot{\mathbf{z}} = \tilde{\mathbf{K}} \left[ \mathbf{J}_m^{-1} \boldsymbol{\tau} - (\mathbf{J}_m^{-1} + \mathbf{M}(\mathbf{q})^{-1}) \mathbf{z} + \mathbf{M}(\mathbf{q})^{-1} (\mathbf{C} \dot{\mathbf{q}} + \mathbf{g}) - \mathbf{J}_m^{-1} \mathbf{B}_m \dot{\boldsymbol{\theta}} \right] $$
+$$ \epsilon^2 \ddot{\mathbf{z}} = \widetilde{\mathbf{K}} \left[ \mathbf{J}_m^{-1} \boldsymbol{\tau} - (\mathbf{J}_m^{-1} + \mathbf{M}(\mathbf{q})^{-1}) \mathbf{z} + \mathbf{M}(\mathbf{q})^{-1} (\mathbf{C} \dot{\mathbf{q}} + \mathbf{g}) - \mathbf{J}_m^{-1} \mathbf{B}_m \dot{\boldsymbol{\theta}} \right] $$
 Вводя растянутую быструю временную переменную $\tau_{\text{fast}} = t / \epsilon$, преобразуем упругую динамику к виду:
-$$ \frac{d^2 \mathbf{z}}{d\tau_{\text{fast}}^2} + \tilde{\mathbf{K}} (\mathbf{J}_m^{-1} + \mathbf{M}(\mathbf{q})^{-1}) \mathbf{z} = \tilde{\mathbf{K}} \mathbf{J}_m^{-1} \boldsymbol{\tau} + \tilde{\mathbf{K}} \mathbf{M}(\mathbf{q})^{-1} (\mathbf{C} \dot{\mathbf{q}} + \mathbf{g}) $$
+$$ \frac{d^2 \mathbf{z}}{d\tau_{\text{fast}}^2} + \widetilde{\mathbf{K}} (\mathbf{J}_m^{-1} + \mathbf{M}(\mathbf{q})^{-1}) \mathbf{z} = \widetilde{\mathbf{K}} \mathbf{J}_m^{-1} \boldsymbol{\tau} + \widetilde{\mathbf{K}} \mathbf{M}(\mathbf{q})^{-1} (\mathbf{C} \dot{\mathbf{q}} + \mathbf{g}) $$
 
 #### Жесткое многообразие и резонанс граничного слоя
 

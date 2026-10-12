@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Русские переводы открытых книг по воплощённому ИИ, робототехнике и глубокому обучению: Embodied AI, Dive into Deep Learning, Physical AI Systems.">
+  <title>Воплощённый ИИ и робототехника: книги на русском</title>
+  <link rel="icon" href="covers/embodied-ai.svg">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #fbf8f4; --surface: #ffffff; --text: #1d1b19; --muted: #5f5a54;
+      --border: rgba(40, 30, 20, .12); --shadow: 0 10px 30px rgba(40, 30, 20, .10);
+      --link: #b7410e; --chip: #f1ebe4; --hero: #ea580c;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14110f; --surface: #1d1916; --text: #f0ebe5; --muted: #a79f96;
+        --border: rgba(255, 255, 255, .09); --shadow: 0 10px 30px rgba(0, 0, 0, .4);
+        --link: #f59e6b; --chip: #2a2420;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    a { color: var(--link); }
+    .hero {
+      padding: 56px 16px 36px; text-align: center;
+      background: linear-gradient(180deg, color-mix(in srgb, var(--hero) 16%, transparent), transparent);
+    }
+    .eyebrow { margin: 0 0 8px; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+    h1 { margin: 0 auto 12px; max-width: 30ch; font-size: clamp(26px, 4.4vw, 40px); line-height: 1.15; }
+    .lead { margin: 0 auto 16px; max-width: 62ch; color: var(--muted); }
+    .repo-link { font-weight: 600; }
+    main { max-width: 1120px; margin: 0 auto; padding: 0 16px 32px; }
+    h2 { margin: 32px 0 6px; font-size: 24px; }
+    .section-note { margin: 0 0 16px; color: var(--muted); }
+    .start {
+      display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      margin: 0; padding: 0; list-style: none;
+    }
+    .start li {
+      padding: 14px 16px; background: var(--surface); border: 1px solid var(--border);
+      border-left: 4px solid var(--accent); border-radius: 12px;
+    }
+    .start span { display: block; color: var(--muted); font-size: 14px; }
+    .grid { display: grid; gap: 24px; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+    .card {
+      display: flex; flex-direction: column; overflow: hidden; background: var(--surface);
+      border: 1px solid var(--border); border-radius: 16px; box-shadow: var(--shadow);
+      border-top: 4px solid var(--accent);
+    }
+    .cover { display: block; aspect-ratio: 16 / 9; background: var(--chip); }
+    .cover img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .body { display: flex; flex: 1; flex-direction: column; gap: 10px; padding: 16px 18px 20px; }
+    .status {
+      align-self: flex-start; margin: 0; padding: 3px 10px; border-radius: 10px; font-size: 12px; font-weight: 600;
+      color: var(--text); background: color-mix(in srgb, var(--accent) 16%, var(--chip));
+    }
+    .body h3 { margin: 0; font-size: 20px; line-height: 1.25; }
+    .body h3 a { color: var(--text); text-decoration: none; }
+    .body h3 a:hover { text-decoration: underline; }
+    .tagline { margin: 0; color: var(--muted); font-size: 15px; }
+    .learn-title { margin: 4px 0 0; font-size: 13px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+    .learn { margin: 0; padding-left: 18px; font-size: 14px; }
+    .learn li { margin: 4px 0; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+    .tags li { font-size: 12px; padding: 3px 8px; border-radius: 6px; background: var(--chip); color: var(--muted); }
+    .meta { margin: 0; font-size: 13px; color: var(--muted); }
+    .meta div { margin: 2px 0; }
+    .meta dt { display: inline; font-weight: 600; }
+    .meta dd { display: inline; margin: 0; }
+    .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 6px; }
+    .btn {
+      display: inline-block; padding: 8px 14px; border-radius: 10px; font-weight: 600; font-size: 14px;
+      text-decoration: none; color: var(--text); border: 1px solid var(--border); background: var(--surface);
+    }
+    .btn:hover { border-color: var(--accent); }
+    .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+    footer {
+      max-width: 1120px; margin: 0 auto; padding: 24px 16px 48px; color: var(--muted); font-size: 14px;
+      border-top: 1px solid var(--border);
+    }
+    footer p { margin: 8px 0; }
+    .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">Воплощённый ИИ · робототехника · глубокое обучение</p>
+    <h1>Книги по воплощённому ИИ и робототехнике на русском</h1>
+    <p class="lead">Переводы открытых учебников: от основ глубокого обучения до физических систем ИИ. Текст, код и диаграммы адаптированы для русскоязычного читателя.</p>
+    <a class="repo-link" href="https://github.com/r007/AI-Robotics-Rus">Исходный код и вклад в проект на GitHub →</a>
+  </header>
+
+  <main>
+    <section aria-labelledby="start">
+      <h2 id="start">С чего начать</h2>
+      <p class="section-note">Книги можно читать независимо. Выберите ту, что ближе к вашей задаче.</p>
+      <ul class="start">
+{{START}}
+      </ul>
+    </section>
+
+    <section aria-labelledby="books">
+      <h2 id="books">Книги</h2>
+      <div class="grid">
+{{CARDS}}
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Перевод на русский язык: Сергей Монин. Черновики переводов подготовлены с помощью ИИ-ассистента Claude; статус вычитки указан у каждой книги. Найденные неточности принимаются через <a href="https://github.com/r007/AI-Robotics-Rus/issues">issue на GitHub</a>.</p>
+    <p>{{LICENSES}}</p>
+    <p>Каждая книга распространяется по лицензии своего автора. Скрипты сборки и страница каталога — по лицензии MIT. Собрано с помощью <a href="https://rust-lang.github.io/mdBook/">mdBook</a>.</p>
+  </footer>
+</body>
+</html>

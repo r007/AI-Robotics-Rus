@@ -3,11 +3,16 @@
 
 Each book is a folder in books/ with these files:
 
-    book.toml       mdBook metadata: [book] title, description, authors, language, src
-    meta.toml       directory metadata: order, status, status_label, summary, license, [source]
+    book.toml       mdBook config: [book] title, description, authors, language, src
+    meta.toml       directory metadata: order, status, status_label, summary, license,
+                    tagline, tags, learn, [source]
     NOTICE.md       authorship, source and license of the text
+    LICENSE         license of the book's text
     src/README.md   first page of the book
     src/SUMMARY.md  table of contents
+    src/notice.md, src/provenance.md  pages that include NOTICE.md and PROVENANCE.md
+
+The directory page also needs covers/<slug>.svg.
 
 If meta.toml says summary = "generated", src/SUMMARY.md must match what
 scripts/make_summary.py produces. Books with summary = "manual" keep their own.
@@ -26,10 +31,20 @@ from make_summary import build
 
 ROOT = Path(__file__).resolve().parent.parent
 BOOKS = ROOT / "books"
+COVERS = ROOT / "covers"
 
-REQUIRED_FILES = ("book.toml", "meta.toml", "NOTICE.md", "src/README.md", "src/SUMMARY.md")
+REQUIRED_FILES = (
+    "book.toml",
+    "meta.toml",
+    "NOTICE.md",
+    "LICENSE",
+    "src/README.md",
+    "src/SUMMARY.md",
+    "src/notice.md",
+    "src/provenance.md",
+)
 BOOK_KEYS = ("title", "description", "authors", "language")
-META_KEYS = ("order", "status", "status_label", "summary", "license", "source")
+META_KEYS = ("order", "status", "status_label", "summary", "license", "tagline", "tags", "learn", "source")
 SOURCE_KEYS = ("title", "author", "license")
 STATUSES = ("in-progress", "draft", "complete")
 SUMMARY_MODES = ("generated", "manual")
@@ -61,6 +76,20 @@ def check_book(book: Path) -> list[str]:
         problems.append(f"meta.toml: summary must be one of {', '.join(SUMMARY_MODES)}")
     source = meta.get("source", {})
     problems += [f"meta.toml: [source] has no {key}" for key in SOURCE_KEYS if key not in source]
+
+    tags = meta.get("tags")
+    if not (isinstance(tags, list) and tags and all(isinstance(tag, str) for tag in tags)):
+        problems.append("meta.toml: tags must be a non-empty list of strings")
+    learn = meta.get("learn")
+    if not (isinstance(learn, list) and 3 <= len(learn) <= 5 and all(isinstance(item, str) for item in learn)):
+        problems.append("meta.toml: learn must be a list of 3 to 5 strings")
+    if not (COVERS / f"{book.name}.svg").is_file():
+        problems.append(f"missing covers/{book.name}.svg")
+    # The page include must point at the book's own files.
+    for page, target in (("notice.md", "NOTICE.md"), ("provenance.md", "PROVENANCE.md")):
+        path = book / "src" / page
+        if path.is_file() and f"{{{{#include ../{target}}}}}" not in path.read_text(encoding="utf-8"):
+            problems.append(f"src/{page} must include ../{target}")
 
     if mode == "generated":
         expected = build(book / "src")

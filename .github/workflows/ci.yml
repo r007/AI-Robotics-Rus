@@ -37,5 +37,8 @@ jobs:
       - name: Install mdBook and plugins
         run: cargo install --locked mdbook@0.5.4 mdbook-mermaid@0.17.1 mdbook-katex@0.10.0
 
-      - name: Build site
+      - name: Build site (every book and the directory page)
         run: python3 scripts/build_site.py
+
+      - name: Links in the built site resolve
+        run: python3 scripts/check_site.py site

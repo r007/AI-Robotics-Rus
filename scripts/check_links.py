@@ -6,7 +6,8 @@ Usage:
 
 Links to http(s), mailto and pure #anchors are skipped, and anchors are not
 checked. A link to a directory (ending in /) resolves to its README.md.
-Exit status is 1 when any relative target is missing.
+A target outside the checked folder is reported too: mdBook cannot publish it.
+Exit status is 1 when any relative target is missing or leaves the folder.
 """
 
 from __future__ import annotations
@@ -44,6 +45,8 @@ def main(argv: list[str]) -> int:
                 dest = dest / "README.md"
             if not dest.exists():
                 broken.append((md.relative_to(root), target))
+            elif not dest.resolve().is_relative_to(root):
+                broken.append((md.relative_to(root), f"{target} (outside {root.name}/)"))
     for source, target in broken:
         print(f"{source}: broken link -> {target}")
     print(f"checked {checked} relative links, broken {len(broken)}")

@@ -467,7 +467,7 @@ $$ T_{\text{cycle}}\ge\sum_f\frac{B_f}{R_{\text{link}}}+t_{\text{master}}+\sum_s
 
 В стандартной модели камеры-отверстия 3D-точка $\mathbf{p}_c = [x_c, y_c, z_c]^\top$ в координатах камеры проецируется в пиксельные координаты $\mathbf{u} = [u, v]^\top$ через матрицу внутренней калибровки $\mathbf{K}$:[^fn-sys-pinhole-projection]
 $$
-\tilde{\mathbf{u}} = \begin{bmatrix} u \\ v \\ 1 \end{bmatrix} = \frac{1}{z_c} \mathbf{K} \mathbf{p}_c = \frac{1}{z_c} \begin{bmatrix} f_x & 0 & c_x \\ 0 & f_y & c_y \\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} x_c \\ y_c \\ z_c \end{bmatrix}
+\widetilde{\mathbf{u}} = \begin{bmatrix} u \\ v \\ 1 \end{bmatrix} = \frac{1}{z_c} \mathbf{K} \mathbf{p}_c = \frac{1}{z_c} \begin{bmatrix} f_x & 0 & c_x \\ 0 & f_y & c_y \\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} x_c \\ y_c \\ z_c \end{bmatrix}
 $$
 где $(f_x, f_y)$ — фокусные расстояния в пиксельных единицах, а $(c_x, c_y)$ — главная точка. Нелинейные радиальные искажения объектива моделируются коэффициентами искажений $(k_1, k_2)$:
 $$ r^2 = x_n^2 + y_n^2, \quad x_d = x_n (1 + k_1 r^2 + k_2 r^4), \quad y_d = y_n (1 + k_1 r^2 + k_2 r^4) $$
@@ -487,7 +487,7 @@ $$ \mathbf{\Sigma}_b = \mathbf{R}_{bc} \mathbf{\Sigma}_c \mathbf{R}_{bc}^\top + 
 
 ### Планарная гомография Чжана и калибровка камеры
 
-Техника калибровки Чжана вычисляет матрицу внутренних параметров камеры $\mathbf{K}$ по наблюдению планарного калибровочного узла (например, шахматного узора) в $N \ge 3$ различных ориентациях [Zhang, 2000](references.md#zhang2000flexible). Без ограничения общности предположим, что модельная плоскость лежит на $Z = 0$ в мировых координатах. 3D-модельная точка $\mathbf{M} = [X, Y, 0, 1]^\top$ отображается в 2D-точку изображения $\tilde{\mathbf{u}} = [u, v, 1]^\top$ через матрицу планарной гомографии $3 \times 3$, $\mathbf{H}$:
+Техника калибровки Чжана вычисляет матрицу внутренних параметров камеры $\mathbf{K}$ по наблюдению планарного калибровочного узла (например, шахматного узора) в $N \ge 3$ различных ориентациях [Zhang, 2000](references.md#zhang2000flexible). Без ограничения общности предположим, что модельная плоскость лежит на $Z = 0$ в мировых координатах. 3D-модельная точка $\mathbf{M} = [X, Y, 0, 1]^\top$ отображается в 2D-точку изображения $\widetilde{\mathbf{u}} = [u, v, 1]^\top$ через матрицу планарной гомографии $3 \times 3$, $\mathbf{H}$:
 $$
 s \begin{bmatrix} u \\ v \\ 1 \end{bmatrix} = \mathbf{K} \begin{bmatrix} \mathbf{r}_1 & \mathbf{r}_2 & \mathbf{r}_3 & \mathbf{t} \end{bmatrix} \begin{bmatrix} X \\ Y \\ 0 \\ 1 \end{bmatrix} = \mathbf{K} \begin{bmatrix} \mathbf{r}_1 & \mathbf{r}_2 & \mathbf{t} \end{bmatrix} \begin{bmatrix} X \\ Y \\ 1 \end{bmatrix} = \mathbf{H} \begin{bmatrix} X \\ Y \\ 1 \end{bmatrix}
 $$

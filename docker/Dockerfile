@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-# Build stage: mdBook with the plugins used by the book, then the merged site.
+# Build stage: mdBook with the plugins the books use, then every book and the directory page.
 FROM rust:1-slim-bookworm AS build
 RUN apt-get update \
  && apt-get install -y --no-install-recommends python3 ca-certificates \
@@ -8,7 +8,7 @@ RUN apt-get update \
 RUN cargo install --locked mdbook@0.5.4 mdbook-mermaid@0.17.1 mdbook-katex@0.10.0
 WORKDIR /src
 COPY . .
-RUN rm -rf build site && python3 scripts/build_site.py
+RUN python3 scripts/build_site.py
 
 # Serve stage: static files only.
 FROM nginx:1-alpine

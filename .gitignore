@@ -1,5 +1,8 @@
-/build/
+# Сборка сайта и отдельных книг
 /site/
+books/*/book/
+
+# Python
 __pycache__/
 *.pyc
 .venv/

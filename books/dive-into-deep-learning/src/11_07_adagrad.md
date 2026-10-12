@@ -59,9 +59,9 @@ $$\kappa = \frac{\boldsymbol{\Lambda}_1}{\boldsymbol{\Lambda}_d}.$$
 В частности, можно взять диагональные элементы $\mathbf{Q}$ и соответствующим образом их перемасштабировать.
 Это обходится гораздо дешевле вычисления собственных значений.
 
-$$\tilde{\mathbf{Q}} = \mathrm{diag}^{-\frac{1}{2}}(\mathbf{Q}) \mathbf{Q} \mathrm{diag}^{-\frac{1}{2}}(\mathbf{Q}).$$
+$$\widetilde{\mathbf{Q}} = \mathrm{diag}^{-\frac{1}{2}}(\mathbf{Q}) \mathbf{Q} \mathrm{diag}^{-\frac{1}{2}}(\mathbf{Q}).$$
 
-В этом случае $\tilde{\mathbf{Q}}_{ij} = \mathbf{Q}_{ij} / \sqrt{\mathbf{Q}_{ii} \mathbf{Q}_{jj}}$, и, в частности, для всех $i$ выполняется $\tilde{\mathbf{Q}}_{ii} = 1$.
+В этом случае $\widetilde{\mathbf{Q}}_{ij} = \mathbf{Q}_{ij} / \sqrt{\mathbf{Q}_{ii} \mathbf{Q}_{jj}}$, и, в частности, для всех $i$ выполняется $\widetilde{\mathbf{Q}}_{ii} = 1$.
 В большинстве случаев это значительно упрощает число обусловленности.
 Например, в рассмотренном ранее примере это полностью устраняет проблему, поскольку задача выровнена по осям.
 

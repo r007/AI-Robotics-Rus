@@ -54,11 +54,65 @@ CHAPTER_TITLES = {
     "21-robot-design": "Глава 21. Проектирование роботов и манипуляторов",
 }
 
-# Titles for folders that have no README.md of their own.
+# Titles for folders that have no README.md of their own, keyed by folder name.
 DIRECTORY_TITLES = {
     "code": "Код",
+    "docs": "Документы",
+    "results": "Результаты",
+    "resources": "Ресурсы",
+    "appendices": "Приложения",
     "images": "Изображения",
+    "getting_started": "Начало работы",
+    "supplement-cartpole-control-tutorial": "Дополнение: управление Cartpole",
+    "supplement-01joycon-control": "Дополнение 01. Управление через Joy-Con",
+    "large-model-control-vla-vlm": "Управление с помощью больших моделей: VLA и VLM",
+    "01SmolVLA-LIBERO": "SmolVLA и LIBERO",
+    "02-openvla-reproduction": "Воспроизведение OpenVLA",
+    "03-rt-series-paper-interpretation-and-code-analysis": "Серия RT: разбор статей и кода",
+    "05DiT4DiT-LIBERO": "DiT4DiT и LIBERO",
+    "Locomotion": "Локомоция",
+    "01-navigation-algorithms-practical-guide": "Алгоритмы навигации: подробный разбор и практика",
+    "02-basics-of-simulation-environment": "Основы среды моделирования",
+    "habitat-navigation-environment": "Среда навигации Habitat",
+    "03-frontier-vln-reproduction": "Воспроизведение передовых проектов VLN",
+    "01VLNCE": "VLN-CE",
+    "01-isaac-deployment-and-gr00t-practices": "Развёртывание Isaac и практика с GR00T",
+    "01-isaac-sim5-0-installation": "Установка Isaac Sim 5.0",
+    "09-sim1-soft-body-simulation-and-data-generation": "SIM1: моделирование мягких тел и генерация данных",
+    "10-internverse-tutorial": "Руководство по InternVerse",
+    "MetaSim-roboverse": "MetaSim и RoboVerse",
+    "RoboGen": "RoboGen",
+    "challenge-competition": "Соревнование",
+    "cosmos": "Cosmos",
+    "genesis-simulation-environment-configuration": "Настройка среды моделирования Genesis",
+    "maniskill-detailed-documentation": "ManiSkill: подробная документация",
+    "instance-document": "Документы с примерами",
+    "docker-related": "Docker",
+    "git-related-usage": "Git",
+    "lerobot-related": "LeRobot",
+    "openpi-related": "OpenPI",
+    "package-management-tools-such-as-conda-mamba-pip-uv": "Управление пакетами: conda, mamba, pip, uv",
+    "vscode-usage-related": "VS Code",
+    "wsa": "WSA",
+    "wsl": "WSL",
+    "drone-large-model-groundingdino-practice": "Беспилотник и большая модель: практика с GroundingDINO",
+    "embodied-navigation-practical-introduction": "Навигация воплощённого ИИ: практическое введение",
+    "act_seed1_best_submission": "Лучшая отправка ACT (seed 1)",
+    "AgiBot_World_Model": "AgiBot World Model",
+    "rocm": "ROCm",
+    "01-task-information": "Материалы задания",
+    "02-executable-code": "Исполняемый код",
+    "01-diffusion-mathematics-and-problem-analysis": "Математика диффузии и постановка задачи",
+    "02-vae-explanation-and-code": "VAE: объяснение и код",
+    "03-ddpm-explanation-and-code": "DDPM: объяснение и код",
+    "leworldmodel-analysis-and-reproduction": "LeWorldModel: разбор и воспроизведение",
 }
+
+# Pages of the book that describe the translation itself; they go to the last part.
+ABOUT_PAGES = (
+    ("notice.md", "Авторство и лицензия"),
+    ("provenance.md", "Происхождение материалов"),
+)
 
 _NATURAL = re.compile(r"(\d+)")
 
@@ -80,6 +134,14 @@ def page_title(path: Path) -> str:
     return path.stem
 
 
+def has_markdown(directory: Path) -> bool:
+    return any(
+        path.suffix == ".md" and path.name != "SUMMARY.md"
+        for path in directory.rglob("*")
+        if path.is_file()
+    )
+
+
 def entry_title(name: str) -> str:
     return name.replace("**", "").replace("[", "").replace("]", "")
 
@@ -98,7 +160,7 @@ def render_dir(src: Path, directory: Path, depth: int, lines: list[str]) -> None
         if child.is_file() and child.suffix == ".md" and child.name != "SUMMARY.md":
             title = page_title(child)
             lines.append(f"{indent}- [{entry_title(title)}]({rel})")
-        elif child.is_dir() and child.name not in SKIP_DIRS:
+        elif child.is_dir() and child.name not in SKIP_DIRS and has_markdown(child):
             readme = child / "README.md"
             if readme.exists():
                 title = page_title(readme)
@@ -135,7 +197,9 @@ def build(src: Path) -> str:
         (
             child
             for child in src.iterdir()
-            if child.is_file() and child.suffix == ".md" and child.name not in {"README.md", "SUMMARY.md"}
+            if child.is_file()
+            and child.suffix == ".md"
+            and child.name not in {"README.md", "SUMMARY.md", *(name for name, _ in ABOUT_PAGES)}
         ),
         key=lambda child: natural_key(child.name),
     )
@@ -144,6 +208,13 @@ def build(src: Path) -> str:
         lines.append("")
         for child in loose:
             lines.append(f"- [{entry_title(page_title(child))}]({child.name})")
+        lines.append("")
+
+    about = [(name, title) for name, title in ABOUT_PAGES if (src / name).is_file()]
+    if about:
+        lines.append("# О переводе")
+        lines.append("")
+        lines.extend(f"- [{title}]({name})" for name, title in about)
         lines.append("")
 
     return "\n".join(lines).rstrip() + "\n"

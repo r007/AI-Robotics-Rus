@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="t-physical-ai-systems">
+  <title id="t-physical-ai-systems">Системы физического ИИ</title>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d9488"/><stop offset="1" stop-color="#042f2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#g)"/>
+  <circle cx="700" cy="80" r="160" fill="#ffffff" fill-opacity=".06"/>
+  <circle cx="90" cy="420" r="120" fill="#ffffff" fill-opacity=".05"/>
+  <text x="60" y="120" font-size="18" letter-spacing="3" fill="#ffffff" fill-opacity=".85" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">MLSYSBOOK · ТОМ IV</text>
+  <text x="60" y="205" font-size="44" font-weight="700" fill="#ffffff" font-family="DejaVu Sans, Arial, sans-serif">Системы</text><text x="60" y="259" font-size="44" font-weight="700" fill="#ffffff" font-family="DejaVu Sans, Arial, sans-serif">физического ИИ</text>
+  <g><circle cx="660.0" cy="235" r="92" fill="none" stroke="#ffffff" stroke-opacity=".35" stroke-width="6" stroke-dasharray="10 12"/><circle cx="660.0" cy="143.0" r="30" fill="#ecfeff"/><circle cx="660.0" cy="143.0" r="13" fill="none" stroke="#0f766e" stroke-width="5"/><circle cx="660.0" cy="143.0" r="5" fill="#0f766e"/><text x="660.0" y="101.0" text-anchor="middle" font-size="16" fill="#ffffff" fill-opacity=".9" font-family="DejaVu Sans, Arial, sans-serif">датчики</text><circle cx="739.7" cy="281.0" r="30" fill="#ecfeff"/><rect x="725.7" y="267.0" width="28" height="28" rx="5" fill="#0f766e"/><rect x="733.7" y="275.0" width="12" height="12" rx="2" fill="#ecfeff"/><text x="739.7" y="333.0" text-anchor="middle" font-size="16" fill="#ffffff" fill-opacity=".9" font-family="DejaVu Sans, Arial, sans-serif">модель</text><circle cx="580.3" cy="281.0" r="30" fill="#ecfeff"/><circle cx="580.3" cy="281.0" r="12" fill="none" stroke="#0f766e" stroke-width="8" stroke-dasharray="6 5"/><circle cx="580.3" cy="281.0" r="4" fill="#0f766e"/><text x="580.3" y="333.0" text-anchor="middle" font-size="16" fill="#ffffff" fill-opacity=".9" font-family="DejaVu Sans, Arial, sans-serif">привод</text><polygon points="0,-11 15,0 0,11" fill="#ffffff" fill-opacity=".85" transform="translate(739.7 189.0) rotate(60)"/><polygon points="0,-11 15,0 0,11" fill="#ffffff" fill-opacity=".85" transform="translate(660.0 327.0) rotate(180)"/><polygon points="0,-11 15,0 0,11" fill="#ffffff" fill-opacity=".85" transform="translate(580.3 189.0) rotate(300)"/></g>
+</svg>

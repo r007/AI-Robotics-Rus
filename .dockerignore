@@ -1,6 +1,6 @@
 .git
-build/
 site/
+books/*/book/
 **/__pycache__/
 **/*.pyc
 **/.venv/

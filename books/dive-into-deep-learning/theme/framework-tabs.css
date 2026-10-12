@@ -1,0 +1,75 @@
+/* Вкладки с кодом для фреймворков. Разметку создаёт scripts/mdbook_framework_tabs.py,
+   поведение — framework-tabs.js. Без JavaScript видны все варианты с подписями. */
+
+.fw-tabs {
+  margin: 1.2em 0;
+}
+
+.fw-panel > .fw-label {
+  margin: 0.6em 0 0.2em;
+}
+
+.fw-panel > pre {
+  margin-top: 0;
+}
+
+/* С включённым JavaScript подпись заменяют вкладки, а показан один вариант. */
+.fw-enabled .fw-panel > .fw-label {
+  display: none;
+}
+
+.fw-enabled .fw-panel[hidden] {
+  display: none;
+}
+
+.fw-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 0;
+  border-bottom: 1px solid var(--table-border-color, rgba(128, 128, 128, 0.4));
+}
+
+.fw-tab {
+  margin: 0 0 -1px;
+  padding: 6px 14px;
+  font: inherit;
+  font-size: 0.9em;
+  color: var(--fg);
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px 6px 0 0;
+}
+
+.fw-tab:hover {
+  background: var(--quote-bg, rgba(128, 128, 128, 0.12));
+}
+
+.fw-tab[aria-selected="true"] {
+  font-weight: 600;
+  background: var(--bg);
+  border-color: var(--table-border-color, rgba(128, 128, 128, 0.4));
+  border-bottom-color: var(--bg);
+  box-shadow: inset 0 2px 0 var(--links, #2b79a2);
+}
+
+.fw-tab:focus-visible {
+  outline: 2px solid var(--links, #2b79a2);
+  outline-offset: 1px;
+}
+
+/* На печати показываем все варианты. */
+@media print {
+  .fw-bar {
+    display: none;
+  }
+
+  .fw-enabled .fw-panel[hidden] {
+    display: block;
+  }
+
+  .fw-enabled .fw-panel > .fw-label {
+    display: block;
+  }
+}

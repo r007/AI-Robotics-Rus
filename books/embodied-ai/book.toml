@@ -1,8 +1,37 @@
-# Сборку выполняет scripts/build_site.py из корня репозитория.
-# Этот файл задаёт только метаданные книги.
+# Самостоятельная книга mdBook: `mdbook serve books/embodied-ai` из корня репозитория.
+# Сайт со всеми книгами и страницей каталога собирает scripts/build_site.py.
+
 [book]
 title = "Воплощённый ИИ и робототехника"
 description = "Учебник на русском языке по воплощённому ИИ, робототехнике, компьютерному зрению, обучению с подкреплением и ускоренному ИИ на периферии."
 authors = ["Datawhale и соавторы (оригинальный материал)", "Перевод на русский: Сергей Монин"]
 language = "ru"
 src = "src"
+
+[build]
+create-missing = false
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+git-repository-url = "https://github.com/r007/AI-Robotics-Rus"
+edit-url-template = "https://github.com/r007/AI-Robotics-Rus/edit/main/books/embodied-ai/src/{path}"
+site-url = "/AI-Robotics-Rus/embodied-ai/"
+additional-js = ["mermaid.min.js", "mermaid-init.js"]
+
+[output.html.search]
+limit-results = 20
+
+[output.html.fold]
+enable = true
+level = 1
+
+[preprocessor.readme-links]
+command = "python3 ../../scripts/mdbook_readme_links.py"
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[preprocessor.katex]
+after = ["links"]
+before = ["mermaid"]

@@ -1,8 +1,37 @@
-# Сборку выполняет scripts/build_site.py из корня репозитория.
-# Этот файл задаёт только метаданные книги.
+# Самостоятельная книга mdBook: `mdbook serve books/dive-into-deep-learning` из корня репозитория.
+# Сайт со всеми книгами и страницей каталога собирает scripts/build_site.py.
+
 [book]
 title = "Погружение в глубокое обучение"
 description = "Русскоязычное издание учебника «Dive into Deep Learning» (动手学深度学习) с кодом на Python. Переведены главы 1 «Введение», 2 «Предварительные знания», 3 «Линейные нейронные сети», 4 «Многослойные перцептроны», 5 «Вычисления глубокого обучения», 6 «Свёрточные нейронные сети», 7 «Современные свёрточные нейронные сети», 8 «Рекуррентные нейронные сети», 9 «Современные рекуррентные нейронные сети», 10 «Механизмы внимания», 11 «Алгоритмы оптимизации», 12 «Вычислительная производительность», 13 «Компьютерное зрение», 14 «Обработка естественного языка: предобучение» и 15 «Обработка естественного языка: приложения»; предисловие, приложение и список литературы переведены."
 authors = ["Астон Чжан, Закари С. Липтон, Му Ли, Алекс Смола и соавторы (оригинал)", "Сергей Монин (перевод)"]
 language = "ru"
 src = "src"
+
+[build]
+create-missing = false
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+git-repository-url = "https://github.com/r007/AI-Robotics-Rus"
+edit-url-template = "https://github.com/r007/AI-Robotics-Rus/edit/main/books/dive-into-deep-learning/src/{path}"
+site-url = "/AI-Robotics-Rus/dive-into-deep-learning/"
+additional-css = ["theme/framework-tabs.css"]
+additional-js = ["theme/framework-tabs.js"]
+
+[output.html.search]
+limit-results = 20
+
+[output.html.fold]
+enable = true
+level = 1
+
+[preprocessor.framework-tabs]
+command = "python3 ../../scripts/mdbook_framework_tabs.py"
+
+[preprocessor.readme-links]
+command = "python3 ../../scripts/mdbook_readme_links.py"
+
+[preprocessor.katex]
+after = ["links"]
