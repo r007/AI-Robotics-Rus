@@ -67,7 +67,7 @@ unzip plate_11.zip
 
 Соберите демонстрации в заданной среде. Задача — взять кружку и поставить её на тарелку. Среда засчитывает успех, когда кружка стоит на тарелке, захват открыт, а концевой эффектор находится над кружкой.
 
-<img src="./media/teleop.gif" width="480" height="360">
+<img src="https://raw.githubusercontent.com/datawhalechina/every-embodied/01d107d2ea79f41f66757fcd9176479e0fc7163c/06-%E7%AD%96%E7%95%A5%E6%8A%93%E5%8F%96%E6%88%96%E6%8A%93%E5%8F%96VLA/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8E%A7%E5%88%B6%E3%80%81VLA%E3%80%81VLM/04mujoco%E5%A4%8D%E7%8E%B0ACT%E3%80%81Pi0%E3%80%81SmolVLA/media/teleop.gif" width="480" height="360">
 
 Назначение клавиш:
 - `WASD`: перемещение в плоскости x-y
@@ -136,7 +136,7 @@ features={
 - [Воспроизведение Nova5](2.visualize_data-nova5.ipynb)
 - [Воспроизведение xArm7](2.visualize_data-xarm7.ipynb)
 
-<img src="./media/data.gif" width="480" height="360">
+<img src="https://raw.githubusercontent.com/datawhalechina/every-embodied/01d107d2ea79f41f66757fcd9176479e0fc7163c/06-%E7%AD%96%E7%95%A5%E6%8A%93%E5%8F%96%E6%88%96%E6%8A%93%E5%8F%96VLA/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8E%A7%E5%88%B6%E3%80%81VLA%E3%80%81VLM/04mujoco%E5%A4%8D%E7%8E%B0ACT%E3%80%81Pi0%E3%80%81SmolVLA/media/data.gif" width="480" height="360">
 
 Ваши действия визуализируются в восстановленной симуляционной сцене. Основное окно проигрывает действия; наложенные справа вверху и справа внизу изображения берутся из набора данных.
 
@@ -152,7 +152,7 @@ features={
 
 Ошибку политики можно оценить, сравнив её с истинными действиями из набора данных.
 
-<image src="./media/inference.png"  width="480" height="360">
+<img src="./media/inference.png"  width="480" height="360">
 
 <details>
     <summary>PicklingError: Can't pickle &lt;function &lt;lambda&gt;...&gt;</summary>
@@ -177,7 +177,7 @@ dataloader = torch.utils.data.DataLoader(
 Если нет GPU, пригодной для обучения, контрольную точку можно скачать с Google Drive:
 - https://drive.google.com/drive/folders/1UqxqUgGPKU04DkpQqSWNgfYMhlvaiZsp?usp=sharing
 
-<img src="./media/rollout.gif" width="480" height="360" controls>
+<img src="https://raw.githubusercontent.com/datawhalechina/every-embodied/01d107d2ea79f41f66757fcd9176479e0fc7163c/06-%E7%AD%96%E7%95%A5%E6%8A%93%E5%8F%96%E6%88%96%E6%8A%93%E5%8F%96VLA/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8E%A7%E5%88%B6%E3%80%81VLA%E3%80%81VLM/04mujoco%E5%A4%8D%E7%8E%B0ACT%E3%80%81Pi0%E3%80%81SmolVLA/media/rollout.gif" width="480" height="360" controls>
 
 ## 5-6. Сбор и визуализация в среде с языковыми условиями
 
@@ -187,7 +187,7 @@ dataloader = torch.utils.data.DataLoader(
 
 **Пример данных**
 
-<img src="./media/data_v2.gif" width="480" height="360" controls>
+<img src="https://raw.githubusercontent.com/datawhalechina/every-embodied/01d107d2ea79f41f66757fcd9176479e0fc7163c/06-%E7%AD%96%E7%95%A5%E6%8A%93%E5%8F%96%E6%88%96%E6%8A%93%E5%8F%96VLA/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8E%A7%E5%88%B6%E3%80%81VLA%E3%80%81VLM/04mujoco%E5%A4%8D%E7%8E%B0ACT%E3%80%81Pi0%E3%80%81SmolVLA/media/data_v2.gif" width="480" height="360" controls>
 
 ## Модели и наборы данных
 
@@ -248,11 +248,11 @@ python train_model.py --config_path pi0_datawhale_eai.yaml
 
 Результат развёртывания:
 
-<img src="./media/rollout2.gif" width="480" height="360" controls>
+<img src="https://raw.githubusercontent.com/datawhalechina/every-embodied/01d107d2ea79f41f66757fcd9176479e0fc7163c/06-%E7%AD%96%E7%95%A5%E6%8A%93%E5%8F%96%E6%88%96%E6%8A%93%E5%8F%96VLA/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8E%A7%E5%88%B6%E3%80%81VLA%E3%80%81VLM/04mujoco%E5%A4%8D%E7%8E%B0ACT%E3%80%81Pi0%E3%80%81SmolVLA/media/rollout2.gif" width="480" height="360" controls>
 
 Журнал обучения:
 
-<image src="./media/wandb.png"  width="480" height="360">
+<img src="./media/wandb.png"  width="480" height="360">
 
 Конфигурация соответствует YAML по ссылке в этом разделе. По умолчанию читается `./demo_data_language` из раздела 5, `dataset.repo_id` равен `datawhale_eai_pnp_language`; при использовании других данных нужно поменять оба значения. По умолчанию W&B выключен; чтобы включить, укажите свой проект и учётную запись. Для обучения нужны полный набор данных, веса модели и окружение CUDA; успешный разбор конфигурации не означает, что полное обучение проверено.
 
@@ -270,11 +270,11 @@ python train_model.py --config_path smolvla_datawhale_eai.yaml
 
 Результат развёртывания:
 
-<img src="./media/rollout3.gif" width="480" height="360" controls>
+<img src="https://raw.githubusercontent.com/datawhalechina/every-embodied/01d107d2ea79f41f66757fcd9176479e0fc7163c/06-%E7%AD%96%E7%95%A5%E6%8A%93%E5%8F%96%E6%88%96%E6%8A%93%E5%8F%96VLA/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8E%A7%E5%88%B6%E3%80%81VLA%E3%80%81VLM/04mujoco%E5%A4%8D%E7%8E%B0ACT%E3%80%81Pi0%E3%80%81SmolVLA/media/rollout3.gif" width="480" height="360" controls>
 
 Журнал обучения:
 
-<image src="./media/wandb2.png"  width="480" height="360">
+<img src="./media/wandb2.png"  width="480" height="360">
 
 Конфигурация соответствует YAML по ссылке в этом разделе. По умолчанию читается `./demo_data_language` из раздела 5, `dataset.repo_id` равен `datawhale_eai_pnp_language`; при использовании других данных нужно поменять оба значения. По умолчанию W&B выключен; чтобы включить, укажите свой проект и учётную запись. Для обучения нужны полный набор данных, веса модели и окружение CUDA; успешный разбор конфигурации не означает, что полное обучение проверено.
 

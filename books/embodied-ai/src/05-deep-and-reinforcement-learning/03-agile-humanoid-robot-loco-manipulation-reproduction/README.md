@@ -61,24 +61,24 @@
 <table>
   <tr>
     <td width="50%">
-      <img src="assets/official_videos/booster_t1_vel_sim2sim.gif" width="100%" alt="Booster T1, слежение за скоростью, симуляция">
+      <img src="https://raw.githubusercontent.com/datawhalechina/every-embodied/01d107d2ea79f41f66757fcd9176479e0fc7163c/05-%E5%85%B7%E8%BA%AB%E5%9C%BA%E6%99%AF%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%92%8C%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/03AGILE%E4%BA%BA%E5%BD%A2%E6%9C%BA%E5%99%A8%E4%BA%BALoco-Manipulation%E5%A4%8D%E7%8E%B0/assets/official_videos/booster_t1_vel_sim2sim.gif" width="100%" alt="Booster T1, слежение за скоростью, симуляция">
       <p><strong>Видео 1. Официальный результат Booster T1 в симуляции: слежение за скоростью.</strong> Видео показывает, как T1 следует командам скорости в симуляции. Это базовая способность задач локомоции в AGILE.</p>
       <p align="center"><sub>Источник: официальный репозиторий NVIDIA Isaac WBC-AGILE, `docs/videos/booster_t1_vel_sim2sim.gif`.</sub></p>
     </td>
     <td width="50%">
-      <img src="assets/official_videos/booster_t1_vel_sim2real.gif" width="100%" alt="Booster T1, слежение за скоростью, реальный робот">
+      <img src="https://raw.githubusercontent.com/datawhalechina/every-embodied/01d107d2ea79f41f66757fcd9176479e0fc7163c/05-%E5%85%B7%E8%BA%AB%E5%9C%BA%E6%99%AF%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%92%8C%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/03AGILE%E4%BA%BA%E5%BD%A2%E6%9C%BA%E5%99%A8%E4%BA%BALoco-Manipulation%E5%A4%8D%E7%8E%B0/assets/official_videos/booster_t1_vel_sim2real.gif" width="100%" alt="Booster T1, слежение за скоростью, реальный робот">
       <p><strong>Видео 2. Официальный результат Booster T1 на реальном роботе: слежение за скоростью.</strong> Видео иллюстрирует цель переноса из симуляции в реальность, о которой говорит статья. Не смешивайте его с локальными короткими видео этой главы.</p>
       <p align="center"><sub>Источник: официальный репозиторий NVIDIA Isaac WBC-AGILE, `docs/videos/booster_t1_vel_sim2real.gif`.</sub></p>
     </td>
   </tr>
   <tr>
     <td width="50%">
-      <img src="assets/official_videos/unitree_g1_vel_height_sim2sim.gif" width="100%" alt="Unitree G1, скорость и высота, симуляция">
+      <img src="https://raw.githubusercontent.com/datawhalechina/every-embodied/01d107d2ea79f41f66757fcd9176479e0fc7163c/05-%E5%85%B7%E8%BA%AB%E5%9C%BA%E6%99%AF%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%92%8C%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/03AGILE%E4%BA%BA%E5%BD%A2%E6%9C%BA%E5%99%A8%E4%BA%BALoco-Manipulation%E5%A4%8D%E7%8E%B0/assets/official_videos/unitree_g1_vel_height_sim2sim.gif" width="100%" alt="Unitree G1, скорость и высота, симуляция">
       <p><strong>Видео 3. Официальный результат Unitree G1 в симуляции: скорость и высота.</strong> Здесь G1 одновременно отслеживает скорость движения и высоту корпуса. За этим стоит подход teacher-student, который повышает реализуемость на роботе.</p>
       <p align="center"><sub>Источник: официальный репозиторий NVIDIA Isaac WBC-AGILE, `docs/videos/unitree_g1_vel_height_sim2sim.gif`.</sub></p>
     </td>
     <td width="50%">
-      <img src="assets/official_videos/unitree_g1_vel_height_sim2real.gif" width="100%" alt="Unitree G1, скорость и высота, реальный робот">
+      <img src="https://raw.githubusercontent.com/datawhalechina/every-embodied/01d107d2ea79f41f66757fcd9176479e0fc7163c/05-%E5%85%B7%E8%BA%AB%E5%9C%BA%E6%99%AF%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%92%8C%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/03AGILE%E4%BA%BA%E5%BD%A2%E6%9C%BA%E5%99%A8%E4%BA%BALoco-Manipulation%E5%A4%8D%E7%8E%B0/assets/official_videos/unitree_g1_vel_height_sim2real.gif" width="100%" alt="Unitree G1, скорость и высота, реальный робот">
       <p><strong>Видео 4. Официальный результат Unitree G1 на реальном роботе: скорость и высота.</strong> Видео соответствует эксперименту статьи по управлению скоростью и высотой G1.</p>
       <p align="center"><sub>Источник: официальный репозиторий NVIDIA Isaac WBC-AGILE, `docs/videos/unitree_g1_vel_height_sim2real.gif`.</sub></p>
     </td>
@@ -86,7 +86,7 @@
 </table>
 
 <p align="center">
-  <img src="assets/official_videos/g1_apple_grasp_black_sort_bin_multi_objects_no_marker_reduced.gif" width="78%" alt="Официальная демонстрация захвата и укладки G1">
+  <img src="https://raw.githubusercontent.com/datawhalechina/every-embodied/01d107d2ea79f41f66757fcd9176479e0fc7163c/05-%E5%85%B7%E8%BA%AB%E5%9C%BA%E6%99%AF%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%92%8C%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/03AGILE%E4%BA%BA%E5%BD%A2%E6%9C%BA%E5%99%A8%E4%BA%BALoco-Manipulation%E5%A4%8D%E7%8E%B0/assets/official_videos/g1_apple_grasp_black_sort_bin_multi_objects_no_marker_reduced.gif" width="78%" alt="Официальная демонстрация захвата и укладки G1">
 </p>
 
 **Видео 5. Официальная демонстрация захвата и укладки Unitree G1.** Видно захват и укладку предмета на фиксированном столе. Важно понимать: это ближе к локальной манипуляции и генерации данных, а не к длинной навигации по открытому помещению.

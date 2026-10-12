@@ -6,10 +6,10 @@
 
 Укажите прямо на учебный каталог вышестоящего проекта в Every Embodied:
 
-~~~bash
+```bash
 export EVERY_EMBODIED_ROOT=/path/to/every-embodied
 export PROJECT_ROOT="$EVERY_EMBODIED_ROOT/<папка-главы-06>/<папка-темы-ACT-Pi0-SmolVLA>"
-~~~
+```
 
 Здесь `<папка-главы-06>` и `<папка-темы-ACT-Pi0-SmolVLA>` — каталоги главы 06 и подраздела «MuJoCo: ACT, Pi0, SmolVLA» в исходном репозитории.
 
@@ -19,32 +19,32 @@ export PROJECT_ROOT="$EVERY_EMBODIED_ROOT/<папка-главы-06>/<папка
 
 Разные версии вышестоящего проекта могут иметь разную структуру файлов. Для текущего процесса нужны как минимум:
 
-~~~text
+```text
 $PROJECT_ROOT/
 ├── asset/example_scene_y2.xml
 ├── mujoco_env/
 ├── train_model.py
 └── eval_policy_success.py
-~~~
+```
 
 Проверьте наличие:
 
-~~~bash
+```bash
 test -f "$PROJECT_ROOT/asset/example_scene_y2.xml"
 test -d "$PROJECT_ROOT/mujoco_env"
 test -f "$PROJECT_ROOT/train_model.py"
 test -f "$PROJECT_ROOT/eval_policy_success.py"
-~~~
+```
 
 Пакетная точка входа темы находится в `code/run_closed_loop.py`, её не нужно копировать в вышестоящий каталог.
 
 ## Данные и модели
 
-~~~bash
+```bash
 export DATA_ROOT=/path/to/datasets/every_embodied
 export MODEL_ROOT=/path/to/checkpoints/every_embodied
 export RUN_ROOT=/path/to/runs/every_embodied
-~~~
+```
 
 | Каталог | Содержимое |
 | --- | --- |
@@ -59,8 +59,8 @@ export RUN_ROOT=/path/to/runs/every_embodied
 
 Если нужно собрать автономный учебный пакет, скопируйте в `external/mujoco_pnp/` только исходный код, XML сцены, сетки и конфигурации, которые нужны текущему заданию. В Notebook путь по-прежнему задаётся через `PROJECT_ROOT`:
 
-~~~bash
+```bash
 export PROJECT_ROOT=/path/to/04-amd-rocm-policy-replication-topic/external/mujoco_pnp
-~~~
+```
 
 После копирования повторите проверку устройства, импорт окружения и один цикл `reset → step → render`, чтобы убедиться, что зависимости полные.

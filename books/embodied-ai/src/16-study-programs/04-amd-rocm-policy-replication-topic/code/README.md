@@ -11,13 +11,13 @@
 
 В каталоге этой темы задайте пути:
 
-~~~bash
+```bash
 cd /path/to/every-embodied/<topic-folder>
 export PROJECT_ROOT=/path/to/mujoco_pnp
 export DATA_ROOT=/path/to/datasets/every_embodied
 export MODEL_ROOT=/path/to/checkpoints/every_embodied
 export OUTPUT_ROOT=/path/to/outputs/every_embodied
-~~~
+```
 
 `<topic-folder>` — каталог этой темы в исходном репозитории `every-embodied`.
 
@@ -27,9 +27,9 @@ PyTorch на ROCm по-прежнему использует `DEVICE=cuda`. Ес
 
 Для записи видео в первую очередь используется H.264 через imageio и imageio-ffmpeg. Если в окружении есть только opencv-python, скрипт автоматически переходит на кодек MP4, доступный OpenCV. Для стабильного воспроизведения в браузере рекомендуется дополнительно установить:
 
-~~~bash
+```bash
 pip install imageio imageio-ffmpeg
-~~~
+```
 
 ## Пакетная замкнутая оценка
 
@@ -42,28 +42,28 @@ pip install imageio imageio-ffmpeg
 
 Пример:
 
-~~~bash
+```bash
 export POLICY_TYPE=smolvla
 export MODEL_RUN_DIR="$MODEL_ROOT/smolvla_weighted_000500"
 export EVAL_SEEDS=1000,1001,1002,1003
 export RENDER=0
 python code/run_closed_loop.py
-~~~
+```
 
 `POLICY_TYPE` принимает значения `act`, `smolvla` и `pi0`. Если каталог модели уже является `pretrained_model`, используйте:
 
-~~~bash
+```bash
 export POLICY_PATH=/path/to/pretrained_model
 python code/run_closed_loop.py
-~~~
+```
 
 По умолчанию замкнутый цикл не открывает 3D-окно, поэтому он подходит для Xvfb или серверов без дисплея. Чтобы наблюдать окно в реальном времени, задайте `RENDER=1` и заранее настройте `DISPLAY`. В официальном отчёте не ограничивайтесь стандартными четырьмя seed: используйте не менее 20–30 отложенных seed и отдельно считайте результаты для красной кружки, синей кружки и физического успеха.
 
 ## Быстрая точка входа для SmolVLA
 
-~~~bash
+```bash
 python code/task11_smolvla_eval.py
-~~~
+```
 
 Скрипт лишь задаёт `POLICY_TYPE=smolvla` и четыре seed по умолчанию, после чего вызывает `run_closed_loop.py`. Если путь к модели другой, сначала явно задайте `MODEL_RUN_DIR`. Скрипт не выполняет код по фиксированным номерам ячеек Notebook и не записывает файлы авторизации X-сервера.
 
@@ -71,36 +71,36 @@ python code/task11_smolvla_eval.py
 
 Сначала выведите список эпизодов:
 
-~~~bash
+```bash
 python code/replay_dataset.py --list
-~~~
+```
 
 Затем экспортируйте вид с основной камеры (agent) или с камеры запястья (wrist):
 
-~~~bash
+```bash
 python code/replay_dataset.py --episode 0 --view agent
 python code/replay_dataset.py --episode 3 --view wrist --fps 20
-~~~
+```
 
 По умолчанию файл записывается в `$OUTPUT_ROOT/replay_ep{episode}_{view}.mp4`. Для основного вида скрипт сначала читает `observation.image`, а для совместимости также принимает старое имя `agent_image`; вид с запястья берётся из `observation.wrist_image`. Если набор лежит не в `DATA_ROOT/omy_pnp_language`, задайте:
 
-~~~bash
+```bash
 export DATASET_ROOT=/path/to/omy_pnp_language
-~~~
+```
 
 ## Вводная демонстрация MuJoCo
 
 Демонстрация с шариком не требует внешних ресурсов:
 
-~~~bash
+```bash
 python code/demo/demo_ball.py
-~~~
+```
 
 Демонстрация с манипулятором требует сцену вышестоящего проекта:
 
-~~~bash
+```bash
 python code/demo/demo_arm.py
-~~~
+```
 
 Оба видео записываются в `outputs/demo_videos` в формате H.264/yuv420p, который легко декодируется браузерами. Демонстрации проверяют только рендеринг, сцену и цепочку видео; они не равны обучению стратегии и не измеряют успех в замкнутом цикле.
 

@@ -16,17 +16,17 @@
 
 Перед обучением, оценкой и запуском Notebook задайте:
 
-~~~bash
+```bash
 export LEROBOT_SRC=/path/to/lerobot_10b7_legacy
 export PYTHONPATH=/path/to/lerobot_10b7_legacy:$PYTHONPATH
-~~~
+```
 
 Либо выполните:
 
-~~~bash
+```bash
 source code/rocm/activate_lerobot_rocm.sh
 python code/rocm/verify_lerobot_rocm_env.py
-~~~
+```
 
 Запускайте Notebook только после вывода `ENVIRONMENT_OK`. Если выводится `ENVIRONMENT_MISMATCH`, не начинайте обучение: сначала исправьте версии Python, ROCm или LeRobot.
 
@@ -41,8 +41,8 @@ python code/rocm/verify_lerobot_rocm_env.py
 
 SSH-порт W7900 временно не завершает рукопожатие, поэтому онлайн-проверка в облаке ещё не выполнена. Когда соединение восстановится, первой командой должна быть:
 
-~~~bash
+```bash
 python code/rocm/verify_lerobot_rocm_env.py --json
-~~~
+```
 
 Окружения считаются согласованными, только если основные версии, коммит LeRobot и пути импорта в JSON на обоих концах полностью совпадают.

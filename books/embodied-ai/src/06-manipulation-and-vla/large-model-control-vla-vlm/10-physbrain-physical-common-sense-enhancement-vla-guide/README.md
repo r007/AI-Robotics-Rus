@@ -137,7 +137,7 @@ TwinBrainVLA + LangForce
 ## 5. Базовая модель PhysBrain: почему одних траекторий робота недостаточно
 
 <p align="center">
-  <img src="./assets/physbrain_arch.png" width="100%" />
+  <img src="https://raw.githubusercontent.com/datawhalechina/every-embodied/01d107d2ea79f41f66757fcd9176479e0fc7163c/06-%E7%AD%96%E7%95%A5%E6%8A%93%E5%8F%96%E6%88%96%E6%8A%93%E5%8F%96VLA/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8E%A7%E5%88%B6%E3%80%81VLA%E3%80%81VLM/10-PhysBrain%E7%89%A9%E7%90%86%E5%B8%B8%E8%AF%86%E5%A2%9E%E5%BC%BAVLA%E5%AF%BC%E8%AF%BB/assets/physbrain_arch.png" width="100%" />
 </p>
 
 **Рисунок 3. Охват корпуса видео от первого лица на странице проекта PhysBrain 1.0.** На кадрах — дом, лаборатория и производственный процесс. Рисунок подчёркивает, что физический контроль не ограничен демонстрациями манипулятора на столе.

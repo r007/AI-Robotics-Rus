@@ -4,7 +4,7 @@
 
 ## Настройка перед запуском
 
-~~~bash
+```bash
 export PROJECT_ROOT=/path/to/mujoco_pnp
 export DATA_ROOT=/path/to/datasets/every_embodied
 export MODEL_ROOT=/path/to/checkpoints/every_embodied
@@ -13,7 +13,7 @@ export OUTPUT_ROOT=$RUN_ROOT/notebooks
 
 cd /path/to/<topic-folder>
 jupyter lab
-~~~
+```
 
 `<topic-folder>` — каталог этой темы в исходном репозитории `every-embodied`.
 
@@ -68,7 +68,7 @@ Notebook 14–16 объединяют конфигурацию модели, о�
 
 После установки Jupyter-ядра лучше выполнять Notebook штатным способом Jupyter. Если в учебном образе не установлен `nbclient`, можно использовать облегчённый исполнитель для ячеек без интерактивных окон:
 
-~~~bash
+```bash
 python code/execute_tutorial_notebooks.py \
   notebooks/07_data_collection_and_audit.ipynb \
   notebooks/08_act_training_rocm.ipynb \
@@ -77,7 +77,7 @@ python code/execute_tutorial_notebooks.py \
   notebooks/11_mujoco_closed_loop_deploy.ipynb \
   notebooks/12_pi0_strict_input_end_to_end.ipynb \
   notebooks/13_pi05_random_position_eef_delta.ipynb
-~~~
+```
 
 Во время длительного обучения индикатор прогресса обновляется в одной и той же области вывода; пошаговые метрики записываются в `metrics.jsonl`, чтобы не создавать отдельный блок вывода на каждом шаге.
 

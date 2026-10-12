@@ -688,8 +688,8 @@ q(x_{t-1}|x_t,x_0)
 \mathcal{N}
 \left(
 x_{t-1};
-\tilde{\mu}_t(x_t,x_0),
-\tilde{\beta}_tI
+\widetilde{\mu}_t(x_t,x_0),
+\widetilde{\beta}_tI
 \right)
 }
 $$
@@ -698,7 +698,7 @@ $$
 
 $$
 \boxed{
-\tilde{\mu}_t(x_t,x_0)
+\widetilde{\mu}_t(x_t,x_0)
 {=}
 \frac{
 \sqrt{\bar{\alpha}_{t-1}}\beta_t
@@ -720,7 +720,7 @@ $$
 
 $$
 \boxed{
-\tilde{\beta}_t
+\widetilde{\beta}_t
 {=}
 \frac{
 1-\bar{\alpha}_{t-1}
@@ -733,7 +733,7 @@ $$
 
 Подробный вывод коэффициентов — в приложении B. Сейчас важен смысл:
 
-- истинное апостериорное среднее $\tilde{\mu}_t(x_t,x_0)$ — линейная комбинация $x_0$ и $x_t$;
+- истинное апостериорное среднее $\widetilde{\mu}_t(x_t,x_0)$ — линейная комбинация $x_0$ и $x_t$;
 - оно показывает наиболее разумное центральное положение, если идти от $x_t$ назад на один шаг;
 - при обучении можно потребовать, чтобы предсказанное моделью среднее $\mu_\theta(x_t,t)$ приближалось к этому истинному среднему.
 
@@ -759,7 +759,7 @@ L_{t-1}
 \left[
 \frac{1}{2\sigma_t^2}
 \left\|
-\tilde{\mu}_t(x_t,x_0)
+\widetilde{\mu}_t(x_t,x_0)
 {-}
 \mu_\theta(x_t,t)
 \right\|^2
@@ -797,7 +797,7 @@ $$
 Истинное апостериорное среднее можно записать как:
 
 $$
-\tilde{\mu}_t(x_t,x_0)
+\widetilde{\mu}_t(x_t,x_0)
 {=}
 A_tx_0+B_tx_t
 $$
@@ -835,7 +835,7 @@ $$
 $$
 \mu_\theta(x_t,t)
 {=}
-\tilde{\mu}_t
+\widetilde{\mu}_t
 \left(
 x_t,
 x_{0,\theta}(x_t,t)
@@ -949,7 +949,7 @@ $$
 Истинное апостериорное среднее можно записать через шум:
 
 $$
-\tilde{\mu}_t(x_t,x_0)
+\widetilde{\mu}_t(x_t,x_0)
 {=}
 \frac{1}{\sqrt{\alpha_t}}
 \left(
@@ -985,7 +985,7 @@ $$
 Их разность:
 
 $$
-\tilde{\mu}_t(x_t,x_0)
+\widetilde{\mu}_t(x_t,x_0)
 {-}
 \mu_\theta(x_t,t)
 {=}
@@ -1003,7 +1003,7 @@ $$
 
 $$
 \left\|
-\tilde{\mu}_t(x_t,x_0)
+\widetilde{\mu}_t(x_t,x_0)
 {-}
 \mu_\theta(x_t,t)
 \right\|^2
@@ -2142,7 +2142,7 @@ $$
 
 $$
 \boxed{
-\tilde{\beta}_t
+\widetilde{\beta}_t
 {=}
 \frac{
 1-\bar{\alpha}_{t-1}
@@ -2217,7 +2217,7 @@ $$
 
 $$
 \boxed{
-\tilde{\mu}_t(x_t,x_0)
+\widetilde{\mu}_t(x_t,x_0)
 {=}
 \frac{
 \sqrt{\bar{\alpha}_{t-1}}\beta_t
