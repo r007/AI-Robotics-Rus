@@ -17,7 +17,7 @@
 - Глава 3 «Линейные нейронные сети»: `src/03_linear_networks.md` (вступление) и семь разделов `src/03_01_linear_regression.md` … `src/03_07_softmax_regression_concise.md`. Соответствие исходникам из `chapter_linear-networks/`: `linear-regression`, `linear-regression-scratch`, `linear-regression-concise`, `softmax-regression`, `image-classification-dataset`, `softmax-regression-scratch`, `softmax-regression-concise`. Исходные файлы `*_origin.md` (английская версия) не использовались.
 - Иллюстрации главы 3 в `src/images/`: `singleneuron.svg`, `softmaxreg.svg`, `neuron.svg` перерисованы с русскими подписями; `fit-linreg.svg` скопирован без изменений.
 
-Предисловие, установка, обозначения и главы 9–15 пока не переведены.
+Предисловие, установка, обозначения, приложение и список литературы пока не переведены.
 
 - Глава 4 «Многослойные перцептроны»: `src/04_multilayer_perceptrons.md` (вступление) и десять разделов `src/04_01_mlp.md` … `src/04_10_kaggle_house_price.md`. Соответствие исходникам из `chapter_multilayer-perceptrons/`: `index`, `mlp`, `mlp-scratch`, `mlp-concise`, `underfit-overfit`, `weight-decay`, `dropout`, `backprop`, `numerical-stability-and-init`, `environment`, `kaggle-house-price`. Исходные файлы `*_origin.md` (английская версия) не использовались.
 - Иллюстрации главы 4 в `src/images/`: `mlp.svg`, `dropout2.svg`, `capacity-vs-error.svg`, `cat-dog-train.svg`, `cat-dog-test.svg` перерисованы или пересобраны с русскими подписями; `forward.svg` и `popvssoda.png` взяты без изменений.
@@ -176,3 +176,26 @@
 - `style-transfer.svg` показывает только два входных изображения (содержимое и стиль). Синтезированный результат в книге не воспроизведён: он получается при запуске кода раздела 13.12 и не был взят из исходника.
 - Фотографии из `img/`, которые нужны только коду (`cat1.jpg`, `banana.jpg`), скопированы в `src/images/` без изменений.
 - Не включены: `kaggle-cifar10.png` (рис. 13.13.1) и `kaggle-dog.jpg` (рис. 13.14.1) — скриншоты страниц соревнований Kaggle, по аналогии с главой 4 в тексте оставлено описание.
+
+## Главы 14–15: что изменено относительно оригинала
+
+- Переведены вступления и разделы 14.1–14.10 (`src/14_*.md`) и 15.1–15.7 (`src/15_*.md`). Соответствие исходникам из `chapter_natural-language-processing-pretraining/`: `word2vec`, `approx-training`, `word-embedding-dataset`, `word2vec-pretraining`, `glove`, `subword-embedding`, `similarity-analogy`, `bert`, `bert-dataset`, `bert-pretraining`; и из `chapter_natural-language-processing-applications/`: `sentiment-analysis-and-dataset`, `sentiment-analysis-rnn`, `sentiment-analysis-cnn`, `natural-language-inference-and-dataset`, `natural-language-inference-attention`, `finetuning-bert`, `natural-language-inference-bert`. Файлы `*_origin.md` (английская версия) использовались только для сверки мест, где китайский перевод оказался искажён.
+- Вкладки фреймворков оформлены жирной подписью перед блоком кода (`**MXNet:**`, `**PyTorch:**`, `**PaddlePaddle:**`, при общем коде — `**MXNet, PyTorch:**` и т. п.); общий код (`#@tab all`) выведен без подписи, а блок без пометки в исходнике — это вкладка MXNet. Маркеры `#@tab` удалены, `#@save` оставлен.
+- Ссылки Sphinx заменены обычным текстом: «рис. 14.1.1», «раздел 14.8», «табл. 14.5.1»; ссылки на подразделы записаны как «подраздел «…» раздела N.M». К формулам с метками добавлены номера `\tag{14.1.1}`. Ссылки `:cite:` оформлены как «(Mikolov et al., 2013b)»; две статьи Миколова 2013 года различены буквами a и b. В конце разделов с цитированием добавлен список «Литература».
+- Подписи в коде, комментарии, docstring, вывод `print` и подписи графиков переведены; имена функций, переменные и выражения не изменены. Проверка: токены кода во всех блоках совпадают с исходником, различаются только строковые литералы.
+
+### Главы 14–15: замечания к исходнику
+
+- 14.8: в исходнике особый токен назван «&lt;seq&gt;» вместо `<sep>`; в переводе везде `<sep>`.
+- 14.9: в исходнике сказано, что функция `_pad_bert_inputs` «добавляет специальные токены `<mask>`»; она дополняет входы токеном `<pad>`, в переводе так и сказано.
+- 14.6: в китайском тексте искажены примеры с символом `_` («a_all er_man»); по английскому оригиналу — «a_ tall er_ man» и «faster_», «taller_» разбиваются на «fast er_» и «tall er_».
+- 14.3, 14.6: в исходнике обрывочные комментарии (`# Exclude`, `# Readthetrainingset.`) заменены законченными по смыслу.
+- 15.3: ссылка на несуществующую метку `subsec_multi-output-channels` заменена ссылкой на подраздел «Несколько выходных каналов» раздела 6.4.
+- 15.4: в китайском тексте пример следования искажён («表白» — признание в любви); по английскому оригиналу гипотеза — «Две женщины проявляют нежность» (showing affection).
+- 15.5: в пояснении к формуле (15.5.2) при $\mathbf{v}_{B,j}$ в исходнике стоит индекс $i$; в переводе $j$.
+- 15.2: в версии для PaddlePaddle в исходнике `stop_gradient = False` у весов вложений, хотя по тексту их не нужно обновлять, и опечатка `"weigth"` в условии инициализации; код оставлен без изменений.
+
+### Главы 14–15: иллюстрации
+
+- Перерисованы заново с русскими подписями (производные работы): `nlp-map-pretrain.svg`, `nlp-map-app.svg`, `nlp-map-sa-rnn.svg`, `nlp-map-sa-cnn.svg`, `nlp-map-nli-attention.svg`, `nlp-map-nli-bert.svg`, `elmo-gpt-bert.svg`, `bert-input.svg`, `bert-one-seq.svg`, `bert-two-seqs.svg`, `bert-tagging.svg`, `bert-qa.svg`, `conv1d.svg`, `conv1d-2d.svg`, `conv1d-channel.svg`, `textcnn.svg`, `nli-attention.svg`. Английские примеры внутри схем («i do need sleep», «a model loading and inference api…») сохранены. На схеме `nlp-map-nli-attention.svg` подписи архитектур выровнены с остальными схемами (в оригинале они английские: MLP, CNN, RNN, Attention).
+- Скопированы без изменений (на них только английские слова и математика): `skip-gram.svg`, `cbow.svg`, `hi-softmax.svg`.
