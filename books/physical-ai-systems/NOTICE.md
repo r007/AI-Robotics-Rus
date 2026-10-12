@@ -2,7 +2,7 @@
 
 **Системы физического ИИ** — русский перевод тома IV учебника «Machine Learning Systems» (Physical AI Systems).
 
-- Оригинальный текст: Vijay Janapa Reddi и соавторы, Harvard University, [mlsysbook.ai](https://mlsysbook.ai). Исходный репозиторий: `harvard-edge/cs249r_book`, коммит `8a9df95ea5`.
+- Оригинальный текст: Vijay Janapa Reddi и соавторы, Harvard University, [mlsysbook.ai](https://mlsysbook.ai). Исходный репозиторий: `harvard-edge/cs249r_book`.
 - Лицензия оригинала: CC BY-NC-SA 4.0. Эта книга распространяется на тех же условиях: с указанием авторства, только в некоммерческих целях и на условиях той же лицензии. Поэтому она не публикуется по общей лицензии CC BY 4.0 репозитория, см. `meta.toml`.
 - Перевод и редакция: Сергей Монин.
 

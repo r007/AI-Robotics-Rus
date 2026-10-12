@@ -2,7 +2,7 @@
 
 ## Источник
 
-Перевод основан на томе IV «Machine Learning Systems» (Physical AI Systems), репозиторий `harvard-edge/cs249r_book`, коммит `8a9df95ea5`. Лицензия оригинала — CC BY-NC-SA 4.0.
+Перевод основан на томе IV «Machine Learning Systems» (Physical AI Systems), репозиторий `harvard-edge/cs249r_book`. Лицензия оригинала — CC BY-NC-SA 4.0.
 
 ## Что переведено
 

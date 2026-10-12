@@ -3,7 +3,7 @@
 # Build stage: mdBook with the plugins the books use, then every book and the directory page.
 FROM rust:1-slim-bookworm AS build
 RUN apt-get update \
- && apt-get install -y --no-install-recommends python3 ca-certificates \
+ && apt-get install -y --no-install-recommends python3 ca-certificates patch \
  && rm -rf /var/lib/apt/lists/*
 RUN cargo install --locked mdbook@0.5.4 mdbook-mermaid@0.17.1 mdbook-katex@0.10.0
 WORKDIR /src

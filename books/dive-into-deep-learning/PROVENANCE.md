@@ -2,7 +2,7 @@
 
 ## Источник
 
-Материал основан на учебнике «Dive into Deep Learning» (动手学深度学习), репозиторий [d2l-ai/d2l-zh](https://github.com/d2l-ai/d2l-zh), коммит `e6b18ccea71451a55fcd861d7b96fddf2587b09a`. Текст лицензирован по CC BY-SA 4.0, код примеров — по MIT-0.
+Материал основан на учебнике «Dive into Deep Learning» (动手学深度学习), репозиторий [d2l-ai/d2l-zh](https://github.com/d2l-ai/d2l-zh). Текст лицензирован по CC BY-SA 4.0, код примеров — по MIT-0.
 
 ## Что есть сейчас
 

@@ -4,6 +4,5 @@
 
 - Оригинальный материал: Datawhale и соавторы, [github.com/datawhalechina/every-embodied](https://github.com/datawhalechina/every-embodied). Лицензия: CC BY 4.0.
 - Перевод на русский язык и редакция: Сергей Монин.
-- Исходная версия: коммит `01d107d2ea79f41f66757fcd9176479e0fc7163c`.
 
 Сторонние материалы, их происхождение и исключения описаны в файле PROVENANCE.md (в этой же папке). Условия использования — в файле LICENSE в папке книги.

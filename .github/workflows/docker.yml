@@ -23,3 +23,5 @@ jobs:
           file: docker/Dockerfile
           push: false
           tags: ai-robotics-rus:ci
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
