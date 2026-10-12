@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="280" viewBox="0 0 460 280">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker></defs>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<rect x="100" y="40" width="45" height="20" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<line x1="145" y1="50" x2="172" y2="50" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="100" y="70" width="45" height="20" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<line x1="145" y1="80" x2="172" y2="80" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="100" y="100" width="45" height="20" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<line x1="145" y1="110" x2="172" y2="110" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="100" y="130" width="45" height="20" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<line x1="145" y1="140" x2="172" y2="140" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="100" y="160" width="45" height="20" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<line x1="145" y1="170" x2="172" y2="170" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="122" y="20" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Ключ</text>
+<text x="122" y="35" text-anchor="middle" dominant-baseline="central" font-size="11" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">(непроизвольная подсказка)</text>
+<rect x="172" y="55" width="84" height="120" rx="0" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="214" y="103" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Агрегация</text>
+<text x="214" y="119" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">внимания</text>
+<text x="307" y="20" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Значение</text>
+<text x="307" y="35" text-anchor="middle" dominant-baseline="central" font-size="11" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">(сенсорный вход)</text>
+<rect x="282" y="40" width="46" height="20" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<rect x="282" y="70" width="46" height="20" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<rect x="282" y="100" width="46" height="20" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<rect x="282" y="130" width="46" height="20" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<rect x="282" y="160" width="46" height="20" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<circle cx="305" cy="170" r="32" fill="#FFD6D6" stroke="#000" stroke-width="0"/>
+<rect x="282" y="160" width="46" height="20" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<line x1="256" y1="120" x2="280" y2="170" stroke="#000" stroke-width="1.5" stroke-dasharray="4,3"/>
+<path d="M 328 170 H 377 V 52" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="355" y="22" width="45" height="22" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="410" y="33" text-anchor="start" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Выход</text>
+<rect x="100" y="220" width="45" height="22" rx="0" fill="none" stroke="#000" stroke-width="1.5"/>
+<path d="M 145 231 H 210 V 176" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="122" y="256" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Запрос</text>
+<text x="122" y="270" text-anchor="middle" dominant-baseline="central" font-size="11" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">(произвольная подсказка)</text>
+</svg>

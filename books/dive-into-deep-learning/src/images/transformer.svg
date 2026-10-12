@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker></defs>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="115" y="18" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Кодировщик</text>
+<rect x="30" y="40" width="170" height="500" rx="12" fill="none" stroke="#000" stroke-width="1.5" stroke-dasharray="5,4"/>
+<text x="14" y="290" text-anchor="middle" dominant-baseline="central" font-size="12" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">n ×</text>
+<rect x="45" y="515" width="140" height="22" rx="0" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="115.0" y="526.0" text-anchor="middle" dominant-baseline="central" font-size="8" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Вложения + позиц. кодирование</text>
+<path d="M 115 515 V 484" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="45" y="448" width="140" height="30" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="115.0" y="463.0" text-anchor="middle" dominant-baseline="central" font-size="11" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Многоголовое внимание</text>
+<rect x="45" y="398" width="140" height="24" rx="0" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="115.0" y="410.0" text-anchor="middle" dominant-baseline="central" font-size="10" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Сложение и нормализация</text>
+<rect x="45" y="338" width="140" height="30" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="115.0" y="353.0" text-anchor="middle" dominant-baseline="central" font-size="9" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Позиционная полносвязная сеть</text>
+<rect x="45" y="288" width="140" height="24" rx="0" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="115.0" y="300.0" text-anchor="middle" dominant-baseline="central" font-size="10" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Сложение и нормализация</text>
+<path d="M 115 448 V 422" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M 115 398 V 370" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M 115 338 V 314" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M 115 288 V 62" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M 45 463 H 36 V 410 H 45" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M 45 353 H 36 V 300 H 45" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="355" y="18" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Декодировщик</text>
+<rect x="270" y="40" width="170" height="500" rx="12" fill="none" stroke="#000" stroke-width="1.5" stroke-dasharray="5,4"/>
+<text x="452" y="290" text-anchor="middle" dominant-baseline="central" font-size="12" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">× n</text>
+<rect x="285" y="505" width="140" height="22" rx="0" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="355.0" y="516.0" text-anchor="middle" dominant-baseline="central" font-size="8" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Вложения + позиц. кодирование</text>
+<path d="M 355 505 V 484" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="285" y="448" width="140" height="30" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="355.0" y="463.0" text-anchor="middle" dominant-baseline="central" font-size="9" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Маскированное внимание</text>
+<path d="M 355 448 V 422" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="285" y="398" width="140" height="24" rx="0" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="355.0" y="410.0" text-anchor="middle" dominant-baseline="central" font-size="10" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Сложение и нормализация</text>
+<path d="M 355 398 V 370" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="285" y="338" width="140" height="30" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="355.0" y="353.0" text-anchor="middle" dominant-baseline="central" font-size="11" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Многоголовое внимание</text>
+<path d="M 355 338 V 314" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="285" y="288" width="140" height="24" rx="0" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="355.0" y="300.0" text-anchor="middle" dominant-baseline="central" font-size="10" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Сложение и нормализация</text>
+<path d="M 355 288 V 262" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="285" y="228" width="140" height="30" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="355.0" y="243.0" text-anchor="middle" dominant-baseline="central" font-size="9" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Позиционная полносвязная сеть</text>
+<path d="M 355 228 V 204" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="285" y="178" width="140" height="24" rx="0" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="355.0" y="190.0" text-anchor="middle" dominant-baseline="central" font-size="10" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Сложение и нормализация</text>
+<path d="M 355 178 V 150" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="285" y="110" width="140" height="26" rx="0" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="355.0" y="123.0" text-anchor="middle" dominant-baseline="central" font-size="11" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Полносвязный слой</text>
+<path d="M 355 110 V 84" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M 200 60 H 250 V 353 H 285" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M 285 463 H 276 V 410 H 285" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M 285 353 H 276 V 300 H 285" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M 285 193 H 276 V 170 H 285" fill="none" stroke="#000" stroke-width="1.5"/>
+</svg>

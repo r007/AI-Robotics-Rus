@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="260" viewBox="0 0 600 260">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker></defs>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="105" y="20" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Свёрточная нейронная сеть</text>
+<circle cx="34" cy="62" r="13" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<circle cx="34" cy="128" r="13" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<circle cx="34" cy="200" r="13" fill="#FFFFFF" stroke="#000" stroke-width="1.5"/>
+<text x="34" y="200" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">x<tspan baseline-shift="sub" font-size="9">1</tspan></text>
+<circle cx="74" cy="62" r="13" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<circle cx="74" cy="128" r="13" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<circle cx="74" cy="200" r="13" fill="#FFFFFF" stroke="#000" stroke-width="1.5"/>
+<text x="74" y="200" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">x<tspan baseline-shift="sub" font-size="9">2</tspan></text>
+<circle cx="114" cy="62" r="13" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<circle cx="114" cy="128" r="13" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<circle cx="114" cy="200" r="13" fill="#FFFFFF" stroke="#000" stroke-width="1.5"/>
+<text x="114" y="200" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">x<tspan baseline-shift="sub" font-size="9">3</tspan></text>
+<circle cx="154" cy="62" r="13" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<circle cx="154" cy="128" r="13" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<circle cx="154" cy="200" r="13" fill="#FFFFFF" stroke="#000" stroke-width="1.5"/>
+<text x="154" y="200" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">x<tspan baseline-shift="sub" font-size="9">4</tspan></text>
+<circle cx="194" cy="62" r="13" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<circle cx="194" cy="128" r="13" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<circle cx="194" cy="200" r="13" fill="#FFFFFF" stroke="#000" stroke-width="1.5"/>
+<text x="194" y="200" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">x<tspan baseline-shift="sub" font-size="9">5</tspan></text>
+<line x1="34" y1="187" x2="34" y2="143" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+<line x1="34" y1="115" x2="34" y2="75" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+<line x1="74" y1="187" x2="34" y2="143" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+<line x1="74" y1="115" x2="34" y2="75" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+<line x1="34" y1="187" x2="74" y2="143" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+<line x1="34" y1="115" x2="74" y2="75" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+<line x1="74" y1="187" x2="74" y2="143" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+<line x1="74" y1="115" x2="74" y2="75" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+<line x1="114" y1="187" x2="74" y2="143" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+<line x1="114" y1="115" x2="74" y2="75" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+<line x1="74" y1="187" x2="114" y2="143" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+<line x1="74" y1="115" x2="114" y2="75" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+<line x1="114" y1="187" x2="114" y2="143" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+<line x1="114" y1="115" x2="114" y2="75" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+<line x1="154" y1="187" x2="114" y2="143" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+<line x1="154" y1="115" x2="114" y2="75" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+<line x1="114" y1="187" x2="154" y2="143" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+<line x1="114" y1="115" x2="154" y2="75" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+<line x1="154" y1="187" x2="154" y2="143" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+<line x1="154" y1="115" x2="154" y2="75" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+<line x1="194" y1="187" x2="154" y2="143" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+<line x1="194" y1="115" x2="154" y2="75" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+<line x1="154" y1="187" x2="194" y2="143" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+<line x1="154" y1="115" x2="194" y2="75" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+<line x1="194" y1="187" x2="194" y2="143" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+<line x1="194" y1="115" x2="194" y2="75" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+<text x="300" y="20" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Рекуррентная сеть</text>
+<circle cx="242" cy="62" r="12" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<circle cx="242" cy="200" r="12" fill="#FFFFFF" stroke="#000" stroke-width="1.5"/>
+<text x="242" y="200" text-anchor="middle" dominant-baseline="central" font-size="12" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">x<tspan baseline-shift="sub" font-size="8">1</tspan></text>
+<line x1="242" y1="188" x2="242" y2="76" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="254" y1="62" x2="260" y2="62" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="272" cy="62" r="12" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<circle cx="272" cy="200" r="12" fill="#FFFFFF" stroke="#000" stroke-width="1.5"/>
+<text x="272" y="200" text-anchor="middle" dominant-baseline="central" font-size="12" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">x<tspan baseline-shift="sub" font-size="8">2</tspan></text>
+<line x1="272" y1="188" x2="272" y2="76" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="284" y1="62" x2="290" y2="62" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="302" cy="62" r="12" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<circle cx="302" cy="200" r="12" fill="#FFFFFF" stroke="#000" stroke-width="1.5"/>
+<text x="302" y="200" text-anchor="middle" dominant-baseline="central" font-size="12" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">x<tspan baseline-shift="sub" font-size="8">3</tspan></text>
+<line x1="302" y1="188" x2="302" y2="76" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="314" y1="62" x2="320" y2="62" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="332" cy="62" r="12" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<circle cx="332" cy="200" r="12" fill="#FFFFFF" stroke="#000" stroke-width="1.5"/>
+<text x="332" y="200" text-anchor="middle" dominant-baseline="central" font-size="12" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">x<tspan baseline-shift="sub" font-size="8">4</tspan></text>
+<line x1="332" y1="188" x2="332" y2="76" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="344" y1="62" x2="350" y2="62" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="362" cy="62" r="12" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<circle cx="362" cy="200" r="12" fill="#FFFFFF" stroke="#000" stroke-width="1.5"/>
+<text x="362" y="200" text-anchor="middle" dominant-baseline="central" font-size="12" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">x<tspan baseline-shift="sub" font-size="8">5</tspan></text>
+<line x1="362" y1="188" x2="362" y2="76" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="490" y="20" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Самовнимание</text>
+<circle cx="412" cy="62" r="12" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<circle cx="412" cy="200" r="12" fill="#FFFFFF" stroke="#000" stroke-width="1.5"/>
+<text x="412" y="200" text-anchor="middle" dominant-baseline="central" font-size="12" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">x<tspan baseline-shift="sub" font-size="8">1</tspan></text>
+<circle cx="442" cy="62" r="12" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<circle cx="442" cy="200" r="12" fill="#FFFFFF" stroke="#000" stroke-width="1.5"/>
+<text x="442" y="200" text-anchor="middle" dominant-baseline="central" font-size="12" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">x<tspan baseline-shift="sub" font-size="8">2</tspan></text>
+<circle cx="472" cy="62" r="12" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<circle cx="472" cy="200" r="12" fill="#FFFFFF" stroke="#000" stroke-width="1.5"/>
+<text x="472" y="200" text-anchor="middle" dominant-baseline="central" font-size="12" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">x<tspan baseline-shift="sub" font-size="8">3</tspan></text>
+<circle cx="502" cy="62" r="12" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<circle cx="502" cy="200" r="12" fill="#FFFFFF" stroke="#000" stroke-width="1.5"/>
+<text x="502" y="200" text-anchor="middle" dominant-baseline="central" font-size="12" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">x<tspan baseline-shift="sub" font-size="8">4</tspan></text>
+<circle cx="532" cy="62" r="12" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<circle cx="532" cy="200" r="12" fill="#FFFFFF" stroke="#000" stroke-width="1.5"/>
+<text x="532" y="200" text-anchor="middle" dominant-baseline="central" font-size="12" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">x<tspan baseline-shift="sub" font-size="8">5</tspan></text>
+<line x1="412" y1="188" x2="412" y2="76" stroke="#000" stroke-width="1.5" stroke-dasharray="2,3"/>
+<line x1="442" y1="188" x2="412" y2="76" stroke="#000" stroke-width="1.5" stroke-dasharray="2,3"/>
+<line x1="472" y1="188" x2="412" y2="76" stroke="#000" stroke-width="1.5" stroke-dasharray="2,3"/>
+<line x1="502" y1="188" x2="412" y2="76" stroke="#000" stroke-width="1.5" stroke-dasharray="2,3"/>
+<line x1="532" y1="188" x2="412" y2="76" stroke="#000" stroke-width="1.5" stroke-dasharray="2,3"/>
+<line x1="412" y1="188" x2="442" y2="76" stroke="#000" stroke-width="1.5" stroke-dasharray="2,3"/>
+<line x1="442" y1="188" x2="442" y2="76" stroke="#000" stroke-width="1.5" stroke-dasharray="2,3"/>
+<line x1="472" y1="188" x2="442" y2="76" stroke="#000" stroke-width="1.5" stroke-dasharray="2,3"/>
+<line x1="502" y1="188" x2="442" y2="76" stroke="#000" stroke-width="1.5" stroke-dasharray="2,3"/>
+<line x1="532" y1="188" x2="442" y2="76" stroke="#000" stroke-width="1.5" stroke-dasharray="2,3"/>
+<line x1="412" y1="188" x2="472" y2="76" stroke="#000" stroke-width="1.5" stroke-dasharray="2,3"/>
+<line x1="442" y1="188" x2="472" y2="76" stroke="#000" stroke-width="1.5" stroke-dasharray="2,3"/>
+<line x1="472" y1="188" x2="472" y2="76" stroke="#000" stroke-width="1.5" stroke-dasharray="2,3"/>
+<line x1="502" y1="188" x2="472" y2="76" stroke="#000" stroke-width="1.5" stroke-dasharray="2,3"/>
+<line x1="532" y1="188" x2="472" y2="76" stroke="#000" stroke-width="1.5" stroke-dasharray="2,3"/>
+<line x1="412" y1="188" x2="502" y2="76" stroke="#000" stroke-width="1.5" stroke-dasharray="2,3"/>
+<line x1="442" y1="188" x2="502" y2="76" stroke="#000" stroke-width="1.5" stroke-dasharray="2,3"/>
+<line x1="472" y1="188" x2="502" y2="76" stroke="#000" stroke-width="1.5" stroke-dasharray="2,3"/>
+<line x1="502" y1="188" x2="502" y2="76" stroke="#000" stroke-width="1.5" stroke-dasharray="2,3"/>
+<line x1="532" y1="188" x2="502" y2="76" stroke="#000" stroke-width="1.5" stroke-dasharray="2,3"/>
+<line x1="412" y1="188" x2="532" y2="76" stroke="#000" stroke-width="1.5" stroke-dasharray="2,3"/>
+<line x1="442" y1="188" x2="532" y2="76" stroke="#000" stroke-width="1.5" stroke-dasharray="2,3"/>
+<line x1="472" y1="188" x2="532" y2="76" stroke="#000" stroke-width="1.5" stroke-dasharray="2,3"/>
+<line x1="502" y1="188" x2="532" y2="76" stroke="#000" stroke-width="1.5" stroke-dasharray="2,3"/>
+<line x1="532" y1="188" x2="532" y2="76" stroke="#000" stroke-width="1.5" stroke-dasharray="2,3"/>
+</svg>

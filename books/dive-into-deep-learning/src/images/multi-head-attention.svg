@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="230" viewBox="0 0 660 230">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker></defs>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<rect x="120" y="20" width="150" height="24" rx="0" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="195" y="32" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Полносвязный слой</text>
+<rect x="120" y="56" width="150" height="22" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="195" y="67" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Конкатенация</text>
+<line x1="195" y1="46" x2="195" y2="54" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="10" y="100" width="150" height="24" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="85.0" y="112.0" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Внимание</text>
+<rect x="220" y="100" width="150" height="24" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="295.0" y="112.0" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Внимание</text>
+<text x="190" y="112" text-anchor="middle" dominant-baseline="central" font-size="16" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">…</text>
+<path d="M 85 100 V 80 H 120" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M 295 100 V 80 H 270" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="10" y="146" width="46" height="20" rx="0" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="33.0" y="156.0" text-anchor="middle" dominant-baseline="central" font-size="11" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">FC</text>
+<line x1="33" y1="146" x2="33" y2="124" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="65" y="146" width="46" height="20" rx="0" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="88.0" y="156.0" text-anchor="middle" dominant-baseline="central" font-size="11" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">FC</text>
+<line x1="88" y1="146" x2="88" y2="124" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="120" y="146" width="46" height="20" rx="0" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="143.0" y="156.0" text-anchor="middle" dominant-baseline="central" font-size="11" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">FC</text>
+<line x1="143" y1="146" x2="143" y2="124" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="220" y="146" width="46" height="20" rx="0" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="243.0" y="156.0" text-anchor="middle" dominant-baseline="central" font-size="11" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">FC</text>
+<line x1="243" y1="146" x2="243" y2="124" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="275" y="146" width="46" height="20" rx="0" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="298.0" y="156.0" text-anchor="middle" dominant-baseline="central" font-size="11" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">FC</text>
+<line x1="298" y1="146" x2="298" y2="124" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="330" y="146" width="46" height="20" rx="0" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="353.0" y="156.0" text-anchor="middle" dominant-baseline="central" font-size="11" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">FC</text>
+<line x1="353" y1="146" x2="353" y2="124" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="33" y1="186" x2="33" y2="166" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="88" y1="186" x2="88" y2="166" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="143" y1="186" x2="143" y2="166" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="243" y1="186" x2="243" y2="166" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="298" y1="186" x2="298" y2="166" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="353" y1="186" x2="353" y2="166" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="33" y="200" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Запрос</text>
+<text x="88" y="200" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Ключ</text>
+<text x="143" y="200" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Значение</text>
+<text x="243" y="200" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Запрос</text>
+<text x="298" y="200" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Ключ</text>
+<text x="353" y="200" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Значение</text>
+</svg>
