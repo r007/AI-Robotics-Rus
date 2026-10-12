@@ -81,7 +81,7 @@ mindmap
 
 Этот пример генерирует зашумлённые данные датчиков и с помощью комплементарного фильтра получает стабильный угол ориентации.
 
-```Python
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -118,17 +118,17 @@ def complementary_filter_demo():
 
     # 4. Сравнительный график
     plt.figure(figsize=(12, 6))
-    plt.plot(t, acc_reading, 'g-', alpha=0.3, label='Accelerometer (noisy)')
+    plt.plot(t, acc_reading, 'g-', alpha=0.3, label='Акселерометр (с шумом)')
     # Чистое интегрирование гироскопа (показывает дрейф)
     gyro_only = np.cumsum(gyro_reading) * dt
-    plt.plot(t, gyro_only, 'k--', alpha=0.5, label='Gyro only (drift)')
+    plt.plot(t, gyro_only, 'k--', alpha=0.5, label='Только гироскоп (дрейф)')
 
-    plt.plot(t, fused_angle, 'b-', linewidth=2, label='Fused result (complementary)')
-    plt.plot(t, true_angle, 'r--', linewidth=1, label='True angle')
+    plt.plot(t, fused_angle, 'b-', linewidth=2, label='Результат слияния (комплементарный фильтр)')
+    plt.plot(t, true_angle, 'r--', linewidth=1, label='Истинный угол')
 
-    plt.title('Sensor fusion: complementary filter demo')
-    plt.xlabel('Time (s)')
-    plt.ylabel('Angle (deg)')
+    plt.title('Слияние данных датчиков: комплементарный фильтр')
+    plt.xlabel('Время (с)')
+    plt.ylabel('Угол (град)')
     plt.legend()
     plt.grid(True)
     plt.show()

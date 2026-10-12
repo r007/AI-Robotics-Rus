@@ -40,7 +40,7 @@ RT-1 использует **EfficientNet** в качестве визуальн�
 
 Ниже показано, как RT-1 превращает непрерывное действие манипулятора в токены, которые может читать Transformer.
 
-```Python
+```python
 import numpy as np
 import tensorflow as tf
 

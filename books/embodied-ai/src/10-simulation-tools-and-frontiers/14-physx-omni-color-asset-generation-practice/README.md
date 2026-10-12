@@ -79,11 +79,11 @@ out = xops.memory_efficient_attention(
 
 В главе приводятся [патч совместимости](patches/blackwell.patch), [скрипт рендеринга](scripts/render_glb_in_isaac.py) и небольшие доказательства. Патч экспортирован из upstream-коммита `5ba54ee3d0e11c8690fd414d2343d47e514930dd` на момент подготовки; полный исторический запуск проходил в июне, точный коммит июня не записан, поэтому коммит сентября не называется исходной версией эксперимента. Успешная проверка применения патча не означает повторного выполнения всего инференса.
 
-Команды ниже рассчитаны на Linux. Сначала измените `TUTORIAL_DIR` на абсолютный путь к этой главе, а `DATA_ROOT` укажите на фактический диск большой ёмкости. Модели, окружения, кэш и результаты записываются на большой диск, исходный код управляется отдельно. На тестовой машине корень большого диска по умолчанию — `/data/Data14TB`.
+Команды ниже рассчитаны на Linux. Сначала измените `TUTORIAL_DIR` на абсолютный путь к этой главе, а `DATA_ROOT` укажите на фактический диск большой ёмкости. Модели, окружения, кэш и результаты записываются на большой диск, исходный код управляется отдельно. На тестовой машине корень большого диска по умолчанию — `/path/to/data-disk`.
 
 ```bash
 export TUTORIAL_DIR="/path/to/every-embodied/10-simulation-tools-and-frontiers/14-physx-omni-color-asset-generation-practice"
-export DATA_ROOT="/data/Data14TB"
+export DATA_ROOT="/path/to/data-disk"
 export PROJECT_ROOT="$DATA_ROOT/01Proj/PhysX-Omni"
 export MODEL_ROOT="$DATA_ROOT/models/physx-omni"
 export RUN_ROOT="$DATA_ROOT/outputs/physx-omni"

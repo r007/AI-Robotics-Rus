@@ -59,17 +59,17 @@ DEPTH_MODEL_NAME = "Intel/dpt-large"
 IMAGE_PATH = "test_image.jpg"  # замените на путь к вашему изображению
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
-print(f"Running on device: {device}")
+print(f"Устройство: {device}")
 
 # --- 1. Загрузка моделей ---
-print("Loading Depth Model...")
+print("Загрузка модели глубины...")
 depth_processor = DPTImageProcessor.from_pretrained(DEPTH_MODEL_NAME)
 depth_model = DPTForDepthEstimation.from_pretrained(DEPTH_MODEL_NAME).to(device)
 depth_model.eval()
 
-print("Loading SAM Model...")
+print("Загрузка модели SAM...")
 if not os.path.exists(SAM_CHECKPOINT):
-    raise FileNotFoundError(f"SAM checkpoint not found at {SAM_CHECKPOINT}. Please download it first.")
+    raise FileNotFoundError(f"Файл весов SAM не найден: {SAM_CHECKPOINT}. Сначала скачайте его.")
 sam = sam_model_registry[MODEL_TYPE](checkpoint=SAM_CHECKPOINT)
 sam.to(device=device)
 predictor = SamPredictor(sam)
@@ -95,7 +95,7 @@ def get_depth_map(image_pil):
 def interactive_demo():
     # Читаем изображение
     if not os.path.exists(IMAGE_PATH):
-        print(f"Error: Image {IMAGE_PATH} not found.")
+        print(f"Ошибка: изображение {IMAGE_PATH} не найдено.")
         return
 
     image_cv = cv2.imread(IMAGE_PATH)
@@ -104,11 +104,11 @@ def interactive_demo():
     image_pil = Image.fromarray(image_rgb)
 
     # Предварительно вычисляем карту глубины
-    print("Computing depth map...")
+    print("Вычисление карты глубины...")
     depth_map = get_depth_map(image_pil)
 
     # Инициализируем SAM
-    print("Setting image for SAM...")
+    print("Подготовка изображения для SAM...")
     predictor.set_image(image_rgb)
 
     # Переменные состояния
@@ -147,7 +147,7 @@ def interactive_demo():
         masked_depth = depth_map[current_mask]
         if masked_depth.size > 0:
             avg_depth = np.mean(masked_depth)
-            print(f"Object Depth -> Mean: {avg_depth:.4f} (Score: {scores[0]:.3f})")
+            print(f"Глубина объекта -> среднее: {avg_depth:.4f} (оценка: {scores[0]:.3f})")
 
     cv2.namedWindow("SAM + Depth Interaction", cv2.WINDOW_NORMAL)
     cv2.setMouseCallback("SAM + Depth Interaction", mouse_callback)
@@ -180,7 +180,7 @@ def interactive_demo():
             input_point = []
             input_label = []
             current_mask = None
-            print("Reset.")
+            print("Сброс.")
 
     cv2.destroyAllWindows()
 
@@ -229,14 +229,12 @@ SAM — «швейцарский нож» компьютерного зрени�
 ```bash
 # Размер файла около 2,4 ГБ
 wget 'https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth'
-(https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth)
 ```
 
 2. **Установите зависимости Python**
 
 ```bash
 pip install git+https://github.com/facebookresearch/segment-anything.git
-(https://github.com/facebookresearch/segment-anything.git)
 pip install transformers opencv-python matplotlib torch torchvision
 ```
 
@@ -270,13 +268,13 @@ def save_visualization(image, mask_or_depth, mode="sam", output_name="output.png
         # Рядом: исходное изображение и карта глубины
         plt.subplot(1, 2, 1)
         plt.imshow(image)
-        plt.title("Original Image")
+        plt.title("Исходное изображение")
         plt.axis('off')
 
         plt.subplot(1, 2, 2)
         plt.imshow(mask_or_depth, cmap="inferno")
-        plt.colorbar(label="Relative Depth")
-        plt.title("Depth Estimation")
+        plt.colorbar(label="Относительная глубина")
+        plt.title("Оценка глубины")
         plt.axis('off')
 
     elif mode == "sam":
@@ -296,7 +294,7 @@ def save_visualization(image, mask_or_depth, mode="sam", output_name="output.png
             color_mask = np.concatenate([np.random.random(3), [0.4]])  # случайный цвет + прозрачность 0,4
             img_overlay[m] = color_mask
         ax.imshow(img_overlay)
-        plt.title("SAM Segmentation")
+        plt.title("Сегментация SAM")
         plt.axis('off')
 
     plt.savefig(output_name, bbox_inches='tight')

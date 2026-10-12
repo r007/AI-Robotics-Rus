@@ -77,15 +77,15 @@ export TORCH_EXTENSIONS_DIR=/path/to/large_disk/cache/torch_extensions
 mkdir -p "$DATA_ROOT" "$HF_HOME" "$PIP_CACHE_DIR" "$UV_CACHE_DIR" "$TORCH_EXTENSIONS_DIR"
 ```
 
-Если на вашей машине большой диск смонтирован в `/data/Data14TB`, можно задать так:
+Если на вашей машине большой диск смонтирован в `/mnt/data`, можно задать так:
 
 ```bash
-export DATA_ROOT=/data/Data14TB/01Proj/locate-anything
-export ENV_ROOT=/data/Data14TB/envs/locate-anything
-export HF_HOME=/data/Data14TB/cache/huggingface
-export PIP_CACHE_DIR=/data/Data14TB/cache/pip
-export UV_CACHE_DIR=/data/Data14TB/cache/uv
-export TORCH_EXTENSIONS_DIR=/data/Data14TB/cache/torch_extensions
+export DATA_ROOT=/mnt/data/01Proj/locate-anything
+export ENV_ROOT=/mnt/data/envs/locate-anything
+export HF_HOME=/mnt/data/cache/huggingface
+export PIP_CACHE_DIR=/mnt/data/cache/pip
+export UV_CACHE_DIR=/mnt/data/cache/uv
+export TORCH_EXTENSIONS_DIR=/mnt/data/cache/torch_extensions
 ```
 
 Клонируйте официальный репозиторий:

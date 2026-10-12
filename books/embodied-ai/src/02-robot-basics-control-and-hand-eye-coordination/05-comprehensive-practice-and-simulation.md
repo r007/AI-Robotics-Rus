@@ -15,7 +15,7 @@ UR5 — самый классический шестиосевой коллаб�
 | **5 (запястье 2)** | $-\pi/2$ | 0 | 94.65 | $q_5$ |
 | **6 (запястье 3)** | 0 | 0 | 82.30 | $q_6$ |
 
-> **Задание**: используя функцию `forward_kinematics` из документа 2, подставьте в неё приведённые выше параметры и вычислите координаты конца UR5 в нулевой позе ($q=[0,0,0,0,0,0]$).
+> **Задание**: используя функцию `dh_matrix` из документа 2 (по образцу `forward_kinematics_2link`), подставьте в неё приведённые выше параметры и вычислите координаты конца UR5 в нулевой позе ($q=[0,0,0,0,0,0]$).
 
 #### 2. Моделирование динамики: фазовый портрет и временной отклик маятника
 
@@ -31,7 +31,7 @@ $$\frac{dy}{dt} = \begin{bmatrix} \dot{\theta} \\ \dot{\omega} \end{bmatrix} = \
 
 #### 3. Код моделирования на Python (`scipy.integrate.odeint`)
 
-```Python
+```python
 import numpy as np
 from scipy.integrate import odeint
 import matplotlib.pyplot as plt
@@ -78,18 +78,18 @@ plt.figure(figsize=(10, 6))
 
 # Подграфик 1: угол в зависимости от времени
 plt.subplot(2, 1, 1)
-plt.plot(t, theta_traj, 'b-', label='Theta (rad)')
-plt.title('Pendulum Dynamics Simulation (Damped)')
-plt.ylabel('Angle (rad)')
+plt.plot(t, theta_traj, 'b-', label='θ (рад)')
+plt.title('Моделирование маятника с демпфированием')
+plt.ylabel('Угол (рад)')
 plt.grid(True)
 plt.legend()
 
 # Подграфик 2: фазовый портрет — скорость от угла
 plt.subplot(2, 1, 2)
 plt.plot(theta_traj, omega_traj, 'r-')
-plt.title('Phase Portrait (State Space)')
-plt.xlabel('Angle (rad)')
-plt.ylabel('Angular Velocity (rad/s)')
+plt.title('Фазовый портрет (пространство состояний)')
+plt.xlabel('Угол (рад)')
+plt.ylabel('Угловая скорость (рад/с)')
 plt.grid(True)
 plt.tight_layout()
 

@@ -1,4 +1,4 @@
-# 04. Исполнительные механизмы робота: принципы, выбор и управление
+# Исполнительные механизмы робота: принципы, выбор и управление
 
 Исполнительные механизмы (актуаторы) — «мышцы» робота. В этой главе подробно рассказано, как заставить робота двигаться: принципы работы двигателей, схемы управления, передачи и основные методы выбора.
 
@@ -153,12 +153,12 @@ torque_curve = slope * rpm_range + motor_stall_torque
 plt.figure(figsize=(8, 6))
 
 # Кривая двигателя (граница возможностей)
-plt.plot(rpm_range, torque_curve, 'b-', label='Characteristic curve of motor (candidate)')
+plt.plot(rpm_range, torque_curve, 'b-', label='Характеристика двигателя (кандидат)')
 # Безопасная область (заливка под кривой)
 plt.fill_between(rpm_range, torque_curve, color='blue', alpha=0.1)
 
 # Рабочая точка (нагрузка)
-plt.plot(RPM_req, T_req, 'ro', markersize=10, label='Required operating point')
+plt.plot(RPM_req, T_req, 'ro', markersize=10, label='Требуемая рабочая точка')
 
 # Вспомогательные линии
 plt.axvline(x=RPM_req, color='gray', linestyle='--', alpha=0.5)
@@ -166,9 +166,9 @@ plt.axhline(y=T_req, color='gray', linestyle='--', alpha=0.5)
 
 plt.xlim(0, motor_no_load_rpm * 1.1)
 plt.ylim(0, motor_stall_torque * 1.1)
-plt.xlabel('Speed (RPM)')
-plt.ylabel('Torque (N.m)')
-plt.title('Motor selection: requirement vs. capacity')
+plt.xlabel('Скорость (об/мин)')
+plt.ylabel('Момент (Н·м)')
+plt.title('Выбор двигателя: требование и возможности')
 plt.grid(True)
 plt.legend()
 

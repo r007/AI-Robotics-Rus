@@ -798,9 +798,9 @@ python eval_LIBERO-task1-libero10.py --policy_path="$OUTPUT_ROOT/libero_smolvla_
 Если вы получили такую ошибку:
 
 ```
-File "/home/tay/Documents/robo-intel-action/finetuning\_lerobot/LIBERO/libero/libero/benchmark/\_\_init\_\_.py", line 164, in get\_task\_init\_states
+File "/home/user/Documents/robo-intel-action/finetuning\_lerobot/LIBERO/libero/libero/benchmark/\_\_init\_\_.py", line 164, in get\_task\_init\_states
 init\_states = torch.load(init\_states\_path)
-File "/home/tay/miniconda3/envs/lerobot/lib/python3.10/site-packages/torch/serialization.py", line 1524, in load
+File "/home/user/miniconda3/envs/lerobot/lib/python3.10/site-packages/torch/serialization.py", line 1524, in load
 raise pickle.UnpicklingError(\_get\_wo\_message(str(e))) from None
 _pickle.UnpicklingError: Weights only load failed. This file can still be loaded, to do so you have two options, do those steps only if you trust the source of the checkpoint.
 ```

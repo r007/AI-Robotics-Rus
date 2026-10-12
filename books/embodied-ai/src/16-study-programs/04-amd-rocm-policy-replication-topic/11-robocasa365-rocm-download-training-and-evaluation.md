@@ -239,7 +239,7 @@ python "$SRC_ROOT/radeon-physical-ai-evidence-suite/scripts/robocasa365_showcase
   --help
 ```
 
-Скрипт показа сохраняет разрешение входа стратегии неизменным и повышает разрешение только камер записи. Рекомендуется записывать центральную, левую, правую камеры и камеру «глаз-рука» по 960×540, а затем склеивать их в 1920×1080 при 20 кадрах в секунду. Полный пример см. в [длинном успешном видео PackIdenticalLunches](https://ethan-chen-plus.github.io/amd-physical-ai-showcase/assets/videos/robocasa-recovery/pack-success.mp4).
+Скрипт показа сохраняет разрешение входа стратегии неизменным и повышает разрешение только камер записи. Рекомендуется записывать центральную, левую, правую камеры и камеру «глаз в руке» по 960×540, а затем склеивать их в 1920×1080 при 20 кадрах в секунду. Полный пример см. в [длинном успешном видео PackIdenticalLunches](https://ethan-chen-plus.github.io/amd-physical-ai-showcase/assets/videos/robocasa-recovery/pack-success.mp4).
 
 ## 9. Ключевые моменты переноса на AMD
 

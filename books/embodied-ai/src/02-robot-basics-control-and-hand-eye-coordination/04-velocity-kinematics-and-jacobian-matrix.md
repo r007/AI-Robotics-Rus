@@ -57,7 +57,7 @@ graph LR
 
 Символьный вывод в `sympy` автоматически строит полную матрицу Якоби плоского манипулятора 2R размером $3 \times 2$.
 
-```Python
+```python
 import sympy as sp
 import numpy as np
 

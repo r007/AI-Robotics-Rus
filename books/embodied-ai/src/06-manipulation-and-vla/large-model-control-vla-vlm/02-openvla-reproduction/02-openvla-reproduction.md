@@ -102,7 +102,7 @@ python experiments/robot/libero/run_libero_eval.py \
 **Просмотр справки:**
 
 ```bash
-micromamba activate dl && cd /home/vipuser/17robo/openvla && python experiments/robot/libero/run_libero_eval.py --help | grep -A 5 -B 5 "num_trials"
+micromamba activate dl && cd /home/user/17robo/openvla && python experiments/robot/libero/run_libero_eval.py --help | grep -A 5 -B 5 "num_trials"
 ```
 
 **Пример изменения числа испытаний:**
@@ -292,7 +292,7 @@ input_embeds = [text_embeds[:prefix], projected_vision, text_embeds[prefix:]]
 #### 3. Совместное внимание
 
 - **Межмодальное взаимодействие**: за счёт механизма self-attention Transformer текстовые токены могут обращаться к визуальным патчам и наоборот. Благодаря этому модель понимает инструкции вроде «возьми [на изображении] красный кубик».
-- **Причинная маска (Causal Mask)**: сохраняет авторегрессивный характер генерации и не позволяет утечке информации из будущего.
+- **Причинная маска (Causal Mask)**: сохраняет авторегрессивный характер генерации и не допускает утечки информации из будущего.
 
 ### 6.2 Конвейер обучающих данных
 

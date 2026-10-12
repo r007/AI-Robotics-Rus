@@ -35,7 +35,7 @@
 
 1. **Получите исходный код LeRobot**
    ```bash
-   git clone https://github.com/huggingface/lerobot.git /home/sunrise/17robo/250602/lerobot
+   git clone https://github.com/huggingface/lerobot.git ~/lerobot
    pip install -e ".[feetech]"
    # Или используйте уже готовую версию, но она должна совпадать с версией на Windows
    ```
@@ -49,8 +49,8 @@
 
 3. **Запустите серверный скрипт**
    ```bash
-   cd /home/sunrise/lerobot_bimanual_remote
-   export LEROBOT_SRC=/home/sunrise/17robo/250602/lerobot  # измените путь, если он другой
+   cd ~/lerobot_bimanual_remote
+   export LEROBOT_SRC=~/lerobot  # измените путь, если он другой
    ./start_server.sh
 
    # Сначала можно найти номера портов шин, затем изменить конфигурационный файл:

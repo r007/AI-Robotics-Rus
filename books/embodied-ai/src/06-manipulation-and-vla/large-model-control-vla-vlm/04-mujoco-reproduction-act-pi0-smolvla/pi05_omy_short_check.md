@@ -5,14 +5,14 @@
 ## Веса и окружение
 
 - Видеокарта: NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 96 ГБ видеопамяти.
-- Отдельное окружение: `/data/Data14TB/envs/every-embodied-omy-pi05-061`; Python 3.12.3, LeRobot 0.6.1, PyTorch 2.7.1, CUDA 12.8, MuJoCo 3.1.6.
-- **Фактической отправной точкой стала кэшированная на станции официальная предобученная политика OpenPi π0.5 для LIBERO**: `/data/Data14TB/robotics_shared/checkpoints/openpi/openpi-assets/checkpoints/pi05_libero_pytorch/model.safetensors`, 7 233 650 408 байт, 812 тензоров.
+- Отдельное окружение: `/path/to/data-disk/envs/every-embodied-omy-pi05-061`; Python 3.12.3, LeRobot 0.6.1, PyTorch 2.7.1, CUDA 12.8, MuJoCo 3.1.6.
+- **Фактической отправной точкой стала кэшированная на станции официальная предобученная политика OpenPi π0.5 для LIBERO**: `/path/to/data-disk/robotics_shared/checkpoints/openpi/openpi-assets/checkpoints/pi05_libero_pytorch/model.safetensors`, 7 233 650 408 байт, 812 тензоров.
 - Общие веса `lerobot/pi05_base` в этом эксперименте не использовались. Предобученная политика LIBERO уже дообучалась на другой задаче, поэтому пятишаговый результат подтверждает только совместимость этой отправной точки с текущим интерфейсом обучения OMY.
 
 Корневой каталог эксперимента:
 
 ```text
-/data/Data14TB/robotics_shared/experiments/omy-pi05-notebook-20261004/short_finetune_20261004
+/path/to/data-disk/robotics_shared/experiments/omy-pi05-notebook-20261004/short_finetune_20261004
 ```
 
 В его каталоге `pi05_libero_start` символическая ссылка указывает на исходные веса; три конфигурационных файла LeRobot взяты из `lerobot/pi05_base` версии `b211f3d44c36b6acfcf7ae94a64e8e96f75a64ba`. Кэшированные веса совпадают с этой моделью по именам ключей и формам; официальный загрузчик переводит ключи OpenPi и строго загружает параметры, в журнале явно видно `All keys loaded successfully!`. Исходная предобученная модель сохранена в исходном каталоге.
@@ -64,8 +64,8 @@ train-5steps/checkpoints/last -> 000005
 Чтобы переиспользовать подготовленный совместимый каталог на этой рабочей станции, перед запуском ноутбука задайте переменные окружения:
 
 ```bash
-export OMY_PI05_PRETRAINED=/data/Data14TB/robotics_shared/experiments/omy-pi05-notebook-20261004/short_finetune_20261004/pi05_libero_start
-export HF_HOME=/data/Data14TB/robotics_shared/cache/huggingface
+export OMY_PI05_PRETRAINED=/path/to/data-disk/robotics_shared/experiments/omy-pi05-notebook-20261004/short_finetune_20261004/pi05_libero_start
+export HF_HOME=/path/to/data-disk/robotics_shared/cache/huggingface
 ```
 
 Всё равно нужно указать собственный источник демонстраций, каталог для преобразования и новый выходной каталог, как описано в ноутбуке. Упрощённая конфигурация из исходного каталога OpenPi не является полной конфигурацией LeRobot и не может заменить подготовленный здесь адаптированный каталог.
