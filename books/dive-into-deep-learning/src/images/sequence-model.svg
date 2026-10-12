@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="240" viewBox="0 0 500 240">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker></defs>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="12" y="38" text-anchor="start" dominant-baseline="central" font-size="14" font-weight="normal" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Выход</text>
+<text x="12" y="118" text-anchor="start" dominant-baseline="central" font-size="14" font-weight="normal" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Скрытое состояние</text>
+<text x="12" y="198" text-anchor="start" dominant-baseline="central" font-size="14" font-weight="normal" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Вход</text>
+<rect x="192" y="18" width="56" height="40" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="220" y="38" text-anchor="middle" dominant-baseline="central" font-size="17" font-weight="normal" font-style="italic" font-family="'Times New Roman', 'Liberation Serif', serif">x̂<tspan baseline-shift="sub" font-size="12">t-1</tspan></text>
+<rect x="192" y="98" width="56" height="40" rx="0" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="220" y="118" text-anchor="middle" dominant-baseline="central" font-size="17" font-weight="normal" font-style="italic" font-family="'Times New Roman', 'Liberation Serif', serif">h<tspan baseline-shift="sub" font-size="12">t-1</tspan></text>
+<rect x="192" y="178" width="56" height="40" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="220" y="198" text-anchor="middle" dominant-baseline="central" font-size="17" font-weight="normal" font-style="italic" font-family="'Times New Roman', 'Liberation Serif', serif">x<tspan baseline-shift="sub" font-size="12">t-2</tspan></text>
+<line x1="220" y1="178" x2="220" y2="140" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="220" y1="98" x2="220" y2="60" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="248" y1="118" x2="302" y2="118" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="302" y="18" width="56" height="40" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="330" y="38" text-anchor="middle" dominant-baseline="central" font-size="17" font-weight="normal" font-style="italic" font-family="'Times New Roman', 'Liberation Serif', serif">x̂<tspan baseline-shift="sub" font-size="12">t</tspan></text>
+<rect x="302" y="98" width="56" height="40" rx="0" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="330" y="118" text-anchor="middle" dominant-baseline="central" font-size="17" font-weight="normal" font-style="italic" font-family="'Times New Roman', 'Liberation Serif', serif">h<tspan baseline-shift="sub" font-size="12">t</tspan></text>
+<rect x="302" y="178" width="56" height="40" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="330" y="198" text-anchor="middle" dominant-baseline="central" font-size="17" font-weight="normal" font-style="italic" font-family="'Times New Roman', 'Liberation Serif', serif">x<tspan baseline-shift="sub" font-size="12">t-1</tspan></text>
+<line x1="330" y1="178" x2="330" y2="140" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="330" y1="98" x2="330" y2="60" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="358" y1="118" x2="412" y2="118" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="412" y="18" width="56" height="40" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="440" y="38" text-anchor="middle" dominant-baseline="central" font-size="17" font-weight="normal" font-style="italic" font-family="'Times New Roman', 'Liberation Serif', serif">x̂<tspan baseline-shift="sub" font-size="12">t+1</tspan></text>
+<rect x="412" y="98" width="56" height="40" rx="0" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="440" y="118" text-anchor="middle" dominant-baseline="central" font-size="17" font-weight="normal" font-style="italic" font-family="'Times New Roman', 'Liberation Serif', serif">h<tspan baseline-shift="sub" font-size="12">t+1</tspan></text>
+<rect x="412" y="178" width="56" height="40" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="440" y="198" text-anchor="middle" dominant-baseline="central" font-size="17" font-weight="normal" font-style="italic" font-family="'Times New Roman', 'Liberation Serif', serif">x<tspan baseline-shift="sub" font-size="12">t</tspan></text>
+<line x1="440" y1="178" x2="440" y2="140" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="440" y1="98" x2="440" y2="60" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+</svg>

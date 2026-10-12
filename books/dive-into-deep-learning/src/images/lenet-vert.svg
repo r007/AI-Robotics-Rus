@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="260pt" height="270pt" viewBox="0 0 260 270" version="1.1">
+<defs>
+<marker id="arrowhead" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+<path d="M0,0 L6,3 L0,6 Z" fill="#000000"/>
+</marker>
+</defs>
+<g fill="#FFFFFF" stroke="#000000" stroke-width="1">
+<rect x="15" y="5" width="220" height="20"/>
+<rect x="15" y="155" width="220" height="20"/>
+</g>
+<g fill="#CCCCCC" stroke="#000000" stroke-width="1">
+<rect x="15" y="35" width="220" height="20"/>
+<rect x="15" y="95" width="220" height="20"/>
+</g>
+<g fill="#E6E6E6" stroke="#000000" stroke-width="1">
+<rect x="15" y="65" width="220" height="20"/>
+<rect x="15" y="125" width="220" height="20"/>
+</g>
+<g fill="#B2D9FF" stroke="#000000" stroke-width="1">
+<rect x="15" y="185" width="220" height="20"/>
+<rect x="15" y="215" width="220" height="20"/>
+<rect x="15" y="245" width="220" height="20"/>
+</g>
+<g fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+<line x1="125" y1="25" x2="125" y2="35" marker-end="url(#arrowhead)"/>
+<line x1="125" y1="55" x2="125" y2="65" marker-end="url(#arrowhead)"/>
+<line x1="125" y1="85" x2="125" y2="95" marker-end="url(#arrowhead)"/>
+<line x1="125" y1="115" x2="125" y2="125" marker-end="url(#arrowhead)"/>
+<line x1="125" y1="145" x2="125" y2="155" marker-end="url(#arrowhead)"/>
+<line x1="125" y1="175" x2="125" y2="185" marker-end="url(#arrowhead)"/>
+<line x1="125" y1="205" x2="125" y2="215" marker-end="url(#arrowhead)"/>
+<line x1="125" y1="235" x2="125" y2="245" marker-end="url(#arrowhead)"/>
+</g>
+<g font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#000000" text-anchor="middle">
+<text x="125" y="19">Вход: 1 × 28 × 28</text>
+<text x="125" y="49">Свёртка 5×5, sigmoid: 6 × 28 × 28</text>
+<text x="125" y="79">Среднее пулинг 2×2: 6 × 14 × 14</text>
+<text x="125" y="109">Свёртка 5×5, sigmoid: 16 × 10 × 10</text>
+<text x="125" y="139">Среднее пулинг 2×2: 16 × 5 × 5</text>
+<text x="125" y="169">Выравнивание: 400</text>
+<text x="125" y="199">Полносвязный, sigmoid: 120</text>
+<text x="125" y="229">Полносвязный, sigmoid: 84</text>
+<text x="125" y="259">Полносвязный: 10</text>
+</g>
+</svg>

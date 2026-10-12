@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="430" viewBox="0 0 680 430">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker></defs>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<rect x="110" y="80" width="400" height="190" rx="18" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="10" y="98" text-anchor="start" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Скрытое состояние</text>
+<text x="10" y="116" text-anchor="start" dominant-baseline="central" font-size="16" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">H<tspan baseline-shift="sub" font-size="11">t−1</tspan></text>
+<line x1="88" y1="118" x2="150" y2="118" stroke="#000" stroke-width="1.5"/>
+<line x1="150" y1="118" x2="150" y2="200" stroke="#000" stroke-width="1.5"/>
+<line x1="150" y1="200" x2="350" y2="200" stroke="#000" stroke-width="1.5"/>
+<line x1="150" y1="300" x2="150" y2="200" stroke="#000" stroke-width="1.5"/>
+<text x="150" y="318" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Вход</text>
+<text x="150" y="336" text-anchor="middle" dominant-baseline="central" font-size="16" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">X<tspan baseline-shift="sub" font-size="11">t</tspan></text>
+<rect x="180.0" y="150.0" width="40" height="24" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="200" y="162" text-anchor="middle" dominant-baseline="central" font-size="15" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">σ</text>
+<rect x="330.0" y="150.0" width="40" height="24" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="350" y="162" text-anchor="middle" dominant-baseline="central" font-size="15" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">σ</text>
+<line x1="200" y1="200" x2="200" y2="174" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="350" y1="200" x2="350" y2="174" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="200" y1="150" x2="200" y2="96" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="350" y1="150" x2="350" y2="96" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="200" y="50" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Вентиль сброса</text>
+<text x="200" y="68" text-anchor="middle" dominant-baseline="central" font-size="16" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">R<tspan baseline-shift="sub" font-size="11">t</tspan></text>
+<text x="350" y="50" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Вентиль обновления</text>
+<text x="350" y="68" text-anchor="middle" dominant-baseline="central" font-size="16" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">Z<tspan baseline-shift="sub" font-size="11">t</tspan></text>
+<rect x="30" y="368" width="40" height="24" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="50" y="380" text-anchor="middle" dominant-baseline="central" font-size="15" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">σ</text>
+<text x="80" y="380" text-anchor="start" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Полносвязный слой с функцией активации</text>
+<path d="M 40 426 V 404" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M 40 426 H 70" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="80" y="414" text-anchor="start" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Копирование</text>
+<path d="M 230 404 Q 230 426 246 426 H 270" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M 230 404 V 404" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="280" y="414" text-anchor="start" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Конкатенация</text>
+<circle cx="470" cy="414" r="10" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<circle cx="470" cy="414" r="2.5" fill="#000" stroke="#000" stroke-width="0"/>
+<text x="490" y="414" text-anchor="start" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Поэлементная операция</text>
+</svg>
