@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="230" height="170" viewBox="0 0 230 170">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker></defs>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="16" y="10" text-anchor="start" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Временной шаг</text>
+<text x="82" y="30" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">1</text>
+<text x="118" y="30" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">2</text>
+<text x="154" y="30" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">3</text>
+<text x="190" y="30" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">4</text>
+<text x="16" y="54" text-anchor="start" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">A</text>
+<text x="16" y="78" text-anchor="start" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">B</text>
+<text x="16" y="102" text-anchor="start" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">C</text>
+<text x="16" y="126" text-anchor="start" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">&lt;eos&gt;</text>
+<rect x="66" y="42" width="34" height="24" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.2"/>
+<text x="83" y="54" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">0.5</text>
+<rect x="66" y="66" width="34" height="24" rx="0" fill="#FFFFFF" stroke="#000" stroke-width="1.2"/>
+<text x="83" y="78" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">0.2</text>
+<rect x="66" y="90" width="34" height="24" rx="0" fill="#FFFFFF" stroke="#000" stroke-width="1.2"/>
+<text x="83" y="102" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">0.2</text>
+<rect x="66" y="114" width="34" height="24" rx="0" fill="#FFFFFF" stroke="#000" stroke-width="1.2"/>
+<text x="83" y="126" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">0.1</text>
+<rect x="102" y="42" width="34" height="24" rx="0" fill="#FFFFFF" stroke="#000" stroke-width="1.2"/>
+<text x="119" y="54" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">0.1</text>
+<rect x="102" y="66" width="34" height="24" rx="0" fill="#FFFFFF" stroke="#000" stroke-width="1.2"/>
+<text x="119" y="78" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">0.4</text>
+<rect x="102" y="90" width="34" height="24" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.2"/>
+<text x="119" y="102" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">0.3</text>
+<rect x="102" y="114" width="34" height="24" rx="0" fill="#FFFFFF" stroke="#000" stroke-width="1.2"/>
+<text x="119" y="126" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">0.2</text>
+<rect x="138" y="42" width="34" height="24" rx="0" fill="#FFFFFF" stroke="#000" stroke-width="1.2"/>
+<text x="155" y="54" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">0.1</text>
+<rect x="138" y="66" width="34" height="24" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.2"/>
+<text x="155" y="78" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">0.6</text>
+<rect x="138" y="90" width="34" height="24" rx="0" fill="#FFFFFF" stroke="#000" stroke-width="1.2"/>
+<text x="155" y="102" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">0.2</text>
+<rect x="138" y="114" width="34" height="24" rx="0" fill="#FFFFFF" stroke="#000" stroke-width="1.2"/>
+<text x="155" y="126" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">0.1</text>
+<rect x="174" y="42" width="34" height="24" rx="0" fill="#FFFFFF" stroke="#000" stroke-width="1.2"/>
+<text x="191" y="54" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">0.1</text>
+<rect x="174" y="66" width="34" height="24" rx="0" fill="#FFFFFF" stroke="#000" stroke-width="1.2"/>
+<text x="191" y="78" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">0.2</text>
+<rect x="174" y="90" width="34" height="24" rx="0" fill="#FFFFFF" stroke="#000" stroke-width="1.2"/>
+<text x="191" y="102" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">0.1</text>
+<rect x="174" y="114" width="34" height="24" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.2"/>
+<text x="191" y="126" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">0.6</text>
+</svg>

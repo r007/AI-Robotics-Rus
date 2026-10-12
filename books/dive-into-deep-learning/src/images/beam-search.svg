@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="430" viewBox="0 0 540 430">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker></defs>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="100" y="26" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Временной шаг 1</text>
+<text x="100" y="42" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Кандидаты</text>
+<text x="270" y="26" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Временной шаг 2</text>
+<text x="270" y="42" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Кандидаты</text>
+<text x="430" y="26" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Временной шаг 3</text>
+<text x="430" y="42" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Кандидаты</text>
+<text x="40" y="280" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">[]</text>
+<circle cx="100" cy="205" r="9" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="100" y="205" text-anchor="middle" dominant-baseline="central" font-size="12" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">A</text>
+<line x1="52" y1="280" x2="90" y2="205" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="100" y="225" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" fill="#000" font-style="italic">B</text>
+<line x1="52" y1="280" x2="96" y2="225" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="100" cy="245" r="9" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="100" y="245" text-anchor="middle" dominant-baseline="central" font-size="12" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">C</text>
+<line x1="52" y1="280" x2="90" y2="245" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="100" y="265" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" fill="#000" font-style="italic">D</text>
+<line x1="52" y1="280" x2="96" y2="265" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="100" y="285" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" fill="#000" font-style="italic">E</text>
+<line x1="52" y1="280" x2="96" y2="285" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="184" y="145" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" fill="#000" font-style="italic">A</text>
+<line x1="110" y1="205" x2="170" y2="145" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="180" cy="165" r="9" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="180" y="165" text-anchor="middle" dominant-baseline="central" font-size="12" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">B</text>
+<line x1="110" y1="205" x2="170" y2="165" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="184" y="185" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" fill="#000" font-style="italic">C</text>
+<line x1="110" y1="205" x2="170" y2="185" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="184" y="205" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" fill="#000" font-style="italic">D</text>
+<line x1="110" y1="205" x2="170" y2="205" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="184" y="225" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" fill="#000" font-style="italic">E</text>
+<line x1="110" y1="205" x2="170" y2="225" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="184" y="275" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" fill="#000" font-style="italic">A</text>
+<line x1="110" y1="245" x2="170" y2="275" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="184" y="295" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" fill="#000" font-style="italic">B</text>
+<line x1="110" y1="245" x2="170" y2="295" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="184" y="315" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" fill="#000" font-style="italic">C</text>
+<line x1="110" y1="245" x2="170" y2="315" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="184" y="335" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" fill="#000" font-style="italic">D</text>
+<line x1="110" y1="245" x2="170" y2="335" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="180" cy="355" r="9" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="180" y="355" text-anchor="middle" dominant-baseline="central" font-size="12" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">E</text>
+<line x1="110" y1="245" x2="170" y2="355" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="150" y="205" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" fill="#000" font-style="italic">A</text>
+<text x="150" y="245" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" fill="#000" font-style="italic">C</text>
+<line x1="110" y1="205" x2="140" y2="205" stroke="#000" stroke-width="1.5" stroke-dasharray="4,3"/>
+<line x1="110" y1="245" x2="140" y2="245" stroke="#000" stroke-width="1.5" stroke-dasharray="4,3"/>
+<line x1="190" y1="165" x2="260" y2="165" stroke="#000" stroke-width="1.5" stroke-dasharray="4,3"/>
+<line x1="190" y1="355" x2="260" y2="355" stroke="#000" stroke-width="1.5" stroke-dasharray="4,3"/>
+<text x="270" y="165" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" fill="#000" font-style="italic">AB</text>
+<text x="270" y="355" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" fill="#000" font-style="italic">CE</text>
+<text x="374" y="125" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" fill="#000" font-style="italic">A</text>
+<line x1="296" y1="165" x2="360" y2="125" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="374" y="145" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" fill="#000" font-style="italic">B</text>
+<line x1="296" y1="165" x2="360" y2="145" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="374" y="165" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" fill="#000" font-style="italic">C</text>
+<line x1="296" y1="165" x2="360" y2="165" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="370" cy="185" r="9" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="370" y="185" text-anchor="middle" dominant-baseline="central" font-size="12" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">D</text>
+<line x1="296" y1="165" x2="360" y2="185" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="374" y="205" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" fill="#000" font-style="italic">E</text>
+<line x1="296" y1="165" x2="360" y2="205" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="374" y="315" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" fill="#000" font-style="italic">A</text>
+<line x1="296" y1="355" x2="360" y2="315" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="374" y="335" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" fill="#000" font-style="italic">B</text>
+<line x1="296" y1="355" x2="360" y2="335" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="374" y="355" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" fill="#000" font-style="italic">C</text>
+<line x1="296" y1="355" x2="360" y2="355" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="370" cy="375" r="9" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="370" y="375" text-anchor="middle" dominant-baseline="central" font-size="12" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">D</text>
+<line x1="296" y1="355" x2="360" y2="375" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="374" y="395" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" fill="#000" font-style="italic">E</text>
+<line x1="296" y1="355" x2="360" y2="395" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="380" y1="185" x2="420" y2="185" stroke="#000" stroke-width="1.5" stroke-dasharray="4,3"/>
+<text x="430" y="185" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" fill="#000" font-style="italic">ABD</text>
+<line x1="380" y1="375" x2="420" y2="375" stroke="#000" stroke-width="1.5" stroke-dasharray="4,3"/>
+<text x="430" y="375" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Times New Roman', 'Liberation Serif', serif" fill="#000" font-style="italic">CED</text>
+</svg>

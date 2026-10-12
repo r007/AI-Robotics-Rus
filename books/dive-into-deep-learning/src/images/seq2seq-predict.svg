@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="200" viewBox="0 0 520 200">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker></defs>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="100" y="22" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Кодировщик</text>
+<text x="395" y="22" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Декодировщик</text>
+<rect x="16" y="80" width="34" height="28" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="33" y="136" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">They</text>
+<line x1="33" y1="116" x2="33" y2="110" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="50" y1="94" x2="66" y2="94" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="66" y="80" width="34" height="28" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="83" y="136" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">are</text>
+<line x1="83" y1="116" x2="83" y2="110" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="100" y1="94" x2="116" y2="94" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="116" y="80" width="34" height="28" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="133" y="136" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">watching</text>
+<line x1="133" y1="116" x2="133" y2="110" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="150" y1="94" x2="166" y2="94" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="166" y="80" width="34" height="28" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="183" y="136" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">.</text>
+<line x1="183" y1="116" x2="183" y2="110" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="200" y1="94" x2="216" y2="94" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="216" y="80" width="34" height="28" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="233" y="136" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">&lt;eos&gt;</text>
+<line x1="233" y1="116" x2="233" y2="110" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="300" y="80" width="34" height="28" rx="0" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="317" y="46" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Ils</text>
+<line x1="317" y1="80" x2="317" y2="62" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="334" y1="94" x2="350" y2="94" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="350" y="80" width="34" height="28" rx="0" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="367" y="46" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">regardent</text>
+<line x1="367" y1="80" x2="367" y2="62" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="384" y1="94" x2="400" y2="94" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="400" y="80" width="34" height="28" rx="0" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="417" y="46" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">.</text>
+<line x1="417" y1="80" x2="417" y2="62" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="434" y1="94" x2="450" y2="94" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="450" y="80" width="34" height="28" rx="0" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="467" y="46" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">&lt;eos&gt;</text>
+<line x1="467" y1="80" x2="467" y2="62" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M 250 94 H 282 V 160 H 300" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="300" y="176" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">&lt;bos&gt;</text>
+<path d="M 323 108 Q 331 146 361 108" fill="none" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+<path d="M 373 108 Q 381 146 411 108" fill="none" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+<path d="M 423 108 Q 431 146 461 108" fill="none" stroke="#000" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+</svg>

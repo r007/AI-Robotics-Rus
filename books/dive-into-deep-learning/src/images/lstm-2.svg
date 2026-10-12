@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="500" viewBox="0 0 680 500">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker></defs>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<rect x="110" y="70" width="440" height="230" rx="18" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="10" y="92" text-anchor="start" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Ячейка памяти</text>
+<text x="10" y="110" text-anchor="start" dominant-baseline="central" font-size="16" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">C<tspan baseline-shift="sub" font-size="11">t−1</tspan></text>
+<line x1="88" y1="110" x2="190" y2="110" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="200" cy="110" r="10" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<circle cx="200" cy="110" r="2.5" fill="#000" stroke="#000" stroke-width="0"/>
+<line x1="210" y1="110" x2="360" y2="110" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="370" cy="110" r="10" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="370" y="110" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">+</text>
+<line x1="380" y1="110" x2="540" y2="110" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="552" y="110" text-anchor="start" dominant-baseline="central" font-size="16" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">C<tspan baseline-shift="sub" font-size="11">t</tspan></text>
+<rect x="180.0" y="198.0" width="40" height="24" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="200" y="210" text-anchor="middle" dominant-baseline="central" font-size="15" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">σ</text>
+<line x1="200" y1="198" x2="200" y2="120" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="280.0" y="198.0" width="40" height="24" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="300" y="210" text-anchor="middle" dominant-baseline="central" font-size="15" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">σ</text>
+<circle cx="370" cy="160" r="10" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<circle cx="370" cy="160" r="2.5" fill="#000" stroke="#000" stroke-width="0"/>
+<path d="M 300 198 V 160 H 360" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="360.0" y="198.0" width="40" height="24" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="380" y="210" text-anchor="middle" dominant-baseline="central" font-size="13" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">tanh</text>
+<path d="M 380 198 V 170" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M 370 150 V 120" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="150" y1="260" x2="150" y2="330" stroke="#000" stroke-width="1.5"/>
+<line x1="88" y1="260" x2="150" y2="260" stroke="#000" stroke-width="1.5"/>
+<line x1="150" y1="260" x2="470" y2="260" stroke="#000" stroke-width="1.5"/>
+<line x1="200" y1="260" x2="200" y2="222" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="300" y1="260" x2="300" y2="222" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="380" y1="260" x2="380" y2="222" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="10" y="240" text-anchor="start" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Скрытое состояние</text>
+<text x="10" y="258" text-anchor="start" dominant-baseline="central" font-size="16" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">H<tspan baseline-shift="sub" font-size="11">t−1</tspan></text>
+<text x="150" y="346" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Вход</text>
+<text x="150" y="364" text-anchor="middle" dominant-baseline="central" font-size="16" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">X<tspan baseline-shift="sub" font-size="11">t</tspan></text>
+<text x="200" y="290" text-anchor="middle" dominant-baseline="central" font-size="16" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">F<tspan baseline-shift="sub" font-size="11">t</tspan></text>
+<text x="300" y="290" text-anchor="middle" dominant-baseline="central" font-size="16" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">I<tspan baseline-shift="sub" font-size="11">t</tspan></text>
+<text x="380" y="290" text-anchor="middle" dominant-baseline="central" font-size="16" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">C̃<tspan baseline-shift="sub" font-size="11">t</tspan></text>
+<rect x="30" y="418" width="40" height="24" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="50" y="430" text-anchor="middle" dominant-baseline="central" font-size="15" font-family="'Times New Roman', 'Liberation Serif', serif" font-style="italic">σ</text>
+<text x="80" y="430" text-anchor="start" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Полносвязный слой с функцией активации</text>
+<path d="M 40 476 V 454" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M 40 476 H 70" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="80" y="464" text-anchor="start" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Копирование</text>
+<path d="M 230 454 Q 230 476 246 476 H 270" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M 230 454 V 454" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="280" y="464" text-anchor="start" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Конкатенация</text>
+<circle cx="470" cy="464" r="10" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<circle cx="470" cy="464" r="2.5" fill="#000" stroke="#000" stroke-width="0"/>
+<text x="490" y="464" text-anchor="start" dominant-baseline="central" font-size="14" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif" fill="#000">Поэлементная операция</text>
+</svg>
