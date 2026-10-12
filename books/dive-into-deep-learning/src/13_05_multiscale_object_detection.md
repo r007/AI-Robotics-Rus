@@ -136,14 +136,11 @@ display_anchors(fmap_w=1, fmap_h=1, s=[0.8])
 1. В эксперименте из раздела о многомасштабных якорных рамках на первом масштабе (`fmap_w=4, fmap_h=4`) создайте равномерно распределённые якорные рамки, которые могут перекрываться.
 1. Дана переменная карты признаков формы $1 \times c \times h \times w$, где $c$, $h$ и $w$ — число каналов, высота и ширина карты признаков. Как преобразовать эту переменную в классы и смещения якорных рамок? Какова форма результата?
 
-:begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/2947)
-:end_tab:
+**MXNet:**
+[Обсуждение](https://discuss.d2l.ai/t/2947)
 
-:begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/2948)
-:end_tab:
+**PyTorch:**
+[Обсуждение](https://discuss.d2l.ai/t/2948)
 
-:begin_tab:`paddle`
-[Discussions](https://discuss.d2l.ai/t/11805)
-:end_tab:
+**PaddlePaddle:**
+[Обсуждение](https://discuss.d2l.ai/t/11805)
