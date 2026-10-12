@@ -32,7 +32,7 @@
 1. Выберите английский ASCII-слаг и создайте папку `books/<слаг>/`.
 2. Добавьте файлы:
    - `book.toml` — блок `[book]` с полями `title`, `description`, `authors`, `language = "ru"`, `src = "src"` и настройки `[output.html]` по образцу существующих книг. Подключите препроцессор `readme-links`: без него ссылки на `README.md` в готовой книге ведут в пустоту;
-   - `meta.toml` — `order` (уникальный номер в каталоге), `status` (`in-progress`, `draft` или `complete`), `status_label`, `summary` (`generated` или `manual`), `license`, `accent` (цвет карточки), `tagline` (одно-два предложения), `tags`, `learn` (три–пять пунктов о том, чему научится читатель) и таблица `[source]` с полями `title`, `author`, `url`, `license`;
+   - `meta.toml` — `order` (уникальный номер в каталоге), `status` (`in-progress`, `draft` или `complete`), `status_label`, `summary` (`generated` или `manual`), `license`, `accent` (цвет карточки), `tagline` (одно-два предложения), `why` (чем ценна книга и чего нет в других источниках), `tags`, `learn` (три–пять пунктов о том, чему научится читатель) и таблица `[source]` с полями `title`, `author`, `url`, `license`;
    - `NOTICE.md` и `PROVENANCE.md` — авторство, источник, лицензия и список изменений относительно оригинала;
    - `LICENSE` — лицензия текста книги;
    - `src/README.md`, `src/SUMMARY.md`, `src/notice.md` и `src/provenance.md` (последние два содержат только `{{#include ../NOTICE.md}}` и `{{#include ../PROVENANCE.md}}`).

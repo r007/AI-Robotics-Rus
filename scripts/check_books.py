@@ -5,7 +5,7 @@ Each book is a folder in books/ with these files:
 
     book.toml       mdBook config: [book] title, description, authors, language, src
     meta.toml       directory metadata: order, status, status_label, summary, license,
-                    tagline, tags, learn, [source]
+                    tagline, why, tags, learn, [source]
     NOTICE.md       authorship, source and license of the text
     LICENSE         license of the book's text
     src/README.md   first page of the book
@@ -44,7 +44,7 @@ REQUIRED_FILES = (
     "src/provenance.md",
 )
 BOOK_KEYS = ("title", "description", "authors", "language")
-META_KEYS = ("order", "status", "status_label", "summary", "license", "tagline", "tags", "learn", "source")
+META_KEYS = ("order", "status", "status_label", "summary", "license", "tagline", "why", "tags", "learn", "source")
 SOURCE_KEYS = ("title", "author", "license")
 STATUSES = ("in-progress", "draft", "complete")
 SUMMARY_MODES = ("generated", "manual")

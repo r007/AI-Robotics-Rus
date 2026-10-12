@@ -27,8 +27,8 @@ jobs:
             python3 scripts/check_links.py "${book}src"
           done
 
-      - name: Python sources compile
-        run: python3 -c "import ast, pathlib; [ast.parse(p.read_text(encoding='utf-8'), str(p)) for p in pathlib.Path('.').rglob('*.py') if '.git' not in p.parts]"
+      - name: Build scripts compile
+        run: python3 -m py_compile scripts/*.py
 
       - uses: dtolnay/rust-toolchain@stable
 

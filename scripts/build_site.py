@@ -46,6 +46,7 @@ class Book:
     slug: str
     title: str
     tagline: str
+    why: str
     order: int
     status: str
     status_label: str
@@ -77,6 +78,7 @@ def load_books() -> list[Book]:
                 slug=folder.name,
                 title=config["title"],
                 tagline=meta["tagline"],
+                why=meta["why"],
                 order=meta["order"],
                 status=meta["status"],
                 status_label=meta["status_label"],
@@ -111,6 +113,7 @@ def render_card(book: Book) -> str:
             <p class="status">{esc(book.status_label)}</p>
             <h3><a href="{book.slug}/">{esc(book.title)}</a></h3>
             <p class="tagline">{esc(book.tagline)}</p>
+            <p class="why"><strong>Чем ценна.</strong> {esc(book.why)}</p>
             <p class="learn-title">Вы узнаете</p>
             <ul class="learn">
 {learn}
