@@ -17,7 +17,7 @@
 - Глава 3 «Линейные нейронные сети»: `src/03_linear_networks.md` (вступление) и семь разделов `src/03_01_linear_regression.md` … `src/03_07_softmax_regression_concise.md`. Соответствие исходникам из `chapter_linear-networks/`: `linear-regression`, `linear-regression-scratch`, `linear-regression-concise`, `softmax-regression`, `image-classification-dataset`, `softmax-regression-scratch`, `softmax-regression-concise`. Исходные файлы `*_origin.md` (английская версия) не использовались.
 - Иллюстрации главы 3 в `src/images/`: `singleneuron.svg`, `softmaxreg.svg`, `neuron.svg` перерисованы с русскими подписями; `fit-linreg.svg` скопирован без изменений.
 
-Предисловие, установка, обозначения и главы 7–15 пока не переведены.
+Предисловие, установка, обозначения и главы 9–15 пока не переведены.
 
 - Глава 4 «Многослойные перцептроны»: `src/04_multilayer_perceptrons.md` (вступление) и десять разделов `src/04_01_mlp.md` … `src/04_10_kaggle_house_price.md`. Соответствие исходникам из `chapter_multilayer-perceptrons/`: `index`, `mlp`, `mlp-scratch`, `mlp-concise`, `underfit-overfit`, `weight-decay`, `dropout`, `backprop`, `numerical-stability-and-init`, `environment`, `kaggle-house-price`. Исходные файлы `*_origin.md` (английская версия) не использовались.
 - Иллюстрации главы 4 в `src/images/`: `mlp.svg`, `dropout2.svg`, `capacity-vs-error.svg`, `cat-dog-train.svg`, `cat-dog-test.svg` перерисованы или пересобраны с русскими подписями; `forward.svg` и `popvssoda.png` взяты без изменений.
@@ -25,6 +25,17 @@
 - Иллюстрации главы 5 в `src/images/`: `blocks.svg` скопирован без изменений (текста на нём нет), `copyto.svg` перерисован с русской подписью.
 - Глава 6 «Свёрточные нейронные сети»: `src/06_convolutional_neural_networks.md` (вступление) и шесть разделов `src/06_01_why_conv.md` … `src/06_06_lenet.md`. Соответствие исходникам из `chapter_convolutional-neural-networks/`: `index`, `why-conv`, `conv-layer`, `padding-and-strides`, `channels`, `pooling`, `lenet`. Исходные файлы `*_origin.md` (английская версия) не использовались.
 - Иллюстрации главы 6 в `src/images/`: `correlation.svg`, `conv-multi-in.svg`, `conv-1x1.svg`, `conv-pad.svg`, `conv-stride.svg`, `pooling.svg`, `lenet.svg`, `lenet-vert.svg` перерисованы с русскими подписями; фотографии из игры «Где Вальдо?» не включены.
+
+## Глава 8: что изменено относительно оригинала
+
+- Переведены вступление главы и разделы 8.1–8.7 (`src/08_*.md`): модели последовательностей, предобработка текста, языковые модели и набор данных, рекуррентные нейронные сети, реализация с нуля, краткая реализация и обратное распространение через время (BPTT). Соответствие исходникам из `chapter_recurrent-neural-networks/`: `index`, `sequence`, `text-preprocessing`, `language-models-and-dataset`, `rnn`, `rnn-scratch`, `rnn-concise`, `bptt`. Исходные файлы `*_origin.md` (английская версия) не использовались.
+- Код не изменён: переведены комментарии, docstring и строки вывода `print` и подписи графиков (`'время'`, `'частота'`, `'эпоха'`, `'перплексия'`). Разметка `#@tab` и `:begin_tab:` заменена подписями фреймворков; общий код (`#@tab all`) выведен без подписи, как в главах 2–6.
+- Ссылки Sphinx заменены обычным текстом: `:numref:` → «раздел 3.3», «рис. 8.4.1»; `:eqref:` → «(8.7.3)»; `:cite:` → «(Wu et al., 2017)». Нумерация формул и рисунков совпадает с книгой: формулы, которым в исходнике присвоена метка, пронумерованы по разделу (8.3.1, 8.4.1–8.4.4, 8.7.1–8.7.9).
+- Подписи в тексте: названия фильмов «Plan 9 from Outer Space» и «Troll 2» записаны полностью, как в исходнике; ссылки на Википедию и онлайн-приложение по теории информации сохранены.
+- Иллюстрации:
+  - перерисованы заново с русскими подписями (производные работы): `rnn.svg` (рис. 8.4.1), `rnn-train.svg` (рис. 8.4.2), `sequence-model.svg` (рис. 8.1.2);
+  - скопированы без изменений: `rnn-bptt.svg` (рис. 8.7.2), `truncated-bptt.svg` (рис. 8.7.1) и `timemachine-5gram.svg` (рис. 8.3.1). На них только математические обозначения и английские данные примера, перевода не требуется;
+  - `ftse100.png` (рис. 8.1.1) скопирован без изменений. Это растровый график, на котором остался английский заголовок «FTSE 100 Index» и числовые оси; перерисовка потребует исходных данных, поэтому подпись не переведена.
 
 ## Глава 7: что изменено относительно оригинала
 

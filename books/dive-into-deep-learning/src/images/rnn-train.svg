@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="300" viewBox="0 0 780 300">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker></defs>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="12" y="30" text-anchor="start" dominant-baseline="central" font-size="14" font-weight="normal" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Временной шаг</text>
+<text x="12" y="86" text-anchor="start" dominant-baseline="central" font-size="14" font-weight="normal" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Метка</text>
+<text x="12" y="132" text-anchor="start" dominant-baseline="central" font-size="14" font-weight="normal" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Выходной слой</text>
+<text x="12" y="190" text-anchor="start" dominant-baseline="central" font-size="14" font-weight="normal" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Скрытый слой</text>
+<text x="12" y="262" text-anchor="start" dominant-baseline="central" font-size="14" font-weight="normal" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">Вход</text>
+<text x="230" y="30" text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="normal" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">1</text>
+<text x="230" y="86" text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="normal" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">a</text>
+<rect x="208" y="100" width="44" height="40" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="230" y="120" text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="bold" font-style="italic" font-family="'Times New Roman', 'Liberation Serif', serif">O<tspan baseline-shift="sub" font-size="11">1</tspan></text>
+<rect x="208" y="170" width="44" height="40" rx="0" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="230" y="190" text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="bold" font-style="italic" font-family="'Times New Roman', 'Liberation Serif', serif">H<tspan baseline-shift="sub" font-size="11">1</tspan></text>
+<text x="230" y="262" text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="normal" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">m</text>
+<line x1="230" y1="252" x2="230" y2="212" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="230" y1="170" x2="230" y2="142" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="252" y1="190" x2="308" y2="190" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="330" y="30" text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="normal" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">2</text>
+<text x="330" y="86" text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="normal" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">c</text>
+<rect x="308" y="100" width="44" height="40" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="330" y="120" text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="bold" font-style="italic" font-family="'Times New Roman', 'Liberation Serif', serif">O<tspan baseline-shift="sub" font-size="11">2</tspan></text>
+<rect x="308" y="170" width="44" height="40" rx="0" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="330" y="190" text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="bold" font-style="italic" font-family="'Times New Roman', 'Liberation Serif', serif">H<tspan baseline-shift="sub" font-size="11">2</tspan></text>
+<text x="330" y="262" text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="normal" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">a</text>
+<line x1="330" y1="252" x2="330" y2="212" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="330" y1="170" x2="330" y2="142" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="352" y1="190" x2="408" y2="190" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="430" y="30" text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="normal" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">3</text>
+<text x="430" y="86" text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="normal" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">h</text>
+<rect x="408" y="100" width="44" height="40" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="430" y="120" text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="bold" font-style="italic" font-family="'Times New Roman', 'Liberation Serif', serif">O<tspan baseline-shift="sub" font-size="11">3</tspan></text>
+<rect x="408" y="170" width="44" height="40" rx="0" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="430" y="190" text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="bold" font-style="italic" font-family="'Times New Roman', 'Liberation Serif', serif">H<tspan baseline-shift="sub" font-size="11">3</tspan></text>
+<text x="430" y="262" text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="normal" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">c</text>
+<line x1="430" y1="252" x2="430" y2="212" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="430" y1="170" x2="430" y2="142" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="452" y1="190" x2="508" y2="190" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="530" y="30" text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="normal" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">4</text>
+<text x="530" y="86" text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="normal" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">i</text>
+<rect x="508" y="100" width="44" height="40" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="530" y="120" text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="bold" font-style="italic" font-family="'Times New Roman', 'Liberation Serif', serif">O<tspan baseline-shift="sub" font-size="11">4</tspan></text>
+<rect x="508" y="170" width="44" height="40" rx="0" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="530" y="190" text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="bold" font-style="italic" font-family="'Times New Roman', 'Liberation Serif', serif">H<tspan baseline-shift="sub" font-size="11">4</tspan></text>
+<text x="530" y="262" text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="normal" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">h</text>
+<line x1="530" y1="252" x2="530" y2="212" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="530" y1="170" x2="530" y2="142" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="552" y1="190" x2="608" y2="190" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="630" y="30" text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="normal" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">5</text>
+<text x="630" y="86" text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="normal" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">n</text>
+<rect x="608" y="100" width="44" height="40" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="630" y="120" text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="bold" font-style="italic" font-family="'Times New Roman', 'Liberation Serif', serif">O<tspan baseline-shift="sub" font-size="11">5</tspan></text>
+<rect x="608" y="170" width="44" height="40" rx="0" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="630" y="190" text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="bold" font-style="italic" font-family="'Times New Roman', 'Liberation Serif', serif">H<tspan baseline-shift="sub" font-size="11">5</tspan></text>
+<text x="630" y="262" text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="normal" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">i</text>
+<line x1="630" y1="252" x2="630" y2="212" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="630" y1="170" x2="630" y2="142" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="652" y1="190" x2="708" y2="190" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="730" y="30" text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="normal" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">6</text>
+<text x="730" y="86" text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="normal" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">e</text>
+<rect x="708" y="100" width="44" height="40" rx="0" fill="#66BFFF" stroke="#000" stroke-width="1.5"/>
+<text x="730" y="120" text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="bold" font-style="italic" font-family="'Times New Roman', 'Liberation Serif', serif">O<tspan baseline-shift="sub" font-size="11">6</tspan></text>
+<rect x="708" y="170" width="44" height="40" rx="0" fill="#B2D9FF" stroke="#000" stroke-width="1.5"/>
+<text x="730" y="190" text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="bold" font-style="italic" font-family="'Times New Roman', 'Liberation Serif', serif">H<tspan baseline-shift="sub" font-size="11">6</tspan></text>
+<text x="730" y="262" text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="normal" font-family="'Liberation Sans', Arial, 'DejaVu Sans', sans-serif">n</text>
+<line x1="730" y1="252" x2="730" y2="212" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="730" y1="170" x2="730" y2="142" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+</svg>
