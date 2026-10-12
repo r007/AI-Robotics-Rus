@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="380pt" height="100pt" viewBox="0 0 380 100" version="1.1">
+<g fill="#B2D9FF" stroke="#000000" stroke-width="1">
+<rect x="6" y="30" width="20" height="20"/>
+<rect x="26" y="30" width="20" height="20"/>
+<rect x="6" y="50" width="20" height="20"/>
+<rect x="26" y="50" width="20" height="20"/>
+<rect x="96" y="40" width="20" height="20"/>
+<rect x="116" y="40" width="20" height="20"/>
+<rect x="96" y="60" width="20" height="20"/>
+<rect x="116" y="60" width="20" height="20"/>
+<rect x="170" y="30" width="20" height="20"/>
+<rect x="190" y="30" width="20" height="20"/>
+<rect x="170" y="50" width="20" height="20"/>
+<rect x="190" y="50" width="20" height="20"/>
+<rect x="260" y="40" width="20" height="20"/>
+<rect x="280" y="40" width="20" height="20"/>
+<rect x="260" y="60" width="20" height="20"/>
+<rect x="280" y="60" width="20" height="20"/>
+<rect x="330" y="40" width="20" height="20"/>
+</g>
+<g fill="none" stroke="#000000" stroke-width="1">
+<rect x="46" y="30" width="20" height="20"/>
+<rect x="6" y="70" width="20" height="20"/>
+<rect x="26" y="70" width="20" height="20"/>
+<rect x="46" y="70" width="20" height="20"/>
+<rect x="46" y="50" width="20" height="20"/>
+<rect x="210" y="30" width="20" height="20"/>
+<rect x="170" y="70" width="20" height="20"/>
+<rect x="190" y="70" width="20" height="20"/>
+<rect x="210" y="70" width="20" height="20"/>
+<rect x="210" y="50" width="20" height="20"/>
+<rect x="350" y="40" width="20" height="20"/>
+<rect x="330" y="60" width="20" height="20"/>
+<rect x="350" y="60" width="20" height="20"/>
+</g>
+<g font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#000000" text-anchor="middle">
+<text x="36" y="20">канал 2</text>
+<text x="116" y="20">ядро 2</text>
+<text x="200" y="20">канал 1</text>
+<text x="280" y="20">ядро 1</text>
+<text x="350" y="20">выход</text>
+<text x="83" y="61" font-size="14" font-weight="bold">*</text>
+<text x="153" y="61" font-size="14" font-weight="bold">+</text>
+<text x="247" y="61" font-size="14" font-weight="bold">*</text>
+<text x="317" y="61" font-size="14" font-weight="bold">=</text>
+<text x="16" y="44">1</text>
+<text x="36" y="44">2</text>
+<text x="56" y="44">3</text>
+<text x="16" y="64">4</text>
+<text x="36" y="64">5</text>
+<text x="56" y="64">6</text>
+<text x="16" y="84">7</text>
+<text x="36" y="84">8</text>
+<text x="56" y="84">9</text>
+<text x="106" y="54">1</text>
+<text x="126" y="54">2</text>
+<text x="106" y="74">3</text>
+<text x="126" y="74">4</text>
+<text x="180" y="44">0</text>
+<text x="200" y="44">1</text>
+<text x="220" y="44">2</text>
+<text x="180" y="64">3</text>
+<text x="200" y="64">4</text>
+<text x="220" y="64">5</text>
+<text x="180" y="84">6</text>
+<text x="200" y="84">7</text>
+<text x="220" y="84">8</text>
+<text x="270" y="54">0</text>
+<text x="290" y="54">1</text>
+<text x="270" y="74">2</text>
+<text x="290" y="74">3</text>
+<text x="340" y="54">56</text>
+<text x="360" y="54">72</text>
+<text x="340" y="74">104</text>
+<text x="360" y="74">120</text>
+</g>
+</svg>
