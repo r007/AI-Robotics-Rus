@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 310" width="760" height="310" role="img" aria-labelledby="title desc">
+  <title id="title">Взаимодействие обучения с подкреплением и среды</title>
+  <desc id="desc">Агент выбирает действие, среда возвращает награду и наблюдение, которые снова поступают агенту; цикл повторяется.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#000"/>
+    </marker>
+  </defs>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#000" text-anchor="middle" stroke="#000" stroke-width="1.5">
+    <!-- Агент -->
+    <path d="M100,125 V38 H279" fill="none" marker-end="url(#arrow)"/>
+    <path d="M279,153 H191" fill="none" marker-end="url(#arrow)"/>
+    <path d="M100,268 H279" fill="none"/>
+    <path d="M279,268 H100 V181" fill="none" marker-end="url(#arrow)"/>
+    <rect x="10" y="125" width="180" height="56" fill="#fff"/>
+    <text x="100" y="153" dy="0.35em" stroke="none">Агент</text>
+    <!-- Действие -->
+    <rect x="280" y="10" width="200" height="56" fill="#B2D9FF"/>
+    <text x="380" y="38" dy="0.35em" stroke="none">Действие</text>
+    <path d="M481,38 H660 V123" fill="none" marker-end="url(#arrow)"/>
+    <line x1="380" y1="66" x2="380" y2="123" marker-end="url(#arrow)"/>
+    <!-- Награда -->
+    <rect x="280" y="125" width="200" height="56" fill="#66BFFF"/>
+    <text x="380" y="153" dy="0.35em" stroke="none">Награда</text>
+    <path d="M569,153 H481" fill="none" marker-end="url(#arrow)"/>
+    <!-- Среда -->
+    <rect x="570" y="125" width="180" height="56" fill="#fff"/>
+    <text x="660" y="153" dy="0.35em" stroke="none">Среда</text>
+    <path d="M660,181 V268 H481" fill="none" marker-end="url(#arrow)"/>
+    <!-- Наблюдение -->
+    <rect x="280" y="240" width="200" height="56" fill="#B2D9FF"/>
+    <text x="380" y="268" dy="0.35em" stroke="none">Наблюдение</text>
+  </g>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 130" width="680" height="130" role="img" aria-labelledby="title desc">
+  <title id="title">Распознавание ключевого слова</title>
+  <desc id="desc">Лицо и звуковые волны подают речь в микрофон, затем модель ключевого слова выдаёт ответ «да» или «нет».</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#000"/>
+    </marker>
+  </defs>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#000" text-anchor="middle">
+    <!-- Лицо -->
+    <circle cx="50" cy="65" r="28" fill="#000"/>
+    <circle cx="52" cy="70" r="20" fill="#fff"/>
+    <circle cx="44" cy="66" r="2.5" fill="#000"/>
+    <circle cx="58" cy="66" r="2.5" fill="#000"/>
+    <path d="M44,76 Q51,82 58,76" fill="none" stroke="#000" stroke-width="2"/>
+    <!-- Звуковые волны -->
+    <g fill="none" stroke="#000" stroke-width="5" stroke-linecap="round">
+      <path d="M103.5,56.5 A12,12 0 0 1 103.5,73.5"/>
+      <path d="M110.6,49.4 A22,22 0 0 1 110.6,80.6"/>
+      <path d="M117.6,42.4 A32,32 0 0 1 117.6,87.6"/>
+    </g>
+    <!-- Микрофон -->
+    <rect x="163" y="38" width="24" height="42" rx="12" fill="#000"/>
+    <path d="M151,62 Q151,88 175,88 Q199,88 199,62" fill="none" stroke="#000" stroke-width="3"/>
+    <line x1="175" y1="88" x2="175" y2="102" stroke="#000" stroke-width="3"/>
+    <line x1="162" y1="104" x2="188" y2="104" stroke="#000" stroke-width="3"/>
+    <!-- Стрелка на вход модели -->
+    <line x1="215" y1="65" x2="278" y2="65" stroke="#000" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <!-- Модель ключевого слова -->
+    <rect x="280" y="34" width="230" height="62" fill="#fff" stroke="#000" stroke-width="1.5"/>
+    <text x="395" y="65" dy="0.35em">Модель ключевого слова</text>
+    <!-- Стрелка на выход -->
+    <line x1="510" y1="65" x2="575" y2="65" stroke="#000" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <text x="625" y="65" dy="0.35em">{да, нет}</text>
+  </g>
+</svg>

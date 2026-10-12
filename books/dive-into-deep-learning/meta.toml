@@ -1,0 +1,16 @@
+# Метаданные для каталога книг. Заголовок и описание берутся из book.toml.
+# Файл проверяет scripts/check_books.py, страница каталога будет строиться из него.
+
+order = 4
+status = "in-progress"
+status_label = "Глава 1 переведена, остальные главы в работе"
+# manual: src/SUMMARY.md написан вручную и не генерируется
+summary = "manual"
+# Текст оригинала распространяется по CC BY-SA 4.0, код — по MIT-0, см. NOTICE.md
+license = "CC BY-SA 4.0"
+
+[source]
+title = "Dive into Deep Learning (动手学深度学习)"
+author = "Aston Zhang, Zachary C. Lipton, Mu Li, Alexander J. Smola и соавторы"
+url = "https://zh.d2l.ai"
+license = "CC BY-SA 4.0"
