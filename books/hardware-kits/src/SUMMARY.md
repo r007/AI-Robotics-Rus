@@ -40,7 +40,7 @@
 - [Малые языковые модели (SLM)](05-raspberry-pi/llm/README.md)
 - [Обнаружение объектов](05-raspberry-pi/object_detection/README.md)
 - [Настройка](05-raspberry-pi/setup/README.md)
-- [Модели «зрение — язык» (VLM)](05-raspberry-pi/vlm/README.md)
+- [Визуально-языковые модели (VLM)](05-raspberry-pi/vlm/README.md)
 
 # Общие лабораторные работы
 
