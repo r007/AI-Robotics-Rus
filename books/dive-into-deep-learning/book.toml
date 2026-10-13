@@ -14,6 +14,8 @@ create-missing = false
 [output.html]
 default-theme = "light"
 preferred-dark-theme = "navy"
+# Номера разделов уже стоят в заголовках SUMMARY.md; без этого mdBook добавляет второй номер.
+no-section-label = true
 git-repository-url = "https://github.com/r007/AI-Robotics-Rus"
 edit-url-template = "https://github.com/r007/AI-Robotics-Rus/edit/main/books/dive-into-deep-learning/src/{path}"
 site-url = "/AI-Robotics-Rus/dive-into-deep-learning/"

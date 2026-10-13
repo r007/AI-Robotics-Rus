@@ -14,6 +14,9 @@ create-missing = false
 [output.html]
 default-theme = "light"
 preferred-dark-theme = "navy"
+# Оглавление разбито на части («Глава N»), а номера разделов стоят в самих заголовках;
+# сквозная нумерация mdBook (1…151) только путает.
+no-section-label = true
 git-repository-url = "https://github.com/r007/AI-Robotics-Rus"
 edit-url-template = "https://github.com/r007/AI-Robotics-Rus/edit/main/books/embodied-ai/src/{path}"
 site-url = "/AI-Robotics-Rus/embodied-ai/"
