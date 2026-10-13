@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" role="img" aria-labelledby="rag2-title rag2-desc" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="15">
+  <title id="rag2-title">Схема RAG с построением базы знаний из документа</title>
+  <desc id="rag2-desc">Документ преобразуется в эмбеддинг и сохраняется в базе знаний. Пользовательский вопрос ищет релевантные данные в базе, после чего SLM формирует ответ с учётом найденного.</desc>
+  <defs>
+    <marker id="rag2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#374151"/>
+    </marker>
+    <marker id="rag2-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="rag2-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- Пользователь (левый) -->
+  <rect x="40" y="82" width="60" height="52" rx="26" fill="#bbf7d0" stroke="#16a34a" stroke-width="1.6"/>
+  <circle cx="70" cy="60" r="18" fill="#bbf7d0" stroke="#16a34a" stroke-width="1.6"/>
+  <text x="70" y="160" text-anchor="middle" fill="#111827">Пользователь</text>
+
+  <path d="M116 95 H252" stroke="#374151" stroke-width="2" fill="none" marker-end="url(#rag2-arrow)"/>
+  <text x="184" y="84" text-anchor="middle" fill="#111827">Вопрос</text>
+
+  <!-- Система формирования промпта -->
+  <circle cx="330" cy="95" r="48" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.6"/>
+  <path d="M330 70 V120 M305 95 H355" stroke="#92400e" stroke-width="7" stroke-linecap="round"/>
+
+  <path d="M380 95 H576" stroke="#374151" stroke-width="2" fill="none" marker-end="url(#rag2-arrow)"/>
+  <text x="478" y="84" text-anchor="middle" fill="#111827">Промпт</text>
+
+  <!-- SLM -->
+  <rect x="580" y="55" width="110" height="80" rx="12" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.6"/>
+  <text x="635" y="100" text-anchor="middle" fill="#1d4ed8">SLM</text>
+
+  <path d="M694 95 H790" stroke="#374151" stroke-width="2" fill="none" marker-end="url(#rag2-arrow)"/>
+  <text x="742" y="84" text-anchor="middle" fill="#111827">Ответ</text>
+
+  <!-- Пользователь (правый) -->
+  <rect x="800" y="82" width="60" height="52" rx="26" fill="#bbf7d0" stroke="#16a34a" stroke-width="1.6"/>
+  <circle cx="830" cy="60" r="18" fill="#bbf7d0" stroke="#16a34a" stroke-width="1.6"/>
+  <text x="830" y="160" text-anchor="middle" fill="#111827">Пользователь</text>
+
+  <!-- Запрос к базе знаний и обратно -->
+  <path d="M300 146 V286" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#rag2-blue)"/>
+  <path d="M360 286 V146" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#rag2-blue)"/>
+  <text x="290" y="200" text-anchor="end" fill="#2563eb">Запрос</text>
+  <text x="290" y="220" text-anchor="end" fill="#2563eb">к базе</text>
+  <text x="370" y="200" fill="#2563eb">Найденные</text>
+  <text x="370" y="220" fill="#2563eb">данные</text>
+
+  <!-- База знаний -->
+  <path d="M285 318 V372 A45 12 0 0 0 375 372 V318 Z" fill="#93c5fd" stroke="#2563eb" stroke-width="1.6"/>
+  <ellipse cx="330" cy="318" rx="45" ry="12" fill="#bfdbfe" stroke="#2563eb" stroke-width="1.6"/>
+  <text x="330" y="412" text-anchor="middle" fill="#1d4ed8" font-size="18" font-weight="bold">База знаний</text>
+
+  <!-- Документ -> эмбеддинг -> база знаний -->
+  <rect x="40" y="270" width="44" height="56" fill="#fee2e2" stroke="#dc2626" stroke-width="1.6"/>
+  <path d="M74 270 L84 280 H74 Z" fill="#fca5a5" stroke="#dc2626" stroke-width="1.2"/>
+  <text x="62" y="345" text-anchor="middle" fill="#dc2626">Документ</text>
+
+  <path d="M70 332 L112 398" stroke="#dc2626" stroke-width="2" fill="none" marker-end="url(#rag2-red)"/>
+
+  <circle cx="140" cy="430" r="34" fill="#fee2e2" stroke="#dc2626" stroke-width="1.6"/>
+  <rect x="122" y="416" width="36" height="28" fill="#ffffff" stroke="#2563eb" stroke-width="1.2"/>
+  <path d="M122 430 H158 M140 416 V444" stroke="#2563eb" stroke-width="1"/>
+  <text x="140" y="486" text-anchor="middle" fill="#dc2626">Эмбеддинг</text>
+
+  <path d="M176 424 L282 368" stroke="#dc2626" stroke-width="2" fill="none" marker-end="url(#rag2-red)"/>
+</svg>

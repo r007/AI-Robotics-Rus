@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 520" role="img" aria-labelledby="odp-title odp-desc" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="15">
+  <title id="odp-title">Схема: от модели и набора данных к развёртыванию на Raspi</title>
+  <desc id="odp-desc">Верхний ряд: набор COCO, модели EfficientDet и MobileNet, конвертация в TFLite, среда выполнения TFLite Runtime на Raspi. Нижний ряд: исходный набор данных размечается в Roboflow, затем экспортируется в Edge Impulse (модели .tflite и .eim) и в Ultralytics YOLOv8 (модель .pt).</desc>
+  <defs>
+    <marker id="odp-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#1f2937"/>
+    </marker>
+  </defs>
+
+  <!-- Верхний ряд: COCO -> модели -> TFLite -> Runtime -> результат -->
+  <rect x="20" y="70" width="200" height="56" rx="6" fill="#e5e7eb" stroke="#6b7280" stroke-width="1.5"/>
+  <text x="120" y="93" text-anchor="middle" fill="#111827" font-weight="bold">COCO</text>
+  <text x="120" y="113" text-anchor="middle" fill="#374151" font-size="13">Common Objects in Context</text>
+  <path d="M226 98 H258" stroke="#1f2937" stroke-width="2" fill="none" marker-end="url(#odp-arrow)"/>
+
+  <rect x="262" y="20" width="400" height="190" rx="14" fill="none" stroke="#ea580c" stroke-width="2" stroke-dasharray="10 8"/>
+  <text x="462" y="46" text-anchor="middle" fill="#ea580c" font-weight="bold">Модели Google AI</text>
+
+  <rect x="290" y="70" width="150" height="44" rx="6" fill="#fb923c" stroke="#c2410c" stroke-width="1.5"/>
+  <text x="365" y="97" text-anchor="middle" fill="#111827">EfficientDet</text>
+  <rect x="290" y="135" width="150" height="44" rx="6" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="365" y="162" text-anchor="middle" fill="#ffffff">MobileNet</text>
+
+  <rect x="500" y="70" width="100" height="44" rx="6" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="550" y="97" text-anchor="middle" fill="#ffffff">TFLite</text>
+  <rect x="500" y="135" width="100" height="44" rx="6" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="550" y="162" text-anchor="middle" fill="#ffffff">TFLite</text>
+
+  <path d="M440 92 H498" stroke="#1f2937" stroke-width="2" fill="none" marker-end="url(#odp-arrow)"/>
+  <path d="M440 157 H498" stroke="#1f2937" stroke-width="2" fill="none" marker-end="url(#odp-arrow)"/>
+  <path d="M600 92 H688" stroke="#1f2937" stroke-width="2" fill="none" marker-end="url(#odp-arrow)"/>
+  <path d="M600 157 H688" stroke="#1f2937" stroke-width="2" fill="none" marker-end="url(#odp-arrow)"/>
+
+  <rect x="690" y="60" width="160" height="130" rx="10" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="770" y="118" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">TFLite</text>
+  <text x="770" y="142" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">Runtime</text>
+
+  <path d="M852 125 H888" stroke="#1f2937" stroke-width="2" fill="none" marker-end="url(#odp-arrow)"/>
+  <rect x="890" y="60" width="190" height="130" rx="10" fill="#f9fafb" stroke="#6b7280" stroke-width="1.5"/>
+  <text x="985" y="108" text-anchor="middle" fill="#111827">Обнаружение</text>
+  <text x="985" y="128" text-anchor="middle" fill="#111827">объектов на Raspi:</text>
+  <text x="985" y="148" text-anchor="middle" fill="#111827">рамки и подписи</text>
+
+  <!-- Нижний ряд: набор данных -> Roboflow -> разметка -> платформы -->
+  <rect x="20" y="330" width="170" height="56" rx="6" fill="#f3f4f6" stroke="#6b7280" stroke-width="1.5"/>
+  <text x="105" y="354" text-anchor="middle" fill="#111827">Исходный набор</text>
+  <text x="105" y="374" text-anchor="middle" fill="#374151" font-size="13">(Raw-Dataset)</text>
+  <path d="M192 358 H238" stroke="#1f2937" stroke-width="2" fill="none" marker-end="url(#odp-arrow)"/>
+
+  <rect x="240" y="330" width="160" height="56" rx="14" fill="none" stroke="#ea580c" stroke-width="2" stroke-dasharray="10 8"/>
+  <text x="320" y="363" text-anchor="middle" fill="#111827" font-weight="bold">Roboflow</text>
+  <path d="M402 358 H448" stroke="#1f2937" stroke-width="2" fill="none" marker-end="url(#odp-arrow)"/>
+
+  <rect x="450" y="330" width="170" height="56" rx="6" fill="#f3f4f6" stroke="#6b7280" stroke-width="1.5"/>
+  <text x="535" y="354" text-anchor="middle" fill="#111827">Размеченный набор</text>
+  <text x="535" y="374" text-anchor="middle" fill="#374151" font-size="13">(Annotated Dataset)</text>
+
+  <path d="M620 345 H670 V295 H716" stroke="#1f2937" stroke-width="2" fill="none" marker-end="url(#odp-arrow)"/>
+  <path d="M620 372 H670 V445 H716" stroke="#1f2937" stroke-width="2" fill="none" marker-end="url(#odp-arrow)"/>
+
+  <rect x="720" y="262" width="170" height="66" rx="14" fill="none" stroke="#ea580c" stroke-width="2" stroke-dasharray="10 8"/>
+  <text x="805" y="300" text-anchor="middle" fill="#111827" font-weight="bold">Edge Impulse</text>
+
+  <rect x="720" y="412" width="170" height="66" rx="14" fill="none" stroke="#ea580c" stroke-width="2" stroke-dasharray="10 8"/>
+  <text x="805" y="447" text-anchor="middle" fill="#111827" font-weight="bold">Ultralytics</text>
+  <text x="805" y="467" text-anchor="middle" fill="#111827" font-weight="bold">YOLOv8</text>
+
+  <path d="M892 282 H948" stroke="#1f2937" stroke-width="2" fill="none" marker-end="url(#odp-arrow)"/>
+  <text x="920" y="272" text-anchor="middle" fill="#2563eb" font-size="13">.tflite</text>
+  <text x="960" y="288" fill="#111827">SSD-MobileNet-V2</text>
+
+  <path d="M892 318 H948" stroke="#1f2937" stroke-width="2" fill="none" marker-end="url(#odp-arrow)"/>
+  <text x="920" y="338" text-anchor="middle" fill="#2563eb" font-size="13">.eim</text>
+  <text x="960" y="324" fill="#111827">FOMO</text>
+
+  <path d="M892 445 H948" stroke="#1f2937" stroke-width="2" fill="none" marker-end="url(#odp-arrow)"/>
+  <text x="920" y="436" text-anchor="middle" fill="#2563eb" font-size="13">.pt</text>
+  <text x="960" y="450" fill="#111827">YOLOv8</text>
+</svg>

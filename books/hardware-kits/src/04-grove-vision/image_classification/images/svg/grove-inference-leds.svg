@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 260" role="img" aria-labelledby="gil-title" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="17">
+  <title id="gil-title">Схема: камера, Grove Vision AI V2, плата Xiao и три светодиода D1–D3</title>
+  <defs>
+    <marker id="gil-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect x="790" y="70" width="150" height="110" rx="14" fill="#93c5fd" stroke="#1f2937" stroke-width="2"/>
+  <text x="865" y="130" text-anchor="middle" fill="#dc2626">Камера</text>
+
+  <path d="M786 125 H652" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#gil-arrow)"/>
+
+  <rect x="400" y="70" width="252" height="110" rx="14" fill="#fde68a" stroke="#1f2937" stroke-width="2"/>
+  <text x="526" y="130" text-anchor="middle" fill="#1d4ed8">Grove Vision AI V2</text>
+
+  <path d="M396 125 H248" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#gil-arrow)"/>
+  <text x="322" y="104" text-anchor="middle" fill="#dc2626">I2C</text>
+
+  <rect x="60" y="70" width="150" height="110" rx="14" fill="#a7f3d0" stroke="#1f2937" stroke-width="2"/>
+  <text x="135" y="130" text-anchor="middle" fill="#dc2626">Xiao</text>
+
+  <path d="M110 186 V228" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#gil-arrow)"/>
+  <path d="M136 186 V228" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#gil-arrow)"/>
+  <path d="M162 186 V228" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#gil-arrow)"/>
+  <text x="96" y="214" text-anchor="end" fill="#dc2626" font-size="15">D1</text>
+  <text x="122" y="214" text-anchor="end" fill="#dc2626" font-size="15">D2</text>
+  <text x="148" y="214" text-anchor="end" fill="#dc2626" font-size="15">D3</text>
+
+  <circle cx="110" cy="248" r="10" fill="#fca5a5" stroke="#dc2626" stroke-width="1.5"/>
+  <circle cx="136" cy="248" r="10" fill="#fde68a" stroke="#d97706" stroke-width="1.5"/>
+  <circle cx="162" cy="248" r="10" fill="#86efac" stroke="#16a34a" stroke-width="1.5"/>
+</svg>

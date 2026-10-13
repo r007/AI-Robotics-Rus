@@ -52,6 +52,13 @@ CHAPTER_TITLES = {
     "19-monthly-team-learning": "Глава 19. Ежемесячные групповые занятия",
     "20-wechat-articles": "Глава 20. Материалы для публикации",
     "21-robot-design": "Глава 21. Проектирование роботов и манипуляторов",
+    # Hardware Kits (books/hardware-kits)
+    "01-start": "Начало работы",
+    "02-arduino-nicla": "Arduino Nicla Vision",
+    "03-seeed-xiao": "XIAOML Kit (Seeed XIAO ESP32S3)",
+    "04-grove-vision": "Grove Vision AI V2",
+    "05-raspberry-pi": "Raspberry Pi",
+    "06-shared": "Общие лабораторные работы",
 }
 
 # Titles for folders that have no README.md of their own, keyed by folder name.

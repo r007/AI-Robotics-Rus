@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 190" role="img" aria-labelledby="gpd-title" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="17">
+  <title id="gpd-title">Схема: человек, модель обнаружения людей, лампочка</title>
+  <circle cx="95" cy="55" r="28" fill="#111827"/>
+  <path d="M40 180 Q40 100 95 98 Q150 100 150 180 Z" fill="#111827"/>
+  <polygon points="170,72 200,72 200,62 222,80 200,98 200,88 170,88" fill="#f97316"/>
+  <rect x="240" y="30" width="170" height="110" rx="18" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="325" y="80" text-anchor="middle" fill="#ffffff">Модель</text>
+  <text x="325" y="102" text-anchor="middle" fill="#ffffff">обнаружения</text>
+  <text x="325" y="124" text-anchor="middle" fill="#ffffff">людей</text>
+  <polygon points="420,72 450,72 450,62 472,80 450,98 450,88 420,88" fill="#f97316"/>
+  <circle cx="540" cy="88" r="40" fill="none" stroke="#111827" stroke-width="8"/>
+  <rect x="518" y="128" width="44" height="34" rx="4" fill="#111827"/>
+  <line x1="540" y1="30" x2="540" y2="14" stroke="#111827" stroke-width="6" stroke-linecap="round"/>
+  <line x1="581" y1="47" x2="592" y2="35" stroke="#111827" stroke-width="6" stroke-linecap="round"/>
+  <line x1="499" y1="47" x2="488" y2="35" stroke="#111827" stroke-width="6" stroke-linecap="round"/>
+  <line x1="598" y1="88" x2="614" y2="88" stroke="#111827" stroke-width="6" stroke-linecap="round"/>
+  <line x1="482" y1="88" x2="466" y2="88" stroke="#111827" stroke-width="6" stroke-linecap="round"/>
+</svg>

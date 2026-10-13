@@ -1,6 +1,6 @@
 # Платформы
 
-> **Примечание о переводе.** Это вторая глава раздела Hardware Kits. Цены указаны в долларах США, как в оригинале, и ориентировочны: перед покупкой проверьте актуальную стоимость у продавца.
+> **Примечание о переводе.** Цены указаны в долларах США, как в оригинале, и ориентировочны: перед покупкой проверьте актуальную стоимость у продавца.
 
 В этой главе приведены подробные технические характеристики четырёх аппаратных платформ, которые используются в лабораторных работах. Каждая из них занимает собственное место на шкале возможностей встраиваемых вычислений: от микроконтроллеров со сверхнизким энергопотреблением до полноценных периферийных компьютеров.
 
@@ -9,7 +9,7 @@
 ## Избранная платформа
 
 <p align="center">
-  <img src="images/xiaoml_kit_complete.png" alt="Полный комплект XIAOML Kit со всеми компонентами"><br>
+  <img src="../../03-seeed-xiao/images/png/xiaoml_kit_complete.png" alt="Полный комплект XIAOML Kit со всеми компонентами"><br>
   <em>Полный комплект XIAOML Kit со всеми компонентами</em>
 </p>
 
@@ -72,7 +72,7 @@
 XIAOML Kit объединяет плату XIAO ESP32S3 Sense и плату расширения, образуя полноценную среду разработки TinyML. Одна только XIAO ESP32S3 Sense обеспечивает камеру и микрофон (зрение и звук), а плата расширения добавляет 6-осевой инерциальный измерительный блок (IMU) для классификации движения. Название «XIAO» (小) в переводе с китайского означает «крошечный» и отражает форм-фактор платы: $21{\times}17.5$ мм.
 
 <p align="center">
-  <img src="images/xiaoml_kit_complete.png" alt="XIAOML Kit с платой расширения" width="400"><br>
+  <img src="../../03-seeed-xiao/images/png/xiaoml_kit_complete.png" alt="XIAOML Kit с платой расширения" width="400"><br>
   <em>XIAOML Kit с платой расширения</em>
 </p>
 
@@ -106,7 +106,7 @@ Wi-Fi 802.11 b/g/n и Bluetooth 5.0
 Nicla Vision — пример профессиональных встраиваемых систем технического зрения, построенных на микроконтроллере STM32H7. Эта платформа показывает, как специализированная аппаратная архитектура позволяет выполнять сложный ML-инференс в жёстких ограничениях ресурсов.
 
 <p align="center">
-  <img src="images/nicla_vision_quarter.jpeg" alt="Arduino Nicla Vision с камерным модулем" width="400"><br>
+  <img src="../../02-arduino-nicla/images/jpg/nicla_vision_quarter.jpeg" alt="Arduino Nicla Vision с камерным модулем" width="400"><br>
   <em>Arduino Nicla Vision с камерным модулем</em>
 </p>
 
@@ -135,7 +135,7 @@ Nicla Vision — пример профессиональных встраива�
 Grove Vision AI V2 включает выделенный блок нейронной обработки (NPU), который демонстрирует аппаратно ускоренный ML-инференс. Эта платформа показывает, как специализированные ИИ-процессоры дают прирост производительности на порядки по сравнению с реализациями, работающими только программно.
 
 <p align="center">
-  <img src="images/grove_vision_ai_v2.jpeg" alt="Grove Vision AI V2 с NPU" width="400"><br>
+  <img src="../../04-grove-vision/images/jpeg/grove_vision_ai_v2.jpeg" alt="Grove Vision AI V2 с NPU" width="400"><br>
   <em>Grove Vision AI V2 с NPU</em>
 </p>
 
@@ -167,7 +167,7 @@ ARM Cortex-M55 со встроенным NPU Ethos-U55
 Семейство Raspberry Pi соединяет встраиваемые системы и традиционные вычисления: оно даёт полноценную среду Linux и при этом остаётся доступным для обучения. Эта платформа показывает, как увеличение вычислительных ресурсов открывает путь к сложным ML-приложениям.
 
 <p align="center">
-  <img src="images/raspis.jpg" alt="Raspberry Pi 5 и Pi Zero 2W для сравнения" width="400"><br>
+  <img src="../../05-raspberry-pi/images/jpeg/raspis.jpg" alt="Raspberry Pi 5 и Pi Zero 2W для сравнения" width="400"><br>
   <em>Raspberry Pi 5 и Pi Zero 2W для сравнения</em>
 </p>
 
@@ -200,7 +200,7 @@ Raspberry Pi OS на основе Debian (полноценный дистриб�
 Чтобы начать работу с аппаратными наборами, которые используются в курсе, их можно купить напрямую у следующих официальных поставщиков:
 
 * [Seeed Studio – XIAOML Kit](https://www.seeedstudio.com/The-XIAOML-Kit.html) и [модуль Grove Vision AI V2](https://wiki.seeedstudio.com/grove_vision_ai_v2/)
-* [Arduino Store – Nicla Vision](https://store.arduino.cc/products/nicla-vision)
+* [Магазин Arduino — Nicla Vision](https://store.arduino.cc/products/nicla-vision)
 * [Raspberry Pi Foundation – платы и наборы](https://www.raspberrypi.com/products/)
 * [DigiKey](https://www.digikey.com/), [Mouser](https://www.mouser.com/), [SparkFun](https://www.sparkfun.com/) — альтернативные дистрибьюторы широкого набора компонентов и наборов
 
