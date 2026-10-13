@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 560" width="100%" height="100%" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <marker id="arr-slate" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#475569" />
+    </marker>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb" />
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#16a34a" />
+    </marker>
+  </defs>
+
+  <!-- Clean Canvas -->
+  <rect width="1100" height="560" fill="#ffffff" />
+
+  <!-- MAIN CONTAINER CARD -->
+  <g transform="translate(20, 16)">
+    <rect width="1060" height="528" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+    <rect width="1060" height="32" rx="4" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2" />
+    <text x="16" y="21" font-size="11.5" font-weight="700" fill="#0f172a" letter-spacing="0.2">ПРОТОКОЛ РЕЗЕРВИРОВАНИЯ БЮДЖЕТА</text>
+    <text x="1044" y="21" font-size="9.5" font-family="'SF Mono', monospace" fill="#475569" text-anchor="end">Инвариант сохранения: B = E + R + F</text>
+
+    <!-- SECTION 1: ROOT AGENT INITIAL LEDGER (y=44..156) -->
+    <g transform="translate(16, 44)">
+      <rect width="1028" height="110" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+      <rect width="1028" height="22" rx="3" fill="#eff6ff" />
+      <text x="12" y="15" font-size="9.5" font-weight="700" fill="#1e40af">РЕЕСТР КОРНЕВОГО АГЕНТА: L_root = ⟨ B, E, R, F ⟩</text>
+      <text x="1016" y="15" font-size="8.5" font-family="'SF Mono', monospace" fill="#1e40af" text-anchor="end">Фаза резервирования</text>
+
+      <!-- 4 State Cards -->
+      <g transform="translate(12, 30)">
+        <!-- Budget B -->
+        <g transform="translate(0, 0)">
+          <rect width="238" height="66" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+          <text x="10" y="16" font-size="8.5" font-weight="600" fill="#475569">Выделенный бюджет (B_root)</text>
+          <text x="10" y="38" font-size="16" font-family="'SF Mono', monospace" font-weight="700" fill="#0f172a">$10.00</text>
+          <text x="10" y="54" font-size="8" fill="#64748b">Жесткий потолок расходов на задачу</text>
+        </g>
+
+        <!-- Settled Spend E -->
+        <g transform="translate(254, 0)">
+          <rect width="238" height="66" rx="2" fill="#fef2f2" stroke="#fca5a5" stroke-width="0.8" />
+          <text x="10" y="16" font-size="8.5" font-weight="600" fill="#991b1b">Зафиксированные расходы (E_root)</text>
+          <text x="10" y="38" font-size="16" font-family="'SF Mono', monospace" font-weight="700" fill="#dc2626">$0.40</text>
+          <text x="10" y="54" font-size="8" fill="#64748b">Планирование корня и ходы супервизора</text>
+        </g>
+
+        <!-- Active Escrow R -->
+        <g transform="translate(508, 0)">
+          <rect width="238" height="66" rx="2" fill="#eff6ff" stroke="#93c5fd" stroke-width="0.8" />
+          <text x="10" y="16" font-size="8.5" font-weight="600" fill="#1e40af">Зарезервировано (R_root)</text>
+          <text x="10" y="38" font-size="16" font-family="'SF Mono', monospace" font-weight="700" fill="#2563eb">$6.00</text>
+          <text x="10" y="54" font-size="8" fill="#64748b">Закреплено: подагент 1 ($2) + 2 ($4)</text>
+        </g>
+
+        <!-- Free Balance F -->
+        <g transform="translate(762, 0)">
+          <rect width="242" height="66" rx="2" fill="#f0fdf4" stroke="#86efac" stroke-width="0.8" />
+          <text x="10" y="16" font-size="8.5" font-weight="600" fill="#166534">Свободный капитал (F_root)</text>
+          <text x="10" y="38" font-size="16" font-family="'SF Mono', monospace" font-weight="700" fill="#16a34a">$3.60</text>
+          <text x="10" y="54" font-size="8" fill="#64748b">Доступно для резервного делегирования</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- DELEGATION ARROWS (Down to Children) -->
+    <g transform="translate(16, 154)">
+      <!-- Left Delegation Arrow -->
+      <line x1="250" y1="0" x2="250" y2="28" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arr-blue)" />
+      <rect x="155" y="6" width="190" height="16" rx="2" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.8" />
+      <text x="250" y="17" font-size="8" font-family="'SF Mono', monospace" font-weight="700" fill="#1e40af" text-anchor="middle">Резерв для потомка: B_1 = $2.00</text>
+
+      <!-- Right Delegation Arrow -->
+      <line x1="778" y1="0" x2="778" y2="28" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arr-blue)" />
+      <rect x="683" y="6" width="190" height="16" rx="2" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.8" />
+      <text x="778" y="17" font-size="8" font-family="'SF Mono', monospace" font-weight="700" fill="#1e40af" text-anchor="middle">Резерв для потомка: B_2 = $4.00</text>
+    </g>
+
+    <!-- SECTION 2: CONCURRENT SUBAGENT LEDGERS (y=182..332) -->
+    <g transform="translate(16, 182)">
+      <!-- CHILD 1: SEARCH SUBAGENT -->
+      <g transform="translate(0, 0)">
+        <rect width="506" height="150" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+        <rect width="506" height="22" rx="3" fill="#f8fafc" />
+        <text x="12" y="15" font-size="9" font-weight="700" fill="#0f172a">ПОДАГЕНТ 1: ПОИСК ПО РЕПОЗИТОРИЮ (B_1 = $2.00)</text>
+        <text x="494" y="15" font-size="8" font-family="'SF Mono', monospace" font-weight="700" fill="#166534" text-anchor="end">СТАТУС: ЗАВЕРШЕН</text>
+
+        <!-- Subagent 1 Details -->
+        <g transform="translate(12, 30)">
+          <!-- Row 1: Execution & Spend -->
+          <rect width="482" height="38" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.8" />
+          <text x="10" y="16" font-size="8" font-family="'SF Mono', monospace" fill="#475569">Зафиксировано: E_1 = $0.50 (15 запросов + 2 разбора)</text>
+          <text x="10" y="30" font-size="8.5" font-family="'SF Mono', monospace" font-weight="700" fill="#166534">Остаток: F_1 = B_1 − E_1 = $2.00 − $0.50 = $1.50</text>
+
+          <!-- Row 2: Refund Action Box -->
+          <g transform="translate(0, 46)">
+            <rect width="482" height="36" rx="2" fill="#f0fdf4" stroke="#86efac" stroke-width="0.8" />
+            <text x="10" y="15" font-size="8" font-weight="700" fill="#166534">ОТПРАВКА ВОЗВРАТА ПРИ ЗАВЕРШЕНИИ:</text>
+            <text x="10" y="28" font-size="7.5" font-family="'SF Mono', monospace" fill="#15803d">Вернуть $1.50 в свободный капитал родителя (F_root)</text>
+          </g>
+
+          <text x="0" y="98" font-size="7.5" fill="#64748b">Потомок тратит только из своего резерва</text>
+        </g>
+      </g>
+
+      <!-- CHILD 2: SYNTHESIZER SUBAGENT -->
+      <g transform="translate(522, 0)">
+        <rect width="506" height="150" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+        <rect width="506" height="22" rx="3" fill="#f8fafc" />
+        <text x="12" y="15" font-size="9" font-weight="700" fill="#0f172a">ПОДАГЕНТ 2: СИНТЕЗАТОР ПАТЧА (B_2 = $4.00)</text>
+        <text x="494" y="15" font-size="8" font-family="'SF Mono', monospace" font-weight="700" fill="#166534" text-anchor="end">СТАТУС: ЗАВЕРШЕН</text>
+
+        <!-- Subagent 2 Details -->
+        <g transform="translate(12, 30)">
+          <!-- Row 1: Execution & Spend -->
+          <rect width="482" height="38" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.8" />
+          <text x="10" y="16" font-size="8" font-family="'SF Mono', monospace" fill="#475569">Зафиксировано: E_2 = $3.10 (4 хода + 2 сборки)</text>
+          <text x="10" y="30" font-size="8.5" font-family="'SF Mono', monospace" font-weight="700" fill="#166534">Остаток: F_2 = B_2 − E_2 = $4.00 − $3.10 = $0.90</text>
+
+          <!-- Row 2: Refund Action Box -->
+          <g transform="translate(0, 46)">
+            <rect width="482" height="36" rx="2" fill="#f0fdf4" stroke="#86efac" stroke-width="0.8" />
+            <text x="10" y="15" font-size="8" font-weight="700" fill="#166534">ОТПРАВКА ВОЗВРАТА ПРИ ЗАВЕРШЕНИИ:</text>
+            <text x="10" y="28" font-size="7.5" font-family="'SF Mono', monospace" fill="#15803d">Вернуть $0.90 в свободный капитал родителя (F_root)</text>
+          </g>
+
+          <text x="0" y="98" font-size="7.5" fill="#64748b">Прервать при θ = $1.50/мин</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- REFUND ARROWS (Upward back to Reconciled Root) -->
+    <g transform="translate(16, 332)">
+      <!-- Left Refund Arrow -->
+      <line x1="250" y1="0" x2="250" y2="28" stroke="#16a34a" stroke-width="1.8" marker-end="url(#arr-green)" />
+      <rect x="155" y="6" width="190" height="16" rx="2" fill="#f0fdf4" stroke="#86efac" stroke-width="0.8" />
+      <text x="250" y="17" font-size="8" font-family="'SF Mono', monospace" font-weight="700" fill="#166534" text-anchor="middle">Возврат неиспользованного: F_1 = $1.50</text>
+
+      <!-- Right Refund Arrow -->
+      <line x1="778" y1="0" x2="778" y2="28" stroke="#16a34a" stroke-width="1.8" marker-end="url(#arr-green)" />
+      <rect x="683" y="6" width="190" height="16" rx="2" fill="#f0fdf4" stroke="#86efac" stroke-width="0.8" />
+      <text x="778" y="17" font-size="8" font-family="'SF Mono', monospace" font-weight="700" fill="#166534" text-anchor="middle">Возврат неиспользованного: F_2 = $0.90</text>
+    </g>
+
+    <!-- SECTION 3: RECONCILED ROOT LEDGER AT TERMINATION (y=360..510) -->
+    <g transform="translate(16, 360)">
+      <rect width="1028" height="148" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+      <rect width="1028" height="22" rx="3" fill="#f1f5f9" />
+      <text x="12" y="15" font-size="9.5" font-weight="700" fill="#0f172a">ИТОГОВЫЙ РЕЕСТР: L_root* = ⟨ $10.00, $4.00, $0.00, $6.00 ⟩</text>
+      <text x="1016" y="15" font-size="8.5" font-family="'SF Mono', monospace" fill="#166534" font-weight="700" text-anchor="end">Итоговая фиксация верификации</text>
+
+      <!-- Split Left (Accounting) and Right (Guarantees) -->
+      <g transform="translate(12, 30)">
+        <!-- Left: Financial Reconciliation Waterfall -->
+        <g transform="translate(0, 0)">
+          <rect width="490" height="106" rx="2" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.8" />
+          <text x="12" y="18" font-size="8.5" font-weight="700" fill="#1e40af">ИТОГОВЫЙ ВОДОПАД ЗАФИКСИРОВАННЫХ РАСХОДОВ</text>
+          
+          <text x="12" y="36" font-size="8" font-family="'SF Mono', monospace" fill="#334155">Прямой расход корневого выполнения:  E_root  = $0.40</text>
+          <text x="12" y="50" font-size="8" font-family="'SF Mono', monospace" fill="#334155">Зафиксированный расход подагента 1:     E_1     = $0.50</text>
+          <text x="12" y="64" font-size="8" font-family="'SF Mono', monospace" fill="#334155">Зафиксированный расход подагента 2:     E_2     = $3.10</text>
+          
+          <line x1="12" y1="72" x2="470" y2="72" stroke="#e2e8f0" stroke-width="1" />
+          
+          <text x="12" y="86" font-size="8.5" font-family="'SF Mono', monospace" font-weight="700" fill="#dc2626">Всего зафиксировано:          E_final = $4.00 (40.0% бюджета)</text>
+          <text x="12" y="99" font-size="8.5" font-family="'SF Mono', monospace" font-weight="700" fill="#166534">Свободный капитал арендатора: F_final = $6.00 (без утечек)</text>
+        </g>
+
+        <!-- Right: Formal Protocol Guarantees -->
+        <g transform="translate(506, 0)">
+          <rect width="500" height="106" rx="2" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.8" />
+          <text x="12" y="18" font-size="8.5" font-weight="700" fill="#0f172a">ГАРАНТИИ РАСПРЕДЕЛЕННОГО ФИНАНСОВОГО УПРАВЛЕНИЯ</text>
+
+          <g transform="translate(12, 30)">
+            <text x="0" y="10" font-size="8" font-family="'SF Mono', monospace" font-weight="700" fill="#1e40af">Инвариант монотонности:</text>
+            <text x="195" y="10" font-size="8" fill="#475569">Зафиксированные расходы E(t) строго не убывают (dE/dt ≥ 0).</text>
+
+            <text x="0" y="28" font-size="8" font-family="'SF Mono', monospace" font-weight="700" fill="#1e40af">Непересекающиеся резервирования:</text>
+            <text x="195" y="28" font-size="8" fill="#475569">Σ R_child ≤ R_parent предотвращает параллельные перерасходы.</text>
+
+            <text x="0" y="46" font-size="8" font-family="'SF Mono', monospace" font-weight="700" fill="#1e40af">Детерминированные ловушки:</text>
+            <text x="195" y="46" font-size="8" fill="#475569">Отклоняет любую диспетчеризацию, чья оценка превышает F_k.</text>
+
+            <text x="0" y="64" font-size="8" font-family="'SF Mono', monospace" font-weight="700" fill="#166534">Восходящее сохранение:</text>
+            <text x="195" y="64" font-size="8" fill="#475569">Все неизрасходованные резервы атомарно возвращаются родителю.</text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

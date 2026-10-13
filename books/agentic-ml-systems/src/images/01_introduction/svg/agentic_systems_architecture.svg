@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 780" width="100%" height="100%"
+     font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <!-- Precision Arrowheads -->
+    <marker id="arr-purple" markerWidth="6" markerHeight="5" refX="5" refY="2.5" orient="auto">
+      <path d="M0,0 L6,2.5 L0,5 Z" fill="#581C87"/>
+    </marker>
+    <marker id="arr-slate" markerWidth="6" markerHeight="5" refX="5" refY="2.5" orient="auto">
+      <path d="M0,0 L6,2.5 L0,5 Z" fill="#334155"/>
+    </marker>
+    <marker id="arr-teal" markerWidth="6" markerHeight="5" refX="5" refY="2.5" orient="auto">
+      <path d="M0,0 L6,2.5 L0,5 Z" fill="#0F766E"/>
+    </marker>
+    <marker id="arr-amber" markerWidth="6" markerHeight="5" refX="5" refY="2.5" orient="auto">
+      <path d="M0,0 L6,2.5 L0,5 Z" fill="#B45309"/>
+    </marker>
+    <marker id="arr-crimson" markerWidth="6" markerHeight="5" refX="5" refY="2.5" orient="auto">
+      <path d="M0,0 L6,2.5 L0,5 Z" fill="#991B1B"/>
+    </marker>
+    <marker id="arr-green" markerWidth="6" markerHeight="5" refX="5" refY="2.5" orient="auto">
+      <path d="M0,0 L6,2.5 L0,5 Z" fill="#15803D"/>
+    </marker>
+  </defs>
+
+  <!-- Clean Canvas -->
+  <rect width="1120" height="780" fill="#FFFFFF"/>
+
+  <!-- ================================================================= -->
+  <!-- OUTER SYSTEM BOUNDARY: THE STOCHASTIC COMPUTER                    -->
+  <!-- ================================================================= -->
+  <rect x="52" y="20" width="1036" height="610" rx="4" fill="#FAFAFA" stroke="#0F172A" stroke-width="2"/>
+
+  <!-- ================================================================= -->
+  <!-- 1. TOP-LEFT: THE STOCHASTIC PROCESSOR                             -->
+  <!-- ================================================================= -->
+  <g transform="translate(68, 36)">
+    <rect width="455" height="212" rx="2" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.5"/>
+    <rect width="455" height="22" fill="#F1F5F9" stroke="#1E293B" stroke-width="1.5"/>
+    <text x="12" y="15" font-size="9.5" font-weight="700" fill="#1E293B">СТОХАСТИЧЕСКИЙ ПРОЦЕССОР (вычислительное ядро)</text>
+    <text x="442" y="15" text-anchor="end" font-size="8" font-weight="600" fill="#475569">Подложка ускорителя вывода</text>
+
+    <!-- Context Staging Register -->
+    <g transform="translate(12, 30)">
+      <rect width="431" height="28" rx="1" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="0.8"/>
+      <text x="10" y="18" font-size="8.5" font-weight="700" fill="#0F172A">Регистр подготовки контекста [c_t]</text>
+      <text x="420" y="18" text-anchor="end" font-size="7.5" font-family="Courier New, monospace" fill="#475569">[Промпт | история | наблюдение o_t]</text>
+    </g>
+
+    <!-- Arrow down to Neural Core -->
+    <path d="M 227,58 L 227,66" fill="none" stroke="#581C87" stroke-width="1.5" marker-end="url(#arr-purple)"/>
+
+    <!-- Neural Compute Core -->
+    <g transform="translate(12, 66)">
+      <rect width="431" height="42" rx="1" fill="#FFFFFF" stroke="#581C87" stroke-width="1.2"/>
+      <rect width="4" height="42" fill="#581C87"/>
+      <text x="12" y="16" font-size="8.8" font-weight="700" fill="#581C87">Матрица весов [W_θ] и авторегрессионный конвейер</text>
+      <text x="12" y="32" font-size="7.8" font-family="Courier New, monospace" fill="#334155">z_t = Softmax(f_θ(c_t) / T) ∈ ℝ^|V| · предзаполнение (GEMM) ↔ декодирование (GEMV)</text>
+    </g>
+
+    <!-- Balanced Branching Arrows down to Deliberator and FSM -->
+    <path d="M 117,108 L 117,116" fill="none" stroke="#581C87" stroke-width="1.5" marker-end="url(#arr-purple)"/>
+    <path d="M 338,108 L 338,116" fill="none" stroke="#581C87" stroke-width="1.5" marker-end="url(#arr-purple)"/>
+
+    <!-- Speculative Deliberator & Grammar Decoder (2 Column Split) -->
+    <g transform="translate(12, 116)">
+      <!-- Left: Speculative Deliberator -->
+      <g transform="translate(0, 0)">
+        <rect width="210" height="42" rx="1" fill="#F8FAFC" stroke="#334155" stroke-width="0.8"/>
+        <text x="10" y="16" font-size="8" font-weight="700" fill="#0F172A">Спекулятивный обдумыватель</text>
+        <text x="10" y="30" font-size="7.2" font-family="Courier New, monospace" fill="#475569">Поиск MCTS / верификатор PRM</text>
+      </g>
+
+      <!-- Right: Grammar Logit Mask -->
+      <g transform="translate(221, 0)">
+        <rect width="210" height="42" rx="1" fill="#F8FAFC" stroke="#334155" stroke-width="0.8"/>
+        <text x="10" y="16" font-size="8" font-weight="700" fill="#0F172A">Маска логитов грамматики (FSM)</text>
+        <text x="10" y="30" font-size="7.2" font-family="Courier New, monospace" fill="#B45309">Обеспечивает синтаксическую корректность</text>
+      </g>
+    </g>
+
+    <!-- Balanced Converging Arrows into Action Proposal -->
+    <path d="M 117,158 L 117,166" fill="none" stroke="#581C87" stroke-width="1.5" marker-end="url(#arr-purple)"/>
+    <path d="M 338,158 L 338,166" fill="none" stroke="#581C87" stroke-width="1.5" marker-end="url(#arr-purple)"/>
+
+    <!-- Emitted Action Proposal Register -->
+    <g transform="translate(12, 166)">
+      <rect width="431" height="34" rx="1" fill="#FAF5FF" stroke="#581C87" stroke-width="1"/>
+      <text x="12" y="21" font-size="8.5" font-weight="700" fill="#581C87">Регистр предложения действия [a_prop]</text>
+      <text x="420" y="21" text-anchor="end" font-size="7.5" font-family="Courier New, monospace" fill="#6B21A8">Статус: [COMPLETED | TRUNCATED | REFUSAL]</text>
+    </g>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- BIDIRECTIONAL ATTENTION MEMORY BUS (BETWEEN SPU & MEMORY)         -->
+  <!-- ================================================================= -->
+  <g transform="translate(523, 130)">
+    <line x1="6" y1="12" x2="88" y2="12" stroke="#0F766E" stroke-width="3"/>
+    <polygon points="6,12 14,8 14,16" fill="#0F766E"/>
+    <polygon points="88,12 80,8 80,16" fill="#0F766E"/>
+    <text x="47" y="4" text-anchor="middle" font-size="7.5" font-weight="700" fill="#0F766E">ШИНА ВНИМАНИЯ</text>
+    <text x="47" y="24" text-anchor="middle" font-size="7" font-family="Courier New, monospace" fill="#475569">HBM3e (3,4 ТБ/с)</text>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- 2. TOP-RIGHT: CONTEXT & MEMORY HIERARCHY                          -->
+  <!-- ================================================================= -->
+  <g transform="translate(617, 36)">
+    <rect width="455" height="212" rx="2" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.5"/>
+    <rect width="455" height="22" fill="#F0FDF4" stroke="#0F766E" stroke-width="1.5"/>
+    <text x="12" y="15" font-size="9.5" font-weight="700" fill="#0F766E">ИЕРАРХИЯ КОНТЕКСТА И ПАМЯТИ</text>
+    <text x="442" y="15" text-anchor="end" font-size="8" font-weight="600" fill="#0F766E">Иерархические уровни состояния</text>
+
+    <!-- Tier 1: L1 Working Context -->
+    <g transform="translate(12, 30)">
+      <rect width="431" height="42" rx="1" fill="#FFFFFF" stroke="#0F766E" stroke-width="1"/>
+      <rect width="4" height="42" fill="#0F766E"/>
+      <text x="12" y="16" font-size="8.5" font-weight="700" fill="#0F766E">L1: активное рабочее окно контекста [HBM ускорителя]</text>
+      <text x="12" y="30" font-size="7.5" font-family="Courier New, monospace" fill="#334155">Поглотители внимания · скользящий черновик · бюджет рабочего набора (128 тыс.–1 млн токенов)</text>
+    </g>
+
+    <!-- Arrow down Tier 1 -> Tier 2 -->
+    <path d="M 227,72 L 227,82" fill="none" stroke="#0F766E" stroke-width="1.5" marker-end="url(#arr-teal)"/>
+
+    <!-- Tier 2: L2 Virtual Paged KV-Cache -->
+    <g transform="translate(12, 82)">
+      <rect width="431" height="42" rx="1" fill="#FFFFFF" stroke="#334155" stroke-width="0.8"/>
+      <text x="12" y="16" font-size="8.5" font-weight="700" fill="#0F172A">L2: виртуальный постраничный KV-кеш [DRAM хоста / CXL]</text>
+      <text x="12" y="30" font-size="7.5" font-family="Courier New, monospace" fill="#475569">Таблицы PagedAttention · префиксное дерево · асинхронная подкачка с хоста (64 ГБ/с)</text>
+    </g>
+
+    <!-- Arrow down Tier 2 -> Tier 3 -->
+    <path d="M 227,124 L 227,134" fill="none" stroke="#0F766E" stroke-width="1.5" marker-end="url(#arr-teal)"/>
+
+    <!-- Tier 3: L3 Persistent Episodic Store -->
+    <g transform="translate(12, 134)">
+      <rect width="431" height="42" rx="1" fill="#FFFFFF" stroke="#15803D" stroke-width="0.8"/>
+      <text x="12" y="16" font-size="8.5" font-weight="700" fill="#15803D">L3: постоянное эпизодическое хранилище [локальный NVMe / объектное хранилище]</text>
+      <text x="12" y="30" font-size="7.5" font-family="Courier New, monospace" fill="#475569">Векторный индекс HNSW · реляционное состояние · воспроизведение журнала упреждающей записи (WAL)</text>
+    </g>
+
+    <!-- Cache Management Line -->
+    <text x="227" y="196" text-anchor="middle" font-size="7.2" font-weight="600" fill="#64748B">Двухфазная фиксация CoT · инвалидация кеша</text>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- 3. CENTRAL TRAJECTORY BUS (SYSTEM INTERCONNECT)                   -->
+  <!-- ================================================================= -->
+  <g transform="translate(68, 278)">
+    <rect width="1004" height="26" rx="2" fill="#1E293B" stroke="#0F172A" stroke-width="1"/>
+    <!-- 3 Distinct Lanes -->
+    <text x="24" y="17" font-size="7.5" font-family="Courier New, monospace" font-weight="700" fill="#93C5FD">ШИНА АДРЕСОВ / KV [/64]</text>
+    <text x="320" y="17" font-size="7.5" font-family="Courier New, monospace" font-weight="700" fill="#86EFAC">ШИНА ДАННЫХ / ТОКЕНОВ [B × d_model] ── наблюдения o_t и токены действий</text>
+    <text x="760" y="17" font-size="7.5" font-family="Courier New, monospace" font-weight="700" fill="#FCA5A5">ШИНА УПРАВЛЕНИЯ И IRQ [TRAP / ESCROW / COMMIT]</text>
+  </g>
+
+  <!-- Bus Interconnect Taps -->
+  <!-- SPU to Bus -->
+  <path d="M 235,268 L 235,278" fill="none" stroke="#581C87" stroke-width="2" marker-end="url(#arr-purple)"/>
+  <!-- Memory to Bus -->
+  <path d="M 845,268 L 845,278" fill="none" stroke="#0F766E" stroke-width="2" marker-end="url(#arr-teal)"/>
+
+  <!-- ================================================================= -->
+  <!-- 4. MIDDLE: THE AGENT OPERATING SYSTEM (CONTROL PLANE)              -->
+  <!-- ================================================================= -->
+  <g transform="translate(68, 314)">
+    <rect width="1004" height="152" rx="2" fill="#FFFFFF" stroke="#334155" stroke-width="1.5"/>
+    <rect width="1004" height="22" fill="#F1F5F9" stroke="#334155" stroke-width="1.5"/>
+    <text x="12" y="15" font-size="9.5" font-weight="700" fill="#0F172A">ПЛОСКОСТЬ УПРАВЛЕНИЯ ОС АГЕНТА</text>
+    <text x="990" y="15" text-anchor="end" font-size="8" font-weight="600" fill="#475569">Детерминированная плоскость управления хоста</text>
+
+    <!-- Bus tap down into OS -->
+    <path d="M 502,-10 L 502,0" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arr-slate)"/>
+
+    <!-- 4 Subsystem Modules -->
+    <g transform="translate(12, 30)">
+      <!-- Module 1: Agent Control Block -->
+      <g transform="translate(0, 0)">
+        <rect width="218" height="66" rx="1" fill="#F8FAFC" stroke="#334155" stroke-width="0.8"/>
+        <text x="10" y="16" font-size="8" font-weight="700" fill="#0F172A">Блок управления агентом (ACB)</text>
+        <text x="10" y="30" font-size="7.2" font-family="Courier New, monospace" fill="#334155">PID траектории · счетчик команд</text>
+        <text x="10" y="44" font-size="7.2" font-family="Courier New, monospace" fill="#0F766E">Бюджет: B_consumed / B_max</text>
+        <text x="10" y="58" font-size="7.2" font-family="Courier New, monospace" fill="#475569">Жизненный цикл: [INIT, RUN, SUSP, HALT]</text>
+      </g>
+
+      <!-- Module 2: Signal & Interrupt Reactor -->
+      <g transform="translate(232, 0)">
+        <rect width="218" height="66" rx="1" fill="#F8FAFC" stroke="#991B1B" stroke-width="0.8"/>
+        <text x="10" y="16" font-size="8" font-weight="700" fill="#991B1B">Реактор сигналов и ловушек</text>
+        <text x="10" y="30" font-size="7.2" font-family="Courier New, monospace" fill="#334155">Сигналы POSIX: SIGINT, SIGPAUSE</text>
+        <text x="10" y="44" font-size="7.2" font-family="Courier New, monospace" fill="#991B1B">Ловушки вытеснения: [LOOP, BUDGET]</text>
+        <text x="10" y="58" font-size="7.2" font-family="Courier New, monospace" fill="#B45309">Шлюз эскроу авторизации человеком</text>
+      </g>
+
+      <!-- Module 3: Verification Enclave -->
+      <g transform="translate(464, 0)">
+        <rect width="218" height="66" rx="1" fill="#F8FAFC" stroke="#0F766E" stroke-width="0.8"/>
+        <text x="10" y="16" font-size="8" font-weight="700" fill="#0F766E">Анклав верификации</text>
+        <text x="10" y="30" font-size="7.2" font-family="Courier New, monospace" fill="#334155">Сторожевые таймеры замыкания инвариантов</text>
+        <text x="10" y="44" font-size="7.2" font-family="Courier New, monospace" fill="#0F766E">Автоматические запускатели тестов и линтеров</text>
+        <text x="10" y="58" font-size="7.2" font-family="Courier New, monospace" fill="#991B1B">Обнаруживает дефекты правдоподобного отказа</text>
+      </g>
+
+      <!-- Module 4: Saga Coordinator -->
+      <g transform="translate(696, 0)">
+        <rect width="222" height="66" rx="1" fill="#F8FAFC" stroke="#B45309" stroke-width="0.8"/>
+        <text x="10" y="16" font-size="8" font-weight="700" fill="#B45309">Координатор отказоустойчивости саг</text>
+        <text x="10" y="30" font-size="7.2" font-family="Courier New, monospace" fill="#334155">Менеджер границ обратимости</text>
+        <text x="10" y="44" font-size="7.2" font-family="Courier New, monospace" fill="#B45309">Компенсирующие действия (T_i → C_i)</text>
+        <text x="10" y="58" font-size="7.2" font-family="Courier New, monospace" fill="#15803D">Восстановление из событий WAL</text>
+      </g>
+    </g>
+
+    <!-- Operating System Governance Invariant Bar -->
+    <g transform="translate(12, 108)">
+      <rect width="918" height="30" rx="1" fill="#F8FAFC" stroke="#334155" stroke-width="0.8"/>
+      <text x="14" y="19" font-size="8" font-weight="700" fill="#1E293B">ФИЛЬТР АВТОРИЗАЦИИ:</text>
+      <text x="140" y="19" font-size="7.5" font-family="Courier New, monospace" fill="#0F172A">Преобразует непроверенное предложение [a_prop] ──(ослабление возможностей и проверка инвариантов)──&gt; разрешенное действие [a_perm]</text>
+    </g>
+
+    <!-- Clear Vertical DMA Channel on the Right Side (x=942 in OS Plane) -->
+    <g transform="translate(942, 35)">
+      <rect width="50" height="95" rx="1" fill="#F0FDF4" stroke="#0F766E" stroke-width="0.8" stroke-dasharray="2,2"/>
+      <!-- Background badge for text so the bus line does not collide -->
+      <rect x="4" y="28" width="42" height="38" rx="2" fill="#FFFFFF" stroke="#0F766E" stroke-width="0.6"/>
+      <text x="25" y="40" text-anchor="middle" font-size="7" font-family="Courier New, monospace" font-weight="700" fill="#0F766E">DMA</text>
+      <text x="25" y="51" text-anchor="middle" font-size="6.8" font-family="Courier New, monospace" font-weight="700" fill="#0F766E">КАНАЛ</text>
+      <text x="25" y="61" text-anchor="middle" font-size="6" font-family="Courier New, monospace" fill="#15803D">[шина o_t]</text>
+    </g>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- 5. LOWER: I/O & PERIPHERAL ACTUATION SUBSYSTEM                    -->
+  <!-- ================================================================= -->
+  <g transform="translate(68, 476)">
+    <rect width="1004" height="135" rx="2" fill="#FFFFFF" stroke="#B45309" stroke-width="1.5"/>
+    <rect width="1004" height="22" fill="#FEF9F3" stroke="#B45309" stroke-width="1.5"/>
+    <text x="12" y="15" font-size="9.5" font-weight="700" fill="#B45309">ПОДСИСТЕМА ВВОДА-ВЫВОДА И ПЕРИФЕРИЙНОГО ИСПОЛНЕНИЯ (инструменты и граница изоляции)</text>
+    <text x="990" y="15" text-anchor="end" font-size="8" font-weight="600" fill="#B45309">Граница исполнения в песочнице</text>
+
+    <!-- Action Dispatch Arrow from OS -->
+    <path d="M 502,-10 L 502,0" fill="none" stroke="#B45309" stroke-width="2" marker-end="url(#arr-amber)"/>
+
+    <g transform="translate(12, 30)">
+      <!-- Unit 1: MCP Peripheral Bus -->
+      <g transform="translate(0, 0)">
+        <rect width="310" height="52" rx="1" fill="#F8FAFC" stroke="#B45309" stroke-width="0.8"/>
+        <text x="10" y="16" font-size="8" font-weight="700" fill="#B45309">Шина Model Context Protocol (MCP)</text>
+        <text x="10" y="30" font-size="7.2" font-family="Courier New, monospace" fill="#334155">Драйверы JSON-RPC 2.0 · реестр схем</text>
+        <text x="10" y="44" font-size="7.2" font-family="Courier New, monospace" fill="#475569">Асинхронный опрос инструментов и неблокирующее ожидание</text>
+      </g>
+
+      <!-- Unit 2: Execution Sandbox -->
+      <g transform="translate(335, 0)">
+        <rect width="310" height="52" rx="1" fill="#F8FAFC" stroke="#991B1B" stroke-width="0.8"/>
+        <text x="10" y="16" font-size="8" font-weight="700" fill="#991B1B">Песочницы исполнения с копированием при записи</text>
+        <text x="10" y="30" font-size="7.2" font-family="Courier New, monospace" fill="#334155">MicroVM Firecracker · gVisor · WASM</text>
+        <text x="10" y="44" font-size="7.2" font-family="Courier New, monospace" fill="#991B1B">Изоляция W ⊕ X и прокси исходящего трафика NetNS</text>
+      </g>
+
+      <!-- Unit 3: Observation Normalizer -->
+      <g transform="translate(670, 0)">
+        <rect width="310" height="52" rx="1" fill="#F8FAFC" stroke="#0F766E" stroke-width="0.8"/>
+        <text x="10" y="16" font-size="8" font-weight="700" fill="#0F766E">Конвейер нормализации наблюдений</text>
+        <text x="10" y="30" font-size="7.2" font-family="Courier New, monospace" fill="#334155">Очистка ANSI · детерминированные коды выхода</text>
+        <text x="10" y="44" font-size="7.2" font-family="Courier New, monospace" fill="#0F766E">Дистилляция трассировки → подготовленное наблюдение [o_t]</text>
+      </g>
+    </g>
+
+    <!-- Physical Actuation Ports across the boundary -->
+    <g transform="translate(12, 90)">
+      <rect width="980" height="34" rx="1" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.8"/>
+      <text x="12" y="21" font-size="7.5" font-weight="700" fill="#475569">ПОРТЫ ИСПОЛНЕНИЯ:</text>
+      
+      <!-- Port 1: Bash -->
+      <rect x="135" y="6" width="175" height="22" rx="1" fill="#F1F5F9" stroke="#334155" stroke-width="0.6"/>
+      <text x="222" y="20" text-anchor="middle" font-size="7.5" font-family="Courier New, monospace" fill="#0F172A">Терминал Bash / оболочка</text>
+
+      <!-- Port 2: Filesystem -->
+      <rect x="325" y="6" width="175" height="22" rx="1" fill="#F1F5F9" stroke="#334155" stroke-width="0.6"/>
+      <text x="412" y="20" text-anchor="middle" font-size="7.5" font-family="Courier New, monospace" fill="#0F172A">Дерево файлов рабочей области</text>
+
+      <!-- Port 3: Web / APIs & Multi-Agent -->
+      <rect x="515" y="6" width="265" height="22" rx="1" fill="#F1F5F9" stroke="#334155" stroke-width="0.6"/>
+      <text x="647" y="20" text-anchor="middle" font-size="7.5" font-family="Courier New, monospace" fill="#0F172A">API REST / БД · мультиагентная сеть</text>
+
+      <!-- Port 4: User Gate -->
+      <rect x="795" y="6" width="185" height="22" rx="1" fill="#FEF2F2" stroke="#991B1B" stroke-width="0.6"/>
+      <text x="887" y="20" text-anchor="middle" font-size="7.5" font-family="Courier New, monospace" font-weight="700" fill="#991B1B">Терминал с участием человека</text>
+    </g>
+  </g>
+
+  <!-- Observation DMA return to Central System Bus through dedicated channel -->
+  <!-- Bottom segment: from I/O pipeline (y=476) up to badge bottom (y=415) -->
+  <path d="M 1035,476 L 1035,415" fill="none" stroke="#0F766E" stroke-width="2"/>
+  <!-- Top segment: from badge top (y=377) up to Central System Bus (y=304) -->
+  <path d="M 1035,377 L 1035,304" fill="none" stroke="#0F766E" stroke-width="2" marker-end="url(#arr-teal)"/>
+
+  <!-- ================================================================= -->
+  <!-- 6. THE POLICY COMPILER (FEEDBACK & SELF-IMPROVEMENT LOOP)         -->
+  <!-- ================================================================= -->
+  <g transform="translate(52, 650)">
+    <rect width="1036" height="98" rx="4" fill="#FFFFFF" stroke="#166534" stroke-width="1.5"/>
+    <rect width="1036" height="20" rx="4" fill="#F0FDF4" stroke="#166534" stroke-width="1.5"/>
+    <text x="14" y="14" font-size="8.5" font-weight="700" fill="#166534">КОМПИЛЯТОР ПОЛИТИК (обратная связь по траекториям, компиляция контекста и непрерывная оптимизация)</text>
+    <text x="1020" y="14" text-anchor="end" font-size="8" font-weight="600" fill="#166534">Непрерывная оптимизация политики</text>
+
+    <!-- 4 Pipeline Stages -->
+    <g transform="translate(14, 28)">
+      <!-- Stage 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="230" height="56" rx="1" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="0.8"/>
+        <text x="10" y="16" font-size="7.5" font-weight="700" fill="#0F172A">Сборщик телеметрии</text>
+        <text x="10" y="30" font-size="6.8" font-family="Courier New, monospace" fill="#475569">Извлечение каузального DAG и участков</text>
+        <text x="10" y="44" font-size="6.8" font-family="Courier New, monospace" fill="#0F766E">Маскирование потерь по ходам M_t</text>
+      </g>
+
+      <!-- Arrow 1 -> 2 -->
+      <path d="M 230,28 L 248,28" fill="none" stroke="#166534" stroke-width="1.2" marker-end="url(#arr-green)"/>
+
+      <!-- Stage 2 -->
+      <g transform="translate(248, 0)">
+        <rect width="230" height="56" rx="1" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="0.8"/>
+        <text x="10" y="16" font-size="7.5" font-weight="700" fill="#0F172A">Фильтр курирования и исправления</text>
+        <text x="10" y="30" font-size="6.8" font-family="Courier New, monospace" fill="#475569">Сито дезактивации загрязнений</text>
+        <text x="10" y="44" font-size="6.8" font-family="Courier New, monospace" fill="#991B1B">Контрфактические песочницы</text>
+      </g>
+
+      <!-- Arrow 2 -> 3 -->
+      <path d="M 478,28 L 496,28" fill="none" stroke="#166534" stroke-width="1.2" marker-end="url(#arr-green)"/>
+
+      <!-- Stage 3 -->
+      <g transform="translate(496, 0)">
+        <rect width="230" height="56" rx="1" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="0.8"/>
+        <text x="10" y="16" font-size="7.5" font-weight="700" fill="#0F172A">Компиляция контекста (SFT)</text>
+        <text x="10" y="30" font-size="6.8" font-family="Courier New, monospace" fill="#334155">Настройка адаптеров LoRA</text>
+        <text x="10" y="44" font-size="6.8" font-family="Courier New, monospace" fill="#475569">Вкладывает промпты в веса</text>
+      </g>
+
+      <!-- Arrow 3 -> 4 -->
+      <path d="M 726,28 L 744,28" fill="none" stroke="#166534" stroke-width="1.2" marker-end="url(#arr-green)"/>
+
+      <!-- Stage 4 -->
+      <g transform="translate(744, 0)">
+        <rect width="264" height="56" rx="1" fill="#F8FAFC" stroke="#166534" stroke-width="0.8"/>
+        <text x="10" y="16" font-size="7.5" font-weight="700" fill="#166534">Проверяемое RL (RLVR / GRPO)</text>
+        <text x="10" y="30" font-size="6.8" font-family="Courier New, monospace" fill="#166534">Детерминированные оракулы награды</text>
+        <text x="10" y="44" font-size="6.8" font-family="Courier New, monospace" fill="#166534">Обновления весов: Δθ_{k+1}</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Clean Feedback Bus from Policy Compiler up into Stochastic Processor Core -->
+  <path d="M 52,699 L 26,699 L 26,132 L 68,132" fill="none" stroke="#166534" stroke-width="1.8" stroke-dasharray="4,2" marker-end="url(#arr-green)"/>
+  <rect x="5" y="380" width="42" height="32" rx="1" fill="#FFFFFF" stroke="#166534" stroke-width="0.8"/>
+  <text x="26" y="394" text-anchor="middle" font-size="6.5" font-family="Courier New, monospace" font-weight="700" fill="#166534">ШИНА Δθ</text>
+  <text x="26" y="405" text-anchor="middle" font-size="5.8" font-family="Courier New, monospace" fill="#166534">ВЕСА</text>
+
+</svg>

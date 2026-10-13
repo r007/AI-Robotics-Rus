@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 530" width="100%" height="100%"
+     font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr-rose" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#e11d48"/>
+    </marker>
+    <marker id="arr-emerald" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#059669"/>
+    </marker>
+    <marker id="arr-blue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#0284c7"/>
+    </marker>
+    <marker id="arr-slate" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1000" height="530" fill="#ffffff"/>
+
+  <!-- ================================================================= -->
+  <!-- PANEL A: SYNCHRONOUS BLOCKING DISPATCH (LEFT)                     -->
+  <!-- ================================================================= -->
+  <g transform="translate(20, 20)">
+    <rect x="0" y="0" width="465" height="490" rx="4" fill="#fff1f2" stroke="#f43f5e" stroke-width="1.2"/>
+    <path d="M 0 4 Q 0 0 4 0 L 320 0 Q 324 0 324 4 L 324 24 L 0 24 Z" fill="#ffe4e6"/>
+    <text x="12" y="16" font-size="10.5" font-weight="700" fill="#9f1239" letter-spacing="0.04em">(a) СИНХРОННАЯ БЛОКИРУЮЩАЯ ДИСПЕТЧЕРИЗАЦИЯ</text>
+    <text x="453" y="16" font-size="10" font-weight="600" fill="#be123c" text-anchor="end">Связанное узкое место</text>
+
+    <!-- Step 1: Model Emits Call -->
+    <rect x="14" y="34" width="437" height="66" rx="3" fill="#ffffff" stroke="#fecdd3" stroke-width="1"/>
+    <text x="24" y="52" font-size="11" font-weight="700" fill="#0f172a">Базовая модель (декодирование вывода)</text>
+    <text x="24" y="68" font-size="9.5" fill="#475569">Вызов инструмента на ходе t</text>
+    <rect x="24" y="74" width="417" height="20" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="32" y="88" font-size="9" font-family="ui-monospace, monospace" fill="#be123c">ToolCall("cargo_build", {"target": "--release"})</text>
+
+    <!-- Arrow 1 -> 2 -->
+    <line x1="232" y1="100" x2="232" y2="120" stroke="#e11d48" stroke-width="1.5" marker-end="url(#arr-rose)"/>
+
+    <!-- Step 2: Supervisor Suspended -->
+    <rect x="14" y="122" width="437" height="150" rx="3" fill="#ffffff" stroke="#fecdd3" stroke-width="1"/>
+    <text x="24" y="140" font-size="11" font-weight="700" fill="#0f172a">Рабочий обвязки: закреплен / приостановлен</text>
+    <text x="24" y="156" font-size="9.5" fill="#475569">Рабочий блокируется, пока дочерний процесс не завершится:</text>
+    <rect x="24" y="164" width="417" height="24" rx="2" fill="#fff1f2" stroke="#fecdd3" stroke-width="1"/>
+    <text x="32" y="180" font-size="9.5" font-family="ui-monospace, monospace" fill="#9f1239">waitpid(child_pid, &amp;status, 0); // Заблокировано на 180 с – 400 с</text>
+
+    <!-- Failure Cascade Details -->
+    <g transform="translate(24, 200)" font-size="9" fill="#475569">
+      <text x="0" y="0" font-weight="700" fill="#be123c">Голодание рабочих:</text>
+      <text x="108" y="0">Слот потока заблокирован на вводе-выводе потомка</text>
+      <text x="0" y="16" font-weight="700" fill="#be123c">Разрыв канала:</text>
+      <text x="108" y="16">Внеполосная отмена потеряна</text>
+      <text x="0" y="32" font-weight="700" fill="#be123c">Потеря параллелизма:</text>
+      <text x="108" y="32">Нет параллельной работы во время блокировки</text>
+      <text x="0" y="48" font-weight="700" fill="#be123c">Слот обслуживания занят:</text>
+      <text x="108" y="48">Соединение простаивает · емкость оспаривается</text>
+    </g>
+
+    <!-- Arrow 2 -> 3 -->
+    <line x1="232" y1="272" x2="232" y2="292" stroke="#e11d48" stroke-width="1.5" marker-end="url(#arr-rose)"/>
+
+    <!-- Step 3: Subprocess Execution -->
+    <rect x="14" y="294" width="437" height="88" rx="3" fill="#ffffff" stroke="#fecdd3" stroke-width="1"/>
+    <text x="24" y="312" font-size="11" font-weight="700" fill="#0f172a">Синхронное исполнение дочернего процесса</text>
+    <text x="24" y="328" font-size="9.5" fill="#475569">Сборка контейнера</text>
+    <rect x="24" y="336" width="417" height="38" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="32" y="350" font-size="9" font-family="ui-monospace, monospace" fill="#334155">Длительность: 400 секунд (блокировка головы очереди по настенным часам)</text>
+    <text x="32" y="364" font-size="8.5" font-family="ui-monospace, monospace" fill="#be123c">Обвязка не отвечает</text>
+
+    <!-- Arrow 3 -> 4 -->
+    <line x1="232" y1="382" x2="232" y2="402" stroke="#e11d48" stroke-width="1.5" marker-end="url(#arr-rose)"/>
+
+    <!-- Step 4: Delayed Return -->
+    <rect x="14" y="404" width="437" height="72" rx="3" fill="#ffffff" stroke="#fecdd3" stroke-width="1"/>
+    <text x="24" y="422" font-size="11" font-weight="700" fill="#0f172a">Отложенный возврат наблюдения (ход t+1)</text>
+    <text x="24" y="438" font-size="9.5" fill="#475569">waitpid освобождает рабочего</text>
+    <rect x="24" y="446" width="417" height="22" rx="2" fill="#fff1f2" stroke="#fecdd3" stroke-width="1"/>
+    <text x="32" y="460" font-size="8.5" font-family="ui-monospace, monospace" fill="#9f1239">T_task = TTFT + блокировка 400 с</text>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- PANEL B: ASYNCHRONOUS JOB ESCROW DISPATCH (RIGHT)                 -->
+  <!-- ================================================================= -->
+  <g transform="translate(515, 20)">
+    <rect x="0" y="0" width="465" height="490" rx="4" fill="#f0fdf4" stroke="#059669" stroke-width="1.2"/>
+    <path d="M 0 4 Q 0 0 4 0 L 335 0 Q 339 0 339 4 L 339 24 L 0 24 Z" fill="#dcfce7"/>
+    <text x="12" y="16" font-size="10.5" font-weight="700" fill="#065f46" letter-spacing="0.04em">(b) АСИНХРОННАЯ ДИСПЕТЧЕРИЗАЦИЯ ДЕСКРИПТОРА ЗАДАНИЯ</text>
+    <text x="453" y="16" font-size="10" font-weight="600" fill="#059669" text-anchor="end">Развязанная архитектура</text>
+
+    <!-- Step 1: Model Emits Call -->
+    <rect x="14" y="34" width="437" height="66" rx="3" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+    <text x="24" y="52" font-size="11" font-weight="700" fill="#0f172a">Базовая модель (декодирование вывода)</text>
+    <text x="24" y="68" font-size="9.5" fill="#475569">Вызов инструмента перехвачен</text>
+    <rect x="24" y="74" width="417" height="20" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="32" y="88" font-size="9" font-family="ui-monospace, monospace" fill="#047857">ToolCall("spawn_cargo_build", {"target": "--release"})</text>
+
+    <!-- Arrow 1 -> 2 -->
+    <line x1="232" y1="100" x2="232" y2="120" stroke="#059669" stroke-width="1.5" marker-end="url(#arr-emerald)"/>
+
+    <!-- Step 2: Escrow Registration & Immediate Receipt -->
+    <rect x="14" y="122" width="437" height="150" rx="3" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+    <text x="24" y="140" font-size="11" font-weight="700" fill="#0f172a">Дескриптор задания и немедленная квитанция</text>
+    <text x="24" y="156" font-size="9.5" fill="#475569">Дескриптор зарегистрирован, рабочий освобожден</text>
+    <rect x="24" y="164" width="417" height="34" rx="2" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+    <text x="32" y="177" font-size="8.5" font-family="ui-monospace, monospace" fill="#065f46">H = ⟨job_id, t_spawn, pid=58214, σ_state=RUNNING, P_io, τ_timeout⟩</text>
+    <text x="32" y="191" font-size="8.5" font-family="ui-monospace, monospace" fill="#0369a1">Квитанция: {"status": "dispatched", "job_id": "job_8f93c10a4e"}</text>
+
+    <!-- Decoupled Systems Advantages -->
+    <g transform="translate(24, 210)" font-size="9" fill="#475569">
+      <text x="0" y="0" font-weight="700" fill="#065f46">Поток освобожден:</text>
+      <text x="105" y="0">Возвращается в пул менее чем за 2 мс</text>
+      <text x="0" y="15" font-weight="700" fill="#065f46">Отзывчивое управление:</text>
+      <text x="105" y="15">Отмена · коррекция оператором</text>
+      <text x="0" y="30" font-weight="700" fill="#065f46">Параллельная работа:</text>
+      <text x="105" y="30">Модель планирует параллельно</text>
+      <text x="0" y="45" font-weight="700" fill="#065f46">Присутствие KV:</text>
+      <text x="105" y="45">Оставлено системе обслуживания</text>
+    </g>
+
+    <!-- Arrow 2 -> 3 -->
+    <line x1="232" y1="272" x2="232" y2="292" stroke="#059669" stroke-width="1.5" marker-end="url(#arr-emerald)"/>
+
+    <!-- Step 3: Background Sandbox Execution -->
+    <rect x="14" y="294" width="437" height="88" rx="3" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+    <text x="24" y="312" font-size="11" font-weight="700" fill="#0f172a">Асинхронное фоновое исполнение</text>
+    <text x="24" y="328" font-size="9.5" fill="#475569">В песочнице · stdout в кольцевой буфер</text>
+    <rect x="24" y="336" width="417" height="38" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="32" y="350" font-size="9" font-family="ui-monospace, monospace" fill="#334155">Неблокирующее исполнение: PID 58214 отслеживается через epoll / SIGCHLD</text>
+    <text x="32" y="364" font-size="8.5" font-family="ui-monospace, monospace" fill="#047857">Сторожевой таймер охраняет предельный срок τ_timeout (например, 600 с)</text>
+
+    <!-- Arrow 3 -> 4 -->
+    <line x1="232" y1="382" x2="232" y2="402" stroke="#059669" stroke-width="1.5" marker-end="url(#arr-emerald)"/>
+
+    <!-- Step 4: Event-Driven Resumption -->
+    <rect x="14" y="404" width="437" height="72" rx="3" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+    <text x="24" y="422" font-size="11" font-weight="700" fill="#0f172a">Возобновление по событию (ход t+1)</text>
+    <text x="24" y="438" font-size="9.5" fill="#475569">Обратный вызов о завершении или зонд</text>
+    <rect x="24" y="446" width="417" height="22" rx="2" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+    <text x="32" y="460" font-size="8.5" font-family="ui-monospace, monospace" fill="#065f46">Наблюдение в контекст</text>
+  </g>
+</svg>

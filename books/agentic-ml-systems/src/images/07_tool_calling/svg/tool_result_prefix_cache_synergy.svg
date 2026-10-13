@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" width="100%" height="100%"
+     font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr-blue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#0284c7"/>
+    </marker>
+    <marker id="arr-emerald" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#059669"/>
+    </marker>
+    <marker id="arr-rose" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#e11d48"/>
+    </marker>
+    <marker id="arr-purple" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#7c3aed"/>
+    </marker>
+    <marker id="arr-slate" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="620" fill="#ffffff"/>
+
+  <!-- ================================================================= -->
+  <!-- UPPER SECTION: ACTUATION GATEWAY TOOL RESULT MEMOIZATION           -->
+  <!-- ================================================================= -->
+  <g transform="translate(30, 20)">
+    <rect x="0" y="0" width="940" height="170" rx="4" fill="#faf5ff" stroke="#7c3aed" stroke-width="1.2"/>
+    <path d="M 0 4 Q 0 0 4 0 L 360 0 Q 364 0 364 4 L 364 24 L 0 24 Z" fill="#ede9fe"/>
+    <text x="12" y="16" font-size="11" font-weight="700" fill="#6b21a8" letter-spacing="0.04em">ШЛЮЗ ИСПОЛНЕНИЯ: МЕМОИЗАЦИЯ С АДРЕСАЦИЕЙ ПО СОДЕРЖИМОМУ</text>
+    <text x="928" y="16" font-size="10.5" font-weight="600" fill="#7c3aed" text-anchor="end">Детерминированный кеш результатов</text>
+
+    <!-- Inbound Tool Call -->
+    <rect x="18" y="36" width="310" height="118" rx="3" fill="#ffffff" stroke="#ddd6fe" stroke-width="1"/>
+    <text x="28" y="54" font-size="11" font-weight="700" fill="#0f172a">Перехват вызова инструмента</text>
+    <text x="28" y="70" font-size="10" fill="#475569">Кандидатный вызов с аргументами:</text>
+    <rect x="28" y="78" width="290" height="42" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    <g font-family="ui-monospace, monospace" font-size="8.5" fill="#0f172a" transform="translate(36, 92)">
+      <text x="0" y="0">ToolCall("compile", {</text>
+      <text x="10" y="14">"commit": "9a4f2b", "target": "//engine" })</text>
+    </g>
+    <text x="28" y="140" font-size="9.5" fill="#64748b">Дорогое исполнение в контейнере (14,5 с без кеша)</text>
+
+    <!-- Arrow 1 -> 2 -->
+    <line x1="328" y1="95" x2="356" y2="95" stroke="#7c3aed" stroke-width="1.5" marker-end="url(#arr-purple)"/>
+
+    <!-- Hash Computation -->
+    <rect x="358" y="36" width="250" height="118" rx="3" fill="#ffffff" stroke="#ddd6fe" stroke-width="1"/>
+    <text x="368" y="54" font-size="11" font-weight="700" fill="#0f172a">Хеш с адресацией по содержимому</text>
+    <text x="368" y="70" font-size="10" fill="#475569">Детерминированный канонический хеш:</text>
+    <rect x="368" y="78" width="230" height="42" rx="2" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1"/>
+    <text x="376" y="93" font-size="8.5" font-family="ui-monospace, monospace" fill="#6b21a8">k_tool = SHA-256(name ‖ args)</text>
+    <text x="376" y="108" font-size="8" font-family="ui-monospace, monospace" fill="#334155">Хеш: e3b0c44298fc1c14...</text>
+    <text x="368" y="140" font-size="9.5" fill="#047857">Поиск: попадание в таблицу за 0,8 мс</text>
+
+    <!-- Arrow 2 -> 3 -->
+    <line x1="608" y1="95" x2="636" y2="95" stroke="#7c3aed" stroke-width="1.5" marker-end="url(#arr-purple)"/>
+
+    <!-- Stored Observation -->
+    <rect x="638" y="36" width="284" height="118" rx="3" fill="#ffffff" stroke="#ddd6fe" stroke-width="1"/>
+    <text x="648" y="54" font-size="11" font-weight="700" fill="#0f172a">Поток вывода, побайтово идентичный</text>
+    <text x="648" y="70" font-size="10" fill="#475569">Детерминированный текст наблюдения:</text>
+    <rect x="648" y="78" width="264" height="42" rx="2" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+    <g font-family="ui-monospace, monospace" font-size="8.5" fill="#065f46" transform="translate(656, 92)">
+      <text x="0" y="0">"Build complete. 48 targets up-to-date."</text>
+      <text x="0" y="14">"Binary hash: 0x8a91c0e (1,400 tokens)"</text>
+    </g>
+    <text x="648" y="140" font-size="9.5" font-weight="600" fill="#0369a1">Сохраняет побайтовое выравнивание токенов</text>
+  </g>
+
+  <!-- Coupling Arrow: Gateway -> GPU Radix Cache -->
+  <line x1="500" y1="190" x2="500" y2="226" stroke="#059669" stroke-width="2" marker-end="url(#arr-emerald)"/>
+  <rect x="365" y="198" width="270" height="20" rx="2" fill="#ffffff" stroke="#a7f3d0" stroke-width="1"/>
+  <text x="500" y="212" font-size="9.5" font-weight="600" fill="#047857" text-anchor="middle">Токены наблюдения в промпт</text>
+
+  <!-- ================================================================= -->
+  <!-- LOWER SECTION: GPU RADIX-TREE PREFIX CACHE (vLLM / SGLang)        -->
+  <!-- ================================================================= -->
+  <g transform="translate(30, 228)">
+    <rect x="0" y="0" width="940" height="370" rx="4" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.2"/>
+    <path d="M 0 4 Q 0 0 4 0 L 370 0 Q 374 0 374 4 L 374 24 L 0 24 Z" fill="#e0f2fe"/>
+    <text x="12" y="16" font-size="11" font-weight="700" fill="#0369a1" letter-spacing="0.04em">КЕШ ПРЕФИКСОВ KV НА ДЕРЕВЕ RADIX GPU (ДВИЖОК ОБСЛУЖИВАНИЯ)</text>
+    <text x="928" y="16" font-size="10.5" font-weight="600" fill="#0284c7" text-anchor="end">Повторное использование физических кадров памяти</text>
+
+    <!-- Tree Layout -->
+    <!-- Root Node -->
+    <rect x="30" y="140" width="110" height="50" rx="3" fill="#ffffff" stroke="#64748b" stroke-width="1.2"/>
+    <text x="85" y="160" font-size="11" font-weight="700" fill="#0f172a" text-anchor="middle">Корень Radix</text>
+    <text x="85" y="176" font-size="9" font-family="ui-monospace, monospace" fill="#64748b" text-anchor="middle">Префикс \0</text>
+
+    <!-- Edge Root -> Node 1 -->
+    <line x1="140" y1="165" x2="208" y2="165" stroke="#475569" stroke-width="1.5" marker-end="url(#arr-slate)"/>
+    <rect x="146" y="145" width="56" height="15" rx="2" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="174" y="156" font-size="8" font-family="ui-monospace, monospace" fill="#334155" text-anchor="middle">[0..511]</text>
+
+    <!-- Node 1: System Prompt -->
+    <rect x="210" y="130" width="150" height="70" rx="3" fill="#ffffff" stroke="#0284c7" stroke-width="1.2"/>
+    <text x="220" y="150" font-size="10.5" font-weight="700" fill="#0f172a">Узел 1: промпт</text>
+    <text x="220" y="166" font-size="9" fill="#475569">Общие системные инструкции</text>
+    <text x="220" y="182" font-size="9" font-family="ui-monospace, monospace" fill="#0369a1">Кадры KV: F_0 .. F_31</text>
+
+    <!-- Edge Node 1 -> Node 2 -->
+    <line x1="360" y1="165" x2="428" y2="165" stroke="#475569" stroke-width="1.5" marker-end="url(#arr-slate)"/>
+    <rect x="364" y="145" width="60" height="15" rx="2" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="394" y="156" font-size="8" font-family="ui-monospace, monospace" fill="#334155" text-anchor="middle">[512..1535]</text>
+
+    <!-- Node 2: Trajectory Context -->
+    <rect x="430" y="130" width="160" height="70" rx="3" fill="#ffffff" stroke="#0284c7" stroke-width="1.2"/>
+    <text x="440" y="150" font-size="10.5" font-weight="700" fill="#0f172a">Узел 2: траектория</text>
+    <text x="440" y="166" font-size="9" fill="#475569">Запрос и шаги 1..t-1</text>
+    <text x="440" y="182" font-size="9" font-family="ui-monospace, monospace" fill="#0369a1">Кадры KV: F_32 .. F_95</text>
+
+    <!-- Branch Fork from Node 2 -->
+    <!-- Branch A: Divergent / Cache Miss (Upper Path) -->
+    <path d="M 590 145 C 625 145, 625 85, 678 85" fill="none" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr-rose)"/>
+    <!-- Branch A Label Box -->
+    <rect x="586" y="98" width="82" height="24" rx="2" fill="#ffffff" stroke="#fecdd3" stroke-width="1"/>
+    <text x="627" y="110" font-size="7.5" font-family="ui-monospace, monospace" fill="#9f1239" text-anchor="middle">Недетерм.</text>
+    <text x="627" y="119" font-size="7" font-family="ui-monospace, monospace" fill="#be123c" text-anchor="middle">[Несовпадение]</text>
+
+    <!-- Node 3a: Cache Miss Node -->
+    <rect x="680" y="45" width="240" height="85" rx="3" fill="#fff1f2" stroke="#f43f5e" stroke-width="1.2"/>
+    <text x="690" y="64" font-size="10.5" font-weight="700" fill="#9f1239">Ветвь A: промах кеша префиксов</text>
+    <text x="690" y="80" font-size="9.5" fill="#475569">Некешированные токены</text>
+    <rect x="690" y="88" width="220" height="34" rx="2" fill="#ffffff" stroke="#fecdd3" stroke-width="1"/>
+    <text x="696" y="101" font-size="8.5" font-family="ui-monospace, monospace" fill="#be123c">Выделяет новые кадры F_180..F_267</text>
+    <text x="696" y="114" font-size="8.5" font-family="ui-monospace, monospace" fill="#be123c">GEMM предзаполнения (450 мс)</text>
+
+    <!-- Branch B: Memoized / Cache Hit (Lower Path) -->
+    <path d="M 590 185 C 625 185, 625 245, 678 245" fill="none" stroke="#059669" stroke-width="2" marker-end="url(#arr-emerald)"/>
+    <!-- Branch B Label Box -->
+    <rect x="586" y="200" width="82" height="24" rx="2" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+    <text x="627" y="212" font-size="7.5" font-family="ui-monospace, monospace" fill="#065f46" text-anchor="middle">Побайтово равный</text>
+    <text x="627" y="221" font-size="7" font-family="ui-monospace, monospace" fill="#047857" text-anchor="middle">[1536..2935]</text>
+
+    <!-- Node 3b: Cache Hit Node -->
+    <rect x="680" y="205" width="240" height="85" rx="3" fill="#f0fdf4" stroke="#059669" stroke-width="1.5"/>
+    <text x="690" y="224" font-size="10.5" font-weight="700" fill="#065f46">Ветвь B: попадание в кеш префиксов</text>
+    <text x="690" y="240" font-size="9.5" fill="#475569">Совпали мемоизированные токены наблюдения</text>
+    <rect x="690" y="248" width="220" height="34" rx="2" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+    <text x="696" y="261" font-size="8.5" font-family="ui-monospace, monospace" fill="#047857">Использует кадры F_96..F_179</text>
+    <text x="696" y="274" font-size="8.5" font-family="ui-monospace, monospace" fill="#047857">Нулевые FLOP предзаполнения; TTFT &lt; 1,5 мс</text>
+
+    <!-- Continuing path from Node 3b: Generation -->
+    <line x1="800" y1="290" x2="800" y2="315" stroke="#059669" stroke-width="1.5" marker-end="url(#arr-emerald)"/>
+    <rect x="680" y="316" width="240" height="42" rx="3" fill="#ffffff" stroke="#0284c7" stroke-width="1"/>
+    <text x="690" y="333" font-size="10" font-weight="700" fill="#0f172a">Декодирование хода t+1</text>
+    <text x="690" y="348" font-size="8.5" font-family="ui-monospace, monospace" fill="#0369a1">Токен [2936]: модель выдает следующую мысль</text>
+
+    <!-- Tree Legend/Annotations -->
+    <g transform="translate(30, 305)">
+      <rect x="0" y="0" width="560" height="52" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="14" y="18" font-size="10" font-weight="700" fill="#0f172a">Инвариант дерева префиксов Radix:</text>
+      <text x="14" y="33" font-size="9.5" fill="#475569">Детерминированная сериализация · идентичный путь в дереве radix</text>
+      
+    </g>
+  </g>
+</svg>

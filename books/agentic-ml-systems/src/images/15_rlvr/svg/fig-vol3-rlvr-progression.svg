@@ -1,0 +1,249 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 530" width="100%" height="100%"
+     font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="1200" height="530" rx="4" fill="#ffffff"/>
+  <defs>
+    <marker id="arrow-slate" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrow-emerald" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <style>
+    .stage-card { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1.5; rx: 4; ry: 4; }
+    .stage-card-active { fill: #f8fafc; stroke: #10b981; stroke-width: 1.8; rx: 4; ry: 4; }
+    .header-box { rx: 3; ry: 3; }
+    .inner-card { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.2; rx: 3; ry: 3; }
+    .loop-card { fill: #f0fdf4; stroke: #86efac; stroke-width: 1.2; rx: 3; ry: 3; }
+    .title-text { font-family: system-ui, -apple-system, sans-serif; font-size: 14px; font-weight: 700; fill: #0f172a; }
+    .subtitle-text { font-family: system-ui, -apple-system, sans-serif; font-size: 11px; font-weight: 600; fill: #475569; }
+    .body-text { font-family: system-ui, -apple-system, sans-serif; font-size: 11px; fill: #334155; line-height: 1.4; }
+    .body-bold { font-weight: 600; fill: #0f172a; }
+    .code-text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; fill: #0f172a; }
+    .code-accent { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; fill: #2563eb; font-weight: 600; }
+    .code-green { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; fill: #059669; font-weight: 600; }
+    .code-purple { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; fill: #7c3aed; font-weight: 600; }
+    .label-badge { font-family: system-ui, -apple-system, sans-serif; font-size: 9.5px; font-weight: 600; fill: #475569; text-anchor: middle; }
+    .dim-label { font-family: system-ui, -apple-system, sans-serif; font-size: 10px; font-weight: 600; fill: #64748b; }
+    .dim-val { font-family: system-ui, -apple-system, sans-serif; font-size: 10.5px; fill: #1e293b; }
+  </style>
+
+  <!-- Stage 1: Base Pretraining -->
+  <g transform="translate(15, 15)">
+    <rect class="stage-card" x="0" y="0" width="330" height="495"/>
+    <rect class="header-box" x="12" y="12" width="306" height="42" fill="#e2e8f0"/>
+    <text class="title-text" x="22" y="32">Этап 1: базовое предобучение</text>
+    <text class="subtitle-text" x="22" y="47">Широкие априорные знания (разомкнутый)</text>
+
+    <!-- Block 1: Training Objective -->
+    <g transform="translate(12, 66)">
+      <rect class="inner-card" x="0" y="0" width="306" height="80"/>
+      <text class="dim-label" x="12" y="18">ЦЕЛЕВАЯ ФУНКЦИЯ ОПТИМИЗАЦИИ</text>
+      <text class="code-text" x="12" y="38">L_pre(θ) = -Σ log π_θ(x_t | x_&lt;t)</text>
+      <text class="body-text" x="12" y="56">Предсказание следующего токена на веб-данных;</text>
+      <text class="body-text" x="12" y="70">усваивает статистику и грамматику.</text>
+    </g>
+
+    <!-- Block 2: Computational Flow -->
+    <g transform="translate(12, 158)">
+      <rect class="inner-card" x="0" y="0" width="306" height="152"/>
+      <text class="dim-label" x="12" y="18">ВЫЧИСЛИТЕЛЬНАЯ АРХИТЕКТУРА</text>
+
+      <rect x="12" y="28" width="282" height="34" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+      <text class="body-bold" x="20" y="44" font-size="10.5px">Нескурированный корпус веб-масштаба D_pre</text>
+      <text class="subtitle-text" x="20" y="56" font-size="9px">Common Crawl, GitHub, технические книги, ArXiv</text>
+
+      <path d="M 153 62 L 153 76" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow-slate)"/>
+
+      <rect x="12" y="78" width="282" height="34" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text class="code-accent" x="20" y="94" font-size="10.5px">Базовая модель: π_θ(x_t | x_&lt;t)</text>
+      <text class="subtitle-text" x="20" y="106" font-size="9px">Самообучаемые представления трансформера</text>
+
+      <path d="M 153 112 L 153 126" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow-slate)"/>
+
+      <rect x="12" y="128" width="282" height="34" rx="3" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+      <text class="body-text" x="16" y="143" font-size="10px">Продолжение текста в разомкнутом цикле; нет</text>
+      <text class="body-text" x="16" y="155" font-size="10px">нет дисциплины исполнения и контрактов.</text>
+    </g>
+
+    <!-- Block 3: Metrics -->
+    <g transform="translate(12, 322)">
+      <rect class="inner-card" x="0" y="0" width="306" height="155"/>
+      <text class="dim-label" x="12" y="18">ОПЕРАЦИОННЫЕ МЕТРИКИ</text>
+
+      <text class="dim-label" x="12" y="38">Канал обратной связи:</text>
+      <text class="dim-val" x="125" y="38">Нет (самообучение)</text>
+
+      <text class="dim-label" x="12" y="58">Гранулярность надзора:</text>
+      <text class="dim-val" x="150" y="58">Плотные токены по шагам</text>
+
+      <text class="dim-label" x="12" y="78">Обратная связь исполнения:</text>
+      <text class="dim-val" x="135" y="78">Нет взаимодействия с песочницей</text>
+
+      <text class="dim-label" x="12" y="98">Граница рассуждений:</text>
+      <text class="dim-val" x="135" y="98">Интерполяция статистических знаний</text>
+
+      <line x1="12" y1="110" x2="294" y2="110" stroke="#f1f5f9" stroke-width="1"/>
+
+      <text class="dim-label" x="12" y="128">Режим отказа:</text>
+      <text class="body-text" x="12" y="143" font-size="10px">Галлюцинаторный дрейф; нет каузальной опоры</text>
+      <text class="body-text" x="12" y="155" font-size="10px">в детерминированном состоянии среды.</text>
+    </g>
+  </g>
+
+  <!-- Transition Arrow 1 -> 2 -->
+  <g transform="translate(365, 230)">
+    <path d="M 0 0 L 50 0" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow-slate)"/>
+    <text class="label-badge" x="25" y="-8">Инструкция</text>
+    <text class="label-badge" x="25" y="14">Дистилляция</text>
+  </g>
+
+  <!-- Stage 2: Supervised Fine-Tuning (SFT) -->
+  <g transform="translate(435, 15)">
+    <rect class="stage-card" x="0" y="0" width="330" height="495"/>
+    <rect class="header-box" x="12" y="12" width="306" height="42" fill="#dbeafe"/>
+    <text class="title-text" x="22" y="32">Этап 2: контролируемая тонкая настройка</text>
+    <text class="subtitle-text" x="22" y="47">Адаптация интерфейса и схемы (разомкнутый цикл)</text>
+
+    <!-- Block 1: Training Objective -->
+    <g transform="translate(12, 66)">
+      <rect class="inner-card" x="0" y="0" width="306" height="80"/>
+      <text class="dim-label" x="12" y="18">ЦЕЛЕВАЯ ФУНКЦИЯ ОПТИМИЗАЦИИ</text>
+      <text class="code-accent" x="12" y="38">L_sft(θ) = -Σ log π_θ(y*_t | x, y*&lt;t)</text>
+      <text class="body-text" x="12" y="56">Имитация отобранных трасс (учитель);</text>
+      <text class="body-text" x="12" y="70">приводит к JSON-конвертам и контрактам.</text>
+    </g>
+
+    <!-- Block 2: Computational Flow -->
+    <g transform="translate(12, 158)">
+      <rect class="inner-card" x="0" y="0" width="306" height="152"/>
+      <text class="dim-label" x="12" y="18">ВЫЧИСЛИТЕЛЬНАЯ АРХИТЕКТУРА</text>
+
+      <rect x="12" y="28" width="282" height="34" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+      <text class="body-bold" x="20" y="44" font-size="10.5px">Отобранные демонстрации D_sft</text>
+      <text class="subtitle-text" x="20" y="56" font-size="9px">Пары экспертных решений &lt;промпт x, действия y*&gt;</text>
+
+      <path d="M 153 62 L 153 76" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+      <rect x="12" y="78" width="282" height="34" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text class="code-accent" x="20" y="94" font-size="10.5px">Инструкционная модель: π_sft(y*_t | x, y*&lt;t)</text>
+      <text class="subtitle-text" x="20" y="106" font-size="9px">Дистилляция токенов с принудительным учителем</text>
+
+      <path d="M 153 112 L 153 126" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+      <rect x="12" y="128" width="282" height="34" rx="3" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+      <text class="body-text" x="16" y="143" font-size="10px">Осваивает синтаксис; не исследует</text>
+      <text class="body-text" x="16" y="155" font-size="10px">новые пути и сбои посреди траектории.</text>
+    </g>
+
+    <!-- Block 3: Metrics -->
+    <g transform="translate(12, 322)">
+      <rect class="inner-card" x="0" y="0" width="306" height="155"/>
+      <text class="dim-label" x="12" y="18">ОПЕРАЦИОННЫЕ МЕТРИКИ</text>
+
+      <text class="dim-label" x="12" y="38">Канал обратной связи:</text>
+      <text class="dim-val" x="125" y="38">Разомкнутый учитель</text>
+
+      <text class="dim-label" x="12" y="58">Гранулярность надзора:</text>
+      <text class="dim-val" x="150" y="58">Плотные токены демонстраций</text>
+
+      <text class="dim-label" x="12" y="78">Обратная связь исполнения:</text>
+      <text class="dim-val" x="135" y="78">Нет проверки в песочнице</text>
+
+      <text class="dim-label" x="12" y="98">Граница рассуждений:</text>
+      <text class="dim-val" x="135" y="98">Потолок демонстратора</text>
+
+      <line x1="12" y1="110" x2="294" y2="110" stroke="#f1f5f9" stroke-width="1"/>
+
+      <text class="dim-label" x="12" y="128">Накопление ошибки:</text>
+      <text class="code-text" x="125" y="128">P_succ &lt;= exp(-ε̄ · H)</text>
+      <text class="body-text" x="12" y="144" font-size="10px">Ковариатный сдвиг → экспон. деградация</text>
+      <text class="body-text" x="12" y="156" font-size="10px">на длинных многошаговых горизонтах выполнения.</text>
+    </g>
+  </g>
+
+  <!-- Transition Arrow 2 -> 3 -->
+  <g transform="translate(785, 230)">
+    <path d="M 0 0 L 50 0" stroke="#059669" stroke-width="1.8" marker-end="url(#arrow-emerald)"/>
+    <text class="label-badge" x="25" y="-8">Замкнутый цикл</text>
+    <text class="label-badge" x="25" y="14">Исследование</text>
+  </g>
+
+  <!-- Stage 3: Verifiable RL (RLVR) -->
+  <g transform="translate(855, 15)">
+    <rect class="stage-card-active" x="0" y="0" width="330" height="495"/>
+    <rect class="header-box" x="12" y="12" width="306" height="42" fill="#dcfce7"/>
+    <text class="title-text" x="20" y="32">Этап 3: проверяемое RL (RLVR)</text>
+    <text class="subtitle-text" x="20" y="47">Замкнутое исследование против механических оракулов</text>
+
+    <!-- Block 1: Training Objective -->
+    <g transform="translate(12, 66)">
+      <rect class="inner-card" x="0" y="0" width="306" height="80"/>
+      <text class="dim-label" x="12" y="18">ЦЕЛЕВАЯ ФУНКЦИЯ ОПТИМИЗАЦИИ</text>
+      <text class="code-green" x="12" y="38">∇_θ J(θ) = E_τ[ Σ ∇ log π_θ · A_hat_t ]</text>
+      <text class="body-text" x="12" y="56">Усиливают детерминированные оракулы;</text>
+      <text class="body-text" x="12" y="70">исключает взлом прокси-награды (закон Гудхарта).</text>
+    </g>
+
+    <!-- Block 2: Computational Flow (Closed Loop) -->
+    <g transform="translate(12, 158)">
+      <rect class="loop-card" x="0" y="0" width="306" height="152"/>
+      <text class="dim-label" x="12" y="18" fill="#15803d">ДВИЖОК ЗАМКНУТОГО ЦИКЛА ИСПОЛНЕНИЯ</text>
+
+      <!-- Inside loop elements -->
+      <g transform="translate(6, 26)">
+        <rect x="16" y="0" width="108" height="34" rx="3" fill="#ffffff" stroke="#86efac" stroke-width="1.2"/>
+        <text class="code-purple" x="22" y="16" font-size="9.5px">Политика агента π_θ</text>
+        <text class="subtitle-text" x="22" y="27" font-size="8px">Исследует ходы</text>
+
+        <path d="M 124 17 L 152 17" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow-emerald)"/>
+        <text class="code-text" x="138" y="11" font-size="8px" text-anchor="middle">a_t</text>
+
+        <rect x="156" y="0" width="124" height="34" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+        <text class="body-bold" x="162" y="16" font-size="9.5px">Песочница исполнения</text>
+        <text class="subtitle-text" x="162" y="27" font-size="8px">Состояние microVM s_t</text>
+
+        <path d="M 218 34 L 218 46" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow-emerald)"/>
+
+        <rect x="16" y="48" width="264" height="32" rx="3" fill="#ffffff" stroke="#10b981" stroke-width="1.2"/>
+        <text class="code-green" x="24" y="63" font-size="9.5px">Механический оракул: R(τ) из {0, 1}</text>
+        <text class="subtitle-text" x="24" y="74" font-size="8px">Компиляторы, юнит-тесты, доказатели</text>
+
+        <!-- Loopback arrow -->
+        <path d="M 16 64 L 6 64 L 6 17 L 14 17" fill="none" stroke="#059669" stroke-width="1.5" stroke-dasharray="3 2" marker-end="url(#arrow-emerald)"/>
+      </g>
+
+      <rect x="12" y="112" width="282" height="32" rx="3" fill="#ffffff" stroke="#86efac" stroke-width="1"/>
+      <text class="body-text" x="16" y="125" font-size="9.5px">Новые решения, самокоррекция, откат</text>
+      <text class="body-text" x="16" y="137" font-size="9.5px">за пределами человеческих демонстраций.</text>
+    </g>
+
+    <!-- Block 3: Metrics -->
+    <g transform="translate(12, 322)">
+      <rect class="inner-card" x="0" y="0" width="306" height="155"/>
+      <text class="dim-label" x="12" y="18">ОПЕРАЦИОННЫЕ МЕТРИКИ</text>
+
+      <text class="dim-label" x="12" y="38">Канал обратной связи:</text>
+      <text class="dim-val" x="120" y="38">Исполнение в замкнутом цикле</text>
+
+      <text class="dim-label" x="12" y="58">Гранулярность надзора:</text>
+      <text class="dim-val" x="145" y="58">Механический возврат R из {0, 1}</text>
+
+      <text class="dim-label" x="12" y="78">Обратная связь исполнения:</text>
+      <text class="dim-val" x="130" y="78">Строго изолированная песочница</text>
+
+      <text class="dim-label" x="12" y="98">Граница рассуждений:</text>
+      <text class="dim-val" x="130" y="98">Автономное обдумывание</text>
+
+      <line x1="12" y1="110" x2="294" y2="110" stroke="#f1f5f9" stroke-width="1"/>
+
+      <text class="dim-label" x="12" y="128">Инвариант оптимизации:</text>
+      <text class="code-green" x="12" y="144">Нулевой разрыв проксирования награды</text>
+      <text class="body-text" x="12" y="157" font-size="10px">Политика активно исследует; награду нельзя взломать.</text>
+    </g>
+  </g>
+</svg>

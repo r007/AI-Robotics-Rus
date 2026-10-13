@@ -1,0 +1,238 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 640" width="100%" height="100%"
+     font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <style>
+      .tier-card { fill: #f8fafc; stroke: #94a3b8; stroke-width: 1.2; rx: 4px; }
+      .tier-pill { font-family: ui-monospace, monospace; font-size: 10px; font-weight: 700; }
+      .tier-spec { font-family: system-ui, -apple-system, sans-serif; font-size: 9.5px; fill: #475569; }
+      .block-title { font-family: system-ui, -apple-system, sans-serif; font-size: 9.5px; font-weight: 700; fill: #0f172a; }
+      .block-sub { font-family: system-ui, -apple-system, sans-serif; font-size: 8.5px; fill: #475569; }
+      .mono-txt { font-family: ui-monospace, monospace; font-size: 8.5px; }
+      .flow-lbl { font-family: system-ui, -apple-system, sans-serif; font-size: 9px; font-weight: 700; }
+    </style>
+
+    <!-- Markers -->
+    <marker id="arr-down-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0284c7"/>
+    </marker>
+    <marker id="arr-down-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#d97706"/>
+    </marker>
+    <marker id="arr-up-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <!-- Clean Background -->
+  <rect width="1040" height="640" fill="#ffffff"/>
+
+  <!-- ================================================================= -->
+  <!-- TIER 1: HOT TIER (HOST DRAM & GPU HBM)                            -->
+  <!-- ================================================================= -->
+  <g transform="translate(30, 20)">
+    <rect width="980" height="160" class="tier-card"/>
+
+    <!-- Header Pill -->
+    <rect x="12" y="10" width="220" height="22" rx="3" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="0.8"/>
+    <text x="18" y="25" class="tier-pill" fill="#0369a1">ГОРЯЧИЙ УРОВЕНЬ: DRAM / HBM</text>
+    <text x="245" y="25" class="tier-spec">Задержка: 50–100 нс | Пропускная способность: 100–400 ГБ/с | Емкость: 64–512 ГБ | Летучий активный рабочий набор</text>
+
+    <!-- Sub-blocks in Hot Tier -->
+    <!-- Block 1: Mutable MemTable / Write Buffer -->
+    <g transform="translate(15, 42)">
+      <rect width="225" height="105" rx="3" fill="#ffffff" stroke="#0284c7" stroke-width="1"/>
+      <rect x="0" y="0" width="225" height="20" rx="3" fill="#e0f2fe"/>
+      <text x="8" y="14" class="block-title" fill="#0369a1">Активный буфер приема</text>
+      <text x="8" y="32" class="mono-txt" fill="#334155">Структура: конкурентный MemTable</text>
+      <text x="8" y="46" class="mono-txt" fill="#334155">Точность: FP32 без сжатия</text>
+      <text x="8" y="60" class="block-sub">Принимает записи от действий агента</text>
+      <text x="8" y="74" class="block-sub">Немедленная видимость (без лага чтения)</text>
+      <rect x="8" y="82" width="209" height="16" rx="2" fill="#f0f9ff" stroke="#bae6fd" stroke-width="0.8"/>
+      <text x="112" y="93" class="mono-txt" font-weight="700" fill="#0284c7" text-anchor="middle">Летучий журнал в памяти</text>
+    </g>
+
+    <!-- Block 2: Coarse Voronoi Centroids -->
+    <g transform="translate(255, 42)">
+      <rect width="225" height="105" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <rect x="0" y="0" width="225" height="20" rx="3" fill="#f1f5f9"/>
+      <text x="8" y="14" class="block-title">Грубые центроиды IVF</text>
+      <text x="8" y="32" class="mono-txt" fill="#334155">Количество: C = 4 096 ключей кластеров</text>
+      <text x="8" y="46" class="mono-txt" fill="#334155">Размерность: D = 1536 (FP16/FP32)</text>
+      <text x="8" y="60" class="block-sub">Объем памяти: 4096 * 3 КБ ≈ 12 МБ</text>
+      <text x="8" y="74" class="block-sub">Вычисляется при грубом зондировании</text>
+      <rect x="8" y="82" width="209" height="16" rx="2" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.8"/>
+      <text x="112" y="93" class="mono-txt" fill="#475569" text-anchor="middle">100 % в DRAM</text>
+    </g>
+
+    <!-- Block 3: HNSW Skip Highway Layers -->
+    <g transform="translate(495, 42)">
+      <rect width="225" height="105" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <rect x="0" y="0" width="225" height="20" rx="3" fill="#f1f5f9"/>
+      <text x="8" y="14" class="block-title">Верхние слои с пропусками HNSW</text>
+      <text x="8" y="32" class="mono-txt" fill="#334155">Топология: графы слоев 2 и 1</text>
+      <text x="8" y="46" class="mono-txt" fill="#334155">Степень: M = 32 связи / узел</text>
+      <text x="8" y="60" class="block-sub">Навигация по разреженной магистрали</text>
+      <text x="8" y="74" class="block-sub">Объем: &lt; 2 % всего индекса</text>
+      <rect x="8" y="82" width="209" height="16" rx="2" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.8"/>
+      <text x="112" y="93" class="mono-txt" fill="#475569" text-anchor="middle">Быстрый вход и жадный спуск</text>
+    </g>
+
+    <!-- Block 4: Query Distance LUT in L1/L2 -->
+    <g transform="translate(735, 42)">
+      <rect width="230" height="105" rx="3" fill="#ffffff" stroke="#7c3aed" stroke-width="1"/>
+      <rect x="0" y="0" width="230" height="20" rx="3" fill="#f5f3ff"/>
+      <text x="8" y="14" class="block-title" fill="#6d28d9">LUT расстояний запроса</text>
+      <text x="8" y="32" class="mono-txt" fill="#334155">Таблица: 64 подвектора * 256 ключей</text>
+      <text x="8" y="46" class="mono-txt" fill="#334155">Размер кеша: 16 384 * 4 Б = 64 КБ</text>
+      <text x="8" y="60" class="block-sub">Строится на запрос в L1/L2</text>
+      <text x="8" y="74" class="block-sub">Позволяет ADC без FLOP-операций</text>
+      <rect x="8" y="82" width="214" height="16" rx="2" fill="#ede9fe" stroke="#c4b5fd" stroke-width="0.8"/>
+      <text x="115" y="93" class="mono-txt" font-weight="700" fill="#6d28d9" text-anchor="middle">Постоянно в кеше L1 (64 КБ)</text>
+    </g>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- VERTICAL FLOW 1: FLUSH & QUANTIZE (HOT -> WARM)                   -->
+  <!-- ================================================================= -->
+  <g transform="translate(142, 180)">
+    <line x1="0" y1="0" x2="0" y2="38" stroke="#0284c7" stroke-width="2" marker-end="url(#arr-down-blue)"/>
+    <rect x="8" y="8" width="195" height="22" rx="3" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="0.8"/>
+    <text x="15" y="22" class="flow-lbl" fill="#0369a1">Сброс: кластеры + PQ (M=64)</text>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- VERTICAL FLOW 2: STREAMING ADC QUERY SCAN (WARM -> HOT)           -->
+  <!-- ================================================================= -->
+  <g transform="translate(850, 220)">
+    <line x1="0" y1="0" x2="0" y2="-38" stroke="#059669" stroke-width="2" marker-end="url(#arr-up-green)"/>
+    <rect x="-195" y="-30" width="185" height="22" rx="3" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="0.8"/>
+    <text x="-187" y="-16" class="flow-lbl" fill="#047857">Запрос: последовательный скан (64 Б)</text>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- TIER 2: WARM TIER (LOCAL NVMe SSD / BLOCK STORAGE)                -->
+  <!-- ================================================================= -->
+  <g transform="translate(30, 225)">
+    <rect width="980" height="165" class="tier-card"/>
+
+    <!-- Header Pill -->
+    <rect x="12" y="10" width="220" height="22" rx="3" fill="#fef3c7" stroke="#fde68a" stroke-width="0.8"/>
+    <text x="18" y="25" class="tier-pill" fill="#b45309">ТЕПЛЫЙ УРОВЕНЬ: ЛОКАЛЬНЫЙ NVMe SSD</text>
+    <text x="245" y="25" class="tier-spec">Задержка: 10–50 мкс | Пропускная способность: 5–15 ГБ/с | Емкость: 1–8 ТБ | Высокоплотное хранилище с отображением в память</text>
+
+    <!-- Sub-blocks in Warm Tier -->
+    <!-- Block 1: Quantized Vector Postings (IVF-PQ) -->
+    <g transform="translate(15, 42)">
+      <rect width="360" height="110" rx="3" fill="#ffffff" stroke="#15803d" stroke-width="1.2"/>
+      <rect x="0" y="0" width="360" height="20" rx="3" fill="#dcfce7"/>
+      <text x="8" y="14" class="block-title" fill="#14532d">Квантованные векторные постинги (IVF-PQ64)</text>
+      
+      <text x="8" y="32" class="mono-txt" fill="#334155">Размер записи: M = 64 байта на вектор (1 байт на подвектор)</text>
+      <text x="8" y="46" class="mono-txt" fill="#334155">Несжатый FP32: 1536 * 4 Б = 6 144 байта / вектор</text>
+      <text x="8" y="60" class="mono-txt" font-weight="700" fill="#15803d">Коэффициент сжатия: 6 144 / 64 = 96,0x снижение объема хранения</text>
+      <text x="8" y="74" class="block-sub">Объем для 10^7 векторов: 10^7 * 64 Б = 640 МБ (умещается в кеше)</text>
+
+      <rect x="8" y="82" width="344" height="20" rx="2" fill="#f0fdf4" stroke="#86efac" stroke-width="0.8"/>
+      <text x="180" y="95" class="mono-txt" font-weight="700" fill="#15803d" text-anchor="middle">Непрерывные блоки постингов на флеш</text>
+    </g>
+
+    <!-- Block 2: Memory-Mapped Base Graph (DiskANN / Layer 0) -->
+    <g transform="translate(390, 42)">
+      <rect width="280" height="110" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <rect x="0" y="0" width="280" height="20" rx="3" fill="#f1f5f9"/>
+      <text x="8" y="14" class="block-title">Смежность базового графа (слой 0)</text>
+      <text x="8" y="32" class="mono-txt" fill="#334155">DiskANN / mmap() file backing</text>
+      <text x="8" y="46" class="mono-txt" fill="#334155">ID узла -&gt; список из M_0 = 64 идентификаторов соседей</text>
+      <text x="8" y="60" class="block-sub">Вычисляется при ограниченном лучевом поиске</text>
+      <text x="8" y="74" class="block-sub">Страничные сбои &lt; 20 мкс (io_uring)</text>
+      <rect x="8" y="82" width="264" height="20" rx="2" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.8"/>
+      <text x="140" y="95" class="mono-txt" fill="#475569" text-anchor="middle">mmap(): буфер ядра без копирования</text>
+    </g>
+
+    <!-- Block 3: In-Memory Tombstone Bitset -->
+    <g transform="translate(685, 42)">
+      <rect width="280" height="110" rx="3" fill="#ffffff" stroke="#dc2626" stroke-width="1"/>
+      <rect x="0" y="0" width="280" height="20" rx="3" fill="#fee2e2"/>
+      <text x="8" y="14" class="block-title" fill="#991b1b">Битовый набор инвалидации на этапе чтения</text>
+      <text x="8" y="32" class="mono-txt" fill="#334155">Теги поколений для правок</text>
+      <text x="8" y="46" class="mono-txt" fill="#334155">Размер: N/8 байт = 1,25 МБ</text>
+      <text x="8" y="60" class="block-sub">Побитовое И при обходе постингов ADC</text>
+      <text x="8" y="74" class="block-sub">Фильтрует устаревшие фрагменты</text>
+      <rect x="8" y="82" width="264" height="20" rx="2" fill="#fef2f2" stroke="#fecaca" stroke-width="0.8"/>
+      <text x="140" y="95" class="mono-txt" font-weight="700" fill="#991b1b" text-anchor="middle">Надгробия: ноль устаревших чтений</text>
+    </g>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- VERTICAL FLOW 3: ARCHIVAL FLUSH (WARM -> COLD)                    -->
+  <!-- ================================================================= -->
+  <g transform="translate(195, 390)">
+    <line x1="0" y1="0" x2="0" y2="38" stroke="#d97706" stroke-width="2" marker-end="url(#arr-down-amber)"/>
+    <rect x="8" y="8" width="195" height="22" rx="3" fill="#fef3c7" stroke="#fde68a" stroke-width="0.8"/>
+    <text x="15" y="22" class="flow-lbl" fill="#b45309">Архив: сегменты Parquet</text>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- VERTICAL FLOW 4: RECOVERY / COLD PROMPT HYDRATION (COLD -> HOT)   -->
+  <!-- ================================================================= -->
+  <g transform="translate(800, 430)">
+    <line x1="0" y1="0" x2="0" y2="-38" stroke="#059669" stroke-width="2" marker-end="url(#arr-up-green)"/>
+    <rect x="-195" y="-30" width="185" height="22" rx="3" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="0.8"/>
+    <text x="-187" y="-16" class="flow-lbl" fill="#047857">Регидратация индекса</text>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- TIER 3: COLD TIER (DISTRIBUTED OBJECT STORAGE / S3 / BLOB)        -->
+  <!-- ================================================================= -->
+  <g transform="translate(30, 435)">
+    <rect width="980" height="185" class="tier-card"/>
+
+    <!-- Header Pill -->
+    <rect x="12" y="10" width="220" height="22" rx="3" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="0.8"/>
+    <text x="18" y="25" class="tier-pill" fill="#047857">ХОЛОДНЫЙ УРОВЕНЬ: ОБЪЕКТНОЕ ХРАНИЛИЩЕ</text>
+    <text x="245" y="25" class="tier-spec">Задержка: 50–200 мс | Пропускная способность: сетевые Гбит/с | Емкость: не ограничена | Долговременное хранилище (S3 / GCS)</text>
+
+    <!-- Sub-blocks in Cold Tier -->
+    <!-- Block 1: Immutable Columnar Segments -->
+    <g transform="translate(15, 42)">
+      <rect width="300" height="130" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <rect x="0" y="0" width="300" height="20" rx="3" fill="#f1f5f9"/>
+      <text x="8" y="14" class="block-title">Неизменяемые колоночные сегменты</text>
+      <text x="8" y="32" class="mono-txt" fill="#334155">Формат: Apache Parquet / таблицы Arrow</text>
+      <text x="8" y="46" class="mono-txt" fill="#334155">Содержимое: постинги, диапазоны токенов, метаданные</text>
+      <text x="8" y="60" class="block-sub">Записывается однократно при фоновом уплотнении</text>
+      <text x="8" y="74" class="block-sub">Сильно сжат с помощью zstd/snappy</text>
+      <text x="8" y="88" class="block-sub">Читается асинхронно при холодном перезапуске</text>
+      <rect x="8" y="100" width="284" height="20" rx="2" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.8"/>
+      <text x="150" y="113" class="mono-txt" fill="#475569" text-anchor="middle">Однократная запись, многократное чтение (WORM)</text>
+    </g>
+
+    <!-- Block 2: Raw High-Precision Vector Archives -->
+    <g transform="translate(330, 42)">
+      <rect width="320" height="130" rx="3" fill="#ffffff" stroke="#0284c7" stroke-width="1"/>
+      <rect x="0" y="0" width="320" height="20" rx="3" fill="#e0f2fe"/>
+      <text x="8" y="14" class="block-title" fill="#0369a1">Сырой архив эталонных векторов</text>
+      <text x="8" y="32" class="mono-txt" fill="#334155">Формат: плоские бинарные блоки тензоров FP32</text>
+      <text x="8" y="46" class="mono-txt" fill="#334155">Размерность: точная D = 1536, без сжатия</text>
+      <text x="8" y="60" class="block-sub">Сохраняет исходные эмбеддинги без потерь</text>
+      <text x="8" y="74" class="block-sub">Переобучается при перекалибровке кодовой книги</text>
+      <text x="8" y="88" class="block-sub">Гарантирует отсутствие накопленного дрейфа во времени</text>
+      <rect x="8" y="100" width="304" height="20" rx="2" fill="#f0f9ff" stroke="#bae6fd" stroke-width="0.8"/>
+      <text x="160" y="113" class="mono-txt" font-weight="700" fill="#0284c7" text-anchor="middle">Авторитетный семантический источник истины</text>
+    </g>
+
+    <!-- Block 3: Monotonic Trajectory Ledgers -->
+    <g transform="translate(665, 42)">
+      <rect width="300" height="130" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <rect x="0" y="0" width="300" height="20" rx="3" fill="#f1f5f9"/>
+      <text x="8" y="14" class="block-title">Журналы траекторий и контрольные точки</text>
+      <text x="8" y="32" class="mono-txt" fill="#334155">Формат: JSONL / FlatBuffers</text>
+      <text x="8" y="46" class="mono-txt" fill="#334155">Записи: действия, выводы, разницы</text>
+      <text x="8" y="60" class="block-sub">Криптографическая цепочка версий SHA-256</text>
+      <text x="8" y="74" class="block-sub">Позволяет детерминированно воспроизводить и восстанавливать</text>
+      <text x="8" y="88" class="block-sub">Выгружается для офлайн-обучения политики RLVR</text>
+      <rect x="8" y="100" width="284" height="20" rx="2" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.8"/>
+      <text x="150" y="113" class="mono-txt" fill="#475569" text-anchor="middle">Аудируемая история только на добавление</text>
+    </g>
+  </g>
+</svg>

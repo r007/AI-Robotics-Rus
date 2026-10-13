@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 560" width="100%" height="100%"
+     font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <!-- Arrowhead markers -->
+    <marker id="arr-navy" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#1e293b"/>
+    </marker>
+    <marker id="arr-teal" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#0f766e"/>
+    </marker>
+    <marker id="arr-slate" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+    <marker id="arr-burgundy" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#991b1b"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1060" height="560" fill="#ffffff"/>
+
+  <!-- ===================================================================== -->
+  <!-- LEFT COLUMN: STATELESS MICROSERVICE PARADIGM                          -->
+  <!-- ===================================================================== -->
+  <g transform="translate(25, 20)">
+    <rect width="365" height="515" rx="3" fill="#f8fafc" stroke="#475569" stroke-width="1.5"/>
+    <rect width="365" height="26" rx="3" fill="#f1f5f9" stroke="#475569" stroke-width="1.5"/>
+    <text x="12" y="17" font-size="9" font-weight="700" fill="#1e293b" letter-spacing="0.3">БЕССОСТОЯТЕЛЬНЫЙ КОНТЕЙНЕР ЗАПРОСА</text>
+    <text x="353" y="17" text-anchor="end" font-size="8" font-weight="600" fill="#475569">RPC / HTTP / бессерверные</text>
+
+    <!-- Substrate Description -->
+    <g transform="translate(12, 36)">
+      <rect width="341" height="34" rx="2" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8"/>
+      <text x="10" y="14" font-size="7.5" font-weight="700" fill="#334155">Жизненный цикл: эфемерные вызовы</text>
+      <text x="10" y="26" font-size="7" fill="#64748b">Запрос клиента → поток исполнения → ответ → завершение</text>
+    </g>
+
+    <!-- 6 Architectural Dimensions -->
+    <!-- 1. Cost -->
+    <g transform="translate(12, 78)">
+      <rect width="341" height="64" rx="2" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="10" y="15" font-size="8" font-weight="700" fill="#1e293b">Стоимость и границы вычислений</text>
+      <text x="10" y="28" font-size="7" font-weight="600" fill="#0f766e">O(1): постоянная граница на запрос</text>
+      <text x="10" y="42" font-size="7" fill="#475569">Фиксированные таймауты в миллисекундах</text>
+      
+    </g>
+
+    <!-- 2. Memory -->
+    <g transform="translate(12, 149)">
+      <rect width="341" height="64" rx="2" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="10" y="15" font-size="8" font-weight="700" fill="#1e293b">Протяженность памяти и время жизни</text>
+      <text x="10" y="28" font-size="7" font-weight="600" fill="#0f766e">Эфемерные куча и стек процесса</text>
+      <text x="10" y="42" font-size="7" fill="#475569">Освобождаются при закрытии соединения</text>
+      
+    </g>
+
+    <!-- 3. Authority -->
+    <g transform="translate(12, 220)">
+      <rect width="341" height="64" rx="2" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="10" y="15" font-size="8" font-weight="700" fill="#1e293b">Полномочия и область привилегий</text>
+      <text x="10" y="28" font-size="7" font-weight="600" fill="#0f766e">Короткоживущий неявный bearer-токен</text>
+      <text x="10" y="42" font-size="7" fill="#475569">Статические неявные учетные данные (OAuth / JWT)</text>
+      
+    </g>
+
+    <!-- 4. Recovery -->
+    <g transform="translate(12, 291)">
+      <rect width="341" height="64" rx="2" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="10" y="15" font-size="8" font-weight="700" fill="#1e293b">Сбои и семантическое восстановление</text>
+      <text x="10" y="28" font-size="7" font-weight="600" fill="#0f766e">Идемпотентный сетевой повтор</text>
+      <text x="10" y="42" font-size="7" fill="#475569">Безопасный повтор на другой реплике</text>
+      
+    </g>
+
+    <!-- 5. Evidence -->
+    <g transform="translate(12, 362)">
+      <rect width="341" height="64" rx="2" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="10" y="15" font-size="8" font-weight="700" fill="#1e293b">Каузальное свидетельство и верификация</text>
+      <text x="10" y="28" font-size="7" font-weight="600" fill="#0f766e">Двоичный статус протокола (HTTP 200 / код 0)</text>
+      <text x="10" y="42" font-size="7" fill="#475569">Статус 200 / код 0 удостоверяет</text>
+      
+    </g>
+
+    <!-- 6. Placement -->
+    <g transform="translate(12, 433)">
+      <rect width="341" height="64" rx="2" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="10" y="15" font-size="8" font-weight="700" fill="#1e293b">Физическое размещение на аппаратуре</text>
+      <text x="10" y="28" font-size="7" font-weight="600" fill="#0f766e">Круговая маршрутизация без состояния</text>
+      <text x="10" y="42" font-size="7" fill="#475569">Любой узел · без резидентного состояния</text>
+      
+    </g>
+  </g>
+
+  <!-- ===================================================================== -->
+  <!-- CENTER COLUMN: THE 6 STRUCTURAL SCOPE MISMATCHES                      -->
+  <!-- ===================================================================== -->
+  <g transform="translate(405, 20)">
+    <rect width="250" height="515" rx="3" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+    <rect width="250" height="26" rx="3" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2"/>
+    <text x="125" y="17" text-anchor="middle" font-size="8.5" font-weight="700" fill="#1e293b" letter-spacing="0.3">АРХИТЕКТУРНЫЕ НЕСООТВЕТСТВИЯ</text>
+
+    <!-- Subtitle indicator -->
+    <text x="125" y="54" text-anchor="middle" font-size="7" font-weight="600" fill="#991b1b">ФУНДАМЕНТАЛЬНЫЕ НАПРЯЖЕНИЯ СРЕДЫ ВЫПОЛНЕНИЯ</text>
+
+    <!-- Connector Mismatch 1: Cost -->
+    <g transform="translate(10, 78)">
+      <rect width="230" height="64" rx="2" fill="#fef2f2" stroke="#991b1b" stroke-width="1"/>
+      <text x="115" y="16" text-anchor="middle" font-size="7.5" font-weight="700" fill="#991b1b">НЕСООТВЕТСТВИЕ СТОИМОСТИ</text>
+      <text x="115" y="30" text-anchor="middle" font-size="6.8" fill="#334155">O(1): потолок на вызов</text>
+      <path d="M 115,38 L 52,38" stroke="#991b1b" stroke-width="1.2" marker-end="url(#arr-burgundy)"/>
+      <path d="M 115,38 L 178,38" stroke="#991b1b" stroke-width="1.2" marker-end="url(#arr-burgundy)"/>
+      <text x="115" y="52" text-anchor="middle" font-size="6.8" font-weight="600" fill="#991b1b">Нарастающие O(L²) FLOP</text>
+    </g>
+
+    <!-- Connector Mismatch 2: Memory -->
+    <g transform="translate(10, 149)">
+      <rect width="230" height="64" rx="2" fill="#fef2f2" stroke="#991b1b" stroke-width="1"/>
+      <text x="115" y="16" text-anchor="middle" font-size="7.5" font-weight="700" fill="#991b1b">НЕСООТВЕТСТВИЕ ПАМЯТИ</text>
+      <text x="115" y="30" text-anchor="middle" font-size="6.8" fill="#334155">Освобождение эфемерной кучи</text>
+      <path d="M 115,38 L 52,38" stroke="#991b1b" stroke-width="1.2" marker-end="url(#arr-burgundy)"/>
+      <path d="M 115,38 L 178,38" stroke="#991b1b" stroke-width="1.2" marker-end="url(#arr-burgundy)"/>
+      <text x="115" y="52" text-anchor="middle" font-size="6.8" font-weight="600" fill="#991b1b">Многоуровневый KV-кеш между ходами</text>
+    </g>
+
+    <!-- Connector Mismatch 3: Authority -->
+    <g transform="translate(10, 220)">
+      <rect width="230" height="64" rx="2" fill="#fef2f2" stroke="#991b1b" stroke-width="1"/>
+      <text x="115" y="16" text-anchor="middle" font-size="7.5" font-weight="700" fill="#991b1b">НЕСООТВЕТСТВИЕ ПОЛНОМОЧИЙ</text>
+      <text x="115" y="30" text-anchor="middle" font-size="6.8" fill="#334155">Статические неявные учетные данные</text>
+      <path d="M 115,38 L 52,38" stroke="#991b1b" stroke-width="1.2" marker-end="url(#arr-burgundy)"/>
+      <path d="M 115,38 L 178,38" stroke="#991b1b" stroke-width="1.2" marker-end="url(#arr-burgundy)"/>
+      <text x="115" y="52" text-anchor="middle" font-size="6.8" font-weight="600" fill="#991b1b">Аренды с нулевыми неявными полномочиями (A = 0)</text>
+    </g>
+
+    <!-- Connector Mismatch 4: Recovery -->
+    <g transform="translate(10, 291)">
+      <rect width="230" height="64" rx="2" fill="#fef2f2" stroke="#991b1b" stroke-width="1"/>
+      <text x="115" y="16" text-anchor="middle" font-size="7.5" font-weight="700" fill="#991b1b">НЕСООТВЕТСТВИЕ ВОССТАНОВЛЕНИЯ</text>
+      <text x="115" y="30" text-anchor="middle" font-size="6.8" fill="#334155">Слепой идемпотентный повтор</text>
+      <path d="M 115,38 L 52,38" stroke="#991b1b" stroke-width="1.2" marker-end="url(#arr-burgundy)"/>
+      <path d="M 115,38 L 178,38" stroke="#991b1b" stroke-width="1.2" marker-end="url(#arr-burgundy)"/>
+      <text x="115" y="52" text-anchor="middle" font-size="6.8" font-weight="600" fill="#991b1b">Откат саги и обрезка</text>
+    </g>
+
+    <!-- Connector Mismatch 5: Evidence -->
+    <g transform="translate(10, 362)">
+      <rect width="230" height="64" rx="2" fill="#fef2f2" stroke="#991b1b" stroke-width="1"/>
+      <text x="115" y="16" text-anchor="middle" font-size="7.5" font-weight="700" fill="#991b1b">НЕСООТВЕТСТВИЕ СВИДЕТЕЛЬСТВ</text>
+      <text x="115" y="30" text-anchor="middle" font-size="6.8" fill="#334155">Поверхностный код выхода POSIX 0</text>
+      <path d="M 115,38 L 52,38" stroke="#991b1b" stroke-width="1.2" marker-end="url(#arr-burgundy)"/>
+      <path d="M 115,38 L 178,38" stroke="#991b1b" stroke-width="1.2" marker-end="url(#arr-burgundy)"/>
+      <text x="115" y="52" text-anchor="middle" font-size="6.8" font-weight="600" fill="#991b1b">Внеполосный запечатанный оракул</text>
+    </g>
+
+    <!-- Connector Mismatch 6: Placement -->
+    <g transform="translate(10, 433)">
+      <rect width="230" height="64" rx="2" fill="#fef2f2" stroke="#991b1b" stroke-width="1"/>
+      <text x="115" y="16" text-anchor="middle" font-size="7.5" font-weight="700" fill="#991b1b">НЕСООТВЕТСТВИЕ РАЗМЕЩЕНИЯ</text>
+      <text x="115" y="30" text-anchor="middle" font-size="6.8" fill="#334155">Круговая выдача без состояния</text>
+      <path d="M 115,38 L 52,38" stroke="#991b1b" stroke-width="1.2" marker-end="url(#arr-burgundy)"/>
+      <path d="M 115,38 L 178,38" stroke="#991b1b" stroke-width="1.2" marker-end="url(#arr-burgundy)"/>
+      <text x="115" y="52" text-anchor="middle" font-size="6.8" font-weight="600" fill="#991b1b">Сродство KV-кеша и ФС</text>
+    </g>
+  </g>
+
+  <!-- ===================================================================== -->
+  <!-- RIGHT COLUMN: STATEFUL AGENT TRAJECTORY RUNTIME                       -->
+  <!-- ===================================================================== -->
+  <g transform="translate(670, 20)">
+    <rect width="365" height="515" rx="3" fill="#f8fafc" stroke="#166534" stroke-width="1.5"/>
+    <rect width="365" height="26" rx="3" fill="#f0fdf4" stroke="#166534" stroke-width="1.5"/>
+    <text x="12" y="17" font-size="9" font-weight="700" fill="#166534" letter-spacing="0.3">ТРАЕКТОРИЯ АГЕНТА С СОСТОЯНИЕМ</text>
+    <text x="353" y="17" text-anchor="end" font-size="8" font-weight="600" fill="#166534">Движок Software 3.0</text>
+
+    <!-- Substrate Description -->
+    <g transform="translate(12, 36)">
+      <rect width="341" height="34" rx="2" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8"/>
+      <text x="10" y="14" font-size="7.5" font-weight="700" fill="#166534">Жизненный цикл: многоходовая траектория (t = 0 ... N)</text>
+      <text x="10" y="26" font-size="7" fill="#475569">Сборка контекста → декодирование модели → авторизация → песочница → оракул</text>
+    </g>
+
+    <!-- 6 Architectural Dimensions -->
+    <!-- 1. Cost -->
+    <g transform="translate(12, 78)">
+      <rect width="341" height="64" rx="2" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="10" y="15" font-size="8" font-weight="700" fill="#1e293b">Стоимость и границы вычислений</text>
+      <text x="10" y="28" font-size="7" font-weight="600" fill="#166534">Сверхлинейно нарастающие FLOP (Σ<tspan dy="2" font-size="5">i</tspan><tspan dy="-2"> |c</tspan><tspan dy="2" font-size="5">i</tspan><tspan dy="-2">|)</tspan></text>
+      <text x="10" y="42" font-size="7" fill="#475569">FLOP предзаполнения растут сверхлинейно</text>
+      
+    </g>
+
+    <!-- 2. Memory -->
+    <g transform="translate(12, 149)">
+      <rect width="341" height="64" rx="2" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="10" y="15" font-size="8" font-weight="700" fill="#1e293b">Протяженность памяти и время жизни</text>
+      <text x="10" y="28" font-size="7" font-weight="600" fill="#166534">Многоуровневая иерархия памяти</text>
+      <text x="10" y="42" font-size="7" fill="#475569">KV в HBM · контекст в DRAM · журнал на NVMe</text>
+      
+    </g>
+
+    <!-- 3. Authority -->
+    <g transform="translate(12, 220)">
+      <rect width="341" height="64" rx="2" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="10" y="15" font-size="8" font-weight="700" fill="#1e293b">Полномочия и область привилегий</text>
+      <text x="10" y="28" font-size="7" font-weight="600" fill="#166534">Нулевые неявные полномочия (A = 0) и аренды</text>
+      <text x="10" y="42" font-size="7" fill="#475569">Эфемерные аренды · монотонное ослабление</text>
+      
+    </g>
+
+    <!-- 4. Recovery -->
+    <g transform="translate(12, 291)">
+      <rect width="341" height="64" rx="2" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="10" y="15" font-size="8" font-weight="700" fill="#1e293b">Сбои и семантическое восстановление</text>
+      <text x="10" y="28" font-size="7" font-weight="600" fill="#166534">Компенсирующие саги и обрезка контекста</text>
+      <text x="10" y="42" font-size="7" fill="#475569">Семантический откат · обрезка циклов</text>
+      
+    </g>
+
+    <!-- 5. Evidence -->
+    <g transform="translate(12, 362)">
+      <rect width="341" height="64" rx="2" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="10" y="15" font-size="8" font-weight="700" fill="#1e293b">Каузальное свидетельство и верификация</text>
+      <text x="10" y="28" font-size="7" font-weight="600" fill="#166534">Внеполосная запечатанная верификация (v<tspan dy="2" font-size="5">t+1</tspan><tspan dy="-2">)</tspan></text>
+      <text x="10" y="42" font-size="7" fill="#475569">Запечатанные тесты инвариантов</text>
+    </g>
+
+    <!-- 6. Placement -->
+    <g transform="translate(12, 433)">
+      <rect width="341" height="64" rx="2" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="10" y="15" font-size="8" font-weight="700" fill="#1e293b">Физическое размещение на аппаратуре</text>
+      <text x="10" y="28" font-size="7" font-weight="600" fill="#166534">Строгое сродство KV-кеша и песочницы</text>
+      <text x="10" y="42" font-size="7" fill="#475569">Закреплено за локальным GPU / узлом хоста</text>
+      
+    </g>
+  </g>
+
+</svg>

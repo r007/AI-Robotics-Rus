@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="100%" height="100%"
+     font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr-blue" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L7,2.5 L0,5 Z" fill="#0284c7"/>
+    </marker>
+    <marker id="arr-green" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L7,2.5 L0,5 Z" fill="#059669"/>
+    </marker>
+    <marker id="arr-amber" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L7,2.5 L0,5 Z" fill="#d97706"/>
+    </marker>
+    <marker id="arr-gray" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L7,2.5 L0,5 Z" fill="#64748b"/>
+    </marker>
+    <filter id="cardShadow" x="-1%" y="-2%" width="102%" height="106%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#0f172a" flood-opacity="0.05"/>
+    </filter>
+  </defs>
+
+  <!-- Clean Canvas -->
+  <rect width="880" height="430" fill="#ffffff"/>
+
+  <!-- ================================================================= -->
+  <!-- COLUMN 1: AGENT RUNTIME (HOST CALLER)                              -->
+  <!-- ================================================================= -->
+  <g transform="translate(30, 20)" filter="url(#cardShadow)">
+    <!-- Container Card -->
+    <rect x="0" y="0" width="250" height="390" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2"/>
+    <rect x="0" y="0" width="250" height="26" rx="4" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.2"/>
+    <rect x="0" y="16" width="250" height="10" fill="#f1f5f9"/>
+    <text x="12" y="18" font-size="10" font-weight="700" fill="#0f172a">СРЕДА НА ХОСТЕ (супервизор)</text>
+
+    <!-- Stage 1 Sub-block: Context Staging & Budgeting -->
+    <g transform="translate(12, 38)">
+      <rect x="0" y="0" width="226" height="152" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <rect x="0" y="0" width="226" height="20" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="8" y="14" font-size="8.5" font-weight="700" fill="#0f172a">Подготовка контекста и бюджетирование</text>
+      
+      <text x="8" y="34" font-size="8" font-weight="700" fill="#334155">Промпт задачи и схемы инструментов</text>
+      <text x="8" y="46" font-family="'SFMono-Regular', Consolas, monospace" font-size="8" fill="#64748b">Prompt x = (x_1, ..., x_M)</text>
+      
+      <text x="8" y="64" font-size="8" font-weight="700" fill="#334155">Потолки ресурсов и сроки</text>
+      <text x="8" y="76" font-size="8" fill="#64748b">Максимум токенов K_max, срок T_max</text>
+      
+      <text x="8" y="94" font-size="8" font-weight="700" fill="#334155">Целевая контрольная точка модели</text>
+      <text x="8" y="106" font-family="'SFMono-Regular', Consolas, monospace" font-size="8" fill="#d97706">model_id: "model-2026-03-01"</text>
+      
+      <text x="8" y="124" font-size="8" font-weight="700" fill="#334155">Управление политикой декодирования</text>
+      <text x="8" y="136" font-size="8" fill="#64748b">Температура tau, top-p, стоп-токены</text>
+    </g>
+
+    <!-- Stage 4 Sub-block: Interpretation & Action Dispatch -->
+    <g transform="translate(12, 202)">
+      <rect x="0" y="0" width="226" height="174" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <rect x="0" y="0" width="226" height="20" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="8" y="14" font-size="8.5" font-weight="700" fill="#0f172a">Проверка и диспетчеризация действий</text>
+
+      <text x="8" y="34" font-size="8" font-weight="700" fill="#334155">Сортировка статусов конверта</text>
+      <text x="8" y="46" font-size="8" fill="#64748b">Завершено, усечено, отказ, сбой</text>
+
+      <text x="8" y="66" font-size="8" font-weight="700" fill="#334155">Проверка схемы и целостности</text>
+      <text x="8" y="78" font-size="8" fill="#64748b">Разбор JSON; проверка AST и аргументов</text>
+
+      <text x="8" y="98" font-size="8" font-weight="700" fill="#334155">Шлюз возможностей и песочницы</text>
+      <text x="8" y="110" font-size="8" fill="#64748b">Проверка ACL путей файлов и аренды записи</text>
+
+      <text x="8" y="130" font-size="8" font-weight="700" fill="#334155">Исполнение внешних побочных эффектов</text>
+      <text x="8" y="143" font-family="'SFMono-Regular', Consolas, monospace" font-size="8" fill="#059669">edit_file(path, search, replace)</text>
+      <text x="8" y="157" font-size="7.8" font-style="italic" fill="#64748b">Авторизованный вызов в песочнице</text>
+    </g>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- COLUMN 2: INFERENCE SERVICE (SERVING ENGINE)                      -->
+  <!-- ================================================================= -->
+  <g transform="translate(315, 20)" filter="url(#cardShadow)">
+    <!-- Container Card -->
+    <rect x="0" y="0" width="250" height="390" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2"/>
+    <rect x="0" y="0" width="250" height="26" rx="4" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.2"/>
+    <rect x="0" y="16" width="250" height="10" fill="#f1f5f9"/>
+    <text x="12" y="18" font-size="10" font-weight="700" fill="#0f172a">СЕРВИС ВЫВОДА (демон движка)</text>
+
+    <!-- Sub-block 1: Queueing & Prefix Caching -->
+    <g transform="translate(12, 38)">
+      <rect x="0" y="0" width="226" height="74" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="8" y="15" font-size="8.5" font-weight="700" fill="#0f172a">Планирование пакетов и выделение KV</text>
+      <text x="8" y="30" font-size="8" fill="#64748b">Токенизация и очередь (T_queue)</text>
+      <text x="8" y="44" font-size="8" fill="#64748b">Префиксный кеш и страничная память</text>
+      <text x="8" y="58" font-family="'SFMono-Regular', Consolas, monospace" font-size="7.8" fill="#059669">Блоки KV: страничные несмежные тензоры</text>
+    </g>
+
+    <!-- Sub-block 2: Decode Loop & Grammar Masking -->
+    <g transform="translate(12, 122)">
+      <rect x="0" y="0" width="226" height="136" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <rect x="0" y="0" width="226" height="20" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="8" y="14" font-size="8.5" font-weight="700" fill="#0f172a">Декодирование и грамматическая маска</text>
+      
+      <text x="8" y="34" font-size="8" font-weight="700" fill="#334155">Маска логитов автомата</text>
+      <text x="8" y="46" font-family="'SFMono-Regular', Consolas, monospace" font-size="7.8" fill="#0284c7">z_masked[invalid] = -infinity</text>
+
+      <text x="8" y="64" font-size="8" font-weight="700" fill="#334155">Softmax и политика выборки</text>
+      <text x="8" y="76" font-family="'SFMono-Regular', Consolas, monospace" font-size="7.8" fill="#0284c7">y_t ~ p_t = softmax(z_masked / tau)</text>
+
+      <text x="8" y="94" font-size="8" font-weight="700" fill="#334155">Динамическая вставка в KV-кеш</text>
+      <text x="8" y="106" font-size="8" fill="#64748b">Добавить (k_t, v_t) в HBM</text>
+
+      <text x="8" y="121" font-size="8" font-weight="700" fill="#334155">Предикаты завершения</text>
+      <text x="8" y="132" font-size="8" fill="#64748b">Проверка EOS, K_max или таймаута</text>
+    </g>
+
+    <!-- Stage 3 Sub-block: Response Packaging -->
+    <g transform="translate(12, 268)">
+      <rect x="0" y="0" width="226" height="108" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <rect x="0" y="0" width="226" height="20" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="8" y="14" font-size="8.5" font-weight="700" fill="#0f172a">Упаковка конверта ответа</text>
+
+      <text x="8" y="34" font-size="8" font-weight="700" fill="#334155">Полезная нагрузка кандидата</text>
+      <text x="8" y="46" font-size="8" fill="#64748b">Текст или JSON вызова инструмента</text>
+
+      <text x="8" y="64" font-size="8" font-weight="700" fill="#334155">Нормализованный статус исхода</text>
+      <text x="8" y="76" font-family="'SFMono-Regular', Consolas, monospace" font-size="7.8" fill="#059669">finish_reason: "stop" | "length"</text>
+
+      <text x="8" y="92" font-size="8" font-weight="700" fill="#334155">Проверенный учет использования</text>
+      <text x="8" y="103" font-size="8" fill="#64748b">Токены M, декодирование K, TTFT</text>
+    </g>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- COLUMN 3: LEARNED MODEL (NEURAL CORE)                             -->
+  <!-- ================================================================= -->
+  <g transform="translate(600, 20)" filter="url(#cardShadow)">
+    <!-- Container Card -->
+    <rect x="0" y="0" width="250" height="390" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1.2"/>
+    <rect x="0" y="0" width="250" height="26" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
+    <rect x="0" y="16" width="250" height="10" fill="#1e293b"/>
+    <text x="12" y="18" font-size="10" font-weight="700" fill="#38bdf8">НЕЙРОННОЕ ЯДРО (кремний)</text>
+
+    <!-- Sub-block 1: Prefill Core -->
+    <g transform="translate(12, 38)">
+      <rect x="0" y="0" width="226" height="102" rx="3" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <rect x="0" y="0" width="226" height="20" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+      <text x="8" y="14" font-size="8.5" font-weight="700" fill="#f8fafc">Фаза предзаполнения промпта (GEMM)</text>
+
+      <text x="8" y="34" font-size="8" font-weight="700" fill="#94a3b8">Параллельный прием контекста</text>
+      <text x="8" y="46" font-size="8" fill="#cbd5e1">Обрабатывает все M токенов промпта</text>
+
+      <text x="8" y="64" font-size="8" font-weight="700" fill="#94a3b8">Насыщение, ограниченное вычислениями</text>
+      <text x="8" y="76" font-size="8" fill="#38bdf8">Интенсивность растет с M (I ~ M)</text>
+      <text x="8" y="90" font-size="8" fill="#94a3b8">Тензорные ядра насыщены; задает TTFT</text>
+    </g>
+
+    <!-- Sub-block 2: Autoregressive Decode Core -->
+    <g transform="translate(12, 150)">
+      <rect x="0" y="0" width="226" height="112" rx="3" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <rect x="0" y="0" width="226" height="20" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+      <text x="8" y="14" font-size="8.5" font-weight="700" fill="#f8fafc">Ядро декодирования (GEMV)</text>
+
+      <text x="8" y="34" font-size="8" font-weight="700" fill="#94a3b8">Последовательный прямой шаг</text>
+      <text x="8" y="46" font-size="8" fill="#cbd5e1">Токен t+1 причинно зависит от токена t</text>
+
+      <text x="8" y="64" font-size="8" font-weight="700" fill="#94a3b8">Ограничено шиной памяти</text>
+      <text x="8" y="76" font-size="8" fill="#f87171">Интенсивность I ~ 2/P FLOP/байт &lt;&lt; I_sat</text>
+      <text x="8" y="90" font-size="8" fill="#94a3b8">Передает веса параметров из HBM</text>
+    </g>
+
+    <!-- Sub-block 3: Unembedding Projection -->
+    <g transform="translate(12, 272)">
+      <rect x="0" y="0" width="226" height="104" rx="3" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <rect x="0" y="0" width="226" height="20" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+      <text x="8" y="14" font-size="8.5" font-weight="700" fill="#f8fafc">Тензорная проекция де-вложения</text>
+
+      <text x="8" y="34" font-size="8" font-weight="700" fill="#94a3b8">Линейное отображение словаря</text>
+      <text x="8" y="46" font-family="'SFMono-Regular', Consolas, monospace" font-size="7.8" fill="#cbd5e1">z_t = W_vocab * h_t in R^|V|</text>
+
+      <text x="8" y="64" font-size="8" font-weight="700" fill="#94a3b8">Сырые ненормированные логиты</text>
+      <text x="8" y="76" font-size="8" fill="#cbd5e1">Выдает оценки для всех |V| токенов</text>
+      <text x="8" y="90" font-size="8" fill="#94a3b8">Вектор логитов z_t — обвязке сервиса</text>
+    </g>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- CROSS-TIER DATAFLOW ARROWS & PROTOCOL STAGES                      -->
+  <!-- ================================================================= -->
+
+  <!-- Flow 1: Stage 1 Dispatch: Runtime -> Service -->
+  <path d="M 280,105 L 315,105" fill="none" stroke="#d97706" stroke-width="1.8" marker-end="url(#arr-amber)"/>
+  <rect x="281" y="86" width="33" height="15" rx="3" fill="#fef3c7" stroke="#d97706" stroke-width="0.8"/>
+  <text x="297" y="97" text-anchor="middle" font-size="7.5" font-weight="700" fill="#b45309">ЗАПРОС</text>
+
+  <!-- Flow 2a: Prefill Dispatch: Service -> Model -->
+  <path d="M 565,82 L 600,82" fill="none" stroke="#0284c7" stroke-width="1.8" marker-end="url(#arr-blue)"/>
+
+  <!-- Flow 2b: Decode Inter-token Step: Service <-> Model -->
+  <!-- Step Request -->
+  <path d="M 565,178 L 600,178" fill="none" stroke="#0284c7" stroke-width="1.8" marker-end="url(#arr-blue)"/>
+  <!-- Logit Return -->
+  <path d="M 600,212 L 565,212" fill="none" stroke="#059669" stroke-width="1.8" marker-end="url(#arr-green)"/>
+  <rect x="568" y="186" width="29" height="15" rx="3" fill="#f1f5f9" stroke="#94a3b8" stroke-width="0.8"/>
+  <text x="582" y="197" text-anchor="middle" font-size="7.5" font-weight="700" fill="#0f172a">ЦИКЛ</text>
+
+  <!-- Flow 3: Stage 3 Response Packaging Return: Service -> Runtime -->
+  <path d="M 315,322 L 280,322" fill="none" stroke="#059669" stroke-width="1.8" marker-end="url(#arr-green)"/>
+  <rect x="281" y="329" width="33" height="15" rx="3" fill="#dcfce7" stroke="#059669" stroke-width="0.8"/>
+  <text x="297" y="340" text-anchor="middle" font-size="7.5" font-weight="700" fill="#059669">ОТВЕТ</text>
+
+</svg>

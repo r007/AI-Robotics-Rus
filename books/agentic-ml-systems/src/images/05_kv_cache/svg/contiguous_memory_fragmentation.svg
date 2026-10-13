@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 520" width="100%" height="100%"
+     font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <style>
+      text { font-family: system-ui, -apple-system, sans-serif; }
+      .panel-label { font-size: 11px; font-weight: 700; fill: #1e293b; letter-spacing: 0.5px; }
+      .sub-label { font-family: ui-monospace, monospace; font-size: 10px; fill: #64748b; }
+      .item-hdr { font-size: 10.5px; font-weight: 700; fill: #0f172a; }
+      .box-txt { font-size: 10px; font-weight: 700; text-anchor: middle; }
+      .box-desc { font-size: 9px; text-anchor: middle; }
+      .note-txt { font-size: 9.5px; fill: #475569; }
+      .mono-code { font-family: ui-monospace, monospace; font-size: 9.5px; }
+    </style>
+    <pattern id="waste-hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#fca5a5" stroke-width="1.5"/>
+    </pattern>
+    <marker id="arr-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748b"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- Clean Canvas Base -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- Top Container Card: Internal Fragmentation -->
+  <g transform="translate(25, 20)">
+    <rect x="0" y="0" width="1050" height="215" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+    
+    <!-- Header Badge -->
+    <rect x="16" y="14" width="220" height="22" rx="3" fill="#fee2e2"/>
+    <text x="24" y="29" class="panel-label" fill="#991b1b">ВНУТРЕННЯЯ ФРАГМЕНТАЦИЯ</text>
+    <text x="248" y="29" class="sub-label">Потери на резервировании и геометрический запас</text>
+
+    <!-- Sequence A: Reservation Waste against S_max -->
+    <g transform="translate(20, 52)">
+      <text x="0" y="16" class="item-hdr">Запрос 1: резервирование по худшему случаю (S_alloc = S_max = 4 096 токенов):</text>
+      <g transform="translate(0, 24)">
+        <!-- Active tokens -->
+        <rect x="0" y="0" width="280" height="42" rx="3" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.2"/>
+        <text x="140" y="20" class="box-txt" fill="#1d4ed8">Живые токены: t = 1 200 (29,3 %)</text>
+        <text x="140" y="34" class="box-desc" fill="#2563eb">Активные учитываемые проекции KV</text>
+
+        <!-- Wasted reservation -->
+        <rect x="286" y="0" width="724" height="42" rx="3" fill="url(#waste-hatch)" stroke="#f87171" stroke-width="1.2"/>
+        <text x="648" y="21" class="box-txt" fill="#b91c1c">Неиспользованные потери резерва: 2 896 токенов простаивают (70,7 % емкости не используется)</text>
+        <text x="648" y="35" class="box-desc" fill="#991b1b">Зарезервировано под S_max по худшему случаю; полностью недоступно параллельным запросам</text>
+      </g>
+    </g>
+
+    <!-- Sequence B: Geometric Slack -->
+    <g transform="translate(20, 132)">
+      <text x="0" y="16" class="item-hdr">Запрос 2: динамический запас при удвоении (S_alloc = 2 048 токенов, завершен на t = 1 025 токенах):</text>
+      <g transform="translate(0, 24)">
+        <!-- Active tokens -->
+        <rect x="0" y="0" width="500" height="40" rx="3" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.2"/>
+        <text x="250" y="19" class="box-txt" fill="#15803d">Готовый вывод: t = 1 025 токенов (50,1 %)</text>
+        <text x="250" y="32" class="box-desc" fill="#16a34a">Выдан токен конца последовательности; буфер сохраняется во время паузы инструмента</text>
+
+        <!-- Wasted slack -->
+        <rect x="506" y="0" width="504" height="40" rx="3" fill="url(#waste-hatch)" stroke="#f87171" stroke-width="1.2"/>
+        <text x="758" y="19" class="box-txt" fill="#b91c1c">Геометрический запас: 1 023 токена простаивают (потери 49,9 %)</text>
+        <text x="758" y="32" class="box-desc" fill="#991b1b">Штраф за удвоение массива; простаивающая хвостовая емкость</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom Container Card: External Fragmentation -->
+  <g transform="translate(25, 255)">
+    <rect x="0" y="0" width="1050" height="245" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+    
+    <!-- Header Badge -->
+    <rect x="16" y="14" width="220" height="22" rx="3" fill="#fee2e2"/>
+    <text x="24" y="29" class="panel-label" fill="#991b1b">ВНЕШНЯЯ ФРАГМЕНТАЦИЯ</text>
+    <text x="248" y="29" class="sub-label">Шахматные разрывы памяти в линейном HBM ускорителя (пул 16 GB)</text>
+
+    <!-- State 1: Active Requests Allocated -->
+    <g transform="translate(20, 48)">
+      <text x="0" y="14" class="item-hdr">Исходное состояние: единые непрерывные выделения при разных сроках жизни траекторий:</text>
+      <g transform="translate(0, 22)">
+        <rect x="0" y="0" width="310" height="36" rx="3" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.2"/>
+        <text x="155" y="18" class="box-txt" fill="#1d4ed8">Запрос A: 4 GB (0..4 GB)</text>
+        <text x="155" y="30" class="box-desc" fill="#2563eb">Активная траектория</text>
+
+        <rect x="316" y="0" width="100" height="36" rx="3" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.2"/>
+        <text x="366" y="18" class="box-txt" fill="#b45309">Запрос B: 1 GB</text>
+        <text x="366" y="30" class="box-desc" fill="#d97706">Короткий запрос</text>
+
+        <rect x="422" y="0" width="460" height="36" rx="3" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="1.2"/>
+        <text x="652" y="18" class="box-txt" fill="#6d28d9">Запрос C: 6 GB (5..11 GB)</text>
+        <text x="652" y="30" class="box-desc" fill="#7c3aed">Траектория агента с длинным горизонтом</text>
+
+        <rect x="888" y="0" width="122" height="36" rx="3" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 2"/>
+        <text x="949" y="18" class="box-txt" fill="#475569">Свободно: 5 GB</text>
+        <text x="949" y="30" class="box-desc" fill="#64748b">11..16 GB</text>
+      </g>
+    </g>
+
+    <!-- State 2: Request B Departed & Stranded Hole -->
+    <g transform="translate(20, 126)">
+      <text x="0" y="14" class="item-hdr">После ухода B: разрыв 1 GB между A и C</text>
+      <g transform="translate(0, 22)">
+        <rect x="0" y="0" width="310" height="36" rx="3" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.2"/>
+        <text x="155" y="22" class="box-txt" fill="#1d4ed8">Запрос A (удержано 4 GB)</text>
+
+        <!-- Stranded hole -->
+        <rect x="316" y="0" width="100" height="36" rx="3" fill="#fee2e2" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="4 2"/>
+        <text x="366" y="16" class="box-txt" fill="#b91c1c">Разрыв: 1 GB</text>
+        <text x="366" y="29" font-size="8.5" fill="#dc2626" text-anchor="middle">Свободный интервал</text>
+
+        <rect x="422" y="0" width="460" height="36" rx="3" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="1.2"/>
+        <text x="652" y="22" class="box-txt" fill="#6d28d9">Запрос C (удержано 6 GB)</text>
+
+        <!-- High tail fragmented pool -->
+        <rect x="888" y="0" width="122" height="36" rx="3" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 2"/>
+        <text x="949" y="16" class="box-txt" fill="#475569">Хвост: 5 GB</text>
+        <text x="949" y="29" font-size="8.5" fill="#64748b" text-anchor="middle">Свободный интервал</text>
+      </g>
+    </g>
+
+    <!-- Incident Callout: Incoming Request D rejected -->
+    <g transform="translate(20, 198)">
+      <rect x="0" y="0" width="1010" height="32" rx="3" fill="#fff1f2" stroke="#f43f5e" stroke-width="1"/>
+      <text x="14" y="20" font-size="10" font-weight="700" fill="#991b1b">Инцидент допуска:</text>
+      <text x="140" y="20" class="note-txt" fill="#881337">D нужно 6 GB непрерывно; 6 GB свободны, но разбиты как 1 + 5</text>
+    </g>
+  </g>
+</svg>

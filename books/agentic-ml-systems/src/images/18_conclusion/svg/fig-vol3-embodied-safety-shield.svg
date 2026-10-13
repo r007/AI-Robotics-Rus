@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="100%" height="100%"
+     font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="880" height="430" rx="4" fill="#ffffff"/>
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 700; }
+      .mono { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; font-size: 10.5px; }
+      .sublabel { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11px; fill: #475569; }
+      .arrow { stroke: #334155; stroke-width: 1.6; fill: none; marker-end: url(#arrow); }
+      .arrow-green { stroke: #059669; stroke-width: 1.6; fill: none; marker-end: url(#arrow-green-m); }
+      .arrow-red { stroke: #dc2626; stroke-width: 1.6; fill: none; marker-end: url(#arrow-red-m); }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155" />
+    </marker>
+    <marker id="arrow-green-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#059669" />
+    </marker>
+    <marker id="arrow-red-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="880" height="430" class="bg" />
+
+  <!-- Container Group -->
+  <g transform="translate(100, 20)">
+
+    <!-- TIER 1: Unprivileged High-Level Planner -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="680" height="70" rx="6" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.5" />
+      <text x="24" y="24" class="label" fill="#0369a1">НЕПРИВИЛЕГИРОВАННЫЙ ВЫСОКОУРОВНЕВЫЙ ПЛАНИРОВЩИК (LLM / VLA)</text>
+      <text x="24" y="42" class="sublabel">Семантическая декомпозиция цели и многошаговые предложения траекторий</text>
+      <text x="24" y="58" class="mono" fill="#0284c7">Задержка: 200 мс – 2000 мс  |  Нулевые полномочия (эскроу)</text>
+    </g>
+
+    <!-- Downward Arrow 1 -->
+    <g transform="translate(340, 70)">
+      <line x1="0" y1="0" x2="0" y2="30" class="arrow" />
+      <rect x="-140" y="6" width="280" height="18" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+      <text x="0" y="19" class="mono" font-size="9.5" fill="#334155" text-anchor="middle">Кандидатная траектория действий (эскроу)</text>
+    </g>
+
+    <!-- TIER 2: Deterministic Safety Shield -->
+    <g transform="translate(0, 105)">
+      <rect x="0" y="0" width="680" height="70" rx="6" fill="#ecfdf5" stroke="#059669" stroke-width="1.5" />
+      <text x="24" y="24" class="label" fill="#065f46">ДЕТЕРМИНИРОВАННЫЙ ЭКРАН БЕЗОПАСНОСТИ / БАРЬЕРНЫЙ СЛОЙ</text>
+      <text x="24" y="42" class="sublabel">CBF · избегание столкновений · кинематические инварианты</text>
+      <text x="24" y="58" class="mono" fill="#059669">Задержка: &lt; 1 мс  |  Полномочия: супервизор с математической гарантией</text>
+    </g>
+
+    <!-- Downward Arrow 2 -->
+    <g transform="translate(340, 175)">
+      <line x1="0" y1="0" x2="0" y2="30" class="arrow-green" />
+      <rect x="-130" y="6" width="260" height="18" rx="3" fill="#ffffff" stroke="#a7f3d0" stroke-width="1" />
+      <text x="0" y="19" class="mono" font-size="9.5" fill="#047857" text-anchor="middle">Проверенные безопасные уставки (h(x) ≥ 0)</text>
+    </g>
+
+    <!-- TIER 3: Real-Time Actuation Pipeline -->
+    <g transform="translate(0, 210)">
+      <rect x="0" y="0" width="680" height="70" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="1.5" />
+      <text x="24" y="24" class="label" fill="#92400e">КОНВЕЙЕР ПРИВЕДЕНИЯ В ДЕЙСТВИЕ ЖЕСТКОГО РЕАЛЬНОГО ВРЕМЕНИ (RTOS)</text>
+      <text x="24" y="42" class="sublabel">Высокочастотные контроллеры обратной связи (PID, MPC) и детерминированная диспетчеризация шины</text>
+      <text x="24" y="58" class="mono" fill="#b45309">Задержка: &lt; 5 мс  |  Связь: детерминированная полевая шина (CAN / EtherCAT)</text>
+    </g>
+
+    <!-- Downward Arrow 3 -->
+    <g transform="translate(340, 280)">
+      <line x1="0" y1="0" x2="0" y2="30" class="arrow-red" />
+      <rect x="-140" y="6" width="280" height="18" rx="3" fill="#ffffff" stroke="#fca5a5" stroke-width="1" />
+      <text x="0" y="19" class="mono" font-size="9.5" fill="#b91c1c" text-anchor="middle">Токи двигателей и крутящие моменты суставов (u_t)</text>
+    </g>
+
+    <!-- TIER 4: Physical Actuators & Atoms -->
+    <g transform="translate(0, 315)">
+      <rect x="0" y="0" width="680" height="70" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5" />
+      <text x="24" y="24" class="label" fill="#991b1b">ФИЗИЧЕСКИЕ АКТУАТОРЫ (АТОМЫ И МЕХАНИКА)</text>
+      <text x="24" y="42" class="sublabel">Обмотки бесщеточных двигателей, гармонические редукторы, гидронасосы и исполнительные органы</text>
+      <text x="24" y="58" class="mono" fill="#dc2626">Термодинамически необратимое пространство состояний (T_reversal = ∞)</text>
+    </g>
+
+  </g>
+</svg>

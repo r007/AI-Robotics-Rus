@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="t-agentic-ml-systems">
+  <title id="t-agentic-ml-systems">Агентные системы машинного обучения</title>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f766e"/><stop offset="1" stop-color="#042f2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#g)"/>
+  <circle cx="700" cy="80" r="160" fill="#ffffff" fill-opacity=".06"/>
+  <circle cx="90" cy="420" r="120" fill="#ffffff" fill-opacity=".05"/>
+  <g fill="none" stroke="#ffffff" stroke-opacity=".35" stroke-width="3">
+    <circle cx="560" cy="250" r="60"/>
+    <path d="M500 250 H440 M620 250 H680"/>
+    <circle cx="410" cy="250" r="18" fill="#ffffff" fill-opacity=".15"/>
+    <circle cx="700" cy="250" r="18" fill="#ffffff" fill-opacity=".15"/>
+  </g>
+  <text x="60" y="170" fill="#ffffff" font-family="Georgia, serif" font-size="46" font-weight="bold">Агентные системы</text>
+  <text x="60" y="226" fill="#ffffff" font-family="Georgia, serif" font-size="46" font-weight="bold">машинного обучения</text>
+  <text x="60" y="290" fill="#ccfbf1" font-family="Arial, sans-serif" font-size="22">Machine Learning Systems · Том III</text>
+</svg>

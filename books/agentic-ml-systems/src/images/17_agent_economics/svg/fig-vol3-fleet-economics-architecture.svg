@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 660" width="100%" height="100%" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <marker id="arr-slate" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#475569" />
+    </marker>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb" />
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#16a34a" />
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#dc2626" />
+    </marker>
+  </defs>
+
+  <!-- Clean Canvas -->
+  <rect width="1100" height="660" fill="#ffffff" />
+
+  <!-- MAIN CONTAINER CARD -->
+  <g transform="translate(20, 16)">
+    <rect width="1060" height="628" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+    <rect width="1060" height="32" rx="4" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2" />
+    <text x="16" y="21" font-size="11.5" font-weight="700" fill="#0f172a" letter-spacing="0.2">КОНТУР УПРАВЛЕНИЯ ЭКОНОМИКОЙ ФЛОТА (5 СТУПЕНЕЙ)</text>
+    <text x="1044" y="21" font-size="9.5" font-family="'SF Mono', monospace" fill="#475569" text-anchor="end">Замкнутый контур телеметрии</text>
+
+    <!-- STAGE 1: ADMISSION WORKLOAD PROFILER (y=44..140) -->
+    <g transform="translate(56, 44)">
+      <rect width="988" height="88" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+      <rect width="988" height="20" rx="3" fill="#eff6ff" />
+      <text x="10" y="14" font-size="9" font-weight="700" fill="#1e40af">СТУПЕНЬ 1: ПРОФИЛЬ НАГРУЗКИ И ЭСКРОУ</text>
+      <text x="978" y="14" font-size="8" font-family="'SF Mono', monospace" fill="#1e40af" text-anchor="end">SLA: задержка &lt; 5 мс</text>
+
+      <g transform="translate(10, 26)">
+        <!-- Box 1 -->
+        <g transform="translate(0, 0)">
+          <rect width="314" height="52" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.8" />
+          <text x="10" y="15" font-size="8.5" font-weight="700" fill="#0f172a">Классификатор намерения и SLA</text>
+          <text x="10" y="28" font-size="7.5" fill="#475569">Проверяет промпт, срок SLA, исторические префиксные токены</text>
+          <text x="10" y="42" font-size="7.5" font-family="'SF Mono', monospace" fill="#2563eb">Разбиение: интерактивные / траектории / пакетные</text>
+        </g>
+        <!-- Box 2 -->
+        <g transform="translate(326, 0)">
+          <rect width="314" height="52" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.8" />
+          <text x="10" y="15" font-size="8.5" font-weight="700" fill="#0f172a">Вектор резервирования ресурсов</text>
+          <text x="10" y="28" font-size="7.5" fill="#475569">Вычисляет конверт токенов B_max и предел ходов K_max</text>
+          <text x="10" y="42" font-size="7.5" font-family="'SF Mono', monospace" fill="#475569">Ограничения: потолок памяти, класс контейнерной песочницы</text>
+        </g>
+        <!-- Box 3 -->
+        <g transform="translate(652, 0)">
+          <rect width="316" height="52" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.8" />
+          <text x="10" y="15" font-size="8.5" font-weight="700" fill="#0f172a">Начальное выделение эскроу</text>
+          <text x="10" y="28" font-size="7.5" fill="#475569">Резервирует финансовый капитал в реестре корневой задачи</text>
+          <text x="10" y="42" font-size="7.5" font-family="'SF Mono', monospace" fill="#166534">Утверждает: R_root + F_root ≤ B_tenant</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Arrow Stage 1 -> Stage 2 -->
+    <line x1="550" y1="132" x2="550" y2="152" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arr-blue)" />
+
+    <!-- STAGE 2: MLFQ SERVING SCHEDULER (y=152..248) -->
+    <g transform="translate(56, 152)">
+      <rect width="988" height="88" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+      <rect width="988" height="20" rx="3" fill="#f1f5f9" />
+      <text x="10" y="14" font-size="9" font-weight="700" fill="#0f172a">СТУПЕНЬ 2: ПЛАНИРОВЩИК MLFQ</text>
+      <text x="978" y="14" font-size="8" font-family="'SF Mono', monospace" fill="#475569" text-anchor="end">Ограничение Кингмана: ρ ≤ 0.70</text>
+
+      <g transform="translate(10, 26)">
+        <!-- Box 1 -->
+        <g transform="translate(0, 0)">
+          <rect width="314" height="52" rx="2" fill="#faf5ff" stroke="#d8b4fe" stroke-width="0.8" />
+          <text x="10" y="15" font-size="8.5" font-weight="700" fill="#581c87">Очередь 0: интерактивные и пробы</text>
+          <text x="10" y="28" font-size="7.5" fill="#475569">Квант Δ_0 = 64 токена · наивысший приоритет HoL</text>
+          <text x="10" y="42" font-size="7.5" font-family="'SF Mono', monospace" fill="#581c87">Без вытеснения; минимизирует TTFT</text>
+        </g>
+        <!-- Box 2 -->
+        <g transform="translate(326, 0)">
+          <rect width="314" height="52" rx="2" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.8" />
+          <text x="10" y="15" font-size="8.5" font-weight="700" fill="#0f172a">Очередь 1: многоходовые рассуждения</text>
+          <text x="10" y="28" font-size="7.5" fill="#475569">Квант Δ_1 = 512 токенов · средний приоритет</text>
+          <text x="10" y="42" font-size="7.5" font-family="'SF Mono', monospace" fill="#475569">Вытесняется Q_0; период отсрочки τ_grace</text>
+        </g>
+        <!-- Box 3 -->
+        <g transform="translate(652, 0)">
+          <rect width="316" height="52" rx="2" fill="#fffbeb" stroke="#fde68a" stroke-width="0.8" />
+          <text x="10" y="15" font-size="8.5" font-weight="700" fill="#92400e">Очередь 2: автономные пакетные флоты</text>
+          <text x="10" y="28" font-size="7.5" fill="#475569">Кванты Δ_2 ≥ 4,096 токенов · низший приоритет</text>
+          <text x="10" y="42" font-size="7.5" font-family="'SF Mono', monospace" fill="#92400e">Выгрузка в DDR5 хоста при давлении на память</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Arrow Stage 2 -> Stage 3 -->
+    <line x1="550" y1="240" x2="550" y2="260" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arr-blue)" />
+
+    <!-- STAGE 3: TIERED MODEL ROUTING CASCADE (y=260..356) -->
+    <g transform="translate(56, 260)">
+      <rect width="988" height="88" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+      <rect width="988" height="20" rx="3" fill="#f0fdf4" />
+      <text x="10" y="14" font-size="9" font-weight="700" fill="#166534">СТУПЕНЬ 3: КАСКАД МОДЕЛЕЙ</text>
+      <text x="978" y="14" font-size="8" font-family="'SF Mono', monospace" fill="#166534" font-weight="700" text-anchor="end">Снижение стоимости на 86.0% (E[C] = $0.0084)</text>
+
+      <g transform="translate(10, 26)">
+        <!-- Box 1 -->
+        <g transform="translate(0, 0)">
+          <rect width="314" height="52" rx="2" fill="#faf5ff" stroke="#d8b4fe" stroke-width="0.8" />
+          <text x="10" y="15" font-size="8.5" font-weight="700" fill="#581c87">Уровень 1: SLM и линтер AST (1B–3B)</text>
+          <text x="10" y="28" font-size="7.5" fill="#475569">C_1 = $0.0004 · линт схем и разбор</text>
+          <text x="10" y="42" font-size="7.5" font-family="'SF Mono', monospace" fill="#166534" font-weight="700">60% задач завершаются здесь (300 мс)</text>
+        </g>
+        <!-- Box 2 -->
+        <g transform="translate(326, 0)">
+          <rect width="314" height="52" rx="2" fill="#f0fdf4" stroke="#86efac" stroke-width="0.8" />
+          <text x="10" y="15" font-size="8.5" font-weight="700" fill="#166534">Уровень 2: универсальная модель (8B–14B)</text>
+          <text x="10" y="28" font-size="7.5" fill="#475569">C_2 = $0.0020 · правки кода и быстрые тесты</text>
+          <text x="10" y="42" font-size="7.5" font-family="'SF Mono', monospace" fill="#166534" font-weight="700">28% задач завершаются здесь (1,500 мс)</text>
+        </g>
+        <!-- Box 3 -->
+        <g transform="translate(652, 0)">
+          <rect width="316" height="52" rx="2" fill="#fffbeb" stroke="#fde68a" stroke-width="0.8" />
+          <text x="10" y="15" font-size="8.5" font-weight="700" fill="#92400e">Уровень 3: передовое ядро (≥ 70B / MoE)</text>
+          <text x="10" y="28" font-size="7.5" fill="#475569">C_3 = $0.0600 · планирование и отладка между репозиториями</text>
+          <text x="10" y="42" font-size="7.5" font-family="'SF Mono', monospace" fill="#dc2626" font-weight="700">12% только эскалация (хвост 6.00 с)</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Arrow Stage 3 -> Stage 4 -->
+    <line x1="550" y1="348" x2="550" y2="368" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arr-blue)" />
+
+    <!-- STAGE 4: SPECULATIVE DECODING ENGINE (y=368..464) -->
+    <g transform="translate(56, 368)">
+      <rect width="988" height="88" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+      <rect width="988" height="20" rx="3" fill="#ede9fe" />
+      <text x="10" y="14" font-size="9" font-weight="700" fill="#581c87">СТУПЕНЬ 4: СПЕКУЛЯТИВНОЕ ДЕКОДИРОВАНИЕ</text>
+      <text x="978" y="14" font-size="8" font-family="'SF Mono', monospace" fill="#581c87" font-weight="700" text-anchor="end">2.2× ускорение декодирования</text>
+
+      <g transform="translate(10, 26)">
+        <!-- Box 1 -->
+        <g transform="translate(0, 0)">
+          <rect width="478" height="52" rx="2" fill="#faf5ff" stroke="#d8b4fe" stroke-width="0.8" />
+          <text x="10" y="15" font-size="8.5" font-weight="700" fill="#581c87">Спекуляция черновых кандидатов (γ = 3..5 токенов)</text>
+          <text x="10" y="28" font-size="7.5" fill="#475569">Черновая модель выдает кандидатов</text>
+          <text x="10" y="42" font-size="7.5" font-family="'SF Mono', monospace" fill="#581c87">Заменяет последовательный GEMV, ограниченный памятью, параллельной проверкой</text>
+        </g>
+        <!-- Box 2 -->
+        <g transform="translate(490, 0)">
+          <rect width="478" height="52" rx="2" fill="#f0fdf4" stroke="#86efac" stroke-width="0.8" />
+          <text x="10" y="15" font-size="8.5" font-weight="700" fill="#166534">Целевая модель: параллельный прямой проход верификации</text>
+          <text x="10" y="28" font-size="7.5" fill="#475569">Целевая модель оценивает γ-блок одним GEMM</text>
+          <text x="10" y="42" font-size="7.5" font-family="'SF Mono', monospace" fill="#166534">Сохраняет точное выходное распределение</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Arrow Stage 4 -> Stage 5 -->
+    <line x1="550" y1="456" x2="550" y2="476" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arr-blue)" />
+
+    <!-- STAGE 5: HIERARCHICAL BUDGET LEDGER & VERIFICATION (y=476..572) -->
+    <g transform="translate(56, 476)">
+      <rect width="988" height="88" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+      <rect width="988" height="20" rx="3" fill="#fef2f2" />
+      <text x="10" y="14" font-size="9" font-weight="700" fill="#991b1b">СТУПЕНЬ 5: РЕЕСТР БЮДЖЕТА И ОРАКУЛЫ</text>
+      <text x="978" y="14" font-size="8" font-family="'SF Mono', monospace" fill="#991b1b" font-weight="700" text-anchor="end">Нулевые неявные полномочия</text>
+
+      <g transform="translate(10, 26)">
+        <!-- Box 1 -->
+        <g transform="translate(0, 0)">
+          <rect width="314" height="52" rx="2" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.8" />
+          <text x="10" y="15" font-size="8.5" font-weight="700" fill="#0f172a">Иерархический реестр эскроу</text>
+          <text x="10" y="28" font-size="7.5" fill="#475569">Непересекающиеся резервирования бюджета для потомков</text>
+          <text x="10" y="42" font-size="7.5" font-family="'SF Mono', monospace" fill="#1e40af">Инвариант сохранения: B = E + R + F</text>
+        </g>
+        <!-- Box 2 -->
+        <g transform="translate(326, 0)">
+          <rect width="314" height="52" rx="2" fill="#fef2f2" stroke="#fca5a5" stroke-width="0.8" />
+          <text x="10" y="15" font-size="8.5" font-weight="700" fill="#991b1b">Автоматические выключатели</text>
+          <text x="10" y="28" font-size="7.5" fill="#475569">Срабатывают при скорости расхода &gt; θ или обнаружении цикла</text>
+          <text x="10" y="42" font-size="7.5" font-family="'SF Mono', monospace" fill="#dc2626">Жесткое ограничение: OutOfBudgetException</text>
+        </g>
+        <!-- Box 3 -->
+        <g transform="translate(652, 0)">
+          <rect width="316" height="52" rx="2" fill="#f0fdf4" stroke="#86efac" stroke-width="0.8" />
+          <text x="10" y="15" font-size="8.5" font-weight="700" fill="#166534">Детерминированный оракул верификации</text>
+          <text x="10" y="28" font-size="7.5" fill="#475569">Герметичные наборы pytest, диффы AST, линтеры типов</text>
+          <text x="10" y="42" font-size="7.5" font-family="'SF Mono', monospace" fill="#166534">Проверенная фиксация: выход y* принят</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- LEFT CLOSED-LOOP FEEDBACK BUS (Stage 5 to Stage 1) -->
+    <!-- Runs along x=28 from y=520 up to y=88 -->
+    <path d="M 56,520 L 26,520 L 26,88 L 52,88" fill="none" stroke="#16a34a" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#arr-green)" />
+    <text x="20" y="304" font-size="8" font-family="'SF Mono', monospace" font-weight="700" fill="#166534" transform="rotate(-90 20 304)" text-anchor="middle">Телеметрия: полезный выход на доллар (GP_$) и шина калибровки p95-задержки</text>
+
+    <!-- BOTTOM OPTIMIZATION INVARIANT STRIP (y=578..612) -->
+    <g transform="translate(56, 578)">
+      <rect width="988" height="34" rx="2" fill="#f0fdf4" stroke="#86efac" stroke-width="1" />
+      <text x="494" y="21" font-size="8.5" font-family="'SF Mono', monospace" font-weight="700" fill="#166534" text-anchor="middle">ИНВАРИАНТ: максимизировать GP_$ = N_acceptable / Σ C_task при p95 ≤ SLA и α_FA = 0</text>
+    </g>
+  </g>
+</svg>

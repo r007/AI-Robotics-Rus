@@ -1,0 +1,276 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 520" width="100%" height="100%" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <marker id="arr-slate" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#475569" />
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#16a34a" />
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#dc2626" />
+    </marker>
+  </defs>
+
+  <!-- Clean Canvas -->
+  <rect width="1100" height="520" fill="#ffffff" />
+
+  <!-- MAIN CONTAINER CARD -->
+  <g transform="translate(20, 20)">
+    <rect width="1060" height="480" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+    <rect width="1060" height="32" rx="4" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2" />
+    <text x="16" y="21" font-size="11.5" font-weight="700" fill="#0f172a" letter-spacing="0.2">КАСКАД ЭСКАЛАЦИИ МОДЕЛЕЙ: ШЛЮЗЫ ВЕРИФИКАЦИИ</text>
+    <text x="1044" y="21" font-size="9.5" font-family="'SF Mono', monospace" fill="#475569" text-anchor="end">Протокол эскалации FrugalGPT</text>
+
+    <!-- TOP SECTION: THE THREE-TIER PIPELINE -->
+    <g transform="translate(16, 46)">
+      <!-- Ingress Request Box -->
+      <g transform="translate(0, 36)">
+        <rect width="80" height="100" rx="3" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2" />
+        <rect width="80" height="18" rx="3" fill="#f1f5f9" />
+        <text x="40" y="13" font-size="8" font-weight="700" fill="#475569" text-anchor="middle">ВХОД</text>
+        <text x="40" y="44" font-size="9.5" font-weight="700" fill="#0f172a" text-anchor="middle">Задача</text>
+        <text x="40" y="58" font-size="9.5" font-weight="700" fill="#0f172a" text-anchor="middle">Запрос</text>
+        <text x="40" y="76" font-size="8" font-family="'SF Mono', monospace" fill="#64748b" text-anchor="middle">x ~ вход</text>
+        <text x="40" y="90" font-size="7.5" font-family="'SF Mono', monospace" fill="#2563eb" text-anchor="middle">100k задач</text>
+      </g>
+
+      <!-- Arrow Ingress -> Tier 1 -->
+      <line x1="80" y1="86" x2="105" y2="86" stroke="#475569" stroke-width="1.5" marker-end="url(#arr-slate)" />
+
+      <!-- ================================================================= -->
+      <!-- TIER 1: SMALL / DETERMINISTIC ENGINE (1B - 3B)                     -->
+      <!-- ================================================================= -->
+      <g transform="translate(108, 0)">
+        <rect width="260" height="240" rx="3" fill="#ffffff" stroke="#7c3aed" stroke-width="1.2" />
+        <rect width="260" height="22" rx="3" fill="#f3e8ff" />
+        <text x="10" y="15" font-size="9.5" font-weight="700" fill="#581c87">УРОВЕНЬ 1: SLM И ЛИНТЕР</text>
+        <text x="250" y="15" font-size="8.5" font-family="'SF Mono', monospace" fill="#581c87" text-anchor="end">1B–3B</text>
+
+        <!-- Specs row -->
+        <g transform="translate(10, 30)">
+          <text x="0" y="10" font-size="8.5" font-weight="600" fill="#334155">SLM 3B / линтер AST</text>
+          <text x="0" y="24" font-size="8" font-family="'SF Mono', monospace" fill="#581c87">C_1 = $0.0004 · T_1 = 250 мс</text>
+          <text x="0" y="36" font-size="7.5" fill="#64748b">Извлечение аргументов, линт схемы JSON</text>
+        </g>
+
+        <!-- Verification Gate V1 -->
+        <g transform="translate(10, 78)">
+          <rect width="240" height="80" rx="2" fill="#faf5ff" stroke="#a855f7" stroke-width="1" />
+          <text x="8" y="15" font-size="8.5" font-weight="700" fill="#581c87">Шлюз верификации V_1 (AST / схема)</text>
+          <text x="8" y="28" font-size="7.5" font-family="'SF Mono', monospace" fill="#64748b">T_V1 = 50 мс · проверка типов / линтер</text>
+
+          <!-- Decision Branches -->
+          <g transform="translate(8, 38)">
+            <!-- Pass branch -->
+            <rect width="108" height="32" rx="2" fill="#f0fdf4" stroke="#86efac" stroke-width="0.8" />
+            <text x="54" y="13" font-size="7.5" font-weight="700" fill="#166534" text-anchor="middle">ПРОХОД: 60%</text>
+            <text x="54" y="25" font-size="7" font-family="'SF Mono', monospace" fill="#15803d" text-anchor="middle">Быстрый выход ($0.0004)</text>
+
+            <!-- Fail branch -->
+            <g transform="translate(116, 0)">
+              <rect width="108" height="32" rx="2" fill="#fef2f2" stroke="#fca5a5" stroke-width="0.8" />
+              <text x="54" y="13" font-size="7.5" font-weight="700" fill="#991b1b" text-anchor="middle">СБОЙ: P(fail_1)=40%</text>
+              <text x="54" y="25" font-size="7" font-family="'SF Mono', monospace" fill="#dc2626" text-anchor="middle">Эскалация на уровень 2</text>
+            </g>
+          </g>
+        </g>
+
+        <!-- Sanitization Context Policy note (Shifted to right half, leaving left clear) -->
+        <g transform="translate(82, 168)">
+          <rect width="168" height="60" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.8" />
+          <text x="8" y="14" font-size="7.5" font-weight="700" fill="#0f172a">Санитизация контекста:</text>
+          <text x="8" y="27" font-size="7.2" fill="#475569">Отбрасывает ошибочный выход 3B</text>
+          <text x="8" y="39" font-size="7.2" fill="#475569">Сохраняет трассу линтера AST</text>
+          <text x="8" y="51" font-size="7.2" font-family="'SF Mono', monospace" fill="#dc2626">Предотвращает отравление контекста</text>
+        </g>
+      </g>
+
+      <!-- Escalation Path Tier 1 -> Tier 2 -->
+      <line x1="368" y1="134" x2="396" y2="134" stroke="#dc2626" stroke-width="1.8" marker-end="url(#arr-red)" />
+      <rect x="370" y="118" width="24" height="13" rx="1" fill="#fee2e2" />
+      <text x="382" y="128" font-size="7" font-family="'SF Mono', monospace" font-weight="700" fill="#dc2626" text-anchor="middle">40%</text>
+
+      <!-- Fast Exit Path Tier 1 -> Committed Output (Drops cleanly through left corridor at x=150) -->
+      <path d="M 150,148 L 150,260 L 968,260" fill="none" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr-green)" />
+      <text x="156" y="254" font-size="7.5" font-family="'SF Mono', monospace" font-weight="700" fill="#166534">Быстрый выход: 60% задач ($0.0004 · 300 мс)</text>
+
+      <!-- ================================================================= -->
+      <!-- TIER 2: MID-TIER GENERALIST (8B - 14B)                            -->
+      <!-- ================================================================= -->
+      <g transform="translate(398, 0)">
+        <rect width="260" height="240" rx="3" fill="#ffffff" stroke="#059669" stroke-width="1.2" />
+        <rect width="260" height="22" rx="3" fill="#dcfce7" />
+        <text x="10" y="15" font-size="9.5" font-weight="700" fill="#166534">УРОВЕНЬ 2: УНИВЕРСАЛЬНАЯ МОДЕЛЬ</text>
+        <text x="250" y="15" font-size="8.5" font-family="'SF Mono', monospace" fill="#166534" text-anchor="end">8B–14B</text>
+
+        <!-- Specs row -->
+        <g transform="translate(10, 30)">
+          <text x="0" y="10" font-size="8.5" font-weight="600" fill="#334155">Модель: универсальная 14B (один ускоритель)</text>
+          <text x="0" y="24" font-size="8" font-family="'SF Mono', monospace" fill="#166534">C_2 = $0.0020 · T_2 = 800 мс</text>
+          <text x="0" y="36" font-size="7.5" fill="#64748b">Правка кода одного файла, диспетчеризация инструментов</text>
+        </g>
+
+        <!-- Verification Gate V2 -->
+        <g transform="translate(10, 78)">
+          <rect width="240" height="80" rx="2" fill="#f0fdf4" stroke="#86efac" stroke-width="1" />
+          <text x="8" y="15" font-size="8.5" font-weight="700" fill="#166534">Шлюз верификации V_2 (модульные тесты / сборка)</text>
+          <text x="8" y="28" font-size="7.5" font-family="'SF Mono', monospace" fill="#64748b">T_V2 = 400 мс · быстрая компиляция тестов</text>
+
+          <!-- Decision Branches -->
+          <g transform="translate(8, 38)">
+            <!-- Pass branch -->
+            <rect width="108" height="32" rx="2" fill="#f0fdf4" stroke="#86efac" stroke-width="0.8" />
+            <text x="54" y="13" font-size="7.5" font-weight="700" fill="#166534" text-anchor="middle">ПРОХОД: 70% от T2</text>
+            <text x="54" y="25" font-size="7" font-family="'SF Mono', monospace" fill="#15803d" text-anchor="middle">Общий выход 28% ($0.0024)</text>
+
+            <!-- Fail branch -->
+            <g transform="translate(116, 0)">
+              <rect width="108" height="32" rx="2" fill="#fef2f2" stroke="#fca5a5" stroke-width="0.8" />
+              <text x="54" y="13" font-size="7.5" font-weight="700" fill="#991b1b" text-anchor="middle">СБОЙ: P(fail_2|f_1)=30%</text>
+              <text x="54" y="25" font-size="7" font-family="'SF Mono', monospace" fill="#dc2626" text-anchor="middle">12% совместная эскалация</text>
+            </g>
+          </g>
+        </g>
+
+        <!-- Sanitization Context Policy note (Shifted to right half) -->
+        <g transform="translate(82, 168)">
+          <rect width="168" height="60" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.8" />
+          <text x="8" y="14" font-size="7.5" font-weight="700" fill="#0f172a">Санитизация контекста:</text>
+          <text x="8" y="27" font-size="7.2" fill="#475569">Удаляет неудачный многострочный код</text>
+          <text x="8" y="39" font-size="7.2" fill="#475569">Сохраняет трассу стека pytest</text>
+          <text x="8" y="51" font-size="7.2" font-family="'SF Mono', monospace" fill="#dc2626">P(f_1, f_2) = 0.12 (12%)</text>
+        </g>
+      </g>
+
+      <!-- Escalation Path Tier 2 -> Tier 3 -->
+      <line x1="658" y1="134" x2="686" y2="134" stroke="#dc2626" stroke-width="1.8" marker-end="url(#arr-red)" />
+      <rect x="660" y="118" width="24" height="13" rx="1" fill="#fee2e2" />
+      <text x="672" y="128" font-size="7" font-family="'SF Mono', monospace" font-weight="700" fill="#dc2626" text-anchor="middle">12%</text>
+
+      <!-- Mid Exit Path Tier 2 -> Committed Output (Drops cleanly through left corridor at x=440) -->
+      <path d="M 440,148 L 440,275 L 968,275" fill="none" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr-green)" />
+      <text x="446" y="270" font-size="7.5" font-family="'SF Mono', monospace" font-weight="700" fill="#166534">Средний выход: 28% задач ($0.0024 · 1,500 мс)</text>
+
+      <!-- ================================================================= -->
+      <!-- TIER 3: FRONTIER REASONING CORE (70B - 405B)                      -->
+      <!-- ================================================================= -->
+      <g transform="translate(688, 0)">
+        <rect width="260" height="240" rx="3" fill="#ffffff" stroke="#d97706" stroke-width="1.2" />
+        <rect width="260" height="22" rx="3" fill="#fef3c7" />
+        <text x="10" y="15" font-size="9.5" font-weight="700" fill="#92400e">УРОВЕНЬ 3: ПЕРЕДОВАЯ МОДЕЛЬ</text>
+        <text x="250" y="15" font-size="8.5" font-family="'SF Mono', monospace" fill="#92400e" text-anchor="end">≥ 70B / MoE</text>
+
+        <!-- Specs row -->
+        <g transform="translate(10, 30)">
+          <text x="0" y="10" font-size="8.5" font-weight="600" fill="#334155">Модель: передовой движок рассуждений</text>
+          <text x="0" y="24" font-size="8" font-family="'SF Mono', monospace" fill="#92400e">C_3 = $0.0600 · T_3 = 4,500 мс</text>
+          <text x="0" y="36" font-size="7.5" fill="#64748b">Рефакторинг между файлами, распределенные ошибки</text>
+        </g>
+
+        <!-- Verification Gate V3 -->
+        <g transform="translate(10, 78)">
+          <rect width="240" height="80" rx="2" fill="#fffbeb" stroke="#fde68a" stroke-width="1" />
+          <text x="8" y="15" font-size="8.5" font-weight="700" fill="#92400e">Шлюз верификации V_3 (оракул интеграции)</text>
+          <text x="8" y="28" font-size="7.5" font-family="'SF Mono', monospace" fill="#64748b">Полный регрессионный набор и диффы</text>
+
+          <!-- Decision Branches -->
+          <g transform="translate(8, 38)">
+            <!-- Pass branch -->
+            <rect width="108" height="32" rx="2" fill="#f0fdf4" stroke="#86efac" stroke-width="0.8" />
+            <text x="54" y="13" font-size="7.5" font-weight="700" fill="#166534" text-anchor="middle">ПРОХОД: 95% от T3</text>
+            <text x="54" y="25" font-size="7" font-family="'SF Mono', monospace" fill="#15803d" text-anchor="middle">Общий выход 11.4%</text>
+
+            <!-- Fail branch -->
+            <g transform="translate(116, 0)">
+              <rect width="108" height="32" rx="2" fill="#fef2f2" stroke="#fca5a5" stroke-width="0.8" />
+              <text x="54" y="13" font-size="7.5" font-weight="700" fill="#991b1b" text-anchor="middle">СБОЙ: 5% от T3</text>
+              <text x="54" y="25" font-size="7" font-family="'SF Mono', monospace" fill="#dc2626" text-anchor="middle">Ловушка 0.6%</text>
+            </g>
+          </g>
+        </g>
+
+        <!-- Terminal Verification note -->
+        <g transform="translate(10, 168)">
+          <rect width="240" height="60" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.8" />
+          <text x="8" y="14" font-size="7.5" font-weight="700" fill="#0f172a">Итоговый барьер верификации:</text>
+          <text x="8" y="27" font-size="7.2" fill="#475569">Достигают только 12% от общего числа задач</text>
+          <text x="8" y="39" font-size="7.2" fill="#475569">Нерешенные 0.6% возвращают FAILED</text>
+          <text x="8" y="51" font-size="7.2" font-family="'SF Mono', monospace" fill="#991b1b">Эскалация к разбору оператором-человеком</text>
+        </g>
+      </g>
+
+      <!-- Exit Path Tier 3 -> Committed Output (Right) -->
+      <path d="M 948,134 L 968,134" fill="none" stroke="#16a34a" stroke-width="1.8" marker-end="url(#arr-green)" />
+
+      <!-- Terminal Committed Output Box -->
+      <g transform="translate(972, 110)">
+        <rect width="84" height="180" rx="3" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.3" />
+        <rect width="84" height="22" rx="3" fill="#dcfce7" />
+        <text x="42" y="15" font-size="8" font-weight="700" fill="#166534" text-anchor="middle">ФИКСАЦИЯ</text>
+        
+        <text x="42" y="50" font-size="9" font-weight="700" fill="#065f46" text-anchor="middle">Проверено</text>
+        <text x="42" y="64" font-size="9" font-weight="700" fill="#065f46" text-anchor="middle">Выход y*</text>
+        <text x="42" y="82" font-size="7.5" font-family="'SF Mono', monospace" fill="#15803d" text-anchor="middle">99.4%</text>
+        <text x="42" y="94" font-size="7.5" font-family="'SF Mono', monospace" fill="#15803d" text-anchor="middle">Решено</text>
+
+        <line x1="8" y1="104" x2="76" y2="104" stroke="#bbf7d0" stroke-width="1" />
+
+        <text x="42" y="122" font-size="7" font-weight="700" fill="#475569" text-anchor="middle">Решение:</text>
+        <text x="42" y="136" font-size="7" font-family="'SF Mono', monospace" fill="#581c87" text-anchor="middle">T1: 60.0%</text>
+        <text x="42" y="148" font-size="7" font-family="'SF Mono', monospace" fill="#059669" text-anchor="middle">T2: 28.0%</text>
+        <text x="42" y="160" font-size="7" font-family="'SF Mono', monospace" fill="#d97706" text-anchor="middle">T3: 11.4%</text>
+        <text x="42" y="172" font-size="7" font-family="'SF Mono', monospace" fill="#dc2626" text-anchor="middle">Ловушка: 0.6%</text>
+      </g>
+    </g>
+
+    <!-- BOTTOM PANEL: SYSTEMS ECONOMICS & LATENCY WATERFALL LEDGER -->
+    <g transform="translate(16, 350)">
+      <rect width="1028" height="114" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+      <rect width="1028" height="22" rx="3" fill="#f1f5f9" />
+      <text x="12" y="15" font-size="9.5" font-weight="700" fill="#0f172a">ЭКОНОМИКА: ПЕРЕДОВАЯ МОДЕЛЬ ПРОТИВ КАСКАДА (100k/ДЕНЬ)</text>
+      <text x="1016" y="15" font-size="8.5" font-family="'SF Mono', monospace" fill="#475569" text-anchor="end">Сверка на примере</text>
+
+      <!-- 4 Columns -->
+      <g transform="translate(12, 30)">
+        <!-- Col 1: Formula & Tiers -->
+        <g transform="translate(0, 0)">
+          <text x="0" y="12" font-size="8.5" font-weight="700" fill="#1e40af">ФОРМУЛА ОЖИДАЕМОГО КАСКАДА</text>
+          <text x="0" y="26" font-size="8" font-family="'SF Mono', monospace" fill="#334155">E[C] = C_1 + P(f_1)·C_2 + P(f_1,f_2)·C_3</text>
+          <text x="0" y="40" font-size="8" font-family="'SF Mono', monospace" fill="#334155">E[C] = $0.0004 + 0.40($0.002) + 0.12($0.060)</text>
+          <text x="0" y="54" font-size="8.5" font-family="'SF Mono', monospace" font-weight="700" fill="#166534">E[C_cascade] = $0.0084 на задачу</text>
+          <text x="0" y="68" font-size="7.5" fill="#64748b">Суммарно 88% решено до уровня 3</text>
+        </g>
+        <line x1="250" y1="4" x2="250" y2="76" stroke="#e2e8f0" stroke-width="1" />
+
+        <!-- Col 2: Monolithic Baseline -->
+        <g transform="translate(262, 0)">
+          <text x="0" y="12" font-size="8.5" font-weight="700" fill="#991b1b">БАЗА: ПЕРЕДОВАЯ МОДЕЛЬ</text>
+          <text x="0" y="26" font-size="8" fill="#475569">Прямой маршрут на передовую модель (100% задач):</text>
+          <text x="0" y="40" font-size="8" font-family="'SF Mono', monospace" fill="#991b1b">C_mono = $0.0600 на задачу ($60.00 / 1k задач)</text>
+          <text x="0" y="54" font-size="8" font-family="'SF Mono', monospace" fill="#991b1b">Дневные расходы: $6,000.00 / день ($2.19M / год)</text>
+          <text x="0" y="68" font-size="7.5" fill="#64748b">Средняя задержка: T_mono = 4.50 с (все задачи)</text>
+        </g>
+        <line x1="504" y1="4" x2="504" y2="76" stroke="#e2e8f0" stroke-width="1" />
+
+        <!-- Col 3: Cascade Results -->
+        <g transform="translate(516, 0)">
+          <text x="0" y="12" font-size="8.5" font-weight="700" fill="#166534">3-УРОВНЕВЫЙ КАСКАД ЭСКАЛАЦИИ</text>
+          <text x="0" y="26" font-size="8" fill="#475569">Многоуровневая диспетчеризация:</text>
+          <text x="0" y="40" font-size="8" font-family="'SF Mono', monospace" fill="#166534">E[C] = $0.0084 на задачу ($8.40 / 1k задач)</text>
+          <text x="0" y="54" font-size="8" font-family="'SF Mono', monospace" fill="#166534">Дневные расходы: $840.00 / день ($306.6k / год)</text>
+          <text x="0" y="68" font-size="8" font-weight="700" fill="#166534">→ Чистая экономия: $5,160.00 / день (снижение на 86.0%)</text>
+        </g>
+        <line x1="756" y1="4" x2="756" y2="76" stroke="#e2e8f0" stroke-width="1" />
+
+        <!-- Col 4: Latency Trade-Off -->
+        <g transform="translate(768, 0)">
+          <text x="0" y="12" font-size="8.5" font-weight="700" fill="#581c87">ДИНАМИКА КОМПРОМИССА ПО ЗАДЕРЖКЕ</text>
+          <text x="0" y="26" font-size="8" font-family="'SF Mono', monospace" fill="#581c87">E[T] = 300 мс + 0.40(1200 мс) + 0.12(4500 мс)</text>
+          <text x="0" y="40" font-size="8" font-family="'SF Mono', monospace" font-weight="700" fill="#581c87">E[T_cascade] = 1,320 мс = 1.32 с</text>
+          <text x="0" y="54" font-size="8" fill="#166534">→ Средняя задержка: в 3.4× быстрее базового варианта</text>
+          <text x="0" y="68" font-size="7.5" fill="#dc2626">Хвостовая задержка (12% эскалированы): T_worst = 6.00 с</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

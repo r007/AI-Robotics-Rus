@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" width="100%" height="100%"
+     font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace">
+  <!-- Clean White Canvas -->
+  <rect width="960" height="380" fill="#FFFFFF"/>
+
+  <!-- Main Container Frame -->
+  <g transform="translate(20, 16)">
+    <rect width="920" height="352" rx="3" fill="#FFFFFF" stroke="#1e293b" stroke-width="1.5"/>
+
+    <!-- Matrix Table Structure -->
+    <g transform="translate(12, 8)">
+      <!-- Row Background Bands -->
+      <!-- Row 0: Header (Vol Titles) -->
+      <rect x="0" y="0" width="896" height="42" rx="2" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="0.8"/>
+      <!-- Vol III Highlight Column Background -->
+      <rect x="448" y="0" width="224" height="336" rx="2" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.5"/>
+
+      <!-- Column Dividers -->
+      <line x1="140" y1="0" x2="140" y2="336" stroke="#CBD5E1" stroke-width="0.8"/>
+      <line x1="294" y1="0" x2="294" y2="336" stroke="#CBD5E1" stroke-width="0.8"/>
+      <line x1="448" y1="0" x2="448" y2="336" stroke="#0F766E" stroke-width="1.5"/>
+      <line x1="672" y1="0" x2="672" y2="336" stroke="#0F766E" stroke-width="1.5"/>
+
+      <!-- Horizontal Row Lines -->
+      <line x1="0" y1="42" x2="896" y2="42" stroke="#CBD5E1" stroke-width="0.8"/>
+      <line x1="0" y1="84" x2="896" y2="84" stroke="#E2E8F0" stroke-width="0.8"/>
+      <line x1="0" y1="126" x2="896" y2="126" stroke="#E2E8F0" stroke-width="0.8"/>
+      <line x1="0" y1="168" x2="896" y2="168" stroke="#E2E8F0" stroke-width="0.8"/>
+      <line x1="0" y1="210" x2="896" y2="210" stroke="#E2E8F0" stroke-width="0.8"/>
+      <line x1="0" y1="252" x2="896" y2="252" stroke="#E2E8F0" stroke-width="0.8"/>
+      <line x1="0" y1="294" x2="896" y2="294" stroke="#E2E8F0" stroke-width="0.8"/>
+      <line x1="0" y1="336" x2="896" y2="336" stroke="#1E293B" stroke-width="1.2"/>
+
+      <!-- ============================================================= -->
+      <!-- HEADER ROW: VOLUMES                                           -->
+      <!-- ============================================================= -->
+      <!-- Label Header -->
+      <text x="10" y="24" font-size="7.5" font-weight="700" fill="#334155">ИЗМЕРЕНИЕ</text>
+
+      <!-- Vol I -->
+      <g transform="translate(148, 8)">
+        <text x="0" y="12" font-size="7.8" font-weight="700" fill="#0F172A">Введение в системы ML</text>
+        <text x="0" y="24" font-size="6.8" fill="#64748B">ML-системы на одном узле</text>
+      </g>
+
+      <!-- Vol II -->
+      <g transform="translate(302, 8)">
+        <text x="0" y="12" font-size="7.8" font-weight="700" fill="#0F172A">ML-системы в масштабе</text>
+        <text x="0" y="24" font-size="6.8" fill="#64748B">Обучение и обслуживание</text>
+      </g>
+
+      <!-- Vol III (THIS VOLUME) -->
+      <g transform="translate(456, 8)">
+        <text x="0" y="12" font-size="8.2" font-weight="700" fill="#0F766E">Агентные ML-системы</text>
+        <text x="0" y="24" font-size="7.0" font-weight="700" fill="#0F766E">Агентные системы [эта книга]</text>
+      </g>
+
+      <!-- Vol IV -->
+      <g transform="translate(680, 8)">
+        <text x="0" y="12" font-size="7.8" font-weight="700" fill="#0F172A">Физический ИИ</text>
+        <text x="0" y="24" font-size="6.8" fill="#64748B">Воплощенное ML в реальном времени</text>
+      </g>
+
+      <!-- ============================================================= -->
+      <!-- ROW 1: EXECUTION UNIT                                         -->
+      <!-- ============================================================= -->
+      <g transform="translate(0, 42)">
+        <text x="10" y="24" font-size="7.2" font-weight="700" fill="#334155">Единица исполнения</text>
+        <text x="148" y="24" font-size="7.0" fill="#0F172A">Тензорная операция (~10⁻⁹ с)</text>
+        <text x="302" y="24" font-size="7.0" fill="#0F172A">Шаг / батч (~10⁻³ с)</text>
+        <text x="456" y="24" font-size="7.2" font-weight="700" fill="#0F766E">Траектория (~10¹…10⁴ с)</text>
+        <text x="680" y="24" font-size="7.0" fill="#0F172A">Сенсомоторный цикл (~10⁻² с)</text>
+      </g>
+
+      <!-- ============================================================= -->
+      <!-- ROW 2: PRIMARY ABSTRACTION                                    -->
+      <!-- ============================================================= -->
+      <g transform="translate(0, 84)">
+        <text x="10" y="24" font-size="7.2" font-weight="700" fill="#334155">Базовая абстракция</text>
+        <text x="148" y="18" font-size="7.0" fill="#0F172A">Статический вычислительный DAG</text>
+        <text x="148" y="30" font-size="6.8" fill="#64748B">Слитые тензорные операции</text>
+        <text x="302" y="18" font-size="7.0" fill="#0F172A">3D-сетка (TP/PP/DP)</text>
+        <text x="302" y="30" font-size="6.8" fill="#64748B">Блоки KV в PagedAttention</text>
+        <text x="456" y="18" font-size="7.2" font-weight="700" fill="#0F766E">Блок управления агентом (ACB)</text>
+        <text x="456" y="30" font-size="6.8" fill="#0F766E">Префиксное дерево (radix) + саги</text>
+        <text x="680" y="18" font-size="7.0" fill="#0F172A">Кибер-физический цикл</text>
+        <text x="680" y="30" font-size="6.8" fill="#64748B">Ядро сенсомоторной политики</text>
+      </g>
+
+      <!-- ============================================================= -->
+      <!-- ROW 3: GOVERNING PHYSICS                                      -->
+      <!-- ============================================================= -->
+      <g transform="translate(0, 126)">
+        <text x="10" y="24" font-size="7.2" font-weight="700" fill="#334155">Управляющий закон</text>
+        <text x="148" y="18" font-size="7.0" fill="#0F172A">Модель roofline</text>
+        <text x="148" y="30" font-size="6.8" fill="#64748B">I = интенсивность FLOP/байт</text>
+        <text x="302" y="18" font-size="7.0" fill="#0F172A">Пропускная способность сечения</text>
+        <text x="302" y="30" font-size="6.8" fill="#64748B">Пузырь конвейера F_bubble</text>
+        <text x="456" y="18" font-size="7.2" font-weight="700" fill="#0F766E">Накопление ошибок (pᴴ)</text>
+        <text x="456" y="30" font-size="6.8" fill="#0F766E">Обратимость действия A⁻¹</text>
+        <text x="680" y="18" font-size="7.0" fill="#0F172A">Предельные сроки реального времени (τ)</text>
+        <text x="680" y="30" font-size="6.8" fill="#64748B">Ньютоновская динамика безопасности</text>
+      </g>
+
+      <!-- ============================================================= -->
+      <!-- ROW 4: SYSTEMS TRIAD                                          -->
+      <!-- ============================================================= -->
+      <g transform="translate(0, 168)">
+        <text x="10" y="24" font-size="7.2" font-weight="700" fill="#334155">Системная триада</text>
+        <text x="148" y="18" font-size="7.0" fill="#0F172A">D · A · M</text>
+        <text x="148" y="30" font-size="6.8" fill="#64748B">Данные, алгоритм, модель</text>
+        <text x="302" y="18" font-size="7.0" fill="#0F172A">Компромисс C³</text>
+        <text x="302" y="30" font-size="6.8" fill="#64748B">Вычисления, связь, емкость</text>
+        <text x="456" y="18" font-size="7.2" font-weight="700" fill="#0F766E">H · S · A · C</text>
+        <text x="456" y="30" font-size="6.8" fill="#0F766E">Горизонт, состояние, полномочия, проверка</text>
+        <text x="680" y="18" font-size="7.0" fill="#0F172A">S · A · E</text>
+        <text x="680" y="30" font-size="6.8" fill="#64748B">Восприятие, исполнение, энергия</text>
+      </g>
+
+      <!-- ============================================================= -->
+      <!-- ROW 5: PHYSICAL BOTTLENECK                                    -->
+      <!-- ============================================================= -->
+      <g transform="translate(0, 210)">
+        <text x="10" y="24" font-size="7.2" font-weight="700" fill="#334155">Физическая стена</text>
+        <text x="148" y="18" font-size="7.0" fill="#991B1B">Пропускная способность памяти HBM</text>
+        <text x="148" y="30" font-size="6.8" fill="#64748B">Сбросы регистров SRAM</text>
+        <text x="302" y="18" font-size="7.0" fill="#991B1B">Перекос межузловой сети</text>
+        <text x="302" y="30" font-size="6.8" fill="#64748B">Простаивание емкости KV</text>
+        <text x="456" y="18" font-size="7.2" font-weight="700" fill="#991B1B">Загрязнение и порча контекста</text>
+        <text x="456" y="30" font-size="6.8" fill="#0F766E">Необратимые побочные эффекты среды</text>
+        <text x="680" y="18" font-size="7.0" fill="#991B1B">Джиттер задержки актуатора</text>
+        <text x="680" y="30" font-size="6.8" fill="#64748B">Физический катастрофический ущерб</text>
+      </g>
+
+      <!-- ============================================================= -->
+      <!-- ROW 6: FAULT MODEL & GUARANTEES                               -->
+      <!-- ============================================================= -->
+      <g transform="translate(0, 252)">
+        <text x="10" y="24" font-size="7.2" font-weight="700" fill="#334155">Модель отказов</text>
+        <text x="148" y="18" font-size="7.0" fill="#0F172A">Отказ с остановкой (IEEE 754)</text>
+        <text x="148" y="30" font-size="6.8" fill="#64748B">Порча битов NaN / Inf</text>
+        <text x="302" y="18" font-size="7.0" fill="#0F172A">Византийские отстающие</text>
+        <text x="302" y="30" font-size="6.8" fill="#64748B">Сигнал живости и перезапуски узлов</text>
+        <text x="456" y="18" font-size="7.2" font-weight="700" fill="#0F766E">Дрейф правдоподобного отказа</text>
+        <text x="456" y="30" font-size="6.8" fill="#0F766E">Код 0 при нарушенных инвариантах</text>
+        <text x="680" y="18" font-size="7.0" fill="#0F172A">Аварийная остановка с безопасным отказом</text>
+        <text x="680" y="30" font-size="6.8" fill="#64748B">Ограничение сторожевым таймером и торможение</text>
+      </g>
+
+      <!-- ============================================================= -->
+      <!-- ROW 7: CAPSTONE INVARIANT                                     -->
+      <!-- ============================================================= -->
+      <g transform="translate(0, 294)">
+        <text x="10" y="24" font-size="7.2" font-weight="700" fill="#334155">Ключевой инвариант</text>
+        <text x="148" y="24" font-size="7.0" fill="#0F172A">Детерминизм ядра</text>
+        <text x="302" y="24" font-size="7.0" fill="#0F172A">Точная согласованность весов</text>
+        <text x="456" y="24" font-size="7.2" font-weight="700" fill="#0F766E">Принцип замыкания инвариантов</text>
+        <text x="680" y="24" font-size="7.0" fill="#0F172A">Физический контур безопасности</text>
+      </g>
+    </g>
+  </g>
+</svg>

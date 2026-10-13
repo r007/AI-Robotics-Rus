@@ -1,0 +1,222 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 620" width="100%" height="100%"
+     font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="1160" height="620" rx="4" fill="#ffffff"/>
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .tier-hdr { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 12.5px; fill: #0f172a; }
+      .box-hdr { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 11px; }
+      .text-reg { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 10px; fill: #334155; }
+      .mono { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; font-size: 9.5px; fill: #0f172a; }
+      .mono-bold { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; font-weight: 700; font-size: 9.5px; }
+      .tag { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; font-size: 9px; font-weight: 600; }
+      .bus-label { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; font-size: 10px; font-weight: 700; fill: #ffffff; }
+      .arrow-data { stroke: #2563eb; stroke-width: 1.6; fill: none; marker-end: url(#arr-blue); }
+      .arrow-inval { stroke: #dc2626; stroke-width: 1.6; stroke-dasharray: 4,3; fill: none; marker-end: url(#arr-red); }
+      .arrow-sync { stroke: #059669; stroke-width: 1.6; fill: none; marker-end: url(#arr-green); }
+    </style>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb" />
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626" />
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#059669" />
+    </marker>
+  </defs>
+
+  <rect width="1160" height="620" class="bg" />
+
+  <!-- TOP ROW: VOLATILE & INFERENCE TIERS (Tiers 1 & 2) -->
+  <!-- TIER 1: LOGICAL WORKING CONTEXT -->
+  <g transform="translate(30, 20)">
+    <rect width="530" height="230" rx="5" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2"/>
+    <path d="M 0 0 L 530 0 L 530 28 L 0 28 Z" fill="#eff6ff" stroke="#94a3b8" stroke-width="1.2"/>
+    <text x="14" y="19" class="tier-hdr" fill="#1e40af">ЯРУС 1: ЛОГИЧЕСКИЙ РАБОЧИЙ КОНТЕКСТ</text>
+    <text x="350" y="19" class="tag" fill="#2563eb">Куча хоста · эфемерный видоискатель</text>
+
+    <!-- Sub-blocks inside Tier 1 -->
+    <g transform="translate(14, 38)">
+      <!-- Context Frame Structure -->
+      <rect width="242" height="178" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="10" y="18" class="box-hdr" fill="#1e293b">Ограничение активной последовательности</text>
+      <text x="10" y="34" class="mono">Токены: L_t ≤ L_max (например, 128k)</text>
+      <text x="10" y="50" class="text-reg">Владелец: супервизор агента хоста</text>
+      <text x="10" y="66" class="text-reg">Задержка: ≤ 1 мс на сборку</text>
+
+      <rect x="8" y="80" width="226" height="88" rx="3" fill="#f1f5f9" stroke="#e2e8f0"/>
+      <text x="14" y="96" class="mono-bold" fill="#0f172a">Раскладка токенов видоискателя:</text>
+      <text x="14" y="112" class="mono">[системный промпт | контракты инструментов]</text>
+      <text x="14" y="128" class="mono">[срезы истории траектории]</text>
+      <text x="14" y="144" class="mono">[выбранные ссылки на артефакты]</text>
+      <text x="14" y="160" class="mono">[конверт наблюдения o_t]</text>
+    </g>
+
+    <g transform="translate(268, 38)">
+      <!-- Compaction & Filtering Engine -->
+      <rect width="248" height="178" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="10" y="18" class="box-hdr" fill="#1e293b">Сборка и уплотнение контекста</text>
+      <text x="10" y="36" class="text-reg">Динамический распределитель токенов:</text>
+      <text x="10" y="52" class="mono">Бюджет: M_rem = M_task - ∑ m_i</text>
+      <text x="10" y="72" class="text-reg">Усечение скользящим окном:</text>
+      <text x="10" y="88" class="mono">Вытесняет далекие ходы при достижении потолка</text>
+      <text x="10" y="108" class="text-reg">Очиститель наблюдений:</text>
+      <text x="10" y="124" class="mono">Удаление ANSI, ограничение байтов</text>
+      <text x="10" y="144" class="text-reg">Протокол перезаписи:</text>
+      <text x="10" y="160" class="mono-bold" fill="#b91c1c">Инвалидированные файлы очищаются за ход</text>
+    </g>
+  </g>
+
+  <!-- TIER 2: PHYSICAL KV CACHE -->
+  <g transform="translate(600, 20)">
+    <rect width="530" height="230" rx="5" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2"/>
+    <path d="M 0 0 L 530 0 L 530 28 L 0 28 Z" fill="#f5f3ff" stroke="#94a3b8" stroke-width="1.2"/>
+    <text x="14" y="19" class="tier-hdr" fill="#5b21b6">ЯРУС 2: ФИЗИЧЕСКИЙ KV-КЕШ</text>
+    <text x="350" y="19" class="tag" fill="#7c3aed">HBM / DRAM хоста · энергозависимый</text>
+
+    <!-- Sub-blocks inside Tier 2 -->
+    <g transform="translate(14, 38)">
+      <!-- PagedAttention Manager -->
+      <rect width="242" height="178" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="10" y="18" class="box-hdr" fill="#1e293b">Выделение PagedAttention</text>
+      <text x="10" y="34" class="mono">Тензоры активаций: K, V</text>
+      <text x="10" y="50" class="text-reg">Владелец: движок обслуживания вывода</text>
+      <text x="10" y="66" class="text-reg">Задержка: ~10 нс (HBM) / 50 нс (PCIe)</text>
+
+      <rect x="8" y="80" width="226" height="88" rx="3" fill="#faf5ff" stroke="#e9d5ff"/>
+      <text x="14" y="96" class="mono-bold" fill="#581c87">Отображение блочной таблицы:</text>
+      <text x="14" y="112" class="mono">Логическая страница 0 → физический кадр #402</text>
+      <text x="14" y="128" class="mono">Логическая страница 1 → физический кадр #118</text>
+      <text x="14" y="144" class="mono">Префиксный узел дерева Radix #A7</text>
+      <text x="14" y="160" class="mono">Совместное использование префикса между выборками</text>
+    </g>
+
+    <g transform="translate(268, 38)">
+      <!-- Tier 2 Eviction & Invalidation -->
+      <rect width="248" height="178" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="10" y="18" class="box-hdr" fill="#1e293b">Жизненный цикл префикса и подкачка</text>
+      <text x="10" y="36" class="text-reg">Совместное использование дерева Radix:</text>
+      <text x="10" y="52" class="mono">Повторное использование префикса без копирования между ходами</text>
+      <text x="10" y="72" class="text-reg">Подкачка в DRAM хоста (PCIe Gen5):</text>
+      <text x="10" y="88" class="mono">Приостановленные траектории выгружаются</text>
+      <text x="10" y="108" class="text-reg">Механизм отсечения префикса:</text>
+      <text x="10" y="124" class="mono-bold" fill="#b91c1c">Несовпадение хеша у загрязненного промпта</text>
+      <text x="10" y="140" class="mono-bold" fill="#b91c1c">→ узел дерева отсоединен и переиспользован</text>
+      <text x="10" y="160" class="text-reg">Емкость: 80–192 ГБ на GPU</text>
+    </g>
+  </g>
+
+  <!-- Dataflow Arrow: Logical Context Token Prefill -> KV Cache Projections -->
+  <path d="M 560 90 L 598 90" class="arrow-data"/>
+  <text x="563" y="82" class="tag" fill="#2563eb">GEMM</text>
+
+  <!-- MIDDLE BAR: SUPERVISOR CACHE COHERENCE & INVALIDATION BUS -->
+  <g transform="translate(30, 268)">
+    <rect width="1100" height="42" rx="4" fill="#1e293b" stroke="#0f172a" stroke-width="1.5"/>
+    <text x="20" y="26" class="bus-label">ФАБРИКА КОГЕРЕНТНОСТИ КЕШЕЙ И ИНВАЛИДАЦИИ СУПЕРВИЗОРА ХОСТА</text>
+    <text x="520" y="26" class="tag" fill="#94a3b8">Протоколы: широковещательная инвалидация · отсечение дерева префиксов · сквозные надгробия</text>
+  </g>
+
+  <!-- Invalidation signals from Bus up to Tier 1 and Tier 2 -->
+  <line x1="280" y1="268" x2="280" y2="252" class="arrow-inval"/>
+  <text x="286" y="263" class="tag" fill="#dc2626">Переписать устаревший контекст</text>
+
+  <line x1="860" y1="268" x2="860" y2="252" class="arrow-inval"/>
+  <text x="866" y="263" class="tag" fill="#dc2626">Отсечь префикс KV в Radix</text>
+
+  <!-- BOTTOM ROW: PERSISTENT TIERS (Tiers 3 & 4) -->
+  <!-- TIER 3: AUTHORITATIVE EXTERNAL ARTIFACTS -->
+  <g transform="translate(30, 330)">
+    <rect width="530" height="260" rx="5" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2"/>
+    <path d="M 0 0 L 530 0 L 530 28 L 0 28 Z" fill="#ecfdf5" stroke="#94a3b8" stroke-width="1.2"/>
+    <text x="14" y="19" class="tier-hdr" fill="#065f46">ЯРУС 3: АВТОРИТЕТНЫЕ ВНЕШНИЕ АРТЕФАКТЫ</text>
+    <text x="350" y="19" class="tag" fill="#059669">Локальный NVMe / Git · эталонная истина</text>
+
+    <!-- Sub-blocks inside Tier 3 -->
+    <g transform="translate(14, 38)">
+      <!-- Sandboxed Workspace Ground Truth -->
+      <rect width="242" height="206" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="10" y="18" class="box-hdr" fill="#1e293b">Эталонная истина целевого рабочего пространства</text>
+      <text x="10" y="34" class="text-reg">Носитель: NVMe / Overlayfs</text>
+      <text x="10" y="50" class="text-reg">Задержка: 10 мкс – 10 мс (ограничено I/O)</text>
+      <text x="10" y="66" class="text-reg">Емкость: многотерабайтная / ограничена квотой</text>
+
+      <rect x="8" y="80" width="226" height="116" rx="3" fill="#f0fdf4" stroke="#bbf7d0"/>
+      <text x="12" y="96" class="mono-bold" fill="#166534">Авторитетные сущности состояния:</text>
+      <text x="12" y="112" class="mono">Рабочее дерево Git и коммит ветки</text>
+      <text x="12" y="128" class="mono">Файлы исходного кода (src/**/*.rs)</text>
+      <text x="12" y="144" class="mono">Схема и таблицы реляционной БД</text>
+      <text x="12" y="160" class="mono">Rootfs эфемерного контейнера MicroVM</text>
+      <text x="12" y="180" class="mono-bold" fill="#059669">Модель не имеет неявных полномочий</text>
+    </g>
+
+    <g transform="translate(268, 38)">
+      <!-- Mutation & Oracle Validation -->
+      <rect width="248" height="206" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="10" y="18" class="box-hdr" fill="#1e293b">Граница мутаций и наблюдатели</text>
+      <text x="10" y="36" class="text-reg">Механизм мутаций в песочнице:</text>
+      <text x="10" y="52" class="mono">Ветка оверлея copy-on-write (CoW)</text>
+      <text x="10" y="72" class="text-reg">Inotify / наблюдатель файловой системы:</text>
+      <text x="10" y="88" class="mono">Немедленно ловит события записи инструментов</text>
+      <text x="10" y="108" class="text-reg">Детерминированная механическая верификация:</text>
+      <text x="10" y="124" class="mono">cargo test / pytest / rustc build</text>
+      <text x="10" y="144" class="text-reg">Инвариант когерентности:</text>
+      <text x="10" y="160" class="mono-bold" fill="#dc2626">При write(file) → выдать инвалидацию</text>
+      <text x="10" y="176" class="mono-bold" fill="#dc2626">на шину супервизора за &lt; 5 мс</text>
+    </g>
+  </g>
+
+  <!-- Mutation event up from Tier 3 to Supervisor Bus -->
+  <line x1="410" y1="330" x2="410" y2="312" class="arrow-inval"/>
+  <text x="404" y="324" class="tag" fill="#dc2626" text-anchor="end">Событие мутации (инструмент fs_write)</text>
+
+  <!-- TIER 4: DERIVATIVE RETRIEVAL INDEXES & LOGS -->
+  <g transform="translate(600, 330)">
+    <rect width="530" height="260" rx="5" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2"/>
+    <path d="M 0 0 L 530 0 L 530 28 L 0 28 Z" fill="#fffbeb" stroke="#94a3b8" stroke-width="1.2"/>
+    <text x="14" y="19" class="tier-hdr" fill="#92400e">ЯРУС 4: ПРОИЗВОДНЫЕ ИНДЕКСЫ И ПОСТОЯННЫЕ ЖУРНАЛЫ</text>
+    <text x="350" y="19" class="tag" fill="#d97706">NVMe / SQLite / векторная БД</text>
+
+    <!-- Sub-blocks inside Tier 4 -->
+    <g transform="translate(14, 38)">
+      <!-- Derivative Indexes -->
+      <rect width="242" height="206" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="10" y="18" class="box-hdr" fill="#1e293b">Вторичные производные представления</text>
+      <text x="10" y="34" class="text-reg">Владелец: подсистемы извлечения и WAL</text>
+      <text x="10" y="50" class="text-reg">Задержка запроса: 2–50 мс</text>
+      <text x="10" y="66" class="text-reg">Полномочия: НУЛЕВОЙ собственный авторитет</text>
+
+      <rect x="8" y="80" width="226" height="116" rx="3" fill="#fefce8" stroke="#fef08a"/>
+      <text x="12" y="96" class="mono-bold" fill="#854d0e">Движки производных индексов:</text>
+      <text x="12" y="112" class="mono">Плотная векторная БД (HNSW / IVF-PQ)</text>
+      <text x="12" y="128" class="mono">Граф символов AST кода (Tree-Sitter)</text>
+      <text x="12" y="144" class="mono">Разреженный лексический инвертированный индекс (BM25)</text>
+      <text x="12" y="160" class="mono">Индекс трасс траектории Radix</text>
+      <text x="12" y="180" class="mono-bold" fill="#b45309">Строгое уплотнение надгробий</text>
+    </g>
+
+    <g transform="translate(268, 38)">
+      <!-- Durable WAL & Saga Logs -->
+      <rect width="248" height="206" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="10" y="18" class="box-hdr" fill="#1e293b">Журнал упреждающей записи (WAL) и саги</text>
+      <text x="10" y="36" class="text-reg">Журнал намерений, только добавление:</text>
+      <text x="10" y="52" class="mono">fsync на диск до исполнения</text>
+      <text x="10" y="72" class="text-reg">Состояние траектории, согласованное при сбоях:</text>
+      <text x="10" y="88" class="mono">Позволяет точно восстановить состояние на момент времени</text>
+      <text x="10" y="108" class="text-reg">Распределенный журнал саги:</text>
+      <text x="10" y="124" class="mono">Регистрирует компенсирующее действие c_t</text>
+      <text x="10" y="144" class="text-reg">Триггер переиндексации:</text>
+      <text x="10" y="160" class="mono-bold" fill="#dc2626">Надгробия для загрязненных векторов;</text>
+      <text x="10" y="176" class="mono-bold" fill="#dc2626">асинхронная фоновая перестройка</text>
+    </g>
+  </g>
+
+  <!-- Synchronization / Tombstone signal from Bus down to Tier 4 -->
+  <line x1="750" y1="310" x2="750" y2="328" class="arrow-inval"/>
+  <text x="756" y="324" class="tag" fill="#dc2626">Сквозное надгробие</text>
+
+  <!-- Recall path from Tier 4 up to Tier 1 -->
+  <path d="M 680 330 L 680 300 L 520 300 L 520 252" class="arrow-sync"/>
+  <text x="674" y="324" class="tag" fill="#059669" text-anchor="end">Семантический отзыв top-k</text>
+</svg>

@@ -1,0 +1,32 @@
+# Самостоятельная книга mdBook: `mdbook serve books/agentic-ml-systems` из корня репозитория.
+# Сайт со всеми книгами и страницей каталога собирает scripts/build_site.py.
+
+[book]
+title = "Агентные системы машинного обучения"
+description = "Русский перевод тома III учебника «Machine Learning Systems»: как построить, измерить, улучшить и масштабировать систему вокруг основной модели, которая выполняет делегированные задачи. Книга в работе."
+authors = ["Vijay Janapa Reddi (оригинальный текст)", "Перевод на русский язык: Сергей Монин"]
+language = "ru"
+src = "src"
+
+[build]
+create-missing = false
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+git-repository-url = "https://github.com/r007/AI-Robotics-Rus"
+edit-url-template = "https://github.com/r007/AI-Robotics-Rus/edit/main/books/agentic-ml-systems/src/{path}"
+site-url = "/AI-Robotics-Rus/agentic-ml-systems/"
+
+[output.html.search]
+limit-results = 20
+
+[output.html.fold]
+enable = true
+level = 1
+
+[preprocessor.readme-links]
+command = "python3 ../../scripts/mdbook_readme_links.py"
+
+[preprocessor.katex]
+after = ["links"]

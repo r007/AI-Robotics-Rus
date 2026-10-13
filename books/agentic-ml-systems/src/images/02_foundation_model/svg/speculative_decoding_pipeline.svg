@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" width="100%" height="100%"
+     font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#0284c7" />
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#7c3aed" />
+    </marker>
+    <marker id="arrow-slate" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#64748b" />
+    </marker>
+    <filter id="cardShadow" x="-1%" y="-2%" width="102%" height="106%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#0f172a" flood-opacity="0.05"/>
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="960" height="430" fill="#ffffff"/>
+
+  <!-- ================================================================= -->
+  <!-- PANEL 1: Draft Proposal (Left Column)                             -->
+  <!-- ================================================================= -->
+  <g transform="translate(30, 20)" filter="url(#cardShadow)">
+    <rect width="280" height="390" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2" />
+    <rect width="280" height="26" rx="4" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.2" />
+    <rect width="280" height="10" y="16" fill="#f1f5f9"/>
+    <text x="12" y="18" font-size="10" font-weight="700" fill="#0f172a">Последовательное предложение черновика</text>
+
+    <!-- Context Box -->
+    <g transform="translate(12, 36)">
+      <rect width="256" height="42" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+      <text x="10" y="15" font-size="8" font-weight="700" fill="#475569">Зафиксированный префиксный контекст (x_1:t)</text>
+      <text x="10" y="30" font-family="'SFMono-Regular', Consolas, monospace" font-size="8.5" fill="#0f172a">"def execute_query(db, sql):"</text>
+    </g>
+
+    <!-- Draft Model Spec -->
+    <g transform="translate(12, 86)">
+      <rect width="256" height="74" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+      <text x="10" y="16" font-size="8.5" font-weight="700" fill="#0284c7">Движок черновика M_q (1–3 млрд параметров)</text>
+      <text x="10" y="32" font-size="8.0" fill="#334155">Коэффициент задержки c = T_q / T_p ≈ 0.08–0.12</text>
+      <text x="10" y="47" font-size="8.0" fill="#334155">Последовательно выдает K=4 кандидатных токена</text>
+      <text x="10" y="62" font-size="8.0" fill="#64748b">Малый объем памяти: помещается в SRAM ускорителя</text>
+    </g>
+
+    <!-- Draft Token Sequence -->
+    <g transform="translate(12, 168)">
+      <text x="0" y="12" font-size="8.5" font-weight="700" fill="#0f172a">Кандидатная последовательность черновика (K = 4):</text>
+      
+      <!-- Token 1 -->
+      <g transform="translate(0, 18)">
+        <rect width="256" height="38" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+        <text x="10" y="16" font-family="'SFMono-Regular', Consolas, monospace" font-size="8.5" font-weight="700" fill="#0284c7">x̃_1: "cursor"</text>
+        <text x="10" y="29" font-size="8.0" fill="#64748b">Вероятность черновика: q_1 = 0.94</text>
+      </g>
+      <!-- Token 2 -->
+      <g transform="translate(0, 60)">
+        <rect width="256" height="38" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+        <text x="10" y="16" font-family="'SFMono-Regular', Consolas, monospace" font-size="8.5" font-weight="700" fill="#0284c7">x̃_2: " ="</text>
+        <text x="10" y="29" font-size="8.0" fill="#64748b">Вероятность черновика: q_2 = 0.98</text>
+      </g>
+      <!-- Token 3 -->
+      <g transform="translate(0, 102)">
+        <rect width="256" height="38" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+        <text x="10" y="16" font-family="'SFMono-Regular', Consolas, monospace" font-size="8.5" font-weight="700" fill="#0284c7">x̃_3: " db.cursor"</text>
+        <text x="10" y="29" font-size="8.0" fill="#64748b">Вероятность черновика: q_3 = 0.89</text>
+      </g>
+      <!-- Token 4 -->
+      <g transform="translate(0, 144)">
+        <rect width="256" height="38" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+        <text x="10" y="16" font-family="'SFMono-Regular', Consolas, monospace" font-size="8.5" font-weight="700" fill="#0284c7">x̃_4: "()"</text>
+        <text x="10" y="29" font-size="8.0" fill="#64748b">Вероятность черновика: q_4 = 0.82</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- PANEL 2: Target Parallel Verification (Middle Column)             -->
+  <!-- ================================================================= -->
+  <g transform="translate(325, 20)" filter="url(#cardShadow)">
+    <rect width="320" height="390" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2" />
+    <rect width="320" height="26" rx="4" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.2" />
+    <rect width="320" height="10" y="16" fill="#f1f5f9"/>
+    <text x="12" y="18" font-size="10" font-weight="700" fill="#0f172a">Пакетная проверка целевой моделью (M_p)</text>
+
+    <!-- Target Engine Spec -->
+    <g transform="translate(12, 36)">
+      <rect width="296" height="66" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+      <text x="10" y="15" font-size="8.5" font-weight="700" fill="#7c3aed">Целевая модель M_p (70 млрд, плотная / MoE)</text>
+      <text x="10" y="29" font-size="8.0" fill="#334155">Параллельный GEMM оценивает все K=4 кандидата за один проход</text>
+      <text x="10" y="43" font-size="8.0" fill="#334155">Одновременно выдает K+1 векторов логитов p(· | x_&lt;k)</text>
+      <text x="10" y="57" font-size="8.0" fill="#64748b">GEMV превращается в GEMM</text>
+    </g>
+
+    <!-- Verification Matrix Comparison -->
+    <g transform="translate(12, 110)">
+      <text x="0" y="11" font-size="8.5" font-weight="700" fill="#0f172a">Проверка принятия: α_k = min(1, p_k / q_k)</text>
+
+      <!-- Row 1: Accept -->
+      <g transform="translate(0, 18)">
+        <rect width="296" height="46" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+        <text x="8" y="16" font-family="'SFMono-Regular', Consolas, monospace" font-size="8.0" font-weight="700" fill="#15803d">k=1: x̃_1 ("cursor")</text>
+        <text x="8" y="32" font-size="8.0" fill="#334155">p_1 = 0.96 | q_1 = 0.94 ⇒ α_1 = 1.00</text>
+        <rect x="222" y="12" width="66" height="22" rx="3" fill="#dcfce7" stroke="#16a34a" stroke-width="1" />
+        <text x="255" y="26" font-size="8.0" font-weight="700" fill="#15803d" text-anchor="middle">ПРИНЯТ</text>
+      </g>
+
+      <!-- Row 2: Accept -->
+      <g transform="translate(0, 70)">
+        <rect width="296" height="46" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+        <text x="8" y="16" font-family="'SFMono-Regular', Consolas, monospace" font-size="8.0" font-weight="700" fill="#15803d">k=2: x̃_2 (" =")</text>
+        <text x="8" y="32" font-size="8.0" fill="#334155">p_2 = 0.99 | q_2 = 0.98 ⇒ α_2 = 1.00</text>
+        <rect x="222" y="12" width="66" height="22" rx="3" fill="#dcfce7" stroke="#16a34a" stroke-width="1" />
+        <text x="255" y="26" font-size="8.0" font-weight="700" fill="#15803d" text-anchor="middle">ПРИНЯТ</text>
+      </g>
+
+      <!-- Row 3: Rejection Triggered -->
+      <g transform="translate(0, 122)">
+        <rect width="296" height="56" rx="3" fill="#fee2e2" stroke="#dc2626" stroke-width="1.2" />
+        <text x="8" y="16" font-family="'SFMono-Regular', Consolas, monospace" font-size="8.0" font-weight="700" fill="#991b1b">k=3: x̃_3 (" db.cursor")</text>
+        <text x="8" y="30" font-size="8.0" fill="#334155">p_3 = 0.21 | q_3 = 0.89 ⇒ α_3 = 0.236</text>
+        <text x="8" y="46" font-size="8.0" font-weight="700" fill="#dc2626">Случайный выбор u=0.45 &gt; α_3 ⇒ ОТКЛОНЕН</text>
+        <rect x="222" y="14" width="66" height="22" rx="3" fill="#fee2e2" stroke="#dc2626" stroke-width="1" />
+        <text x="255" y="28" font-size="8.0" font-weight="700" fill="#991b1b" text-anchor="middle">ОТКЛОНЕН</text>
+      </g>
+
+      <!-- Row 4: Discarded Tail -->
+      <g transform="translate(0, 184)">
+        <rect width="296" height="40" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="3 3" />
+        <text x="8" y="17" font-family="'SFMono-Regular', Consolas, monospace" font-size="8.0" fill="#64748b">k=4: x̃_4 ("()") [ПРОПУЩЕН]</text>
+        <text x="8" y="30" font-size="7.5" fill="#64748b">Оценка пропущена после отклонения выше по цепочке</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- PANEL 3: KV Cache Commit & Rollback (Right Column)                -->
+  <!-- ================================================================= -->
+  <g transform="translate(660, 20)" filter="url(#cardShadow)">
+    <rect width="270" height="390" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2" />
+    <rect width="270" height="26" rx="4" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.2" />
+    <rect width="270" height="10" y="16" fill="#f1f5f9"/>
+    <text x="12" y="18" font-size="10" font-weight="700" fill="#0f172a">Откат и фиксация остатка</text>
+
+    <!-- Residual Sampling Box -->
+    <g transform="translate(12, 36)">
+      <rect width="246" height="84" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+      <text x="10" y="15" font-size="8.5" font-weight="700" fill="#15803d">Коррекция остаточного распределения</text>
+      <text x="10" y="30" font-size="7.8" fill="#334155">При отклонении выборка замены из:</text>
+      <text x="14" y="44" font-family="'SFMono-Regular', Consolas, monospace" font-size="7.5" fill="#0f172a">p_res(v) = norm(max(0, p - q))</text>
+      <text x="10" y="58" font-size="7.8" fill="#64748b">Гарантирует точное соответствие целевой модели</text>
+      <text x="10" y="73" font-size="8.0" font-weight="700" fill="#d97706">Выборка: " conn.cursor"</text>
+    </g>
+
+    <!-- KV Cache Memory State -->
+    <g transform="translate(12, 128)">
+      <text x="0" y="11" font-size="8.5" font-weight="700" fill="#0f172a">Физические слоты KV-кеша в HBM:</text>
+
+      <!-- Slot 1: Committed -->
+      <rect x="0" y="18" width="246" height="24" rx="3" fill="#dcfce7" stroke="#16a34a" stroke-width="1" />
+      <text x="8" y="34" font-family="'SFMono-Regular', Consolas, monospace" font-size="7.8" font-weight="700" fill="#15803d">Слот t+1: "cursor" [ЗАФИКСИРОВАН]</text>
+
+      <!-- Slot 2: Committed -->
+      <rect x="0" y="46" width="246" height="24" rx="3" fill="#dcfce7" stroke="#16a34a" stroke-width="1" />
+      <text x="8" y="62" font-family="'SFMono-Regular', Consolas, monospace" font-size="7.8" font-weight="700" fill="#15803d">Слот t+2: " =" [ЗАФИКСИРОВАН]</text>
+
+      <!-- Slot 3: Corrected -->
+      <rect x="0" y="74" width="246" height="24" rx="3" fill="#fef3c7" stroke="#d97706" stroke-width="1" />
+      <text x="8" y="90" font-family="'SFMono-Regular', Consolas, monospace" font-size="7.8" font-weight="700" fill="#b45309">Слот t+3: " conn.cursor" [ИСПРАВЛЕН]</text>
+
+      <!-- Slot 4: Invalidated -->
+      <rect x="0" y="102" width="246" height="24" rx="3" fill="#fee2e2" stroke="#dc2626" stroke-width="1" stroke-dasharray="3 3" />
+      <text x="8" y="118" font-family="'SFMono-Regular', Consolas, monospace" font-size="7.8" fill="#991b1b">Слот t+4: [АННУЛИРОВАН И ОСВОБОЖДЕН]</text>
+    </g>
+
+    <!-- Round Summary Badge -->
+    <g transform="translate(12, 266)">
+      <rect width="246" height="84" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+      <text x="10" y="16" font-size="8.5" font-weight="700" fill="#0f172a">Учет шага пакета:</text>
+      <text x="10" y="32" font-size="8.0" fill="#334155">Принятые токены: 2 из черновика + 1 исправленный = 3 токена</text>
+      <text x="10" y="46" font-size="8.0" fill="#334155">Прямые проходы целевой модели: 1 (против 3 последовательных)</text>
+      <text x="10" y="61" font-size="8.0" font-weight="700" fill="#16a34a">Эффективное ускорение шага: ρ ≈ 2.14×</text>
+      <text x="10" y="74" font-size="7.5" fill="#64748b">Выходное распределение совпадает с целевой моделью</text>
+    </g>
+  </g>
+</svg>

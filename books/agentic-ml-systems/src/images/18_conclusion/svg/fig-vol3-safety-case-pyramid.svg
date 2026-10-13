@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430"
+     font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <style>
+      .panel-hdr  { font-size: 9.5px; font-weight: 700; fill: #0f172a; }
+      .tier-hdr   { font-size: 9.5px; font-weight: 700; }
+      .item       { font-size: 9px;   fill: #475569; }
+      .metric     { font-size: 8px;   fill: #475569; }
+      .claim-hdr  { font-size: 9.5px; font-weight: 700; fill: #0f172a; }
+      .role       { font-size: 8px;   font-weight: 700; fill: #64748b; }
+      .ev         { font-size: 9px;   fill: #475569; }
+      .mono       { font-family: "Courier New", monospace; font-size: 8px; }
+      .panel-bg   { fill: #f8fafc; stroke: #94a3b8; stroke-width: 1; }
+      .card-bg    { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1.2; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="430" fill="#fff" rx="4"/>
+
+  <!-- ============ PANEL A : evidence pyramid ============ -->
+  <g transform="translate(30, 20)">
+    <rect class="panel-bg" width="560" height="390" rx="5"/>
+    <rect width="560" height="26" rx="5" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+    <text class="panel-hdr" x="14" y="18">ПАНЕЛЬ A: трехъярусная пирамида свидетельств</text>
+
+    <!-- Top tier — narrowest: least traffic, least certainty -->
+    <g transform="translate(140, 44)">
+      <rect width="280" height="86" rx="4" fill="#fee2e2" stroke="#dc2626" stroke-width="1.2"/>
+      <text class="tier-hdr" x="12" y="18" fill="#dc2626">ВЕРХНИЙ ЯРУС &#183; канарейка времени выполнения</text>
+      <text class="item" x="12" y="35">Автоматические выключатели</text>
+      <text class="item" x="12" y="48">Канареечные кольца &#183; SPRT</text>
+      <text class="item" x="12" y="61">Трассировка OpenTelemetry</text>
+      <text class="metric" x="12" y="78">&#60; 100 мс &#183; в полете</text>
+      <text class="mono" x="268" y="78" text-anchor="end" fill="#dc2626">T_react &#60; 50 мс</text>
+    </g>
+
+    <!-- Middle tier -->
+    <g transform="translate(90, 146)">
+      <rect width="380" height="100" rx="4" fill="#fef3c7" stroke="#d97706" stroke-width="1.2"/>
+      <text class="tier-hdr" x="12" y="18" fill="#d97706">СРЕДНИЙ ЯРУС &#183; статистические полигоны</text>
+      <text class="item" x="12" y="35">Герметичные полигоны</text>
+      <text class="item" x="12" y="48">Границы Уилсона</text>
+      <text class="item" x="12" y="61">Накопление надежности</text>
+      <text class="item" x="12" y="74">Грязные фикстуры</text>
+      <text class="metric" x="12" y="91">10 с &#8211; 10 мин &#183; статистика</text>
+      <text class="mono" x="368" y="91" text-anchor="end" fill="#d97706">N &#8805; 2 400 &#183; &#916;p &#8804; 2,0%</text>
+    </g>
+
+    <!-- Base tier — widest: intercepts most transitions -->
+    <g transform="translate(40, 262)">
+      <rect width="480" height="100" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.2"/>
+      <text class="tier-hdr" x="12" y="18" fill="#16a34a">НИЖНИЙ ЯРУС &#183; механические верификаторы</text>
+      <text class="item" x="12" y="35">Линтеры AST &#183; компиляторы</text>
+      <text class="item" x="12" y="48">Автоматы с магазинной памятью</text>
+      <text class="item" x="12" y="61">анклавы seccomp-bpf</text>
+      <text class="item" x="12" y="74">Статический анализ загрязнения</text>
+      <text class="metric" x="12" y="91">&#60; 1 мс &#183; формальные грамматики</text>
+      <text class="mono" x="468" y="91" text-anchor="end" fill="#16a34a">частота ошибок = 0</text>
+    </g>
+  </g>
+
+  <!-- ============ PANEL B : claim / argument / evidence ============ -->
+  <g transform="translate(610, 20)">
+    <rect class="panel-bg" width="560" height="390" rx="5"/>
+    <rect width="560" height="26" rx="5" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+    <text class="panel-hdr" x="14" y="18">ПАНЕЛЬ B: утверждение &#8592; аргумент &#8592; свидетельство</text>
+
+    <!-- Claim 1 -->
+    <g transform="translate(18, 44)">
+      <rect class="card-bg" width="524" height="100" rx="4"/>
+      <path d="M 0 0 L 524 0 L 524 22 L 0 22 Z" fill="#e2e8f0"/>
+      <text class="claim-hdr" x="12" y="15">УТВЕРЖДЕНИЕ 1 &#183; нулевая эскалация привилегий хоста</text>
+      <text class="role" x="12" y="42">АРГУМЕНТ</text>
+      <text class="ev" x="80" y="42">изоляция microVM, фильтр системных вызовов seccomp-bpf</text>
+      <text class="role" x="12" y="66">СВИДЕТЕЛЬСТВО</text>
+      <text class="ev" x="80" y="66">Нижний ярус &#8212; 0 нарушений системных вызовов</text>
+      <text class="ev" x="80" y="83">Средний ярус &#8212; 10 000 прогонов фаззинга, 0 выходов</text>
+    </g>
+
+    <!-- Claim 2 -->
+    <g transform="translate(18, 156)">
+      <rect class="card-bg" width="524" height="100" rx="4"/>
+      <path d="M 0 0 L 524 0 L 524 22 L 0 22 Z" fill="#e2e8f0"/>
+      <text class="claim-hdr" x="12" y="15">УТВЕРЖДЕНИЕ 2 &#183; ограниченный расход <tspan class="mono" font-size="9">(C_task &#8804; B_max)</tspan></text>
+      <text class="role" x="12" y="42">АРГУМЕНТ</text>
+      <text class="ev" x="80" y="42">Монотонный журнал, непересекающиеся эскроу</text>
+      <text class="role" x="12" y="66">СВИДЕТЕЛЬСТВО</text>
+      <text class="ev" x="80" y="66">Нижний ярус &#8212; <tspan class="mono" font-size="9">B = E + R + F</tspan> выполняется</text>
+      <text class="ev" x="80" y="83">Верхний ярус &#8212; выключатель срабатывает при $2.00/мин</text>
+    </g>
+
+    <!-- Claim 3 -->
+    <g transform="translate(18, 268)">
+      <rect class="card-bg" width="524" height="100" rx="4"/>
+      <path d="M 0 0 L 524 0 L 524 22 L 0 22 Z" fill="#e2e8f0"/>
+      <text class="claim-hdr" x="12" y="15">УТВЕРЖДЕНИЕ 3 &#183; детерминированное восстановление при сбое</text>
+      <text class="role" x="12" y="42">АРГУМЕНТ</text>
+      <text class="ev" x="80" y="42">Компенсация WAL, саги в обратном порядке</text>
+      <text class="role" x="12" y="66">СВИДЕТЕЛЬСТВО</text>
+      <text class="ev" x="80" y="66">Средний ярус &#8212; 500 зерен сбоев, 100% откатов</text>
+      <text class="ev" x="80" y="83">Верхний ярус &#8212; MTTR &#60; 3,2 с</text>
+    </g>
+  </g>
+</svg>

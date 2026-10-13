@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 480"
+     font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="980" height="480" fill="#ffffff"/>
+  <defs>
+    <style>
+      .title { font-size: 12px; font-weight: 700; }
+      .label { font-size: 9.5px; font-weight: 700; fill: #0f172a; }
+      .sub { font-size: 8.5px; fill: #475569; }
+      .step { font-size: 8px; font-weight: 700; fill: #ffffff; }
+    </style>
+    <marker id="arr-dark" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- ===== Panel A: the approval request ===== -->
+  <g transform="translate(20, 20)">
+    <rect x="0" y="0" width="430" height="440" rx="4" fill="#f8fafc" stroke="#7c3aed" stroke-width="1.2"/>
+    <rect x="0" y="0" width="430" height="26" rx="4" fill="#f3e8ff"/>
+    <text x="14" y="17" class="title" fill="#6d28d9">(а) Что должен одобрить рецензент</text>
+
+    <rect x="20" y="40" width="390" height="46" rx="3" fill="#ffffff" stroke="#d97706" stroke-width="1"/>
+    <text x="30" y="57" class="label">Точное действие</text>
+    <text x="30" y="74" font-family="Courier New, monospace" font-size="9" fill="#b45309">drop_table(db="prod", table="orders_staging")</text>
+
+    <rect x="20" y="96" width="390" height="46" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="30" y="113" class="label">Цель и полномочия</text>
+    <text x="30" y="130" class="sub">Производственная база данных; помечено как необратимое (A3)</text>
+
+    <rect x="20" y="152" width="390" height="46" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="30" y="169" class="label">Предпросмотр</text>
+    <text x="30" y="186" class="sub">Затронутые строки, разница или вывод пробного запуска</text>
+
+    <rect x="20" y="208" width="390" height="46" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="30" y="225" class="label">Предусловия на момент запроса</text>
+    <text x="30" y="242" class="sub">Например, число строк и версия схемы на момент предложения</text>
+
+    <rect x="20" y="264" width="390" height="46" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="30" y="281" class="label">Дайджест действия</text>
+    <text x="30" y="298" class="sub">Хеш канонического вызова; одобрение привязывается к нему</text>
+
+    <rect x="20" y="320" width="390" height="46" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="30" y="337" class="label">Срок действия</text>
+    <text x="30" y="354" class="sub">Отсутствие решения к сроку считается отказом</text>
+
+    <rect x="20" y="376" width="390" height="46" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="30" y="393" class="label">Запрашивающая траектория</text>
+    <text x="30" y="410" class="sub">ID записи, номер хода, оставшийся бюджет</text>
+  </g>
+
+  <!-- ===== Panel B: the gate protocol ===== -->
+  <g transform="translate(490, 20)">
+    <rect x="0" y="0" width="470" height="440" rx="4" fill="#f8fafc" stroke="#64748b" stroke-width="1.2"/>
+    <rect x="0" y="0" width="470" height="26" rx="4" fill="#f1f5f9"/>
+    <text x="14" y="17" class="title" fill="#334155">(б) Шлюз одобрения</text>
+
+    <!-- ── 1. Hold ── -->
+    <rect x="20" y="40" width="430" height="50" rx="3" fill="#ffffff" stroke="#dc2626" stroke-width="1"/>
+    <rect x="30" y="50" width="16" height="16" rx="3" fill="#dc2626"/>
+    <text x="38" y="61" text-anchor="middle" class="step">1</text>
+    <text x="56" y="62" class="label">Удержать вызов</text>
+    <text x="56" y="78" class="sub">Траектория переходит в AWAITING_APPROVAL и освобождает рабочий поток</text>
+    <path d="M 235 90 V 110" fill="none" stroke="#334155" stroke-width="1.2" marker-end="url(#arr-dark)"/>
+
+    <!-- ── 2. Request ── -->
+    <rect x="20" y="110" width="430" height="50" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    <rect x="30" y="120" width="16" height="16" rx="3" fill="#334155"/>
+    <text x="38" y="131" text-anchor="middle" class="step">2</text>
+    <text x="56" y="132" class="label">Отправить запрос уполномоченному рецензенту</text>
+    <text x="56" y="148" class="sub">Рецензент видит панель (а), а не стенограмму</text>
+    <path d="M 235 160 V 180" fill="none" stroke="#334155" stroke-width="1.2" marker-end="url(#arr-dark)"/>
+
+    <!-- ── 3. Decide ── -->
+    <rect x="20" y="180" width="430" height="50" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    <rect x="30" y="190" width="16" height="16" rx="3" fill="#334155"/>
+    <text x="38" y="201" text-anchor="middle" class="step">3</text>
+    <text x="56" y="202" class="label">Решение: одобрить, отклонить или истечь</text>
+    <text x="56" y="218" class="sub">Модель не участвует</text>
+    <path d="M 235 230 V 250" fill="none" stroke="#334155" stroke-width="1.2" marker-end="url(#arr-dark)"/>
+
+    <!-- ── 4. Re-check ── -->
+    <rect x="20" y="250" width="430" height="50" rx="3" fill="#ffffff" stroke="#7c3aed" stroke-width="1.2"/>
+    <rect x="30" y="260" width="16" height="16" rx="3" fill="#7c3aed"/>
+    <text x="38" y="271" text-anchor="middle" class="step">4</text>
+    <text x="56" y="272" class="label">Повторная проверка перед отправкой</text>
+    <text x="56" y="288" class="sub">Дайджест совпадает; предусловия выполнены; разрешение и бюджет действительны</text>
+
+    <path d="M 120 300 V 330" fill="none" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arr-green)"/>
+    <path d="M 350 300 V 330" fill="none" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arr-red)"/>
+
+    <!-- ── Dispatch ── -->
+    <rect x="20" y="330" width="200" height="90" rx="3" fill="#ffffff" stroke="#16a34a" stroke-width="1.2"/>
+    <rect x="20" y="330" width="200" height="22" rx="3" fill="#dcfce7"/>
+    <text x="30" y="345" class="label" fill="#15803d">Одобрено и актуально</text>
+    <text x="30" y="374" class="sub">Отправка с ключом идемпотентности</text>
+    <text x="30" y="390" class="sub">Траектория переходит в WAITING_TOOL</text>
+
+    <!-- ── Refuse ── -->
+    <rect x="250" y="330" width="200" height="90" rx="3" fill="#ffffff" stroke="#dc2626" stroke-width="1.2"/>
+    <rect x="250" y="330" width="200" height="22" rx="3" fill="#fee2e2"/>
+    <text x="260" y="345" class="label" fill="#b91c1c">Отклонено, истекло или устарело</text>
+    <text x="260" y="374" class="sub">Наблюдение REFUSED для модели</text>
+    <text x="260" y="390" class="sub">Траектория возвращается в READY</text>
+  </g>
+</svg>

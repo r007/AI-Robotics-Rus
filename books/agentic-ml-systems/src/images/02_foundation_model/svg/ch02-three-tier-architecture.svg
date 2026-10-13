@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" width="100%" height="100%" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#475569"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#0284c7"/>
+    </marker>
+    <marker id="arrowAmber" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#d97706"/>
+    </marker>
+    <filter id="cardShadow" x="-1%" y="-2%" width="102%" height="106%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#0f172a" flood-opacity="0.05"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="960" height="440" fill="#ffffff"/>
+
+  <!-- TIER 1: HOST AGENT RUNTIME -->
+  <g transform="translate(40, 20)" filter="url(#cardShadow)">
+    <rect width="880" height="102" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2"/>
+    <rect width="880" height="28" rx="4" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.2"/>
+    <rect width="880" height="10" y="18" fill="#f1f5f9"/>
+    
+    <text x="20" y="19" font-size="11.5" font-weight="700" fill="#0f172a">УРОВЕНЬ 1: СРЕДА НА ХОСТЕ</text>
+    <text x="230" y="19" font-size="10" font-weight="600" fill="#475569">[пространство хоста • супервизор • Ring 3]</text>
+    <text x="860" y="19" font-size="10" font-weight="700" fill="#2563eb" text-anchor="end">Привилегии: неявные полномочия хоста</text>
+
+    <!-- Content Blocks inside Tier 1 -->
+    <g transform="translate(20, 38)">
+      <rect width="260" height="52" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="12" y="20" font-size="11" font-weight="700" fill="#0f172a">Менеджер контекста и бюджета</text>
+      <text x="12" y="36" font-size="9.5" fill="#64748b">Подготовка промпта, запас S_max, обрезка</text>
+    </g>
+
+    <g transform="translate(310, 38)">
+      <rect width="260" height="52" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="12" y="20" font-size="11" font-weight="700" fill="#0f172a">Монитор верификации и безопасности</text>
+      <text x="12" y="36" font-size="9.5" fill="#64748b">Эскроу памяти, ловушки статусов, проверка инвариантов</text>
+    </g>
+
+    <g transform="translate(600, 38)">
+      <rect width="260" height="52" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="12" y="20" font-size="11" font-weight="700" fill="#0f172a">Исполнение и диспетчеризация в песочнице</text>
+      <text x="12" y="36" font-size="9.5" fill="#64748b">Вызовы MicroVM, MCP RPC, журнал отката</text>
+    </g>
+  </g>
+
+  <!-- INTERCONNECT BUS 1: Network / RPC Transport -->
+  <g transform="translate(480, 122)">
+    <!-- Down Arrow: Request -->
+    <line x1="-150" y1="0" x2="-150" y2="36" stroke="#0284c7" stroke-width="1.8" marker-end="url(#arrowBlue)"/>
+    <text x="-160" y="22" font-size="9.5" font-weight="600" fill="#0284c7" text-anchor="end">Типизированный запрос RPC R</text>
+
+    <!-- Up Arrow: Candidate Envelope -->
+    <line x1="150" y1="36" x2="150" y2="0" stroke="#d97706" stroke-width="1.8" marker-end="url(#arrowAmber)"/>
+    <text x="160" y="22" font-size="9.5" font-weight="600" fill="#d97706" text-anchor="start">Конверт статуса и токены</text>
+
+    <!-- Boundary Badge -->
+    <rect x="-120" y="8" width="240" height="20" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="0" y="22" font-size="9" font-weight="600" fill="#475569" text-anchor="middle">Граница сети / IPC (HTTP/2 • gRPC)</text>
+  </g>
+
+  <!-- TIER 2: INFERENCE SERVICE DAEMON -->
+  <g transform="translate(40, 158)" filter="url(#cardShadow)">
+    <rect width="880" height="102" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2"/>
+    <rect width="880" height="28" rx="4" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.2"/>
+    <rect width="880" height="10" y="18" fill="#f1f5f9"/>
+    
+    <text x="20" y="19" font-size="11.5" font-weight="700" fill="#0f172a">УРОВЕНЬ 2: ДЕМОН ВЫВОДА</text>
+    <text x="280" y="19" font-size="10" font-weight="600" fill="#475569">[vLLM / SGLang / TensorRT-LLM]</text>
+    <text x="860" y="19" font-size="10" font-weight="700" fill="#0369a1" text-anchor="end">Привилегии: системная служба хоста</text>
+
+    <!-- Content Blocks inside Tier 2 -->
+    <g transform="translate(20, 38)">
+      <rect width="260" height="52" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="12" y="20" font-size="11" font-weight="700" fill="#0f172a">Планировщик пакетов</text>
+      <text x="12" y="36" font-size="9.5" fill="#64748b">Очереди предзаполн. и декодирования</text>
+    </g>
+
+    <g transform="translate(310, 38)">
+      <rect width="260" height="52" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="12" y="20" font-size="11" font-weight="700" fill="#0f172a">Менеджер памяти PagedAttention</text>
+      <text x="12" y="36" font-size="9.5" fill="#64748b">Блочные таблицы и радиксные деревья</text>
+    </g>
+
+    <g transform="translate(600, 38)">
+      <rect width="260" height="52" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="12" y="20" font-size="11" font-weight="700" fill="#0f172a">Маскирование логитов</text>
+      <text x="12" y="36" font-size="9.5" fill="#64748b">Проверка байтовыми DFA и PDA</text>
+    </g>
+  </g>
+
+  <!-- INTERCONNECT BUS 2: PCIe / NVLink Interconnect -->
+  <g transform="translate(480, 260)">
+    <!-- Down Arrow: Kernel Launch -->
+    <line x1="-150" y1="0" x2="-150" y2="36" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+    <text x="-160" y="22" font-size="9.5" font-weight="600" fill="#475569" text-anchor="end">Запуск ядра CUDA и токены промпта</text>
+
+    <!-- Up Arrow: Sampled Token ID -->
+    <line x1="150" y1="36" x2="150" y2="0" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+    <text x="160" y="22" font-size="9.5" font-weight="600" fill="#475569" text-anchor="start">Идентификатор выбранного токена y_t</text>
+
+    <!-- Boundary Badge -->
+    <rect x="-120" y="8" width="240" height="20" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="0" y="22" font-size="9" font-weight="600" fill="#475569" text-anchor="middle">Межсоединение PCIe Gen5 / NVLink</text>
+  </g>
+
+  <!-- TIER 3: NEURAL CORE (ACCELERATOR SILICON) -->
+  <g transform="translate(40, 296)" filter="url(#cardShadow)">
+    <rect width="880" height="114" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1.2"/>
+    <rect width="880" height="28" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
+    <rect width="880" height="10" y="18" fill="#1e293b"/>
+    
+    <text x="20" y="19" font-size="11.5" font-weight="700" fill="#38bdf8">УРОВЕНЬ 3: НЕЙРОННОЕ ЯДРО</text>
+    <text x="320" y="19" font-size="10" font-weight="500" fill="#94a3b8">[NVIDIA H100 / B200 / TPU v5p]</text>
+    <text x="860" y="19" font-size="10" font-weight="700" fill="#ef4444" text-anchor="end">Привилегии: нулевые неявные полномочия (A = 0)</text>
+
+    <!-- Content Blocks inside Tier 3 -->
+    <g transform="translate(20, 38)">
+      <rect width="260" height="62" rx="3" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <text x="12" y="20" font-size="11" font-weight="700" fill="#f8fafc">Тензорные вычислительные ядра</text>
+      <text x="12" y="36" font-size="9.5" fill="#94a3b8">GEMM (предзаполн.) и GEMV (декод.)</text>
+      <text x="12" y="52" font-size="8.5" fill="#38bdf8">Интенсивность I ∈ [1, 150] FLOP/байт</text>
+    </g>
+
+    <g transform="translate(310, 38)">
+      <rect width="260" height="62" rx="3" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <text x="12" y="20" font-size="11" font-weight="700" fill="#f8fafc">Статические веса параметров Θ</text>
+      <text x="12" y="36" font-size="9.5" fill="#94a3b8">Память HBM (HBM3 / HBM3e)</text>
+      <text x="12" y="52" font-size="8.5" fill="#38bdf8">Предел шины: β_eff ≈ 3.35 TB/s</text>
+    </g>
+
+    <g transform="translate(600, 38)">
+      <rect width="260" height="62" rx="3" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <text x="12" y="20" font-size="11" font-weight="700" fill="#f8fafc">Выборка на кристалле и KV-кеш</text>
+      <text x="12" y="36" font-size="9.5" fill="#94a3b8">Логит softmax и выборка с температурой</text>
+      <text x="12" y="52" font-size="8.5" fill="#38bdf8">Прямая выборка строк: Offset(t) = t · d_model · b</text>
+    </g>
+  </g>
+</svg>
