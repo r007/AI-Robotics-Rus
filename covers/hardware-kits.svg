@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="t-hardware-kits">
+  <title id="t-hardware-kits">Аппаратные наборы</title>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4338ca"/><stop offset="1" stop-color="#1e1b4b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#g)"/>
+  <circle cx="700" cy="80" r="160" fill="#ffffff" fill-opacity=".06"/>
+  <circle cx="90" cy="420" r="120" fill="#ffffff" fill-opacity=".05"/>
+  <text x="60" y="120" font-size="18" letter-spacing="3" fill="#ffffff" fill-opacity=".85" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">MLSYSBOOK · HARDWARE KITS</text>
+  <text x="60" y="205" font-size="44" font-weight="700" fill="#ffffff" font-family="DejaVu Sans, Arial, sans-serif">Аппаратные</text><text x="60" y="259" font-size="44" font-weight="700" fill="#ffffff" font-family="DejaVu Sans, Arial, sans-serif">наборы</text>
+  <text x="60" y="310" font-size="20" fill="#ffffff" fill-opacity=".85" font-family="DejaVu Sans, Arial, sans-serif">Практика на реальных платах</text>
+  <g>
+    <circle cx="640" cy="235" r="110" fill="none" stroke="#ffffff" stroke-opacity=".35" stroke-width="6" stroke-dasharray="10 12"/>
+    <rect x="570" y="180" width="140" height="110" rx="10" fill="#ffffff" fill-opacity=".92"/>
+    <rect x="615" y="215" width="50" height="40" rx="5" fill="#4338ca"/>
+    <circle cx="590" cy="250" r="6" fill="#fbbf24"/>
+    <circle cx="590" cy="270" r="6" fill="#34d399"/>
+    <rect x="675" y="240" width="20" height="30" rx="3" fill="#c7d2fe"/>
+  </g>
+</svg>
