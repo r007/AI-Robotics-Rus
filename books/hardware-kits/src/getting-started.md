@@ -22,7 +22,7 @@
 | [Raspberry Pi](https://mlsysbook.ai/kits/contents/raspi/raspi.html) | ~$60–80 | Полноценная среда Linux, LLM и VLM |
 | [Nicla Vision](https://mlsysbook.ai/kits/contents/arduino/nicla_vision/nicla_vision.html) | ~$95 | Профессиональный уровень, сверхнизкое энергопотребление |
 
-Подробные характеристики и технические сравнения см. на странице [«Платформы»](https://mlsysbook.ai/kits/contents/platforms.html).
+Подробные характеристики и технические сравнения см. на странице [«Платформы»](platforms.md).
 
 ## Шаг 2. Настройте среду разработки
 

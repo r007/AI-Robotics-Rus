@@ -27,3 +27,6 @@ level = 1
 
 [preprocessor.readme-links]
 command = "python3 ../../scripts/mdbook_readme_links.py"
+
+[preprocessor.katex]
+after = ["links"]

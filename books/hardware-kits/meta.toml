@@ -4,7 +4,7 @@
 order = 4
 # in-progress | draft | complete
 status = "in-progress"
-status_label = "Первая глава переведена · остальное в работе"
+status_label = "Первые две главы переведены · остальное в работе"
 # generated: src/SUMMARY.md создаёт scripts/make_summary.py и проверяет CI
 summary = "generated"
 # Книга не под общей лицензией репозитория, см. NOTICE.md
