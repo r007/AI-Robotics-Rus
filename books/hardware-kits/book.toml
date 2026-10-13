@@ -1,0 +1,29 @@
+# Самостоятельная книга mdBook: `mdbook serve books/hardware-kits` из корня репозитория.
+# Сайт со всеми книгами и страницей каталога собирает scripts/build_site.py.
+
+[book]
+title = "Аппаратные наборы"
+description = "Русский перевод раздела Hardware Kits учебника «Machine Learning Systems»: лабораторные работы по машинному обучению на реальных встраиваемых платах."
+authors = ["Vijay Janapa Reddi, Marcelo Rovai и соавторы (оригинальный текст)", "Перевод на русский язык: Сергей Монин"]
+language = "ru"
+src = "src"
+
+[build]
+create-missing = false
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+git-repository-url = "https://github.com/r007/AI-Robotics-Rus"
+edit-url-template = "https://github.com/r007/AI-Robotics-Rus/edit/main/books/hardware-kits/src/{path}"
+site-url = "/AI-Robotics-Rus/hardware-kits/"
+
+[output.html.search]
+limit-results = 20
+
+[output.html.fold]
+enable = true
+level = 1
+
+[preprocessor.readme-links]
+command = "python3 ../../scripts/mdbook_readme_links.py"
