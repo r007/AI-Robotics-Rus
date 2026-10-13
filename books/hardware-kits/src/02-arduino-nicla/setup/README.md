@@ -2,12 +2,12 @@
 
 <p align="center">
   <img src="images/jpg/nicla_sys_ini.jpg" alt="Иллюстрация с платой Arduino NICLA VISION в центре стола с компьютером" width="500"><br>
-  <em>*Промпт DALL·E 3: иллюстрация в духе мультфильма 1950-х годов, где плата Arduino NICLA VISION с камерой и другими датчиками стоит в центре старомодного стола. На экране компьютера со скруглёнными углами открыта Arduino IDE. Код связан с настройкой светодиодов и распознаванием голосовых команд. В Serial Monitor явно выводятся слова «yes» и «no».</em>
+  <em>Промпт DALL·E 3: иллюстрация в духе мультфильма 1950-х годов, где плата Arduino NICLA VISION с камерой и другими датчиками стоит в центре старомодного стола. На экране компьютера со скруглёнными углами открыта Arduino IDE. Код связан с настройкой светодиодов и распознаванием голосовых команд. В Serial Monitor явно выводятся слова «yes» и «no».</em>
 </p>
 
 ## Обзор
 
-[Arduino Nicla Vision](https://docs.arduino.cc/hardware/nicla-vision) (иногда её называют *NiclaV*) — отладочная плата с двумя процессорами, которые могут выполнять задачи параллельно. Она входит в семейство плат с тем же форм-фактором, но рассчитанных на конкретные задачи, например [Nicla Sense ME](https://www.bosch-sensortec.com/software-tools/tools/arduino-nicla-sense-me/) и [Nicla Voice](https://store-usa.arduino.cc/products/nicla-voice). Платы Nicla эффективно выполняют процессы, созданные с помощью TensorFlow Lite. Например, одно ядро NiclaV на лету выполняет алгоритм компьютерного зрения (инференс), а другое решает низкоуровневые задачи: управляет мотором, обменивается данными или работает как пользовательский интерфейс. Встроенный беспроводной модуль позволяет одновременно использовать Wi-Fi и Bluetooth Low Energy (BLE).
+[Arduino Nicla Vision](https://docs.arduino.cc/hardware/nicla-vision) (иногда её называют *NiclaV*) — отладочная плата с двумя процессорами, которые могут выполнять задачи параллельно. Она входит в семейство плат с тем же форм-фактором, но рассчитанных на конкретные задачи, например [Nicla Sense ME](https://www.bosch-sensortec.com/software-tools/tools/arduino-nicla-sense-me/) и [Nicla Voice](https://store-usa.arduino.cc/products/nicla-voice). Платы Nicla хорошо справляются с эффективным выполнением процессов, созданных с помощью TensorFlow Lite. Например, одно ядро NiclaV на лету выполняет алгоритм компьютерного зрения (инференс), а другое решает низкоуровневые задачи: управляет мотором, обменивается данными или работает как пользовательский интерфейс. Встроенный беспроводной модуль позволяет одновременно использовать Wi-Fi и Bluetooth Low Energy (BLE).
 
 <p align="center">
   <img src="images/png/nicla-1.png" alt="Плата Arduino Nicla Vision" width="400">
@@ -17,7 +17,7 @@
 
 ### Два параллельных ядра
 
-Центральный процессор — двухъядерный [STM32H747](https://content.arduino.cc/assets/Arduino-Portenta-H7_Datasheet_stm32h747xi.pdf): ядро Cortex-M7 работает на частоте 480 МГц, ядро Cortex-M4 — на 240 МГц. Два ядра обмениваются данными через механизм удалённого вызова процедур (RPC), который позволяет без затруднений вызывать функции на другом процессоре. Оба процессора используют общие периферийные устройства кристалла и могут работать с:
+Центральный процессор — двухъядерный [STM32H747](https://content.arduino.cc/assets/Arduino-Portenta-H7_Datasheet_stm32h747xi.pdf): ядро Cortex-M7 работает на частоте 480 МГц, ядро Cortex-M4 — на 240 МГц. Два ядра обмениваются данными через механизм удалённого вызова процедур (RPC), который позволяет без затруднений вызывать функции на другом процессоре. Оба процессора используют общую периферию кристалла и могут запускать:
 
 - скетчами Arduino поверх Arm Mbed OS;
 - нативными приложениями Mbed;
@@ -127,7 +127,7 @@ OpenMV IDE — ведущая интегрированная среда разр
   <img src="images/png/image-20250409103159216.png" alt="Окно установки OpenMV IDE" width="370">
 </p>
 
-IDE должна открыться с кодом helloworld_1.py в области редактирования. Если этого не произошло, откройте его через `Files > Examples > HelloWord > helloword.py`.
+IDE должна открыться с кодом helloworld_1.py в области редактирования. Если этого не произошло, откройте его через `File > Examples > HelloWorld > helloworld.py`.
 
 <p align="center">
   <img src="images/png/image-20250409104108038.png" alt="OpenMV IDE с кодом helloworld_1.py" width="430">
@@ -161,7 +161,7 @@ IDE должна открыться с кодом helloworld_1.py в облас�
   <img src="images/png/image-20250409103828014.png" alt="Ход прошивки OpenMV в терминале" width="380">
 </p>
 
-Дождитесь, пока зелёный светодиод перестанет мигать и гаснуть. По окончании процесса появится сообщение «DFU firmware update complete!». Нажмите `[OK]`.
+Дождитесь, пока зелёный светодиод перестанет мигать и плавно менять яркость. По окончании процесса появится сообщение «DFU firmware update complete!». Нажмите `[OK]`.
 
 <p align="center">
   <img src="images/png/image-20250409103900709.png" alt="Сообщение о завершении обновления DFU" width="240">
@@ -189,7 +189,7 @@ IDE должна открыться с кодом helloworld_1.py в облас�
 
 #### Проверка камеры
 
-Чтобы проверить камеру, запустим helloword_1.py. Для этого выберите скрипт в `File > Examples > HelloWorld > helloword.py`.
+Чтобы проверить камеру, запустим helloworld_1.py. Для этого выберите скрипт в `File > Examples > HelloWorld > helloworld.py`.
 
 Когда вы нажмёте зелёную кнопку «Play», скрипт MicroPython (helloworld.py) из области редактирования загрузится и запустится на Nicla Vision. В области Camera Viewer начнётся потоковая передача видео. В Serial Monitor будет выводиться FPS (кадров в секунду): примерно 27 кадров/с.
 
@@ -306,7 +306,7 @@ Edge Impulse официально поддерживает Nicla Vision. Поэ�
 
 [Датчик освещённости Grove](https://wiki.seeedstudio.com/Grove-Light_Sensor/) подключается к одному из одиночных аналоговых выводов (A0/PC4), [устройство LoRaWAN](https://wiki.seeedstudio.com/Grove_LoRa_E5_New_Version/) — к UART, а [OLED-дисплей](https://wiki.seeedstudio.com/Grove-OLED-Display-0.96-SSD1315/) — к разъёму I2C.
 
-Выводы Nicla 3 (Tx) и 4 (Rx) подключаются к разъёму Serial Shield. Обмен по UART используется для устройства LoRaWan. Вот простой код для работы с UART:
+Выводы Nicla 3 (Tx) и 4 (Rx) подключаются к разъёму Serial Shield. Обмен по UART используется для устройства LoRaWAN. Вот простой код для работы с UART:
 
 ``` python
 # Тест UART — By: marcelo_rovai — Sat Sep 23 2023
@@ -327,7 +327,7 @@ while(True):
     time.sleep_ms(1000)
 ```
 
-Чтобы проверить работу UART, подключите другое устройство, например Arduino UNO, которое выводит «Hello Word» в Serial Monitor. Вот [код](https://github.com/Mjrovai/Arduino_Nicla_Vision/blob/main/Arduino-IDE/teste_uart_UNO/teste_uart_UNO.ino).
+Чтобы проверить работу UART, подключите другое устройство, например Arduino UNO, которое выводит «Hello World» в Serial Monitor. Вот [код](https://github.com/Mjrovai/Arduino_Nicla_Vision/blob/main/Arduino-IDE/teste_uart_UNO/teste_uart_UNO.ino).
 
 <p align="center">
   <img src="images/jpg/image24.jpg" alt="Вывод Hello World на Serial Monitor Arduino UNO" width="290">
@@ -379,7 +379,7 @@ while (True):
 
 ## Итоги
 
-Arduino Nicla Vision — отличное *миниатюрное устройство* для промышленного и профессионального применения! Оно мощное, надёжное, маломощное и имеет подходящие датчики для самых распространённых задач встраиваемого машинного обучения: зрения, движения, слияния датчиков и звука.
+Arduino Nicla Vision — отличное *миниатюрное устройство* для промышленного и профессионального применения! Оно мощное, надёжное, маломощное и имеет подходящие датчики для самых распространённых задач встраиваемого машинного обучения: зрения, движения, слияния данных датчиков и звука.
 
 > В [репозитории GitHub](https://github.com/Mjrovai/Arduino_Nicla_Vision/tree/main) вы найдёте самые свежие версии всех кодов, которые использовались или комментировались в этой практической лабораторной работе.
 
