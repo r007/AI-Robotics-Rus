@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 240" role="img" aria-labelledby="xp-title" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="15">
+  <title id="xp-title">Конвейер: от цели и набора данных к инференсу и развёртыванию</title>
+  <defs>
+    <marker id="xp-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#ed7d31"/>
+    </marker>
+  </defs>
+  <ellipse cx="70" cy="65" rx="62" ry="36" fill="#4472c4"/>
+  <text x="70" y="61" text-anchor="middle" fill="#ffffff">Определить</text>
+  <text x="70" y="81" text-anchor="middle" fill="#ffffff">цель</text>
+  <path d="M136 65 H160" stroke="#ed7d31" stroke-width="2.5" fill="none" marker-end="url(#xp-arrow)"/>
+
+  <path d="M165 50 V80 A40 10 0 0 0 245 80 V50" fill="#e2f0d9" stroke="#70ad47" stroke-width="1.5"/>
+  <ellipse cx="205" cy="50" rx="40" ry="10" fill="#c5e0b4" stroke="#70ad47" stroke-width="1.5"/>
+  <text x="205" y="68" text-anchor="middle" fill="#1f3864">Набор</text>
+  <text x="205" y="86" text-anchor="middle" fill="#1f3864">данных</text>
+  <path d="M250 65 H276" stroke="#ed7d31" stroke-width="2.5" fill="none" marker-end="url(#xp-arrow)"/>
+
+  <rect x="280" y="36" width="120" height="60" rx="8" fill="#4472c4"/>
+  <text x="340" y="71" text-anchor="middle" fill="#ffffff">Предобработка</text>
+  <path d="M404 66 H426" stroke="#ed7d31" stroke-width="2.5" fill="none" marker-end="url(#xp-arrow)"/>
+
+  <rect x="430" y="36" width="100" height="60" rx="8" fill="#4472c4"/>
+  <text x="480" y="71" text-anchor="middle" fill="#ffffff">Обучение</text>
+  <path d="M534 66 H556" stroke="#ed7d31" stroke-width="2.5" fill="none" marker-end="url(#xp-arrow)"/>
+
+  <rect x="560" y="36" width="100" height="60" rx="8" fill="#4472c4"/>
+  <text x="610" y="71" text-anchor="middle" fill="#ffffff">Тест</text>
+  <path d="M664 66 H686" stroke="#ed7d31" stroke-width="2.5" fill="none" marker-end="url(#xp-arrow)"/>
+
+  <rect x="690" y="28" width="160" height="76" rx="8" fill="#fff2cc" stroke="#bf9000" stroke-width="1.5"/>
+  <text x="770" y="58" text-anchor="middle" fill="#c00000" font-weight="bold">model_vela.tflite</text>
+  <text x="770" y="84" text-anchor="middle" fill="#111827">int8</text>
+
+  <path d="M770 104 V178 H718" stroke="#ed7d31" stroke-width="2.5" fill="none" marker-end="url(#xp-arrow)"/>
+  <rect x="585" y="150" width="130" height="56" rx="8" fill="#d9e2f3" stroke="#8faadc" stroke-width="1.2"/>
+  <text x="650" y="183" text-anchor="middle" fill="#1f3864">Развёртывание</text>
+
+  <path d="M585 178 H414" stroke="#ed7d31" stroke-width="2.5" fill="none" marker-end="url(#xp-arrow)"/>
+  <rect x="290" y="150" width="120" height="56" rx="8" fill="#d9e2f3" stroke="#8faadc" stroke-width="1.2"/>
+  <text x="350" y="183" text-anchor="middle" fill="#1f3864">Инференс</text>
+</svg>

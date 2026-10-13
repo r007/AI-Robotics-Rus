@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" role="img" aria-labelledby="fl2-title fl2-desc" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="15">
+  <title id="fl2-title">Архитектура Florence-2</title>
+  <desc id="fl2-desc">Схема: вход (изображение и текстовый запрос) проходит через кодировщик изображений DaViT и токенизацию текста, затем мультимодальный кодировщик и декодер на основе трансформера, после чего выдаётся результат: текст или координаты.</desc>
+  <defs>
+    <marker id="fl2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#6b7280"/>
+    </marker>
+  </defs>
+
+  <g stroke="#6b7280" stroke-width="2" fill="none" marker-end="url(#fl2-arrow)">
+    <path d="M240 40 H210 V98"/>
+    <path d="M520 40 H550 V98"/>
+    <path d="M210 142 V178"/>
+    <path d="M550 142 V178"/>
+    <path d="M210 222 V268"/>
+    <path d="M550 222 V268"/>
+    <path d="M380 312 V358"/>
+    <path d="M380 402 V448"/>
+  </g>
+
+  <g text-anchor="middle" dominant-baseline="middle" fill="#111827">
+    <rect x="240" y="18" width="280" height="44" rx="6" fill="#fde2e2" stroke="#d64545" stroke-width="1.5"/>
+    <text x="380" y="40">Вход</text>
+
+    <rect x="70" y="98" width="280" height="44" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="210" y="120">Изображение</text>
+
+    <rect x="410" y="98" width="280" height="44" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="550" y="120">Текстовый запрос</text>
+
+    <rect x="70" y="178" width="280" height="44" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="210" y="200">Кодировщик изображений (DaViT)</text>
+
+    <rect x="410" y="178" width="280" height="44" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="550" y="200">Токенизация текста</text>
+
+    <rect x="200" y="268" width="360" height="44" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="380" y="290">Мультимодальный кодировщик (трансформер)</text>
+
+    <rect x="200" y="358" width="360" height="44" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="380" y="380">Мультимодальный декодер (трансформер)</text>
+
+    <rect x="240" y="448" width="280" height="44" rx="6" fill="#fde2e2" stroke="#d64545" stroke-width="1.5"/>
+    <text x="380" y="470">Выход (текст или координаты)</text>
+  </g>
+</svg>

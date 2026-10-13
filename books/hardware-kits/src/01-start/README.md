@@ -1,7 +1,5 @@
 # Начало работы
 
-> **Примечание о переводе.** Это первая глава раздела Hardware Kits. Ссылки на главы, которые ещё не переведены, ведут на оригинальные страницы [mlsysbook.ai/kits](https://mlsysbook.ai/kits/).
-
 Это руководство проведёт вас через выбор оборудования, настройку среды разработки и запуск первого приложения машинного обучения на встраиваемом устройстве. Большинство студентов завершают настройку меньше чем за час.
 
 ## Шаг 1. Выберите платформу
@@ -12,17 +10,17 @@
 
 | Платформа | Стоимость | Почему стоит выбрать |
 |---|---|---|
-| [Grove Vision AI V2](https://mlsysbook.ai/kits/contents/seeed/grove_vision_ai_v2/grove_vision_ai_v2.html) | ~$25 | Интерфейс без программирования, самый быстрый путь к запуску моделей |
-| [XIAOML Kit](https://mlsysbook.ai/kits/contents/seeed/xiao_esp32s3/xiao_esp32s3.html) | ~$40 | Лучшее соотношение цены и возможностей: зрение, звук и движение |
+| [Grove Vision AI V2](../04-grove-vision/README.md) | \~\$25 | Интерфейс без программирования, самый быстрый путь к запуску моделей |
+| [XIAOML Kit](../03-seeed-xiao/README.md) | \~\$40 | Лучшее соотношение цены и возможностей: зрение, звук и движение |
 
 **Для продвинутых приложений:**
 
 | Платформа | Стоимость | Почему стоит выбрать |
 |---|---|---|
-| [Raspberry Pi](https://mlsysbook.ai/kits/contents/raspi/raspi.html) | ~$60–80 | Полноценная среда Linux, LLM и VLM |
-| [Nicla Vision](https://mlsysbook.ai/kits/contents/arduino/nicla_vision/nicla_vision.html) | ~$95 | Профессиональный уровень, сверхнизкое энергопотребление |
+| [Raspberry Pi](../05-raspberry-pi/README.md) | \~\$60–80 | Полноценная среда Linux, LLM и VLM |
+| [Nicla Vision](../02-arduino-nicla/README.md) | \~\$95 | Профессиональный уровень, сверхнизкое энергопотребление |
 
-Подробные характеристики и технические сравнения см. на странице [«Платформы»](platforms.md).
+Подробные характеристики и технические сравнения см. на странице [«Платформы»](platforms/README.md).
 
 ## Шаг 2. Настройте среду разработки
 
@@ -30,7 +28,7 @@
 
 **Ориентировочное время:** 30–60 минут в зависимости от платформы и скорости интернета.
 
-Полные инструкции см. в [руководстве по настройке среды разработки](https://mlsysbook.ai/kits/contents/ide-setup.html). В нём описаны:
+Полные инструкции см. в [руководстве по настройке среды разработки](ide-setup/README.md). В нём описаны:
 
 - требования к компьютеру для разработки;
 - установка Arduino IDE для платформ на микроконтроллерах;
@@ -55,16 +53,16 @@
 
 ## Шаг 4. Начните первую лабораторную работу
 
-**Grove Vision AI V2:** начните с раздела [«Настройка и приложения без программирования»](https://mlsysbook.ai/kits/contents/seeed/grove_vision_ai_v2/setup_and_no_code_apps/setup_and_no_code_apps.html). Вы развернёте предобученную модель за несколько минут в визуальном интерфейсе.
+**Grove Vision AI V2:** начните с раздела [«Настройка и приложения без программирования»](../04-grove-vision/setup_and_no_code_apps/README.md). Вы развернёте предобученную модель за несколько минут в визуальном интерфейсе.
 
-**XIAOML Kit:** начните с раздела [«Настройка»](https://mlsysbook.ai/kits/contents/seeed/xiao_esp32s3/setup/setup.html), затем перейдите к разделу [«Классификация изображений»](https://mlsysbook.ai/kits/contents/seeed/xiao_esp32s3/image_classification/image_classification.html), чтобы обучить и развернуть свою первую модель.
+**XIAOML Kit:** начните с раздела [«Настройка»](../03-seeed-xiao/setup/README.md), затем перейдите к разделу [«Классификация изображений»](../03-seeed-xiao/image_classification/README.md), чтобы обучить и развернуть свою первую модель.
 
-**Nicla Vision:** пройдите [«Настройку»](https://mlsysbook.ai/kits/contents/arduino/nicla_vision/setup/setup.html), чтобы подготовить плату, и попробуйте [«Классификацию изображений»](https://mlsysbook.ai/kits/contents/arduino/nicla_vision/image_classification/image_classification.html).
+**Nicla Vision:** пройдите [«Настройку»](../02-arduino-nicla/setup/README.md), чтобы подготовить плату, и попробуйте [«Классификацию изображений»](../02-arduino-nicla/image_classification/README.md).
 
-**Raspberry Pi:** выполните [«Настройку»](https://mlsysbook.ai/kits/contents/raspi/setup/setup.html), затем выберите путь:
+**Raspberry Pi:** выполните [«Настройку»](../05-raspberry-pi/setup/README.md), затем выберите путь:
 
-- [«Классификация изображений»](https://mlsysbook.ai/kits/contents/raspi/image_classification/image_classification.html) — основы компьютерного зрения;
-- [«Развёртывание LLM»](https://mlsysbook.ai/kits/contents/raspi/llm/llm.html) — запуск языковых моделей на периферийных устройствах.
+- [«Классификация изображений»](../05-raspberry-pi/image_classification/README.md) — основы компьютерного зрения;
+- [«Развёртывание LLM»](../05-raspberry-pi/llm/README.md) — запуск языковых моделей на периферийных устройствах.
 
 ## Предварительные требования
 

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 430" role="img" aria-labelledby="omd-title omd-desc" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="15">
+  <title id="omd-title">Схема: предобученная квантованная модель COCO SSD MobileNet v1 и её перенос на Raspberry Pi</title>
+  <desc id="omd-desc">Набор COCO с изображениями 300×300×3 и 91 классом используется для обучения SSD MobileNet v1. Полученная модель конвертируется в формат TFLite размером 4,2 МБ и переносится на Raspberry Pi.</desc>
+  <defs>
+    <marker id="omd-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#1f2937"/>
+    </marker>
+    <marker id="omd-curve" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#c2410c"/>
+    </marker>
+  </defs>
+
+  <text x="20" y="40" fill="#111827" font-size="20" font-weight="bold">Предобученная квантованная модель COCO SSD MobileNet v1</text>
+
+  <rect x="20" y="90" width="540" height="300" rx="14" fill="none" stroke="#ea580c" stroke-width="2" stroke-dasharray="10 8"/>
+
+  <!-- Набор COCO -->
+  <path d="M50 150 V260 A40 12 0 0 0 130 260 V150 Z" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.5"/>
+  <ellipse cx="90" cy="150" rx="40" ry="12" fill="#60a5fa" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="90" y="212" text-anchor="middle" fill="#ffffff" font-weight="bold">COCO</text>
+
+  <path d="M140 205 H172" stroke="#1f2937" stroke-width="2" fill="none" marker-end="url(#omd-arrow)"/>
+
+  <!-- SSD MobileNet v1 -->
+  <rect x="175" y="160" width="110" height="90" rx="12" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="230" y="194" text-anchor="middle" fill="#ffffff">SSD</text>
+  <text x="230" y="214" text-anchor="middle" fill="#ffffff">MobileNet</text>
+  <text x="230" y="234" text-anchor="middle" fill="#ffffff">V1</text>
+
+  <path d="M288 205 H322" stroke="#1f2937" stroke-width="2" fill="none" marker-end="url(#omd-arrow)"/>
+
+  <!-- Модель с весами -->
+  <rect x="325" y="160" width="100" height="90" rx="6" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="375" y="200" text-anchor="middle" fill="#1e3a8a">Модель</text>
+  <text x="375" y="220" text-anchor="middle" fill="#1e3a8a">(wi, bi)</text>
+
+  <!-- Обучение -->
+  <path d="M90 300 H230 M90 294 V300 M230 294 V300" stroke="#374151" stroke-width="1.2" fill="none"/>
+  <text x="160" y="288" text-anchor="middle" fill="#374151">Обучение</text>
+  <text x="160" y="340" text-anchor="middle" fill="#374151" font-size="14">Изображения 300×300×3 (91 класс)</text>
+
+  <path d="M428 205 H583" stroke="#c2410c" stroke-width="2.5" fill="none" marker-end="url(#omd-curve)"/>
+
+  <!-- Модель TFLite -->
+  <rect x="590" y="160" width="110" height="90" rx="6" fill="#f97316" stroke="#c2410c" stroke-width="1.5"/>
+  <text x="645" y="200" text-anchor="middle" fill="#ffffff">TFLite</text>
+  <text x="645" y="220" text-anchor="middle" fill="#ffffff">модель</text>
+
+  <!-- Перенос на Raspi: дуга и устройство -->
+  <path d="M645 152 C690 70, 760 110, 790 196" stroke="#c2410c" stroke-width="2.5" fill="none" marker-end="url(#omd-curve)"/>
+  <text x="760" y="104" text-anchor="middle" fill="#111827" font-weight="bold">4,2 МБ</text>
+
+  <rect x="735" y="200" width="165" height="62" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="817" y="237" text-anchor="middle" fill="#14532d" font-weight="bold">Raspberry Pi</text>
+</svg>
