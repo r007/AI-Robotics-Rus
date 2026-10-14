@@ -2,19 +2,14 @@
   <title id="t-agentic-ml-systems">Агентные системы машинного обучения</title>
   <defs>
     <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0f766e"/><stop offset="1" stop-color="#042f2e"/>
+      <stop offset="0" stop-color="#be185d"/><stop offset="1" stop-color="#500724"/>
     </linearGradient>
   </defs>
   <rect width="800" height="450" fill="url(#g)"/>
   <circle cx="700" cy="80" r="160" fill="#ffffff" fill-opacity=".06"/>
   <circle cx="90" cy="420" r="120" fill="#ffffff" fill-opacity=".05"/>
-  <g fill="none" stroke="#ffffff" stroke-opacity=".35" stroke-width="3">
-    <circle cx="560" cy="250" r="60"/>
-    <path d="M500 250 H440 M620 250 H680"/>
-    <circle cx="410" cy="250" r="18" fill="#ffffff" fill-opacity=".15"/>
-    <circle cx="700" cy="250" r="18" fill="#ffffff" fill-opacity=".15"/>
-  </g>
-  <text x="60" y="170" fill="#ffffff" font-family="Georgia, serif" font-size="46" font-weight="bold">Агентные системы</text>
-  <text x="60" y="226" fill="#ffffff" font-family="Georgia, serif" font-size="46" font-weight="bold">машинного обучения</text>
-  <text x="60" y="290" fill="#ccfbf1" font-family="Arial, sans-serif" font-size="22">Machine Learning Systems · Том III</text>
+  <text x="60" y="120" font-size="18" letter-spacing="3" fill="#ffffff" fill-opacity=".85" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">MLSYSBOOK · ТОМ III</text>
+  <text x="60" y="205" font-size="38" font-weight="700" fill="#ffffff" font-family="DejaVu Sans, Arial, sans-serif">Агентные системы</text><text x="60" y="255" font-size="38" font-weight="700" fill="#ffffff" font-family="DejaVu Sans, Arial, sans-serif">машинного обучения</text>
+  <text x="60" y="308" font-size="20" fill="#ffffff" fill-opacity=".85" font-family="DejaVu Sans, Arial, sans-serif">Траектория, инструменты, проверка</text>
+  <g><rect x="562" y="100" width="182" height="46" rx="23" fill="#ffffff" fill-opacity="0.92"/><circle cx="585" cy="123" r="16" fill="#9d174d"/><text x="585" y="129" text-anchor="middle" font-size="17" font-weight="700" fill="#fdf2f8" font-family="DejaVu Sans, Arial, sans-serif">1</text><text x="612" y="129" font-size="18" font-weight="700" fill="#9d174d" font-family="DejaVu Sans, Arial, sans-serif">модель</text><rect x="574" y="168" width="182" height="46" rx="23" fill="#ffffff" fill-opacity="0.92"/><circle cx="597" cy="191" r="16" fill="#9d174d"/><text x="597" y="197" text-anchor="middle" font-size="17" font-weight="700" fill="#fdf2f8" font-family="DejaVu Sans, Arial, sans-serif">2</text><text x="624" y="197" font-size="18" font-weight="700" fill="#9d174d" font-family="DejaVu Sans, Arial, sans-serif">инструмент</text><line x1="585" y1="139" x2="597" y2="175" stroke="#ffffff" stroke-opacity=".55" stroke-width="3" stroke-dasharray="3 5" stroke-linecap="round"/><rect x="586" y="236" width="182" height="46" rx="23" fill="#ffffff" fill-opacity="0.92"/><circle cx="609" cy="259" r="16" fill="#9d174d"/><text x="609" y="265" text-anchor="middle" font-size="17" font-weight="700" fill="#fdf2f8" font-family="DejaVu Sans, Arial, sans-serif">3</text><text x="636" y="265" font-size="18" font-weight="700" fill="#9d174d" font-family="DejaVu Sans, Arial, sans-serif">среда</text><line x1="597" y1="207" x2="609" y2="243" stroke="#ffffff" stroke-opacity=".55" stroke-width="3" stroke-dasharray="3 5" stroke-linecap="round"/><rect x="598" y="304" width="182" height="46" rx="23" fill="#fdf2f8" fill-opacity="1"/><circle cx="621" cy="327" r="16" fill="#9d174d"/><polyline points="614,327 619,333 629,321" fill="none" stroke="#fdf2f8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="648" y="333" font-size="18" font-weight="700" fill="#9d174d" font-family="DejaVu Sans, Arial, sans-serif">проверка</text><line x1="609" y1="275" x2="621" y2="311" stroke="#ffffff" stroke-opacity=".55" stroke-width="3" stroke-dasharray="3 5" stroke-linecap="round"/></g>
 </svg>

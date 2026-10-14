@@ -5,7 +5,8 @@ A book is a folder in books/ that has a book.toml and a meta.toml. The build:
 
 1. runs `mdbook build books/<slug>` for every book, writing site/<slug>/;
 2. renders directory/index.html into site/index.html: one card per book,
-   filled from the book's book.toml and meta.toml;
+   filled from the book's book.toml and meta.toml (the "С чего начать" tile
+   comes first in the same grid, so five books and the tile fill a 3 x 2 grid);
 3. copies covers/<slug>.svg into site/covers/.
 
 Each book is also a normal mdBook, so `mdbook serve books/<slug>` works on its own.
@@ -33,14 +34,6 @@ BOOKS = ROOT / "books"
 DIRECTORY = ROOT / "directory"
 COVERS = ROOT / "covers"
 
-# Short labels for the "С чего начать" block, by book slug.
-START_HINTS = {
-    "dive-into-deep-learning": "Вы только начинаете с машинного обучения и хотите понять нейронные сети с кодом.",
-    "embodied-ai": "Вас интересуют роботы, модели VLA и симуляция, и нужен маршрут от основ до практики.",
-    "physical-ai-systems": "Вы строите системы, в которых обученная модель управляет железом, и вас волнует безопасность.",
-}
-
-
 @dataclass
 class Book:
     slug: str
@@ -57,6 +50,8 @@ class Book:
     source_title: str
     source_author: str
     source_url: str
+    start: str
+    author_short: str
 
     @property
     def path(self) -> Path:
@@ -89,6 +84,8 @@ def load_books() -> list[Book]:
                 source_title=source["title"],
                 source_author=source["author"],
                 source_url=source.get("url", ""),
+                start=meta.get("start", meta["tagline"]),
+                author_short=source.get("author_short", source["author"]),
             )
         )
     return sorted(books, key=lambda book: book.order)
@@ -98,44 +95,56 @@ def esc(value: str) -> str:
     return html.escape(value, quote=True)
 
 
+LEARN_ON_CARD = 3  # how many "learn" items the card shows
+
+
+def plural_books(count: int) -> str:
+    """"5 книг", "21 книга", "2 книги" (the count is always shown with its noun)."""
+    tail = count % 100
+    if 11 <= tail <= 14:
+        noun = "книг"
+    elif count % 10 == 1:
+        noun = "книга"
+    elif 2 <= count % 10 <= 4:
+        noun = "книги"
+    else:
+        noun = "книг"
+    return f"{count} {noun}"
+
+
 def render_card(book: Book) -> str:
-    learn = "\n".join(f"              <li>{esc(item)}</li>" for item in book.learn)
+    learn = "\n".join(f"            <li>{esc(item)}</li>" for item in book.learn[:LEARN_ON_CARD])
     tags = "".join(f"<li>{esc(tag)}</li>" for tag in book.tags)
-    source = esc(book.source_title)
-    if book.source_url:
-        source = f'<a href="{esc(book.source_url)}">{source}</a>'
     original = ""
     if book.source_url:
-        original = f'\n              <a class="btn" href="{esc(book.source_url)}">Оригинал</a>'
-    return f"""        <article class="card" style="--accent: {esc(book.accent)}">
-          <a class="cover" href="{book.slug}/" tabindex="-1" aria-hidden="true"><img src="covers/{book.slug}.svg" alt="" width="800" height="450" loading="lazy"></a>
-          <div class="body">
-            <p class="status">{esc(book.status_label)}</p>
-            <h3><a href="{book.slug}/">{esc(book.title)}</a></h3>
-            <p class="tagline">{esc(book.tagline)}</p>
-            <p class="why"><strong>Чем ценна.</strong> {esc(book.why)}</p>
-            <p class="learn-title">Вы узнаете</p>
-            <ul class="learn">
+        original = f'\n            <a class="btn" href="{esc(book.source_url)}">Оригинал</a>'
+    return f"""      <article class="card" style="--accent: {esc(book.accent)}">
+        <a class="cover" href="{book.slug}/" tabindex="-1" aria-hidden="true"><img src="covers/{book.slug}.svg" alt="" width="800" height="450" loading="lazy"></a>
+        <div class="body">
+          <p class="status">{esc(book.status_label)}</p>
+          <h3><a href="{book.slug}/">{esc(book.title)}</a></h3>
+          <p class="tagline">{esc(book.tagline)}</p>
+          <ul class="learn">
 {learn}
-            </ul>
-            <ul class="tags">{tags}</ul>
-            <dl class="meta">
-              <div><dt>Оригинал: </dt><dd>{source}, {esc(book.source_author)}</dd></div>
-              <div><dt>Лицензия: </dt><dd>{esc(book.license)}</dd></div>
-            </dl>
-            <div class="actions">
-              <a class="btn primary" href="{book.slug}/">Читать онлайн</a>{original}
-            </div>
+          </ul>
+          <ul class="tags">{tags}</ul>
+          <details class="why"><summary>Чем ценна книга</summary><p>{esc(book.why)}</p></details>
+          <dl class="meta">
+            <div><dt>Автор: </dt><dd>{esc(book.author_short)}</dd></div>
+            <div><dt>Лицензия: </dt><dd>{esc(book.license)}</dd></div>
+          </dl>
+          <div class="actions">
+            <a class="btn primary" href="{book.slug}/">Читать онлайн</a>{original}
           </div>
-        </article>"""
+        </div>
+      </article>"""
 
 
 def render_start(book: Book) -> str:
-    hint = START_HINTS.get(book.slug, book.tagline)
     return (
-        f'        <li style="--accent: {esc(book.accent)}">'
-        f'<a href="{book.slug}/"><strong>{esc(book.title)}</strong></a>'
-        f"<span>{esc(hint)}</span></li>"
+        f'          <li style="--accent: {esc(book.accent)}">'
+        f'<a href="{book.slug}/">{esc(book.title)}</a>'
+        f"<span>{esc(book.start)}</span></li>"
     )
 
 
@@ -147,6 +156,7 @@ def render_directory(books: list[Book], out: Path) -> None:
     page = (
         template.replace("{{START}}", "\n".join(render_start(book) for book in books))
         .replace("{{CARDS}}", "\n".join(render_card(book) for book in books))
+        .replace("{{COUNT}}", plural_books(len(books)))
         .replace("{{LICENSES}}", licenses)
     )
     out.mkdir(parents=True, exist_ok=True)

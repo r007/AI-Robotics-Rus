@@ -10,7 +10,7 @@
 docker compose -f docker/compose.yaml up --build
 ```
 
-После сборки каталог доступен по адресу `http://localhost:8080`, а книги — по адресам `/embodied-ai/`, `/dive-into-deep-learning/` и `/physical-ai-systems/`.
+После сборки каталог доступен по адресу `http://localhost:8080`, а книги — по адресам `/embodied-ai/`, `/dive-into-deep-learning/`, `/agentic-ml-systems/`, `/physical-ai-systems/` и `/hardware-kits/`.
 
 ## Только сборка образа
 

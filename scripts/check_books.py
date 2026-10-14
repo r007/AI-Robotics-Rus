@@ -5,7 +5,8 @@ Each book is a folder in books/ with these files:
 
     book.toml       mdBook config: [book] title, description, authors, language, src
     meta.toml       directory metadata: order, status, status_label, summary, license,
-                    tagline, why, tags, learn, [source]
+                    tagline, start (optional), why, tags, learn, [source]; the texts have
+                    length limits so that the cards on the directory page stay the same size
     NOTICE.md       authorship, source and license of the text
     LICENSE         license of the book's text
     src/README.md   first page of the book
@@ -45,6 +46,10 @@ REQUIRED_FILES = (
 )
 BOOK_KEYS = ("title", "description", "authors", "language")
 META_KEYS = ("order", "status", "status_label", "summary", "license", "tagline", "why", "tags", "learn", "source")
+# Карточки каталога должны оставаться одного размера: тексты ограничены по длине (в символах).
+LIMITS = {"status_label": 70, "tagline": 140, "start": 100, "why": 260}
+LEARN_ITEM_LIMIT = 100
+MAX_TAGS = 6
 SOURCE_KEYS = ("title", "author", "license")
 STATUSES = ("in-progress", "draft", "complete")
 SUMMARY_MODES = ("generated", "manual")
@@ -83,6 +88,16 @@ def check_book(book: Path) -> list[str]:
     learn = meta.get("learn")
     if not (isinstance(learn, list) and 3 <= len(learn) <= 5 and all(isinstance(item, str) for item in learn)):
         problems.append("meta.toml: learn must be a list of 3 to 5 strings")
+    for key, limit in LIMITS.items():
+        value = meta.get(key)
+        if isinstance(value, str) and len(value) > limit:
+            problems.append(f"meta.toml: {key} is {len(value)} characters, the card allows {limit}")
+    if isinstance(tags, list) and len(tags) > MAX_TAGS:
+        problems.append(f"meta.toml: at most {MAX_TAGS} tags fit on the card")
+    if isinstance(learn, list):
+        for item in learn:
+            if isinstance(item, str) and len(item) > LEARN_ITEM_LIMIT:
+                problems.append(f"meta.toml: a learn item is {len(item)} characters, the card allows {LEARN_ITEM_LIMIT}")
     if not (COVERS / f"{book.name}.svg").is_file():
         problems.append(f"missing covers/{book.name}.svg")
     # The page include must point at the book's own files.
