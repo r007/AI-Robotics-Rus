@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="650" viewBox="0 0 1700 650">
+<rect width="1700" height="650" fill="#ffffff"/>
+<g transform="translate(150,0)">
+<polygon points="480,100 1000,175 585,245 480,540" fill="#cfe3f8" opacity="0.75"/>
+<rect x="220" y="0" width="262" height="102" fill="#d9d9d9"/><rect x="220" y="72" width="262" height="30" fill="#b3b3b3"/>
+<ellipse cx="351" cy="125" rx="90" ry="22" fill="#9a9a9a"/><ellipse cx="351" cy="118" rx="88" ry="20" fill="#e8e8e8"/>
+<path d="M 290 150 L 412 150 L 412.0 215 L 290.0 215 Z" fill="#6c9be0"/>
+<line x1="288" y1="215" x2="414" y2="215" stroke="#ffffff" stroke-width="1.5"/>
+<path d="M 290 215 L 412 215 L 413.9 290 L 288.1 290 Z" fill="#2162c9"/>
+<line x1="288" y1="290" x2="414" y2="290" stroke="#ffffff" stroke-width="1.5"/>
+<path d="M 290 290 L 412 290 L 416.2 365 L 285.8 365 Z" fill="#0d3a5e"/>
+<line x1="288" y1="365" x2="414" y2="365" stroke="#ffffff" stroke-width="1.5"/>
+<path d="M 290 365 L 412 365 L 418.4 440 L 283.6 440 Z" fill="#051428"/>
+<line x1="288" y1="440" x2="414" y2="440" stroke="#ffffff" stroke-width="1.5"/>
+<path d="M 290 440 L 412 440 L 420.7 530 L 281.3 530 Z" fill="#00071a"/>
+<line x1="288" y1="530" x2="414" y2="530" stroke="#ffffff" stroke-width="1.5"/>
+<ellipse cx="351" cy="505" rx="92" ry="26" fill="#ffffff"/><ellipse cx="351" cy="525" rx="105" ry="26" fill="#9a9a9a"/><ellipse cx="351" cy="518" rx="100" ry="24" fill="#f2f2f2"/>
+<rect x="220" y="515" width="264" height="133" fill="#d9d9d9"/><rect x="220" y="618" width="264" height="30" fill="#b3b3b3"/>
+<ellipse cx="351" cy="545" rx="105" ry="28" fill="#ffffff"/><ellipse cx="351" cy="560" rx="105" ry="20" fill="#9a9a9a"/><rect x="290" y="440" width="122" height="75" fill="#00071a"/>
+<text x="206" y="112" text-anchor="end" font-family="'Liberation Sans', Arial, Helvetica, 'DejaVu Sans', sans-serif" font-weight="bold" font-size="26" fill="#333333">Технический</text>
+<text x="206" y="149" text-anchor="end" font-family="'Liberation Sans', Arial, Helvetica, 'DejaVu Sans', sans-serif" font-weight="bold" font-size="26" fill="#333333">фундамент</text>
+<text x="206" y="205" text-anchor="end" font-family="'Liberation Sans', Arial, Helvetica, 'DejaVu Sans', sans-serif" font-weight="bold" font-size="26" fill="#333333">Эффективность и</text>
+<text x="206" y="242" text-anchor="end" font-family="'Liberation Sans', Arial, Helvetica, 'DejaVu Sans', sans-serif" font-weight="bold" font-size="26" fill="#333333">оптимизация</text>
+<text x="206" y="298" text-anchor="end" font-family="'Liberation Sans', Arial, Helvetica, 'DejaVu Sans', sans-serif" font-weight="bold" font-size="26" fill="#333333">Бенчмаркинг</text>
+<text x="206" y="335" text-anchor="end" font-family="'Liberation Sans', Arial, Helvetica, 'DejaVu Sans', sans-serif" font-weight="bold" font-size="26" fill="#333333">и оценка</text>
+<text x="206" y="391" text-anchor="end" font-family="'Liberation Sans', Arial, Helvetica, 'DejaVu Sans', sans-serif" font-weight="bold" font-size="26" fill="#333333">Устойчивость и</text>
+<text x="206" y="428" text-anchor="end" font-family="'Liberation Sans', Arial, Helvetica, 'DejaVu Sans', sans-serif" font-weight="bold" font-size="26" fill="#333333">надежность</text>
+<text x="206" y="484" text-anchor="end" font-family="'Liberation Sans', Arial, Helvetica, 'DejaVu Sans', sans-serif" font-weight="bold" font-size="26" fill="#333333">Ответственная и</text>
+<text x="206" y="521" text-anchor="end" font-family="'Liberation Sans', Arial, Helvetica, 'DejaVu Sans', sans-serif" font-weight="bold" font-size="26" fill="#333333">этичная инженерия</text>
+<polygon points="570,244 1010,30 1450,244" fill="#bdbdbd"/><polygon points="670,226 1010,86 1350,226" fill="#d4d4d4"/>
+<text x="1010" y="162" text-anchor="middle" font-family="'Liberation Sans', Arial, Helvetica, 'DejaVu Sans', sans-serif" font-weight="bold" font-size="28" fill="#333333">Инженерия</text>
+<text x="1010" y="198" text-anchor="middle" font-family="'Liberation Sans', Arial, Helvetica, 'DejaVu Sans', sans-serif" font-weight="bold" font-size="28" fill="#333333">систем ML</text>
+<rect x="597" y="244" width="160" height="32" fill="#b8b8b8"/><rect x="597" y="244" width="160" height="12" fill="#cdcdcd"/>
+<ellipse cx="677" cy="292" rx="40" ry="11" fill="#999999"/><ellipse cx="677" cy="288" rx="40" ry="11" fill="#e0e0e0"/>
+<path d="M 625 305 L 729 305 L 719 520 L 635 520 Z" fill="#d2d2d2"/>
+<path d="M 625 305 L 647 305 L 653 520 L 635 520 Z" fill="#a9a9a9"/>
+<path d="M 711 305 L 729 305 L 719 520 L 699 520 Z" fill="#8f8f8f"/>
+<ellipse cx="677" cy="525" rx="62" ry="14" fill="#f4f4f4" stroke="#e0e0e0"/><ellipse cx="677" cy="535" rx="62" ry="14" fill="#ffffff" stroke="#cfcfcf"/>
+<rect x="597" y="548" width="160" height="54" fill="#b9b9b9"/><rect x="597" y="590" width="160" height="14" fill="#a8a8a8"/>
+<g transform="translate(665,425) rotate(-90)" font-family="'Liberation Sans', Arial, Helvetica, 'DejaVu Sans', sans-serif" font-weight="bold" font-size="24" fill="#1f1f1f" text-anchor="middle"><text x="0" y="0">Инженерия</text><text x="0" y="31">данных</text></g>
+<rect x="763" y="244" width="160" height="32" fill="#b8b8b8"/><rect x="763" y="244" width="160" height="12" fill="#cdcdcd"/>
+<ellipse cx="843" cy="292" rx="40" ry="11" fill="#999999"/><ellipse cx="843" cy="288" rx="40" ry="11" fill="#e0e0e0"/>
+<path d="M 791 305 L 895 305 L 885 520 L 801 520 Z" fill="#d2d2d2"/>
+<path d="M 791 305 L 813 305 L 819 520 L 801 520 Z" fill="#a9a9a9"/>
+<path d="M 877 305 L 895 305 L 885 520 L 865 520 Z" fill="#8f8f8f"/>
+<ellipse cx="843" cy="525" rx="62" ry="14" fill="#f4f4f4" stroke="#e0e0e0"/><ellipse cx="843" cy="535" rx="62" ry="14" fill="#ffffff" stroke="#cfcfcf"/>
+<rect x="763" y="548" width="160" height="54" fill="#b9b9b9"/><rect x="763" y="590" width="160" height="14" fill="#a8a8a8"/>
+<g transform="translate(831,425) rotate(-90)" font-family="'Liberation Sans', Arial, Helvetica, 'DejaVu Sans', sans-serif" font-weight="bold" font-size="24" fill="#1f1f1f" text-anchor="middle"><text x="0" y="0">Обучение</text><text x="0" y="31">моделей</text></g>
+<rect x="929" y="244" width="160" height="32" fill="#b8b8b8"/><rect x="929" y="244" width="160" height="12" fill="#cdcdcd"/>
+<ellipse cx="1009" cy="292" rx="40" ry="11" fill="#999999"/><ellipse cx="1009" cy="288" rx="40" ry="11" fill="#e0e0e0"/>
+<path d="M 957 305 L 1061 305 L 1051 520 L 967 520 Z" fill="#d2d2d2"/>
+<path d="M 957 305 L 979 305 L 985 520 L 967 520 Z" fill="#a9a9a9"/>
+<path d="M 1043 305 L 1061 305 L 1051 520 L 1031 520 Z" fill="#8f8f8f"/>
+<ellipse cx="1009" cy="525" rx="62" ry="14" fill="#f4f4f4" stroke="#e0e0e0"/><ellipse cx="1009" cy="535" rx="62" ry="14" fill="#ffffff" stroke="#cfcfcf"/>
+<rect x="929" y="548" width="160" height="54" fill="#b9b9b9"/><rect x="929" y="590" width="160" height="14" fill="#a8a8a8"/>
+<g transform="translate(997,425) rotate(-90)" font-family="'Liberation Sans', Arial, Helvetica, 'DejaVu Sans', sans-serif" font-weight="bold" font-size="24" fill="#1f1f1f" text-anchor="middle"><text x="0" y="0">Развертывание</text><text x="0" y="31">моделей</text></g>
+<rect x="1095" y="244" width="160" height="32" fill="#b8b8b8"/><rect x="1095" y="244" width="160" height="12" fill="#cdcdcd"/>
+<ellipse cx="1175" cy="292" rx="40" ry="11" fill="#999999"/><ellipse cx="1175" cy="288" rx="40" ry="11" fill="#e0e0e0"/>
+<path d="M 1123 305 L 1227 305 L 1217 520 L 1133 520 Z" fill="#d2d2d2"/>
+<path d="M 1123 305 L 1145 305 L 1151 520 L 1133 520 Z" fill="#a9a9a9"/>
+<path d="M 1209 305 L 1227 305 L 1217 520 L 1197 520 Z" fill="#8f8f8f"/>
+<ellipse cx="1175" cy="525" rx="62" ry="14" fill="#f4f4f4" stroke="#e0e0e0"/><ellipse cx="1175" cy="535" rx="62" ry="14" fill="#ffffff" stroke="#cfcfcf"/>
+<rect x="1095" y="548" width="160" height="54" fill="#b9b9b9"/><rect x="1095" y="590" width="160" height="14" fill="#a8a8a8"/>
+<g transform="translate(1163,425) rotate(-90)" font-family="'Liberation Sans', Arial, Helvetica, 'DejaVu Sans', sans-serif" font-weight="bold" font-size="24" fill="#1f1f1f" text-anchor="middle"><text x="0" y="0">Эксплуатация и</text><text x="0" y="31">сопровождение</text></g>
+<rect x="1262" y="244" width="160" height="32" fill="#3b8bd0"/><rect x="1262" y="244" width="160" height="12" fill="#78b2e2"/>
+<ellipse cx="1342" cy="292" rx="40" ry="11" fill="#999999"/><ellipse cx="1342" cy="288" rx="40" ry="11" fill="#78b2e2"/>
+<path d="M 1290 305 L 1394 305 L 1384 520 L 1300 520 Z" fill="#2b8bd0"/>
+<path d="M 1290 305 L 1312 305 L 1318 520 L 1300 520 Z" fill="#2d6aa8"/>
+<path d="M 1376 305 L 1394 305 L 1384 520 L 1364 520 Z" fill="#14416f"/>
+<ellipse cx="1342" cy="525" rx="62" ry="14" fill="#f4f4f4" stroke="#e0e0e0"/><ellipse cx="1342" cy="535" rx="62" ry="14" fill="#ffffff" stroke="#cfcfcf"/>
+<rect x="1262" y="548" width="160" height="54" fill="#79b3e3"/><rect x="1262" y="590" width="160" height="14" fill="#3b8bd0"/>
+<g transform="translate(1440,360) rotate(-90)" font-family="'Liberation Sans', Arial, Helvetica, 'DejaVu Sans', sans-serif" font-weight="bold" font-size="24" fill="#1f1f1f" text-anchor="middle"><text x="0" y="0">Этика и</text><text x="0" y="31">управление</text></g>
+</g></svg>

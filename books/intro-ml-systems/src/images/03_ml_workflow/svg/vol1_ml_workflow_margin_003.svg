@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="311.660" height="162.005" viewBox="8.346 8.042 77.914 40.501" role="img">
+<line x1="10.35" y1="31.65" x2="81.3" y2="31.65" stroke="#cccccc" stroke-width="0.3"/>
+<line x1="74.25" y1="17.7" x2="74.25" y2="42.15" stroke="#cb202d" stroke-width="0.35" stroke-dasharray="2.96,1.28"/>
+<circle cx="65.7" cy="31.65" r="2.0" fill="#cb202d"/>
+<text x="74.25" y="13.1" text-anchor="middle" font-size="4.2" fill="#cb202d" font-family="Helvetica, Arial, sans-serif">порог 90%</text>
+<text x="54.6" y="46.4" text-anchor="middle" font-size="4.2" fill="#cb202d" font-family="Helvetica, Arial, sans-serif">78% в поле</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="290.520" height="384.479" viewBox="0.000 3.780 72.630 96.120" role="img">
+<rect x="1.43" y="5.8" width="65.67" height="10.70" fill="#5e6b73"/>
+<rect x="1.43" y="22.0" width="59.97" height="10.60" fill="#5e6b73"/>
+<rect x="1.43" y="38.2" width="52.47" height="10.60" fill="#5e6b73"/>
+<rect x="1.43" y="54.3" width="42.37" height="10.80" fill="#5e6b73"/>
+<rect x="1.43" y="70.5" width="25.97" height="10.70" fill="#5e6b73"/>
+<rect x="1.43" y="86.7" width="4.67" height="10.70" fill="#5e6b73"/>
+<text x="66.10" y="12.85" text-anchor="end" font-size="4.8" fill="#ffffff" font-family="Helvetica, Arial, sans-serif">Квартал</text>
+<text x="60.40" y="29.00" text-anchor="end" font-size="4.8" fill="#ffffff" font-family="Helvetica, Arial, sans-serif">Месяц</text>
+<text x="52.90" y="45.20" text-anchor="end" font-size="4.8" fill="#ffffff" font-family="Helvetica, Arial, sans-serif">Неделя</text>
+<text x="42.80" y="61.40" text-anchor="end" font-size="4.8" fill="#ffffff" font-family="Helvetica, Arial, sans-serif">День</text>
+<text x="26.40" y="77.55" text-anchor="end" font-size="4.8" fill="#ffffff" font-family="Helvetica, Arial, sans-serif">Час</text>
+<text x="8.5" y="93.4" font-size="4.8" fill="#333333" font-family="Helvetica, Arial, sans-serif">Минута</text>
+<text x="71.1" y="96.75" text-anchor="end" font-size="3.6" fill="#777777" font-family="Helvetica, Arial, sans-serif">логарифмическая шкала</text>
+<line x1="1.43" y1="98.1" x2="71.1" y2="98.1" stroke="#dddddd" stroke-width="0.2"/>
+</svg>

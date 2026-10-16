@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="112pt" height="99.9pt" viewBox="0 0 112 99.9" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-15T00:54:29.076926</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 99.9 
+L 112 99.9 
+L 112 0 
+L 0 0 
+L 0 99.9 
+z
+" style="fill: none"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 54.3 18.1 
+C 54.989528 18.1 55.650908 18.373952 56.138478 18.861522 
+C 56.626048 19.349092 56.9 20.010472 56.9 20.7 
+C 56.9 21.389528 56.626048 22.050908 56.138478 22.538478 
+C 55.650908 23.026048 54.989528 23.3 54.3 23.3 
+C 53.610472 23.3 52.949092 23.026048 52.461522 22.538478 
+C 51.973952 22.050908 51.7 21.389528 51.7 20.7 
+C 51.7 20.010472 51.973952 19.349092 52.461522 18.861522 
+C 52.949092 18.373952 53.610472 18.1 54.3 18.1 
+z
+" clip-path="url(#p30ec6946aa)" style="fill: #e67817"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 48.039659 50.4 
+C 48.729187 50.4 49.390566 50.673952 49.878136 51.161522 
+C 50.365706 51.649092 50.639659 52.310472 50.639659 53 
+C 50.639659 53.689528 50.365706 54.350908 49.878136 54.838478 
+C 49.390566 55.326048 48.729187 55.6 48.039659 55.6 
+C 47.350131 55.6 46.688751 55.326048 46.201181 54.838478 
+C 45.713611 54.350908 45.439659 53.689528 45.439659 53 
+C 45.439659 52.310472 45.713611 51.649092 46.201181 51.161522 
+C 46.688751 50.673952 47.350131 50.4 48.039659 50.4 
+z
+" clip-path="url(#p30ec6946aa)" style="fill: #e67817"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 3.592762 82.7 
+C 4.28229 82.7 4.94367 82.973952 5.43124 83.461522 
+C 5.91881 83.949092 6.192762 84.610472 6.192762 85.3 
+C 6.192762 85.989528 5.91881 86.650908 5.43124 87.138478 
+C 4.94367 87.626048 4.28229 87.9 3.592762 87.9 
+C 2.903234 87.9 2.241855 87.626048 1.754285 87.138478 
+C 1.266715 86.650908 0.992762 85.989528 0.992762 85.3 
+C 0.992762 84.610472 1.266715 83.949092 1.754285 83.461522 
+C 2.241855 82.973952 2.903234 82.7 3.592762 82.7 
+z
+" clip-path="url(#p30ec6946aa)" style="fill: #e67817"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 1.7 20.7 
+L 51.3 20.7 
+" clip-path="url(#p30ec6946aa)" style="fill: none; stroke: #c8c8c8; stroke-width: 0.9; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 1.7 53 
+L 45.039659 53 
+" clip-path="url(#p30ec6946aa)" style="fill: none; stroke: #c8c8c8; stroke-width: 0.9; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 1.7 85.3 
+L 0.592762 85.3 
+" clip-path="url(#p30ec6946aa)" style="fill: none; stroke: #c8c8c8; stroke-width: 0.9; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 1.7 98.3 
+L 70.7 98.3 
+" clip-path="url(#p30ec6946aa)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; text-anchor: start; fill: #333333" x="58.8" y="22.570312" transform="rotate(-0 58.8 22.570312)">ResNet 80</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; text-anchor: start; fill: #333333" x="52.539659" y="54.870594" transform="rotate(-0 52.539659 54.870594)">MobileNet 43</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; text-anchor: start; fill: #333333" x="8.092762" y="87.170312" transform="rotate(-0 8.092762 87.170312)">GPT-2 0,5</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 5.4px; font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; text-anchor: end; fill: #777777" x="70.5" y="95.902734" transform="rotate(-0 70.5 95.902734)">лог. шкала</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p30ec6946aa">
+   <rect x="0" y="0" width="93.18" height="99.9"/>
+  </clipPath>
+ </defs>
+</svg>

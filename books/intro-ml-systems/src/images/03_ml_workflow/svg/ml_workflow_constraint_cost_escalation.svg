@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="363.524" height="215.459" viewBox="0.000 3.498 90.881 53.865" role="img">
+<line x1="9.0" y1="55.2" x2="82.8" y2="55.2" stroke="#cccccc" stroke-width="0.3"/>
+<polygon points="65.1,55.2 65.1,26.1 78.3,18.8 78.3,55.2" fill="#cb202d"/>
+<line x1="12.4" y1="52.7" x2="78.3" y2="18.8" stroke="#333333" stroke-width="0.4"/>
+<circle cx="12.4" cy="52.7" r="2.4" fill="#e67817"/>
+<circle cx="25.6" cy="46.8" r="2.4" fill="#e67817"/>
+<circle cx="38.8" cy="40.1" r="2.4" fill="#e67817"/>
+<circle cx="52.0" cy="33.2" r="2.4" fill="#e67817"/>
+<circle cx="65.1" cy="26.1" r="2.4" fill="#e67817"/>
+<circle cx="78.3" cy="18.8" r="2.8" fill="#cb202d"/>
+<text x="1.5" y="37.5" font-size="4.6" fill="#333333" font-family="Helvetica, Arial, sans-serif">определение</text>
+<text x="1.5" y="43.5" font-size="4.6" fill="#333333" font-family="Helvetica, Arial, sans-serif">1×</text>
+<text x="76.5" y="8.0" text-anchor="middle" font-size="4.6" fill="#cb202d" font-family="Helvetica, Arial, sans-serif">мониторинг</text>
+<text x="76.5" y="14.0" text-anchor="middle" font-size="4.6" fill="#cb202d" font-family="Helvetica, Arial, sans-serif">32×</text>
+</svg>

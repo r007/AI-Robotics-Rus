@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="290.520" height="366.805" viewBox="0.000 8.199 72.630 91.701" role="img">
+<rect x="1.43" y="10.2" width="62.87" height="21.30" fill="#7e317b"/>
+<rect x="1.43" y="42.5" width="28.37" height="21.30" fill="#7e317b"/>
+<rect x="1.43" y="74.9" width="8.07" height="21.30" fill="#7e317b"/>
+<text x="63.5" y="22.2" text-anchor="end" font-size="5.6" fill="#ffffff" font-family="Helvetica, Arial, sans-serif">~5000×</text>
+<text x="28.9" y="54.6" text-anchor="end" font-size="5.6" fill="#ffffff" font-family="Helvetica, Arial, sans-serif">Сырые</text>
+<text x="13.5" y="87" font-size="5.6" fill="#333333" font-family="Helvetica, Arial, sans-serif">Сводка</text>
+<text x="71.1" y="95.3" text-anchor="end" font-size="4.2" fill="#777777" font-family="Helvetica, Arial, sans-serif">логарифмическая шкала</text>
+<line x1="1.43" y1="98.1" x2="71.1" y2="98.1" stroke="#dddddd" stroke-width="0.2"/>
+</svg>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="208.8pt" height="172.8pt" viewBox="0 0 208.8 172.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-14T19:43:26.003661</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 172.8 
+L 208.8 172.8 
+L 208.8 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 6.264 167.616 
+L 204.624 167.616 
+L 204.624 3.456 
+L 6.264 3.456 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+   <g id="line2d_1">
+    <path d="M 10.153412 157.95969 
+L 54.769546 155.265209 
+L 85.321899 153.213413 
+L 107.629966 151.502543 
+L 124.118538 150.023195 
+L 136.727445 148.675498 
+L 146.426605 147.426109 
+L 154.185933 146.214075 
+L 160.490387 145.015336 
+L 165.824924 143.776316 
+L 170.189546 142.538203 
+L 174.06921 141.192844 
+L 176.978958 139.971652 
+L 176.978958 139.971652 
+" clip-path="url(#p46fa3450fb)" style="fill: none; stroke: #008f45; stroke-width: 4; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 177.463916 139.745706 
+L 177.948874 139.512426 
+L 178.433832 139.271405 
+L 178.91879 139.022204 
+L 179.403748 138.764351 
+L 179.888706 138.49734 
+L 180.373664 138.22062 
+L 180.858622 137.933598 
+L 181.34358 137.63563 
+L 181.828538 137.326018 
+L 182.313496 137.004004 
+L 182.798454 136.668763 
+L 183.283412 136.319391 
+L 183.76837 135.954906 
+L 184.253328 135.574229 
+L 184.738286 135.176176 
+L 185.223244 134.759445 
+L 185.708202 134.322601 
+L 186.19316 133.864059 
+L 186.678118 133.382062 
+L 187.163076 132.874656 
+L 187.648034 132.339667 
+L 188.132992 131.774665 
+L 188.61795 131.176924 
+L 189.102908 130.54338 
+L 189.587866 129.870573 
+L 190.072824 129.154582 
+L 190.557782 128.390948 
+L 191.042739 127.574573 
+L 191.527697 126.699608 
+L 192.012655 125.759304 
+L 192.497613 124.745833 
+L 192.982571 123.650069 
+L 193.467529 122.461297 
+L 193.952487 121.16686 
+L 194.437445 119.751697 
+L 194.922403 118.197739 
+L 195.407361 116.483123 
+L 195.892319 114.581139 
+L 196.377277 112.45881 
+L 196.862235 110.074937 
+L 197.347193 107.37737 
+L 197.832151 104.299103 
+L 198.317109 100.752586 
+L 198.802067 96.621197 
+L 199.287025 91.746074 
+L 199.771983 85.905102 
+L 200.256941 78.777937 
+L 200.741899 69.88496 
+L 201.226857 58.474244 
+L 201.711815 43.296316 
+L 202.196773 22.111065 
+L 202.550918 -1 
+" clip-path="url(#p46fa3450fb)" style="fill: none; stroke: #cb202d; stroke-width: 4; stroke-linecap: round"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 6.264 167.616 
+L 6.264 3.456 
+" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 6.264 167.616 
+L 204.624 167.616 
+" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; text-anchor: start; fill: #008f45" x="29.600471" y="143.474824" transform="rotate(-0 29.600471 143.474824)">безопасно</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; text-anchor: start; fill: #cb202d" x="146.282824" y="75.879529" transform="rotate(-0 146.282824 75.879529)">сбой</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p46fa3450fb">
+   <rect x="6.264" y="3.456" width="198.36" height="164.16"/>
+  </clipPath>
+ </defs>
+</svg>
