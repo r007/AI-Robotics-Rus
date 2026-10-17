@@ -11,7 +11,7 @@
   <rect x="60" y="150" width="120" height="18" rx="4" fill="#ffffff" fill-opacity=".85"/>
   <rect x="60" y="180" width="200" height="18" rx="4" fill="#ffffff" fill-opacity=".55"/>
   <rect x="60" y="210" width="150" height="18" rx="4" fill="#ffffff" fill-opacity=".35"/>
-  <text x="60" y="120" font-size="18" letter-spacing="3" fill="#ffffff" fill-opacity=".85" font-family="Helvetica, Arial, sans-serif">MACHINE LEARNING SYSTEMS · TOM I</text>
+  <text x="60" y="120" font-size="18" letter-spacing="3" fill="#ffffff" fill-opacity=".85" font-family="Helvetica, Arial, sans-serif">MLSYSBOOK · ТОМ I</text>
   <text x="60" y="300" font-size="44" font-weight="700" fill="#ffffff" font-family="Helvetica, Arial, sans-serif">Введение в системы</text>
   <text x="60" y="352" font-size="44" font-weight="700" fill="#ffffff" font-family="Helvetica, Arial, sans-serif">машинного обучения</text>
   <text x="60" y="400" font-size="18" fill="#ffffff" fill-opacity=".8" font-family="Helvetica, Arial, sans-serif">Русский перевод · Vijay Janapa Reddi (Harvard University)</text>

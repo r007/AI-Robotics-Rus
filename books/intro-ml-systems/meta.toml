@@ -1,10 +1,10 @@
 # Метаданные для каталога книг. Заголовок и описание берутся из book.toml.
 # Файл проверяет scripts/check_books.py, страницу каталога строит scripts/build_site.py.
 
-order = 6
+order = 3
 # in-progress | draft | complete
-status = "draft"
-status_label = "Вся книга переведена (главы 1–16, приложения) · ждет вычитки"
+status = "complete"
+status_label = "Полный перевод · вычитан"
 # manual: src/SUMMARY.md ведется вручную (генератор подписывает главы как «Приложения»);
 # при добавлении частей и приложений правьте его вместе с оглавлением оригинала
 summary = "manual"

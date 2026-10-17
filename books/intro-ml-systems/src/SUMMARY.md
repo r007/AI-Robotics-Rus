@@ -47,3 +47,8 @@
 - [Основы машины](appendix_machine.md)
 - [Системные допущения](appendix_assumptions.md)
 - [Глоссарий](glossary.md)
+
+# О переводе
+
+- [Авторство и лицензия](notice.md)
+- [Происхождение материалов](provenance.md)

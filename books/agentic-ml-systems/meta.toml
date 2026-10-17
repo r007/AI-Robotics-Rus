@@ -1,7 +1,7 @@
 # Метаданные для каталога книг. Заголовок и описание берутся из book.toml.
 # Файл проверяет scripts/check_books.py, страницу каталога строит scripts/build_site.py.
 
-order = 3
+order = 4
 # in-progress | draft | complete
 status = "in-progress"
 status_label = "Переведены все главы · приложения в работе"

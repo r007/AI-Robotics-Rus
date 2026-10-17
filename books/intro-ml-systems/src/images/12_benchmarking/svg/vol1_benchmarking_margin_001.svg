@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="213.289282pt" height="118.170709pt" viewBox="0 0 213.289282 118.170709" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="227.289282pt" height="118.170709pt" viewBox="0 0 227.289282 118.170709" xmlns="http://www.w3.org/2000/svg" version="1.1">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
@@ -375,7 +375,7 @@ z
    </g>
    <g id="text_4">
     <!-- 50 мс -->
-    <g style="fill: #5f6b73" transform="translate(179.316546 47.762291) scale(0.11 -0.11)">
+    <g style="fill: #5f6b73" transform="translate(190 47.762291) scale(0.11 -0.11)">
      <defs>
       <path id="DejaVuSans-18" d="M 691 4666 
 L 3169 4666 
@@ -545,7 +545,7 @@ z
    </g>
    <g id="text_7">
     <!-- 43 мс -->
-    <g style="fill: #5f6b73" transform="translate(179.316546 92.66716) scale(0.11 -0.11)">
+    <g style="fill: #5f6b73" transform="translate(190 92.66716) scale(0.11 -0.11)">
      <defs>
       <path id="DejaVuSans-17" d="M 2419 4116 
 L 825 1625 
