@@ -10,6 +10,7 @@
 - [Распределенное обучение](05_distributed_training.md)
 - [Коллективные коммуникации](06_collective_communication.md)
 - [Отказоустойчивость](07_fault_tolerance.md)
+- [Оркестрация парка](08_fleet_orchestration.md)
 
 # Служебные разделы
 
