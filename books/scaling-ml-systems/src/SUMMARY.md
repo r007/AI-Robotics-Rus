@@ -11,6 +11,7 @@
 - [Коллективные коммуникации](06_collective_communication.md)
 - [Отказоустойчивость](07_fault_tolerance.md)
 - [Оркестрация парка](08_fleet_orchestration.md)
+- [Инженерия производительности](09_performance_engineering.md)
 
 # Служебные разделы
 

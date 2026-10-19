@@ -4,7 +4,7 @@
 order = 7
 # in-progress | draft | complete
 status = "in-progress"
-status_label = "Главы 1, 2, 4, 6, 7, 8, часть 5 · в работе"
+status_label = "Главы 1, 2, 4, 6, 7, 8, части 5 и 9 · в работе"
 # manual: src/SUMMARY.md ведется вручную; при добавлении глав правьте его вместе с оглавлением оригинала
 summary = "manual"
 # Книга не под общей лицензией репозитория, см. NOTICE.md

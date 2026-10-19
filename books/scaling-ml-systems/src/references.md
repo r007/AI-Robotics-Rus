@@ -94,6 +94,7 @@
 - Krizhevsky, Alex, Sutskever, Ilya, Hinton, Geoffrey E. (2012). ImageNet Classification with Deep Convolutional Neural Networks. Advances in Neural Information Processing Systems (NeurIPS).
 - Kung (1982). Why systolic architectures? Computer.
 - Kung and Leiserson (1979). Systolic arrays (for VLSI). Sparse Matrix Proceedings 1978.
+- Kwon, Woosuk, Li, Zhuohan, Zhuang, Siyuan, Sheng, Ying, Zheng, Lianmin, Yu, Cody Hao, Gonzalez, Joseph, Zhang, Hao, Stoica, Ion (2023). Efficient Memory Management for Large Language Model Serving with PagedAttention. Proceedings of the 29th Symposium on Operating Systems Principles.
 - Lamport, Leslie, Shostak, Robert, Pease, Marshall (1982). The Byzantine Generals Problem. *ACM Transactions on Programming Languages and Systems.*
 - Langston, Jennifer (2020). Microsoft Announces New Supercomputer, Lays Out Vision for Future AI Work. Microsoft Source.
 - Lepikhin et al. (2021). GShard: Scaling giant models with conditional computation and automatic sharding. International Conference on Learning Representations (ICLR).
@@ -167,6 +168,7 @@
 - Sutton, Richard S. (2019). The Bitter Lesson. incompleteideas.net.
 - Tang, Hanlin, Gan, Shaoduo, Awan, Ammar Ahmad, Rajbhandari, Samyam, Li, Conglong, Lian, Xiangru, Liu, Ji, Zhang, Ce, He, Yuxiong (2021). 1-bit Adam: Communication efficient large-scale training with Adam's convergence speed. *Proceedings of the 38th International Conference on Machine Learning (ICML).*
 - Thakur, Rajeev, Rabenseifner, Rolf, Gropp, William (2005). Optimization of Collective Communication Operations in MPICH. *The International Journal of High Performance Computing Applications.*
+- Thompson, N. C., Greenewald, K., Lee, K., Manso, G. F. (2021). Deep Learning's Diminishing Returns: The Cost of Improvement Is Becoming Unsustainable. IEEE Spectrum, 58(10).
 - Tiwari, Devesh, Gupta, Saurabh, Rogers, James, Maxwell, Don, Rech, Paolo, Vazhkudai, Sudharshan, Oliveira, Daniel, Londo, Dave, DeBardeleben, Nathan, Navaux, Philippe, Carro, Luigi, Bland, Arthur (2015). Understanding GPU Errors on Large-Scale HPC Systems and the Implications for System Design and Operation. *2015 IEEE 21st International Symposium on High Performance Computer Architecture (HPCA).*
 - Tsai, Timothy, Hari, Siva Kumar Sastry, Sullivan, Michael, Villa, Oreste, Keckler, Stephen W. (2021). NVBitFI: Dynamic Fault Injection for GPUs. *2021 51st Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN).*
 - Uptime Institute (2026). Tier Classification System. Uptime Institute web page.
