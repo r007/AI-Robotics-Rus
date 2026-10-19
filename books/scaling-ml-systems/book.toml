@@ -1,0 +1,32 @@
+# Самостоятельная книга mdBook: `mdbook serve books/scaling-ml-systems` из корня репозитория.
+# Сайт со всеми книгами и страницей каталога собирает scripts/build_site.py.
+
+[book]
+title = "Масштабирование систем машинного обучения"
+description = "Русский перевод тома II учебника «Machine Learning Systems» (Harvard University): что меняется, когда модель выходит за пределы одной машины, и почему сеть, отказы и координация становятся главными ограничениями. Книга в работе: переведены главы 1, 2, 4 и 6, первая часть главы 5 и первая половина главы 7."
+authors = ["Vijay Janapa Reddi (оригинальный текст)", "Перевод на русский язык: Сергей Монин"]
+language = "ru"
+src = "src"
+
+[build]
+create-missing = false
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+git-repository-url = "https://github.com/r007/AI-Robotics-Rus"
+edit-url-template = "https://github.com/r007/AI-Robotics-Rus/edit/main/books/scaling-ml-systems/src/{path}"
+site-url = "/AI-Robotics-Rus/scaling-ml-systems/"
+
+[output.html.search]
+limit-results = 20
+
+[output.html.fold]
+enable = true
+level = 1
+
+[preprocessor.readme-links]
+command = "python3 ../../scripts/mdbook_readme_links.py"
+
+[preprocessor.katex]
+after = ["links"]
