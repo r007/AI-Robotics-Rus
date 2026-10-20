@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="72.63pt" height="99.9pt" viewBox="0 0 72.63 99.9" role="img" aria-labelledby="title desc" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="title">Лестница объема памяти внимания</title>
+  <desc id="desc">Двухступенчатая лестница величин в логарифмической шкале. Наивное внимание около 35 ГБ, FlashAttention около 537 МБ.</desc>
+  <path d="M 0 99.9
+L 72.63 99.9
+L 72.63 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  <path d="M 1.44 98.46
+L 71.19 98.46
+L 71.19 1.44
+L 1.44 1.44
+z
+" style="fill: #ffffff"/>
+  <path d="M 1.44 46.5543
+L 61.840073 46.5543
+L 61.840073 14.5377
+L 1.44 14.5377
+z
+" style="fill: #1F407A; opacity: 0.92"/>
+  <path d="M 1.44 95.0643
+L 12.30584 95.0643
+L 12.30584 63.0477
+L 1.44 63.0477
+z
+" style="fill: #1F407A; opacity: 0.92"/>
+  <path d="M 1.44 98.46
+L 71.19 98.46
+" style="fill: none; stroke: #cccccc; stroke-width: 0.55; stroke-linejoin: miter; stroke-linecap: square"/>
+  <text x="59.8" y="32.4" text-anchor="end" font-size="5.2" fill="#ffffff">Наивно: 35 ГБ</text>
+  <text x="17" y="81.1" font-size="5.2" fill="#333333">Flash: 537 МБ</text>
+  <text x="70.6" y="94.4" text-anchor="end" font-size="4.6" fill="#777777">лог. шкала</text>
+</svg>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="74.829533pt" height="99.9pt" viewBox="0 0 74.829533 99.9" role="img" aria-labelledby="title desc" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="title">Лестница емкости батча</title>
+  <desc id="desc">Лестница емкости батча: 407 запросов при базовой точности FP16 против 971 запроса с весами INT4 и KV-кэшем INT8, рост в 2,4 раза.</desc>
+  <path d="M 0 99.9
+L 74.829533 99.9
+L 74.829533 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  <path d="M 1.44 98.46
+L 71.19 98.46
+L 71.19 1.44
+L 1.44 1.44
+z
+" style="fill: #ffffff"/>
+  <path d="M 1.44 46.5543
+L 63.716786 46.5543
+L 63.716786 14.5377
+L 1.44 14.5377
+z
+" style="fill: #1F407A; opacity: 0.92"/>
+  <path d="M 1.44 95.0643
+L 27.543658 95.0643
+L 27.543658 63.0477
+L 1.44 63.0477
+z
+" style="fill: #1F407A; opacity: 0.92"/>
+  <path d="M 1.44 98.46
+L 71.19 98.46
+" style="fill: none; stroke: #cccccc; stroke-width: 0.55; stroke-linejoin: miter; stroke-linecap: square"/>
+  <path d="M 28.158577 54.801
+Q 45.630222 54.801 63.101867 54.801
+" style="fill: none; stroke: #777777; stroke-width: 0.55; stroke-linecap: round"/>
+  <path d="M 30.158577 55.801
+L 28.158577 54.801
+L 30.158577 53.801
+" style="fill: none; stroke: #777777; stroke-width: 0.55; stroke-linecap: round"/>
+  <path d="M 61.101867 53.801
+L 63.101867 54.801
+L 61.101867 55.801
+" style="fill: none; stroke: #777777; stroke-width: 0.55; stroke-linecap: round"/>
+  <path d="M 40.765769 58.201
+L 50.494675 58.201
+Q 51.394675 58.201 51.394675 57.301
+L 51.394675 52.301
+Q 51.394675 51.401 50.494675 51.401
+L 40.765769 51.401
+Q 39.865769 51.401 39.865769 52.301
+L 39.865769 57.301
+Q 39.865769 58.201 40.765769 58.201
+z
+" style="fill: #ffffff; opacity: 0.94"/>
+  <text x="60.2" y="32.4" text-anchor="end" font-size="5.2" fill="#ffffff">INT4 + INT8: 971</text>
+  <text x="29" y="81.1" font-size="5.2" fill="#333333">FP16: 407</text>
+  <text x="45.63" y="56.9" text-anchor="middle" font-size="5.6" font-weight="700" fill="#333333">2,4×</text>
+</svg>
