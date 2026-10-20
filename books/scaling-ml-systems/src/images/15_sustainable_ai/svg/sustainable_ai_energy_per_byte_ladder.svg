@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" width="72.63pt" height="99.9pt" viewBox="0 0 72.63 99.9" version="1.1" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 99.9 L 72.63 99.9 L 72.63 0 L 0 0 z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 1.44 98.46 L 71.19 98.46 L 71.19 1.44 L 1.44 1.44 z " style="fill: #ffffff" />
+   </g>
+   <g id="patch_3">
+    <path d="M 1.44 19.0653 L 67.02929 19.0653 L 67.02929 3.2187 L 1.44 3.2187 z " clip-path="url(#p879ee31a35)" style="fill: #e67817; opacity: 0.92" />
+   </g>
+   <g id="patch_4">
+    <path d="M 1.44 35.2353 L 54.87849 35.2353 L 54.87849 19.3887 L 1.44 19.3887 z " clip-path="url(#p879ee31a35)" style="fill: #e67817; opacity: 0.92" />
+   </g>
+   <g id="patch_5">
+    <path d="M 1.44 51.4053 L 45.207911 51.4053 L 45.207911 35.5587 L 1.44 35.5587 z " clip-path="url(#p879ee31a35)" style="fill: #e67817; opacity: 0.92" />
+   </g>
+   <g id="patch_6">
+    <path d="M 1.44 67.5753 L 26.919135 67.5753 L 26.919135 51.7287 L 1.44 51.7287 z " clip-path="url(#p879ee31a35)" style="fill: #e67817; opacity: 0.92" />
+   </g>
+   <g id="patch_7">
+    <path d="M 1.44 83.7453 L 18.42609 83.7453 L 18.42609 67.8987 L 1.44 67.8987 z " clip-path="url(#p879ee31a35)" style="fill: #e67817; opacity: 0.92" />
+   </g>
+   <g id="patch_8">
+    <path d="M 1.44 99.9153 L 6.27529 99.9153 L 6.27529 84.0687 L 1.44 84.0687 z " clip-path="url(#p879ee31a35)" style="fill: #e67817; opacity: 0.92" />
+   </g>
+   <g id="matplotlib.axis_1" />
+   <g id="matplotlib.axis_2" />
+   <g id="patch_9">
+    <path d="M 1.44 98.46 L 71.19 98.46 " style="fill: none; stroke: #cccccc; stroke-width: 0.55; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <text transform="translate(37.691096 12.465156)" font-size="5.2000" font-family="Liberation Sans, Arial, Helvetica, sans-serif" fill="#ffffff">Сеть 10k</text><text transform="translate(33.055108 28.635156)" font-size="5.2000" font-family="Liberation Sans, Arial, Helvetica, sans-serif" fill="#ffffff">NVMe 1k</text><text transform="translate(19.337467 44.805156)" font-size="5.2000" font-family="Liberation Sans, Arial, Helvetica, sans-serif" fill="#ffffff">DRAM 160</text><text transform="translate(16.359440 60.975156)" font-size="5.2000" font-family="Liberation Sans, Arial, Helvetica, sans-serif" fill="#ffffff">L2 5</text><text transform="translate(7.866395 77.145156)" font-size="5.2000" font-family="Liberation Sans, Arial, Helvetica, sans-serif" fill="#ffffff">L1 1</text><text transform="translate(8.587972 93.281844)" font-size="5.2000" font-family="Liberation Sans, Arial, Helvetica, sans-serif" fill="#333333">Регистр 0,1</text><text transform="translate(55.798406 96.303525)" font-size="3.1372" font-family="Liberation Sans, Arial, Helvetica, sans-serif" fill="#777777">лог. шкала</text></g>
+ </g>
+ <defs>
+  <clipPath id="p879ee31a35">
+   <rect x="1.44" y="1.44" width="69.75" height="97.02" />
+  </clipPath>
+ </defs>
+</svg>
