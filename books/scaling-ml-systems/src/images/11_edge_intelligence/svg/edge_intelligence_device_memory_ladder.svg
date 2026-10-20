@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="72.63pt" height="99.9pt" viewBox="0 0 72.63 99.9" xmlns="http://www.w3.org/2000/svg" version="1.1" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 99.9
+L 72.63 99.9
+L 72.63 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 1.44 98.46
+L 71.19 98.46
+L 71.19 1.44
+L 1.44 1.44
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 1.44 23.99715
+L 66.342871 23.99715
+L 66.342871 7.98885
+L 1.44 7.98885
+z
+" clip-path="url(#p879ee31a35)" style="fill: #1F407A; opacity: 0.92"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 1.44 48.25215
+L 53.559274 48.25215
+L 53.559274 32.24385
+L 1.44 32.24385
+z
+" clip-path="url(#p879ee31a35)" style="fill: #1F407A; opacity: 0.92"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 1.44 72.50715
+L 19.615482 72.50715
+L 19.615482 56.49885
+L 1.44 56.49885
+z
+" clip-path="url(#p879ee31a35)" style="fill: #1F407A; opacity: 0.92"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 1.44 96.76215
+L 7.072999 96.76215
+L 7.072999 80.75385
+L 1.44 80.75385
+z
+" clip-path="url(#p879ee31a35)" style="fill: #1F407A; opacity: 0.92"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+   <g id="patch_7">
+    <path d="M 1.44 98.46
+L 71.19 98.46
+" style="fill: none; stroke: #cccccc; stroke-width: 0.55; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <!-- Phone 8 GB -->
+    <text x="37.501" y="17.316" font-size="4.387" font-family="Arial, Helvetica, Liberation Sans, sans-serif" fill="#ffffff">Телефон 8 ГБ</text>
+   </g>
+   <g id="text_2">
+    <!-- IoT 1 GB -->
+    <text x="32.240" y="41.571" font-size="5.200" font-family="Arial, Helvetica, Liberation Sans, sans-serif" fill="#ffffff">IoT 1 ГБ</text>
+   </g>
+   <g id="text_3">
+    <!-- MCU 4 MB -->
+    <text x="22.310" y="65.826" font-size="5.200" font-family="Arial, Helvetica, Liberation Sans, sans-serif" fill="#333333">MCU 4 МБ</text>
+   </g>
+   <g id="text_4">
+    <!-- SRAM 520 KB -->
+    <text x="9.767" y="90.081" font-size="5.200" font-family="Arial, Helvetica, Liberation Sans, sans-serif" fill="#333333">SRAM 520 КБ</text>
+   </g>
+   <g id="text_5">
+    <!-- log scale -->
+    <text x="55.798" y="95.657" font-size="3.138" font-family="Arial, Helvetica, Liberation Sans, sans-serif" fill="#777777">лог. шкала</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p879ee31a35">
+   <rect x="1.44" y="1.44" width="69.75" height="97.02"/>
+  </clipPath>
+ </defs>
+</svg>

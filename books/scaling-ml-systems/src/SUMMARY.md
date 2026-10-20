@@ -13,6 +13,7 @@
 - [Оркестрация парка](08_fleet_orchestration.md)
 - [Инженерия производительности](09_performance_engineering.md)
 - [Инференс в масштабе](10_inference.md)
+- [Граничный интеллект](11_edge_intelligence.md)
 
 # Служебные разделы
 
