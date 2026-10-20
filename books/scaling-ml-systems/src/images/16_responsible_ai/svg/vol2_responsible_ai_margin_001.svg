@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="72.63pt" height="99.9pt" viewBox="0 0 72.63 99.9" xmlns="http://www.w3.org/2000/svg" version="1.1" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 99.9
+L 72.63 99.9
+L 72.63 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 1.44 98.46
+L 71.19 98.46
+L 71.19 1.44
+L 1.44 1.44
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 1.44 46.5543
+L 67.112755 46.5543
+L 67.112755 14.5377
+L 1.44 14.5377
+z
+" clip-path="url(#p879ee31a35)" style="fill: #e67817; opacity: 0.92"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 1.44 95.0643
+L 6.178293 95.0643
+L 6.178293 63.0477
+L 1.44 63.0477
+z
+" clip-path="url(#p879ee31a35)" style="fill: #e67817; opacity: 0.92"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+   <g id="patch_5">
+    <path d="M 1.44 98.46
+L 71.19 98.46
+" style="fill: none; stroke: #cccccc; stroke-width: 0.55; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <!-- 20 feat 1M -->
+    <text x="54.398" y="31.869" font-size="4.067" fill="#ffffff" text-anchor="middle" font-family="Liberation Sans, Arial, sans-serif">20 признаков: 1M</text>
+   </g>
+   <g id="text_2">
+    <!-- 3 feat 8 -->
+    <text x="17.118" y="80.379" font-size="4.067" fill="#333333" text-anchor="middle" font-family="Liberation Sans, Arial, sans-serif">3 признака: 8</text>
+   </g>
+   <g id="text_3">
+    <!-- log scale -->
+    <text x="63.495" y="93.716" font-size="3.050" fill="#777777" text-anchor="middle" font-family="Liberation Sans, Arial, sans-serif">лог. шкала</text>
+   </g>
+   <g id="patch_6">
+    <path d="M 6.793211 54.801
+Q 36.645524 54.801 66.497836 54.801
+" style="fill: none; stroke: #777777; stroke-width: 0.55; stroke-linecap: round"/>
+    <path d="M 8.793211 55.801
+L 6.793211 54.801
+L 8.793211 53.801
+" style="fill: none; stroke: #777777; stroke-width: 0.55; stroke-linecap: round"/>
+    <path d="M 64.497836 53.801
+L 66.497836 54.801
+L 64.497836 55.801
+" style="fill: none; stroke: #777777; stroke-width: 0.55; stroke-linecap: round"/>
+   </g>
+   <g id="text_4">
+    <g id="patch_7">
+     <path d="M 32.692008 58.015453
+L 40.59904 58.015453
+Q 41.49904 58.015453 41.49904 57.115453
+L 41.49904 52.486547
+Q 41.49904 51.586547 40.59904 51.586547
+L 32.692008 51.586547
+Q 31.792008 51.586547 31.792008 52.486547
+L 31.792008 57.115453
+Q 31.792008 58.015453 32.692008 58.015453
+z
+" style="fill: #ffffff; opacity: 0.94"/>
+    </g>
+    <!-- 2^n -->
+    <g style="fill: #333333" transform="translate(32.692008 56.073266) scale(0.05 -0.05)">
+     <defs>
+      <path id="Helvetica-5e" d="M 1953 4591
+L 3056 1894
+L 2547 1894
+L 1716 3963
+L 888 1894
+L 375 1894
+L 1472 4591
+L 1953 4591
+z
+" transform="scale(0.015625)"/>
+      <path id="Helvetica-6e" d="M 413 3347
+L 947 3347
+L 947 2872
+Q 1184 3166 1450 3294
+Q 1716 3422 2041 3422
+Q 2753 3422 3003 2925
+Q 3141 2653 3141 2147
+L 3141 0
+L 2569 0
+L 2569 2109
+Q 2569 2416 2478 2603
+Q 2328 2916 1934 2916
+Q 1734 2916 1606 2875
+Q 1375 2806 1200 2600
+Q 1059 2434 1017 2257
+Q 975 2081 975 1753
+L 975 0
+L 413 0
+L 413 3347
+z
+M 1734 3428
+L 1734 3428
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Helvetica-32"/>
+     <use xlink:href="#Helvetica-5e" transform="translate(55.615234 0)"/>
+     <use xlink:href="#Helvetica-6e" transform="translate(102.539062 0)"/>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p879ee31a35">
+   <rect x="1.44" y="1.44" width="69.75" height="97.02"/>
+  </clipPath>
+ </defs>
+</svg>

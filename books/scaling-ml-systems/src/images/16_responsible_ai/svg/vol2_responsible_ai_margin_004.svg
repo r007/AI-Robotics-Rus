@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="68.724pt" height="42.7968pt" viewBox="0 0 68.724 42.7968" xmlns="http://www.w3.org/2000/svg" version="1.1" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 42.7968
+L 68.724 42.7968
+L 68.724 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 1.44 41.3568
+L 67.284 41.3568
+L 67.284 1.44
+L 1.44 1.44
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+   <g id="line2d_1">
+    <path d="M 1.44 36.566784
+L 2.105091 35.033353
+L 2.770182 33.575445
+L 3.435273 32.18934
+L 4.100364 30.871502
+L 4.765455 29.618568
+L 5.430545 28.427343
+L 6.095636 27.294786
+L 6.760727 26.218009
+L 7.425818 25.194264
+L 8.090909 24.22094
+L 8.756 23.295552
+L 9.421091 22.415741
+L 10.086182 21.579261
+L 10.751273 20.783979
+L 11.416364 20.027865
+L 12.081455 19.30899
+L 12.746545 18.62552
+L 13.411636 17.975712
+L 14.076727 17.357908
+L 14.741818 16.77053
+L 15.406909 16.212082
+L 16.072 15.681138
+L 16.737091 15.176343
+L 17.402182 14.69641
+L 18.067273 14.240114
+L 18.732364 13.806291
+L 19.397455 13.393834
+L 20.062545 13.001691
+L 20.727636 12.628861
+L 21.392727 12.274394
+L 22.057818 11.937384
+L 22.722909 11.616973
+L 23.388 11.312342
+L 24.053091 11.022714
+L 24.718182 10.747351
+L 25.383273 10.485549
+L 26.048364 10.236642
+L 26.713455 9.999993
+L 27.378545 9.775
+L 28.043636 9.561087
+L 28.708727 9.35771
+L 29.373818 9.16435
+L 30.038909 8.980513
+L 30.704 8.80573
+L 31.369091 8.639555
+L 32.034182 8.481564
+L 32.699273 8.331355
+L 33.364364 8.188543
+L 34.029455 8.052765
+L 34.694545 7.923675
+L 35.359636 7.800942
+L 36.024727 7.684253
+L 36.689818 7.573312
+L 37.354909 7.467835
+L 38.02 7.367553
+L 38.685091 7.272209
+L 39.350182 7.181561
+L 40.015273 7.095378
+L 40.680364 7.01344
+L 41.345455 6.935537
+L 42.010545 6.86147
+L 42.675636 6.791052
+L 43.340727 6.724102
+L 44.005818 6.660449
+L 44.670909 6.599931
+L 45.336 6.542393
+L 46.001091 6.48769
+L 46.666182 6.43568
+L 47.331273 6.386233
+L 47.996364 6.33922
+L 48.661455 6.294523
+L 49.326545 6.252027
+L 49.991636 6.211624
+L 50.656727 6.173211
+L 51.321818 6.13669
+L 51.986909 6.101968
+L 52.652 6.068956
+L 53.317091 6.037569
+L 53.982182 6.007729
+L 54.647273 5.979358
+L 55.312364 5.952384
+L 55.977455 5.926739
+L 56.642545 5.902357
+L 57.307636 5.879176
+L 57.972727 5.857136
+L 58.637818 5.836182
+L 59.302909 5.81626
+L 59.968 5.797319
+L 60.633091 5.779311
+L 61.298182 5.76219
+L 61.963273 5.745912
+L 62.628364 5.730436
+L 63.293455 5.715722
+L 63.958545 5.701733
+L 64.623636 5.688432
+L 65.288727 5.675787
+L 65.953818 5.663764
+L 66.618909 5.652334
+L 67.284 5.641467
+" clip-path="url(#p9173796fe7)" style="fill: none; stroke: #DC2626; stroke-width: 1.45; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 1.44 5.43168
+L 67.284 5.43168
+" clip-path="url(#p9173796fe7)" style="fill: none; stroke: #cccccc; stroke-width: 0.6; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <!-- rare -->
+    <text x="19.218" y="11.469" font-size="4.267" fill="#333333" text-anchor="middle" font-family="Liberation Sans, Arial, sans-serif">редко</text>
+   </g>
+   <g id="text_2">
+    <!-- certain -->
+    <text x="48.848" y="14.687" font-size="4.354" fill="#DC2626" text-anchor="middle" font-family="Liberation Sans, Arial, sans-serif">неизбежно</text>
+   </g>
+   <g id="text_3">
+    <!-- fleet scale -->
+    <text x="39.630" y="32.998" font-size="4.180" fill="#333333" text-anchor="middle" font-family="Liberation Sans, Arial, sans-serif">масштаб парка</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p9173796fe7">
+   <rect x="1.44" y="1.44" width="65.844" height="39.9168"/>
+  </clipPath>
+ </defs>
+</svg>
