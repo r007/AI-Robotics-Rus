@@ -12,6 +12,7 @@
 - [Отказоустойчивость](07_fault_tolerance.md)
 - [Оркестрация парка](08_fleet_orchestration.md)
 - [Инженерия производительности](09_performance_engineering.md)
+- [Инференс в масштабе](10_inference.md)
 
 # Служебные разделы
 
