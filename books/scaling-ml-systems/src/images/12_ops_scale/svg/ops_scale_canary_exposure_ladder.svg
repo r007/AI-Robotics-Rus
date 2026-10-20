@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="72.63pt" height="99.9pt" viewBox="0 0 72.63 99.9" xmlns="http://www.w3.org/2000/svg" version="1.1" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 99.9
+L 72.63 99.9
+L 72.63 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 1.44 98.46
+L 71.19 98.46
+L 71.19 1.44
+L 1.44 1.44
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 1.44 46.5543
+L 63.716786 46.5543
+L 63.716786 14.5377
+L 1.44 14.5377
+z
+" clip-path="url(#p879ee31a35)" style="fill: #008f45; opacity: 0.92"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 1.44 95.0643
+L 4.553839 95.0643
+L 4.553839 63.0477
+L 1.44 63.0477
+z
+" clip-path="url(#p879ee31a35)" style="fill: #008f45; opacity: 0.92"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+   <g id="patch_5">
+    <path d="M 1.44 98.46
+L 71.19 98.46
+" style="fill: none; stroke: #cccccc; stroke-width: 0.55; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <!-- Blue-green 100% -->
+    <text x="15.800" y="31.836" font-size="5.200" font-family="Arial, Helvetica, Liberation Sans, sans-serif" fill="#ffffff">Сине-зел. 100%</text>
+   </g>
+   <g id="text_2">
+    <!-- Canary 5% -->
+    <text x="5.600" y="80.415" font-size="5.200" font-family="Arial, Helvetica, Liberation Sans, sans-serif" fill="#333333">Канарейка 5%</text>
+   </g>
+   <g id="patch_6">
+    <path d="M 5.168758 54.801
+Q 34.135312 54.801 63.101867 54.801
+" style="fill: none; stroke: #777777; stroke-width: 0.55; stroke-linecap: round"/>
+    <path d="M 7.168758 55.801
+L 5.168758 54.801
+L 7.168758 53.801
+" style="fill: none; stroke: #777777; stroke-width: 0.55; stroke-linecap: round"/>
+    <path d="M 61.101867 53.801
+L 63.101867 54.801
+L 61.101867 55.801
+" style="fill: none; stroke: #777777; stroke-width: 0.55; stroke-linecap: round"/>
+   </g>
+   <g id="text_3">
+    <g id="patch_7">
+     <path d="M 30.104844 58.015453
+L 38.165781 58.015453
+Q 39.065781 58.015453 39.065781 57.115453
+L 39.065781 52.486547
+Q 39.065781 51.586547 38.165781 51.586547
+L 30.104844 51.586547
+Q 29.204844 51.586547 29.204844 52.486547
+L 29.204844 57.115453
+Q 29.204844 58.015453 30.104844 58.015453
+z
+" style="fill: #ffffff; opacity: 0.94"/>
+    </g>
+    <!-- 20x -->
+    <text x="30.105" y="56.073" font-size="5.000" font-family="Arial, Helvetica, Liberation Sans, sans-serif" fill="#333333">20×</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p879ee31a35">
+   <rect x="1.44" y="1.44" width="69.75" height="97.02"/>
+  </clipPath>
+ </defs>
+</svg>
