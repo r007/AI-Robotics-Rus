@@ -1,8 +1,9 @@
 # Список литературы
 
-Список работ, на которые ссылаются главы «Введение», «Вычислительная инфраструктура», «Хранение данных», первая часть главы «Распределенное обучение», глава «Граничный интеллект», глава «Эксплуатация ML-систем в масштабе», глава «Коллективные коммуникации», глава «Отказоустойчивость», глава «Оркестрация парка», глава «Инженерия производительности» глава «Инференс в масштабе» и первая часть главы «Безопасность и приватность». Записи приведены на языке оригинала.
+Список работ, на которые ссылаются главы «Введение», «Вычислительная инфраструктура», «Хранение данных», первая часть главы «Распределенное обучение», глава «Граничный интеллект», глава «Эксплуатация ML-систем в масштабе», глава «Коллективные коммуникации», глава «Отказоустойчивость», глава «Оркестрация парка», глава «Инженерия производительности» глава «Инференс в масштабе» и глава «Безопасность и приватность». Записи приведены на языке оригинала.
 
 - Abadi, M., Chu, A., Goodfellow, I., McMahan, H. B., Mironov, I., Talwar, K., Zhang, L. (2016). Deep Learning With Differential Privacy. *Proceedings of the 2016 ACM SIGSAC Conference on Computer and Communications Security.*
+- Adi, Yossi, Baum, Carsten, Cisse, Moustapha, Pinkas, Benny, Keshet, Joseph (2018). Turning your weakness into a strength: Watermarking deep neural networks by backdooring. *27th USENIX Security Symposium (USENIX Security 18).*
 - Agrawal, Amey, Kedia, Nitin, Panwar, Ashish, Mohan, Jayashree, Kwatra, Nipun, Gulavani, Bhargav S., Tumanov, Alexey, Ramjee, Ramachandran (2024). Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve. *18th USENIX Symposium on Operating Systems Design and Implementation (OSDI 24)*, 117–134.
 - Ainslie, Joshua, Lee-Thorp, James, de Jong, Michiel, Zemlyanskiy, Yury, Lebron, Federico, Sanghai, Sumit (2023). GQA: Training Generalized Multi-Query Transformer Models From Multi-Head Checkpoints. *Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing.*
 - Aizman, Alex, Maltby, Gavin, Breuel, Thomas (2019). High Performance I/O for Large Scale Deep Learning. 2019 IEEE International Conference on Big Data (Big Data).
@@ -16,17 +17,26 @@
 - Amazon Web Services (2026). Understanding Archive Retrieval Options. Amazon S3 User Guide.
 - Amdahl, Gene M. (1967). Validity of the single processor approach to achieving large scale computing capabilities. Proceedings of the April 18-20, 1967, spring joint computer conference on - AFIPS '67 (Spring).
 - Amershi, Saleema, Begel, Andrew, Bird, Christian, DeLine, Robert, Gall, Harald, Kamar, Ece, Nagappan, Nachiappan, Nushi, Besmira, Zimmermann, Thomas (2019). Software Engineering for Machine Learning: A Case Study. *2019 IEEE/ACM 41st International Conference on Software Engineering: Software Engineering in Practice (ICSE-SEIP).*
+- Amiel, Frederic, Clavier, Christophe, Tunstall, Michael (2006). Fault Analysis of DPA-Resistant Algorithms. *Fault Diagnosis and Tolerance in Cryptography.*
 - Amodei, Dario, Hernandez, Danny (2018). AI and Compute. OpenAI Blog.
 - Antonakakis, M., April, T., Bailey, M., Bernhard, M., Bursztein, E., Cochran, J., et al. (2017). Understanding the mirai botnet. *26th USENIX security symposium (USENIX Security 17).*
+- Apple (2024). The Secure Enclave. Apple Platform Security.
+- Apple (2024). Facial matching security. Apple Platform Security.
+- Apple (2021). Secure software updates. Apple Platform Security.
+- Apple (2021). Boot process for iPad and iPhone devices. Apple Platform Security.
+- Apple Differential Privacy Team (2017). Learning with privacy at scale. Apple Machine Learning Research.
 - Arifeen, Tooba, Hassan, Abdus Sami, Lee, Jeong-A (2020). Approximate Triple Modular Redundancy: A Survey. *IEEE Access.*
 - Arivazhagan, Manoj Ghuhan, Aggarwal, Vinay, Singh, Aaditya Kumar, Choudhary, Sunav (2019). Federated Learning with Personalization Layers. *CoRR.*
 - Ashkboos, Saleh, Mohtashami, Amirkeivan, Croci, Maximilian L., Li, Bo, Cameron, Pashmina, Jaggi, Martin, Alistarh, Dan, Hoefler, Torsten, Hensman, James (2024). QuaRot: Outlier-Free 4-Bit Inference in Rotated LLMs. *Advances in Neural Information Processing Systems (NeurIPS).*
+- Asonov, Dmitri, Agrawal, Rakesh (2004). Keyboard acoustic emanations. *IEEE Symposium on Security and Privacy, 2004. Proceedings. 2004.*
 - Ateniese, G., Mancini, L. V., Spognardi, A., Villani, A., Vitali, D., Felici, G. (2015). Hacking smart machines with smarter ones: How to extract meaningful data from machine learning classifiers. *International Journal of Security and Networks.*
 - Avizienis, Algirdas, Laprie, Jean-Claude, Randell, Brian, Landwehr, Carl (2004). Basic Concepts and Taxonomy of Dependable and Secure Computing. *IEEE Transactions on Dependable and Secure Computing.*
 - Aygun, Sercan, Gunes, Ece Olcay, De Vleeschouwer, Christophe (2021). Efficient and robust bitstream processing in binarised neural networks. *Electronics Letters.*
+- Bahdanau, Dzmitry, Cho, Kyunghyun, Bengio, Yoshua (2015). Neural Machine Translation by Jointly Learning to Align and Translate. *International Conference on Learning Representations (ICLR).*
 - Bai, Yuntao, et al. (2022). Constitutional AI: Harmlessness from AI Feedback.
 - Banbury, Colby, Reddi, Vijay Janapa, Torelli, Peter, Holleman, Jeremy, Jeffries, Nat, Kiraly, Csaba, Montino, Pietro, Kanter, David, Ahmed, Sebastian, Pau, Danilo, Thakker, Urmish, Torrini, Antonio, Warden, Peter, Cordaro, Jay, Guglielmo, Giuseppe Di, Duarte, Javier, Gibellini, Stephen, Parekh, Videet, Tran, Honson, Tran, Nhan, Wenxu, Niu, Xuesong, Xu (2021). MLPerf Tiny Benchmark. *arXiv preprint.*
 - Bannon, Pete, Venkataramanan, Ganesh, Sarma, Debjit Das, Talpes, Emil (2019). Computer and Redundancy Solution for the Full Self-Driving Computer. *2019 IEEE Hot Chips 31 Symposium (HCS).*
+- Barenghi, A., Bertoni, G. M., Breveglieri, L., Pellicioli, M., Pelosi, G. (2010). Low voltage fault attacks to AES. *2010 IEEE International Symposium on Hardware-Oriented Security and Trust (HOST).*
 - Barroso, Luiz André, Hölzle, Urs, Ranganathan, Parthasarathy (2019). The Datacenter as a Computer. Springer International Publishing.
 - Basiri, A., Behnam, N., Rooij, R., Hochstein, L., Kosewski, L., Reynolds, J., Rosenthal, C. (2016). Chaos Engineering. *IEEE Software.*
 - Baumann, R. (2005). Soft Errors in Advanced Computer Systems. *IEEE Design and Test of Computers.*
@@ -45,15 +55,20 @@
 - Bommasani, Rishi, Hudson, Drew A., Adeli, Ehsan, Altman, Russ, Arora, Simran, Arx, Sydney, Bernstein, Michael S., Bohg, Jeannette, Bosselut, Antoine, Brunskill, Emma, Brynjolfsson, Erik, Buch, Shyamal, Card, Dallas, Castellon, Rodrigo, Chatterji, Niladri, Chen, Annie, Creel, Kathleen, Davis, Jared Quincy, Demszky, Dora, Donahue, Chris, Doumbouya, Moussa, Durmus, Esin, Ermon, Stefano, Etchemendy, John, Ethayarajh, Kawin, Fei-Fei, Li, Finn, Chelsea, Gale, Trevor, Gillespie, Lauren, Goel, Karan, Goodman, Noah, Grossman, Shelby, Guha, Neel, Hashimoto, Tatsunori, Henderson, Peter, Hewitt, John, Ho, Daniel E., Hong, Jenny, Hsu, Kyle, Huang, Jing, Icard, Thomas, Jain, Saahil, Jurafsky, Dan, Kalluri, Pratyusha, Karamcheti, Siddharth, Keeling, Geoff, Khani, Fereshte, Khattab, Omar, Koh, Pang Wei, Krass, Mark, Krishna, Ranjay, Kuditipudi, Rohith, Kumar, Ananya, Ladhak, Faisal, Lee, Mina, Lee, Tony, Leskovec, Jure, Levent, Isabelle, Li, Xiang Lisa, Li, Xuechen, Ma, Tengyu, Malik, Ali, Manning, Christopher D., Mirchandani, Suvir, Mitchell, Eric, Munyikwa, Zanele, Nair, Suraj, Narayan, Avanika, Narayanan, Deepak, Newman, Ben, Nie, Allen, Niebles, Juan Carlos, Nilforoshan, Hamed, Nyarko, Julian, Ogut, Giray, Orr, Laurel, Papadimitriou, Isabel, Park, Joon Sung, Piech, Chris, Portelance, Eva, Potts, Christopher, Raghunathan, Aditi, Reich, Rob, Ren, Hongyu, Rong, Frieda, Roohani, Yusuf, Ruiz, Camilo, Ryan, Jack, Ré, Christopher, Sadigh, Dorsa, Sagawa, Shiori, Santhanam, Keshav, Shih, Andy, Srinivasan, Krishnan, Tamkin, Alex, Taori, Rohan, Thomas, Armin W., Tramèr, Florian, Wang, Rose E., Wang, William, Wu, Bohan, Wu, Jiajun, Wu, Yuhuai, Xie, Sang Michael, Yasunaga, Michihiro, You, Jiaxuan, Zaharia, Matei, Zhang, Michael, Zhang, Tianyi, Zhang, Xikun, Zhang, Yuhui, Zheng, Lucia, Zhou, Kaitlyn, Liang, Percy (2021). On the Opportunities and Risks of Foundation Models. *arXiv preprint arXiv:2108.07258.*
 - Bonawitz, Keith, Ivanov, Vladimir, Kreuter, Ben, Marcedone, Antonio, McMahan, H. Brendan, Patel, Sarvar, Ramage, Daniel, Segal, Aaron, Seth, Karn (2017). Practical Secure Aggregation for Privacy-Preserving Machine Learning. *Proceedings of the 2017 ACM SIGSAC Conference on Computer and Communications Security.*
 - Bonawitz, K., Eichner, H., Grieskamp, W., Huba, D., Ingerman, A., Ivanov, V., Kiddon, C., Konečný, J., Mazzocchi, S., McMahan, H. B., Overveldt, T. V., Petrou, D., Ramage, D., Roselander, J. (2019). Towards Federated Learning at Scale: System Design. *Proceedings of Machine Learning and Systems.*
+- Breier, Jakub, Hou, Xiaolu, Jap, Dirmanto, Ma, Lei, Bhasin, Shivam, Liu, Yang (2018). Practical Fault Attack on Deep Neural Networks. *Proceedings of the 2018 ACM SIGSAC Conference on Computer and Communications Security.*
 - Brewer, Eric A. (2000). Towards robust distributed systems (abstract). Proceedings of the nineteenth annual ACM symposium on Principles of distributed computing.
 - Brown, Tom B., Mann, Benjamin, Ryder, Nick, Subbiah, Melanie, Kaplan, Jared, Dhariwal, Prafulla, Neelakantan, Arvind, Shyam, Pranav, Sastry, Girish, Askell, Amanda, Agarwal, Sandhini, Herbert-Voss, Ariel, Krueger, Gretchen, Henighan, Tom, Child, Rewon, Ramesh, Aditya, Ziegler, Daniel M., Wu, Jeffrey, Winter, Clemens, Hesse, Christopher, Chen, Mark, Sigler, Eric, Litwin, Mateusz, Gray, Scott, Chess, Benjamin, Clark, Jack, Berner, Christopher, McCandlish, Sam, Radford, Alec, Sutskever, Ilya, Amodei, Dario (2020). Language Models are Few-Shot Learners. Advances in Neural Information Processing Systems.
+- Bu, Zhiqi, Dong, Jiawen, Long, Qi, Su, Weijie J. (2020). Deep learning with Gaussian differential privacy. *Harvard Data Science Review.*
 - Burns, Brendan, Grant, Brian, Oppenheimer, David, Brewer, Eric, Wilkes, John (2016). Borg, Omega, and Kubernetes. *Communications of the ACM.*
+- Bursztein, Elie, Picod, Jean-Michel (2019). A Hacker Guide To Deep Learning Based Side Channel Attacks. *DEF CON 27.*
+- Bursztein, Elie, Invernizzi, Luca, Král, Karel, Moghimi, Daniel, Picod, Jean-Michel, Zhang, Marina (2024). Generalized Power Attacks Against Crypto Hardware Using Long-Range Deep Learning. *IACR Transactions on Cryptographic Hardware and Embedded Systems.*
 - Bushnell, Michael L, Agrawal, Vishwani D (2002). Built-In Self-Test. *Frontiers in Electronic Testing.*
 - Cai, Tianle, Li, Yuhong, Geng, Zhengyang, Peng, Hongwu, Lee, Jason D., Chen, Deming, Dao, Tri (2024). Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads. *Proceedings of the 41st International Conference on Machine Learning (ICML).*
 - Cai, Han, Gan, Chuang, Zhu, Ligeng, Han, Song (2020). TinyTL: Reduce Activations, Not Trainable Parameters for Efficient On-Device Learning. *Advances in Neural Information Processing Systems.*
 - Carlini, N., Tramer, F., Wallace, E., Jagielski, M., Herbert-Voss, A., Lee, K., et al. (2021). Extracting Training Data from Large Language Models. *30th USENIX Security Symposium (USENIX Security 21).*
 - Carlini, N., Paleka, D., Dvijotham, K., Steinke, T., Hayase, J., Cooper, A., et al. (2024). Stealing Part of a Production Language Model. *arXiv preprint arXiv:2403.06634.*
 - Caveness, E., G. C., P. S., Peng, Z., Polyzotis, N., Roy, S., Zinkevich, M. (2020). TensorFlow Data Validation: Data Analysis and Validation in Continuous ML Pipelines. *Proceedings of the 2020 ACM SIGMOD International Conference on Management of Data.*
+- Cavoukian, A. (2012). Privacy by design. *Office of the Information and Privacy Commissioner.*
 - Cerebras Systems (2021). Wafer-Scale Deep Learning Acceleration with the Cerebras CS-2. Cerebras Technical Paper.
 - Cerebras Systems (2024). Cerebras Systems, Inc. Registration Statement on Form S-1.
 - Chandola, Varun, Banerjee, Arindam, Kumar, Vipin (2009). Anomaly Detection. *ACM Computing Surveys.*
@@ -68,6 +83,8 @@
 - Cloud Native Computing Foundation (2024). Kubernetes: Production-Grade Container Orchestration.
 - Cloudflare (2019). Details of the Cloudflare Outage on July 2, 2019. *Cloudflare incident report.*
 - Constantinescu, C. (2008). Intermittent faults and effects on reliability of integrated circuits. *2008 Annual Reliability and Maintainability Symposium.*
+- coreboot contributors (2026). vboot: Verified Boot Support.
+- coreboot contributors (2026). coreboot.
 - Courbariaux, Matthieu, Hubara, Itay, Soudry, Daniel, El-Yaniv, Ran, Bengio, Yoshua (2016). Binarized Neural Networks: Training Deep Neural Networks with Weights and Activations Constrained to +1 or -1. *arXiv preprint arXiv:1602.02830.*
 - Covington, Paul, Adams, Jay, Sargin, Emre (2016). Deep Neural Networks for YouTube Recommendations. *Proceedings of the 10th ACM Conference on Recommender Systems.*
 - Culler, David, Karp, Richard, Patterson, David, Sahay, Abhijit, Schauser, Klaus Erik, Santos, Eunice, Subramonian, Ramesh, Eicken, Thorsten (1993). LogP: towards a realistic model of parallel computation. *ACM SIGPLAN Notices.*
@@ -75,6 +92,7 @@
 - Dao, T., Fu, D. Y., Ermon, S., Rudra, A., Ré, C. (2022). FlashAttention: Fast and Memory-Efficient Exact Attention With IO-Awareness. *Advances in Neural Information Processing Systems (NeurIPS).*
 - Dao, Tri (2023). FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning. *arXiv preprint arXiv:2307.08691.*
 - Databricks (2026). Mosaic Streaming: Main Concepts. Databricks Mosaic AI Training Documentation.
+- De, Soham, Berrada, Leonard, Hayes, Jamie, Smith, Samuel L., Balle, Borja (2022). Unlocking High-Accuracy Differentially Private Image Classification through Scale. *arXiv preprint arXiv:2204.13650.*
 - Dean, Jeffrey, Barroso, Luiz André (2013). The tail at scale. Communications of the ACM.
 - Dean, Jeffrey, Corrado, Greg, Monga, Rajat, Chen, Kai, Devin, Matthieu, Le, Quoc V., Mao, Mark Z., Ranzato, Marc'Aurelio, Senior, Andrew W., Tucker, Paul A., Yang, Ke, Ng, Andrew Y. (2012). Large Scale Distributed Deep Networks. Advances in Neural Information Processing Systems (NeurIPS).
 - Dean, Jeffrey, Ghemawat, Sanjay (2004). MapReduce: Simplified Data Processing on Large Clusters. Proceedings of the 6th Symposium on Operating Systems Design and Implementation (OSDI).
@@ -86,6 +104,8 @@
 - Devlin, Jacob, Chang, Ming-Wei, Lee, Kenton, Toutanova, Kristina (2019). BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies.
 - Dixit, H. D., Pendharkar, S., Beadon, M., Mason, C., Chakravarthy, T., Muthiah, B., Sankar, S. (2021). Silent Data Corruptions at Scale. *arXiv preprint arXiv:2102.11245.*
 - Dubey, Abhimanyu, Jauhri, Abhinav, Pandey, Abhinav, Kadian, Abhishek, others (2024). The Llama 3 Herd of Models. arXiv preprint arXiv:2407.21783.
+- Dwork, Cynthia, Roth, Aaron (2014). The Algorithmic Foundations of Differential Privacy. *Foundations and Trends® in Theoretical Computer Science.*
+- Dwork, Cynthia, McSherry, Frank, Nissim, Kobbi, Smith, Adam (2006). Calibrating Noise to Sensitivity in Private Data Analysis. *Theory of Cryptography Conference (TCC).*
 - Eckles, Dean, Karrer, Brian, Ugander, Johan (2017). Design and analysis of experiments in networks: Reducing bias from interference. *Journal of Causal Inference.*
 - Egwutuoha, I. P., Levy, D., Selic, B., Chen, S. (2013). A survey of fault tolerance mechanisms and checkpoint/restart implementations for high performance computing systems. *The Journal of Supercomputing.*
 - Engineering at Meta (2016). Introducing FBLearner Flow: Facebook's AI backbone. *Engineering at Meta Blog.*
@@ -98,12 +118,19 @@
 - Frantar, Elias, Ashkboos, Saleh, Hoefler, Torsten, Alistarh, Dan (2023). GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers. *International Conference on Learning Representations (ICLR).*
 - Fredrikson, Matt, Jha, Somesh, Ristenpart, Thomas (2015). Model Inversion Attacks That Exploit Confidence Information and Basic Countermeasures. *Proceedings of the 22nd ACM SIGSAC Conference on Computer and Communications Security.*
 - Gama, João, Žliobaitė, Indrė, Bifet, Albert, Pechenizkiy, Mykola, Bouchachia, Abdelhamid (2014). A survey on concept drift adaptation. *ACM Computing Surveys.*
+- Gandolfi, Karine, Mourtel, Christophe, Olivier, Francis (2001). Electromagnetic Analysis: Concrete Results. *Cryptographic Hardware and Embedded Systems — CHES 2001.*
+- Gao, Y., Al-Sarawi, S. F., Abbott, D. (2020). Physical unclonable functions. *Nature Electronics.*
+- Gassend, Blaise, Clarke, Dwaine, van Dijk, Marten, Devadas, Srinivas (2002). Silicon physical random functions. *Proceedings of the 9th ACM conference on Computer and communications security.*
+- Genkin, Daniel, Shamir, Adi, Tromer, Eran (2017). Acoustic cryptanalysis. *Journal of Cryptology.*
+- Gentry, C. (2009). Fully Homomorphic Encryption Using Ideal Lattices. *Proceedings of the forty-first annual ACM symposium on Theory of computing.*
 - Ghodsi, Ali, Zaharia, Matei, Hindman, Benjamin, Konwinski, Andy, Shenker, Scott, Stoica, Ion (2011). Dominant Resource Fairness: Fair Allocation of Multiple Resource Types. *Proceedings of the 8th USENIX Symposium on Networked Systems Design and Implementation (NSDI 11).*
 - Gibiansky, A. (2017). Bringing HPC Techniques to Deep Learning. Baidu Research Technical Blog.
 - Gilbert, Seth, Lynch, Nancy (2002). Brewer's conjecture and the feasibility of consistent, available, partition-tolerant web services. ACM SIGACT News.
 - GitLab (2017). Postmortem of Database Outage of January 31. GitLab postmortem.
+- Gnad, D. R. E., Oboril, F., Tahoori, M. B. (2017). Voltage drop-based fault attacks on FPGAs using valid bitstreams. *2017 27th International Conference on Field Programmable Logic and Applications (FPL).*
 - Goldberg, David (1991). What every computer scientist should know about floating-point arithmetic. *ACM Computing Surveys.*
 - Gomez-Uribe, Carlos A., Hunt, Neil (2015). The Netflix Recommender System. *ACM Transactions on Management Information Systems.*
+- Goncalves, A., Ray, P., Soper, B., Stevens, J., Coyle, L., Sales, A. P. (2020). Generation and evaluation of synthetic patient data. *BMC Medical Research Methodology.*
 - Goodfellow, I. J., Shlens, J., Szegedy, C. (2015). Explaining and Harnessing Adversarial Examples. *International Conference on Learning Representations (ICLR).*
 - Google (2024). ShieldGemma: Generative AI Content Moderation Based on Gemma. Google AI for Developers documentation.
 - Google Cloud (2026). About Cloud Storage Objects. Google Cloud Documentation.
@@ -138,12 +165,15 @@
 - Hosseini, Hossein, Kannan, Sreeram, Zhang, Baosen, Poovendran, Radha (2017). Deceiving Google's Perspective API Built for Detecting Toxic Comments. *arXiv preprint arXiv:1702.08138.*
 - Houlsby, Neil, Giurgiu, Andrei, Jastrzebski, Stanislaw, Morrone, Bruna, Laroussilhe, Chloé, Gesmundo, Andrea, Attariyan, Mohammad, Gelly, Sylvain (2019). Parameter-efficient transfer learning for NLP. *International Conference on Machine Learning (ICML).*
 - Howard, A. G., Zhu, M., Chen, B., Kalenichenko, D., Wang, W., Weyand, T., Andreetto, M., Adam, H. (2017). MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications. *CoRR.*
+- Hsiao, Yu-Shun, Wan, Zishen, Jia, Tianyu, Ghosal, Radhika, Mahmoud, Abdulrahman, Raychowdhury, Arijit, et al. (2023). MAVFI: An End-To-End Fault Analysis Framework With Anomaly Detection and Recovery for Micro Aerial Vehicles. *2023 Design, Automation & Test in Europe Conference & Exhibition (DATE).*
 - Hu, Edward J., Shen, Yelong, Wallis, Phillip, Allen-Zhu, Zeyuan, Li, Yuanzhi, Wang, Shean, Wang, Lu, Chen, Weizhu (2021). LoRA: Low-Rank Adaptation of Large Language Models. *arXiv preprint arXiv:2106.09685.*
 - Huang, Cheng, Simitci, Huseyin, Xu, Yikang, Ogus, Aaron, Calder, Brad, Gopalan, Parikshit, Li, Jin, Yekhanin, Sergey (2012). Erasure Coding in Windows Azure Storage. 2012 USENIX Annual Technical Conference (USENIX ATC 12).
 - Hudgens, Michael G., Halloran, M. Elizabeth (2008). Toward causal inference with interference. *Journal of the American Statistical Association.*
 - Hugging Face (2026). Safetensors Documentation.
+- Hutter, Michael, Schmidt, Jorn-Marc, Plos, Thomas (2009). Contact-based fault injections and power analysis on RFID tags. *2009 European Conference on Circuit Theory and Design.*
 - Hwang, Changho, Cui, Wei, Xiong, Yifan, Yang, Ziyue, Liu, Ze, Hu, Han, Wang, Zilong, Salas, Rafael, Jose, Jithin, Ram, Prabhat, Chau, Joe, Cheng, Peng, Yang, Fan, Yang, Mao, Xiong, Yongqiang (2023). Tutel: Adaptive Mixture-of-Experts at Scale. *Proceedings of Machine Learning and Systems (MLSys).*
 - Iandola, Forrest N., Han, Song, Moskewicz, Matthew W., Ashraf, Khalid, Dally, William J., Keutzer, Kurt (2016). SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size. *ArXiv preprint.*
+- IEEE 802.1 Working Group (2018). IEEE Standard for Local and Metropolitan Area Networks—Secure Device Identity. IEEE Std 802.1AR-2018.
 - IEEE Standards Association (2019). IEEE 754-2019: Standard for Floating-Point Arithmetic.
 - Inan, H., Upasani, K., Chi, J., Rungta, R., Iyer, K., Mao, Y., et al. (2023). Llama Guard: LLM-based Input-Output Safeguard for Human-AI Conversations. *arXiv preprint arXiv:2312.06674.*
 - Jacob, Benoit, Kligys, Skirmantas, Chen, Bo, Zhu, Menglong, Tang, Matthew, Howard, Andrew, Adam, Hartwig, Kalenichenko, Dmitry (2018). Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference. *2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition.*
@@ -155,6 +185,7 @@
 - Jiang et al. (2024). Mixtral of Experts. arXiv preprint arXiv:2401.04088.
 - Jouppi et al. (2017). In-Datacenter Performance Analysis of a Tensor Processing Unit. Proceedings of the 44th Annual International Symposium on Computer Architecture.
 - Jouppi et al. (2023). TPU v4: An Optically Reconfigurable Supercomputer for Machine Learning With Hardware Support for Embeddings. Proceedings of the 50th Annual International Symposium on Computer Architecture.
+- Joye, Marc, Tunstall, Michael (2012). Fault Analysis in Cryptography. Springer Berlin Heidelberg.
 - Kairouz, P., McMahan, H. B. (2021). Advances and Open Problems in Federated Learning. *Foundations and Trends in Machine Learning.*
 - Kaplan, J., McCandlish, S., Henighan, T., Brown, T. B., Chess, B., Child, R., Gray, S., Radford, A., Wu, J., Amodei, D. (2020). Scaling Laws for Neural Language Models. ArXiv preprint.
 - Karger, D., Lehman, E., Leighton, T., Panigrahy, R., Levine, M., Lewin, D. (1997). Consistent hashing and random trees. *Proceedings of the twenty-ninth annual ACM symposium on Theory of computing - STOC '97.*
@@ -166,6 +197,9 @@
 - Kleppmann, Martin (2016). Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems. *O'Reilly Media.*
 - Klutke, G., Kiessler, P. C., Wortman, M. A. (2003). A critical look at the bathtub curve. *IEEE Transactions on Reliability.*
 - Ko, Y. (2021). Characterizing System-Level Masking Effects Against Soft Errors. *Electronics.*
+- Kocher, Paul, Horn, Jann, Fogh, Anders, Genkin, Daniel, Gruss, Daniel, Haas, Werner, et al. (2019). Spectre Attacks: Exploiting Speculative Execution. *2019 IEEE Symposium on Security and Privacy (SP).*
+- Kocher, Paul, Jaffe, Joshua, Jun, Benjamin, Rohatgi, Pankaj (2011). Introduction to differential power analysis. *Journal of Cryptographic Engineering.*
+- Kocher, Paul, Jaffe, Joshua, Jun, Benjamin (1999). Differential Power Analysis. *Advances in Cryptology — CRYPTO' 99.*
 - Kohavi, Ron, Longbotham, Roger, Sommerfield, Dan, Henne, Randal M. (2009). Controlled experiments on the web: survey and practical guide. *Data Mining and Knowledge Discovery.*
 - Kohavi, Ron, Tang, Diane, Xu, Ya (2020). Trustworthy Online Controlled Experiments: A Practical Guide to A/B Testing. *Cambridge University Press.*
 - Kokolis, Apostolos, Kuchnik, Michael, Hoffman, John, Kumar, Adithya, Malani, Parth, Ma, Faye, DeVito, Zach, Sengupta, Shubho, Saladi, Kalyan, Wu, Carole-Jean (2025). Revisiting Reliability in Large-Scale Machine Learning Research Clusters. *2025 IEEE International Symposium on High Performance Computer Architecture (HPCA).*
@@ -196,6 +230,7 @@
 - Lin, Yujun, Han, Song, Mao, Huizi, Wang, Yu, Dally, William J (2018). Deep gradient compression: Reducing the communication bandwidth for distributed training. *International Conference on Learning Representations (ICLR).*
 - Lin, Ji, Tang, Jiaming, Tang, Haotian, Yang, Shang, Chen, Wei-Ming, Wang, Wei-Chen, Xiao, Guangxuan, Dang, Xingyu, Gan, Chuang, Han, Song (2024). AWQ: Activation-aware Weight Quantization for on-device LLM compression and acceleration. *Proceedings of Machine Learning and Systems.*
 - Lindholm, Andreas, Zachariah, Dave, Stoica, Petre, Schon, Thomas B. (2019). Data Consistency Approach to Model Validation. *IEEE Access.*
+- Lipp, M., Schwarz, M., Gruss, D., Prescher, T., Haas, W., Horn, J., et al. (2018). Meltdown. *Proceedings of the 27th USENIX Security Symposium (USENIX Security).*
 - Liu, Hao, Zaharia, Matei, Abbeel, Pieter (2023). Ring Attention with Blockwise Transformers for Near-Infinite Context. *arXiv preprint arXiv:2310.01889.*
 - Liu, W., Xi, Y., Qin, J., Sun, F., Chen, B., Zhang, W., Zhang, R., Tang, R. (2022). Neural Re-Ranking in Multi-Stage Recommender Systems: A Review. *Proceedings of the Thirty-First International Joint Conference on Artificial Intelligence.*
 - Lustre Wiki (2017). lfs setstripe: set striping pattern of a file. Lustre Wiki manual page.
@@ -215,6 +250,7 @@
 - Microsoft (2025). Inside the World's Most Powerful AI Datacenter. The Official Microsoft Blog.
 - Miller, Charlie, Valasek, Chris (2015). Remote Exploitation of an Unaltered Passenger Vehicle. Black Hat USA 2015 Whitepaper.
 - Miller, C. (2019). Lessons learned from hacking a car. *IEEE Design & Test.*
+- Mironov, I. (2017). Rényi Differential Privacy. *2017 IEEE 30th Computer Security Foundations Symposium (CSF).*
 - Mitzenmacher, M. (2001). The power of two choices in randomized load balancing. *IEEE Transactions on Parallel and Distributed Systems.*
 - Mnih, Volodymyr, Kavukcuoglu, Koray, Silver, David, Rusu, Andrei A., Veness, Joel, Bellemare, Marc G., Graves, Alex, Riedmiller, Martin, Fidjeland, Andreas K., Ostrovski, Georg, Petersen, Stig, Beattie, Charles, Sadik, Amir, Antonoglou, Ioannis, King, Helen, Kumaran, Dharshan, Wierstra, Daan, Legg, Shane, Hassabis, Demis (2015). Human-level control through deep reinforcement learning. *Nature.*
 - Mohanram, K., Touba, N. A. (2003). Partial error masking to reduce soft error failure rate in logic circuits. *Proceedings. 18th IEEE International Symposium on Defect and Fault Tolerance in VLSI Systems.*
@@ -222,6 +258,7 @@
 - Narayanan, Deepak, Shoeybi, Mohammad, Casper, Jared, LeGresley, Patrick, Patwary, Mostofa, Korthikanti, Vijay, Vainbrand, Dmitri, Kashinkunti, Prethvi, Bernauer, Julie, Catanzaro, Bryan, Phanishayee, Amar, Zaharia, Matei (2021). Efficient large-scale language model training on GPU clusters using Megatron-LM. Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis.
 - Narayanan, Arvind, Shmatikov, Vitaly (2006). How To Break Anonymity of the Netflix Prize Dataset.
 - Narayanan, Arvind, Shmatikov, Vitaly (2008). Robust De-Anonymization of Large Sparse Datasets. *2008 IEEE Symposium on Security and Privacy (SP 2008).*
+- Nasr, Milad, Shokri, Reza, Houmansadr, Amir (2019). Comprehensive Privacy Analysis of Deep Learning: Passive and Active White-Box Inference Attacks Against Centralized and Federated Learning. *2019 IEEE Symposium on Security and Privacy (SP).*
 - National Transportation Safety Board (2017). Collision Between a Car Operating With Automated Vehicle Control Systems and a Tractor-Semitrailer Truck Near Williston, Florida, May 7, 2016.
 - Netflix Technology Blog (2017). Innovating faster on personalization algorithms at Netflix using interleaving. *Netflix Tech Blog.*
 - Nguyen, John, Malik, Kshitiz, Zhan, Hongyuan, Yousefpour, Ashkan, Rabbat, Michael, Malek, Mani, Huba, Dzmitry (2021). Federated Learning with Buffered Asynchronous Aggregation. *Proceedings of Machine Learning Research (AISTATS).*
@@ -240,6 +277,7 @@
 - OVHcloud (2021). Strasbourg Datacentre: Latest Information. OVHcloud incident update.
 - Papadimitriou, George, Gizopoulos, Dimitris (2021). Demystifying the System Vulnerability Stack: Transient Fault Effects Across the Layers. *2021 ACM/IEEE 48th Annual International Symposium on Computer Architecture (ISCA).*
 - Papernot, Nicolas, McDaniel, Patrick, Goodfellow, Ian (2016). Transferability in Machine Learning: from Phenomena to Black-Box Attacks using Adversarial Samples. *arXiv preprint arXiv:1605.07277.*
+- Parrish, Alicia, Kirk, Hannah Rose, Quaye, Jessica, Rastogi, Charvi, Bartolo, Max, Inel, Oana, et al. (2023). Adversarial Nibbler: A Data-Centric Challenge for Improving the Safety of Text-to-Image Models. *ArXiv preprint.*
 - Patarasuk, Pitch, Yuan, Xin (2009). Bandwidth optimal all-reduce algorithms for clusters of workstations. Journal of Parallel and Distributed Computing.
 - Patel, Dylan, Wong, Gerald (2023). GPT-4 Architecture, Infrastructure, Training Dataset, Costs, Vision, MoE. SemiAnalysis Blog.
 - Patel, Pratyush, Choukse, Esha, Zhang, Chaojie, Shah, Aashaka, Goiri, Íñigo, Maleki, Saeed, Bianchini, Ricardo (2024). Splitwise: Efficient Generative LLM Inference Using Phase Splitting. *2024 ACM/IEEE 51st Annual International Symposium on Computer Architecture (ISCA)*, 118–132.
@@ -254,6 +292,7 @@
 - PyTorch Contributors (2026). torchrun (Elastic Launch). PyTorch documentation.
 - PyTorch Contributors (2026). Torch Distributed Elastic Rendezvous. PyTorch documentation.
 - Qiao, Aurick, Choe, Sang Keun, Subramanya, Suhas Jayaram, Neiswanger, Willie, Ho, Qirong, Zhang, Hao, Ganger, Gregory R., Xing, Eric P. (2021). Pollux: Co-adaptive Cluster Scheduling for Goodput-Optimized Deep Learning. *15th USENIX Symposium on Operating Systems Design and Implementation (OSDI 21).*
+- Quaye, J., Parrish, A., Inel, O., Rastogi, C., Kirk, H. R., Kahng, M., et al. (2024). Adversarial Nibbler: An Open Red-Teaming Method for Identifying Diverse Harms in Text-To-Image Generation. *The 2024 ACM Conference on Fairness, Accountability, and Transparency.*
 - Rajbhandari, Samyam, Rasley, Jeff, Ruwase, Olatunji, He, Yuxiong (2020). ZeRO: Memory Optimizations Toward Training Trillion Parameter Models. SC20: International Conference for High Performance Computing, Networking, Storage and Analysis.
 - Ramesh, A., Pavlov, M., Goh, G., Gray, S., Voss, C., Radford, A., Chen, M., Sutskever, I. (2021). Zero-Shot Text-to-Image Generation. *Proceedings of the 38th International Conference on Machine Learning (ICML 2021)*, PMLR 139, 8821–8831.
 - Rashid, Layali, Pattabiraman, Karthik, Gopalakrishnan, Sathish (2012). Intermittent Hardware Errors Recovery: Modeling and Evaluation. *2012 Ninth International Conference on Quantitative Evaluation of Systems.*
@@ -265,7 +304,9 @@
 - Reddi, Vijay Janapa, Gupta, Meeta Sharma (2013). Resilient Architecture Design for Voltage Variation. *Springer International Publishing.*
 - Reddi, Vijay Janapa, Cheng, Christine, Kanter, David, Mattson, Peter, Schmuelling, Guenther, Wu, Carole-Jean, Anderson, Brian, Breughe, Maximilien, Charlebois, Mark, Chou, William, Chukka, Ramesh, Coleman, Cody, Davis, Sam, Deng, Pan, Diamos, Greg, Duke, Jared, Fick, Dave, Gardner, J. Scott, Hubara, Itay, Idgunji, Sachin, Jablin, Thomas B., Jiao, Jeff, John, Tom St., Kanwar, Pankaj, Lee, David, Liao, Jeffery, Lokhmotov, Anton, Massa, Francisco, Meng, Peng, Micikevicius, Paulius, Osborne, Colin, Pekhimenko, Gennady, Rajan, Arun Tejusve Raghunath, Sequeira, Dilip, Sirasao, Ashish, Sun, Fei, Tang, Hanlin, Thomson, Michael, Wei, Frank, Wu, Ephrem, Xu, Lingjie, Yamada, Koichi, Yu, Bing, Yuan, George, Zhong, Aaron, Zhang, Peizhao, Zhou, Yuchen (2019). MLPerf Inference Benchmark. *2020 ACM/IEEE 47th Annual International Symposium on Computer Architecture (ISCA).*
 - Reed, I. S., Solomon, G. (1960). Polynomial Codes Over Certain Finite Fields. Journal of the Society for Industrial and Applied Mathematics.
+- Regenscheid, Andrew (2018). Platform Firmware Resiliency Guidelines. *National Institute of Standards and Technology.*
 - Reis, G. A., Chang, J., Vachharajani, N., Rangan, R., August, D. I. (2005). SWIFT: Software Implemented Fault Tolerance. *International Symposium on Code Generation and Optimization.*
+- Robertson, J., Riley, M. (2018). The Big Hack: How China Used a Tiny Chip to Infiltrate U.S. Companies - Bloomberg.
 - Rodio, Angelo, Neglia, Giovanni (2024). FedStale: leveraging stale client updates in federated learning. *Frontiers in Artificial Intelligence and Applications (ECAI 2024).*
 - Rolnick, David, Ahuja, Arun, Schwarz, Jonathan, Lillicrap, Timothy, Wayne, Greg (2019). Experience Replay for Continual Learning. *Advances in Neural Information Processing Systems (NeurIPS).*
 - Rubin, Donald B. (1980). Randomization Analysis of Experimental Data: The Fisher Randomization Test Comment. *Journal of the American Statistical Association.*
@@ -295,6 +336,9 @@
 - Shvachko, Konstantin, Kuang, Hairong, Radia, Sanjay, Chansler, Robert (2010). The Hadoop Distributed File System. 2010 IEEE 26th Symposium on Mass Storage Systems and Technologies (MSST).
 - Sigelman, Benjamin H, Barroso, Luiz André, Burrows, Mike, Stephenson, Pat, Plakal, Manoj, Beaver, Donald, Jaspan, Saul, Shanbhag, Chandan (2010). Dapper, a large-scale distributed systems tracing infrastructure.
 - Sigler, Eric (2021). Scaling Kubernetes to 7,500 Nodes. *OpenAI Blog.*
+- Skorobogatov, S. (2009). Local heating attacks on Flash memory devices. *2009 IEEE International Workshop on Hardware-Oriented Security and Trust.*
+- Skorobogatov, S. P., Anderson, R. J. (2003). Optical Fault Induction Attacks. *Cryptographic Hardware and Embedded Systems - CHES 2002.*
+- Song, Liwei, Shokri, Reza, Mittal, Prateek (2019). Privacy risks of securing machine learning models against adversarial examples. *Proceedings of the 2019 ACM SIGSAC Conference on Computer and Communications Security.*
 - Spotify Engineering (2019). The winding road to better machine learning infrastructure through TensorFlow Extended and Kubeflow. *Spotify Engineering Blog.*
 - Sridharan, V., DeBardeleben, N., Blanchard, S., Ferreira, K. B., Stearley, J., Shalf, J., Gurumurthi, S. (2015). Memory Errors in Modern Systems. *ACM SIGPLAN Notices.*
 - Steck, Harald, Baltrunas, Linas, Elahi, Ehtsham, Liang, Dawen, Raimond, Yves, Basilico, Justin (2021). Deep learning for recommender systems: A Netflix case study. *AI Magazine.*
@@ -306,14 +350,20 @@
 - Tang, Hanlin, Gan, Shaoduo, Awan, Ammar Ahmad, Rajbhandari, Samyam, Li, Conglong, Lian, Xiangru, Liu, Ji, Zhang, Ce, He, Yuxiong (2021). 1-bit Adam: Communication efficient large-scale training with Adam's convergence speed. *Proceedings of the 38th International Conference on Machine Learning (ICML).*
 - Thakur, Rajeev, Rabenseifner, Rolf, Gropp, William (2005). Optimization of Collective Communication Operations in MPICH. *The International Journal of High Performance Computing Applications.*
 - The New York Times (2017). Google's Self-Driving Car Company Sues Uber Over Trade Secrets. The New York Times.
+- The U-Boot Project (2026). UEFI on U-Boot.
+- The U-Boot Project (2026). Das U-Boot.
 - Thompson, N. C., Greenewald, K., Lee, K., Manso, G. F. (2021). Deep Learning's Diminishing Returns: The Cost of Improvement Is Becoming Unsustainable. IEEE Spectrum, 58(10).
 - Tillet, Philippe, Kung, H. T., Cox, David (2019). Triton: An Intermediate Language and Compiler for Tiled Neural Network Computations. *Proceedings of the 3rd ACM SIGPLAN International Workshop on Machine Learning and Programming Languages.*
 - Tiwari, Devesh, Gupta, Saurabh, Rogers, James, Maxwell, Don, Rech, Paolo, Vazhkudai, Sudharshan, Oliveira, Daniel, Londo, Dave, DeBardeleben, Nathan, Navaux, Philippe, Carro, Luigi, Bland, Arthur (2015). Understanding GPU Errors on Large-Scale HPC Systems and the Implications for System Design and Operation. *2015 IEEE 21st International Symposium on High Performance Computer Architecture (HPCA).*
 - Touvron, Hugo, Martin, Louis, Stone, Kevin, Albert, Peter, Almahairi, Amjad, Babaei, Yasmine, Bashlykov, Nikolay, Batra, Soumya, Bhargava, Prajjwal, Bhosale, Shruti, Bikel, Dan, Blecher, Lukas, Ferrer, Cristian Canton, Chen, Moya, Cucurull, Guillem, Esiobu, David, Fernandes, Jude, Fu, Jeremy, Fu, Wenyin, Fuller, Brian, Gao, Cynthia, Goswami, Vedanuj, Goyal, Naman, Hartshorn, Anthony, Hosseini, Saghar, Hou, Rui, Inan, Hakan, Kardas, Marcin, Kerkez, Viktor, Khabsa, Madian, Kloumann, Isabel, Korenev, Artem, Koura, Punit Singh, Lachaux, Marie-Anne, Lavril, Thibaut, Lee, Jenya, Liskovich, Diana, Lu, Yinghai, Mao, Yuning, Martinet, Xavier, Mihaylov, Todor, Mishra, Pushkar, Molybog, Igor, Nie, Yixin, Poulton, Andrew, Reizenstein, Jeremy, Rungta, Rashi, Saladi, Kalyan, Schelten, Alan, Silva, Ruan, Smith, Eric Michael, Subramanian, Ranjan, Tan, Xiaoqing Ellen, Tang, Binh, Taylor, Ross, Williams, Adina, Kuan, Jian Xiang, Xu, Puxin, Yan, Zheng, Zarov, Iliyan, Zhang, Yuchen, Fan, Angela, Kambadur, Melanie, Narang, Sharan, Rodriguez, Aurelien, Stojnic, Robert, Edunov, Sergey, Scialom, Thomas (2023). Llama 2: Open Foundation and Fine-Tuned Chat Models. *arXiv preprint arXiv:2307.09288.*
 - Tramèr, Florian, Zhang, Fan, Juels, Ari, Reiter, Michael K, Ristenpart, Thomas (2016). Stealing machine learning models via prediction APIs. *25th USENIX Security Symposium (USENIX Security 16).*
+- Trusted Computing Group (2018). Hardware requirements for a Device Identifier Composition Engine. *Trusted Computing Group.*
 - Tsai, Timothy, Hari, Siva Kumar Sastry, Sullivan, Michael, Villa, Oreste, Keckler, Stephen W. (2021). NVBitFI: Dynamic Fault Injection for GPUs. *2021 51st Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN).*
 - U.S. Department of Health and Human Services (2026). The HIPAA Security Rule. *HHS.gov guidance.*
 - U.S. Department of Health and Human Services (2003). Summary of the HIPAA Privacy Rule.
+- U.S. Department of Health and Human Services (2005). Summary of the HIPAA Security Rule.
+- U.S. Department of Health and Human Services (2026). Annual Civil Monetary Penalties Inflation Adjustment. Federal Register.
+- United States Congress (2022). CHIPS and Science Act of 2022 (Public Law 117-167). Public Law 117-167, 136 Stat. 1366.
 - Uptime Institute (2026). Tier Classification System. Uptime Institute web page.
 - Valiant, Leslie G. (1990). A bridging model for parallel computation. Communications of the ACM.
 - Velazco, Raoul, Foucard, Gilles, Peronnard, Paul (2010). Combining Results of Accelerated Radiation Tests and Fault Injections to Predict the Error Rate of an Application Implemented in SRAM-Based FPGAs. *IEEE Transactions on Nuclear Science.*
@@ -326,9 +376,11 @@
 - Wei, Jason, Tay, Yi, Bommasani, Rishi, Raffel, Colin, Zoph, Barret, Borgeaud, Sebastian, Yogatama, Dani, Bosma, Maarten, Zhou, Denny, Metzler, Donald, Chi, Ed H., Hashimoto, Tatsunori, Vinyals, Oriol, Liang, Percy, Dean, Jeff, Fedus, William (2022). Emergent Abilities of Large Language Models. *Transactions on Machine Learning Research.*
 - Williams et al. (2009). Roofline. Communications of the ACM.
 - Wongpanich, A., Oguntebi, T., Baiocchi Paredes, J., Wang, Y. E., Phothilimthana, P. M., Mitra, R., Zhou, Z., Kumar, N., Reddi, V. J. (2025). Machine Learning Fleet Efficiency: Analyzing and Optimizing Large-Scale Google TPU Systems with ML Productivity Goodput.
+- Wright, Peter, Greengrass, Paul (1987). Spycatcher: The Candid Autobiography of a Senior Intelligence Officer. Viking Penguin.
 - Wulf and McKee (1995). Hitting the memory wall. ACM SIGARCH Computer Architecture News.
 - Xiao, Wencong, Bhardwaj, Romil, Ramjee, Ramachandran, Sivathanu, Muthian, Kwatra, Nipun, Han, Zhenhua, Patel, Prabal, Peng, Xuan, Zhao, Hanyu, Zhang, Quanlu, Yang, Fan, Li, Lidong (2018). Gandiva: Introspective Cluster Scheduling for Deep Learning. *13th USENIX Symposium on Operating Systems Design and Implementation (OSDI 18).*
 - Xiao, Guangxuan, Lin, Ji, Seznec, Mickaël, Wu, Hao, Demouth, Julien, Han, Song (2023). SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models. *International Conference on Machine Learning (ICML).*
+- Yao, Andrew C. (1982). Protocols for secure computations. *23rd Annual Symposium on Foundations of Computer Science (sfcs 1982).*
 - Yeh, Y.C. (1996). Triple-triple redundant 777 primary flight computer. *1996 IEEE Aerospace Applications Conference. Proceedings.*
 - Yin, Dong, Chen, Yudong, Ramchandran, Kannan, Bartlett, Peter (2018). Byzantine-robust distributed learning: Towards optimal statistical rates. *International Conference on Machine Learning (ICML).*
 - Yoo, A. B., Jette, M. A., Grondona, M. (2003). SLURM: Simple Linux Utility for Resource Management. *Job Scheduling Strategies for Parallel Processing.*
@@ -342,6 +394,7 @@
 - Zhang, Susan, Roller, Stephen, Goyal, Naman, Artetxe, Mikel, Chen, Moya, Chen, Shuohui, Dewan, Christopher, Diab, Mona, Li, Xian, Lin, Xi, Mihaylov, Todor, Ott, Myle, Shleifer, Sam, Shuster, Kurt, Simig, Daniel, Koura, Punit Singh, Sridhar, Anjali, Wang, Tianlu, Zettlemoyer, Luke (2022). OPT: Open Pre-trained Transformer Language Models. arXiv preprint arXiv:2205.01068.
 - Zhao, Yanli, Gu, Andrew, Varma, Rohan, Luo, Liang, Huang, Chien-Chin, Xu, Min, Wright, Less, Shojanazeri, Hamid, Ott, Myle, Shleifer, Sam, Desmaison, Alban, Balioglu, Can, Damania, Pritam, Nguyen, Bernard, Chauhan, Geeta, Hao, Yuchen, Mathews, Ajit, Li, Shen (2023). PyTorch FSDP: Experiences on Scaling Fully Sharded Data Parallel. Proceedings of the VLDB Endowment.
 - Zhao, Yue, Li, Meng, Lai, Liangzhen, Suda, Naveen, Civin, Damon, Chandra, Vikas (2018). Federated Learning with Non-IID Data. *CoRR.*
+- Zhao, M., Suh, G. E. (2018). FPGA-Based Remote Power Side-Channel Attacks. *2018 IEEE Symposium on Security and Privacy (SP).*
 - Zhong, Yinmin, Liu, Shengyu, Chen, Junda, Hu, Jianbo, Zhu, Yibo, Liu, Xuanzhe, Jin, Xin, Zhang, Hao (2024). DistServe: Disaggregating Prefill and Decoding for Goodput-Optimized Large Language Model Serving. *18th USENIX Symposium on Operating Systems Design and Implementation (OSDI 24)*.
 - Zhu, Ligeng, Liu, Zhijian, Han, Song (2019). Deep Leakage from Gradients. *Advances in Neural Information Processing Systems (NeurIPS).*
 - Ziegler, J. F., Curtis, H. W., Muhlfeld, H. P., Montrose, C. J., Chin, B., Nicewicz, M., Russell, C. A., Wang, W. Y., Freeman, L. B., Hosier, P., LaFave, L. E., Walsh, J. L., Orro, J. M., Unger, G. J., Ross, J. M., O'Gorman, T. J., Messina, B., Sullivan, T. D., Sykes, A. J., Yourke, H., Enger, T. A., Tolat, V., Scott, T. S., Taber, A. H., Sussman, R. J., Klein, W. A., Wahaus, C. W. (1996). IBM experiments in soft fails in computer electronics (1978–1994). *IBM Journal of Research and Development.*

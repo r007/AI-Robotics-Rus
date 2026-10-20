@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 287" width="500" height="287">
+  <rect x="433" y="8" width="22" height="268" fill="#f2d4d2"/>
+  <rect x="431" y="8" width="4" height="268" fill="#dc2626"/>
+  <rect x="191" y="95" width="242" height="32" fill="#dc2626"/>
+  <text x="312" y="118" text-anchor="middle" font-family="Helvetica, Arial, Liberation Sans, sans-serif" font-size="26" fill="#ffffff">10</text>
+  <text x="10" y="120" font-family="Helvetica, Arial, Liberation Sans, sans-serif" font-size="26" fill="#333333">10 выпусков</text>
+  <text x="430" y="65" text-anchor="end" font-family="Helvetica, Arial, Liberation Sans, sans-serif" font-size="26" fill="#dc2626">ε = 10</text>
+</svg>
