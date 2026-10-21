@@ -6,6 +6,7 @@
 
 - [Введение](01_introduction.md)
 - [Вычислительная инфраструктура](02_compute_infrastructure.md)
+- [Сетевые фабрики](03_network_fabrics.md)
 - [Хранение данных](04_data_storage.md)
 - [Распределенное обучение](05_distributed_training.md)
 - [Коллективные коммуникации](06_collective_communication.md)
