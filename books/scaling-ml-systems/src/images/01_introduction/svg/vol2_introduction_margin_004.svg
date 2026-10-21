@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="75.42pt" height="66.636pt" viewBox="0 0 75.42 66.636" xmlns="http://www.w3.org/2000/svg" version="1.1" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="301.68" height="266.54" viewBox="0 0 75.42 66.636" xmlns="http://www.w3.org/2000/svg" version="1.1" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
@@ -285,102 +285,7 @@ z
      <use xlink:href="#m3a64f1ad0f" x="19.075549" y="39.814579" style="fill: #1F407A; stroke: #1F407A"/>
     </g>
    </g>
-   <g id="text_1">
-    <g id="patch_5">
-     <path d="M 12.519299 29.414579
-L 23.075549 29.414579
-Q 23.675549 29.414579 23.675549 28.814579
-L 23.675549 24.185672
-Q 23.675549 23.585672 23.075549 23.585672
-L 12.519299 23.585672
-Q 11.919299 23.585672 11.919299 24.185672
-L 11.919299 28.814579
-Q 11.919299 29.414579 12.519299 29.414579
-z
-" style="fill: #ffffff; opacity: 0.92"/>
-    </g>
-    <!-- work -->
-    <g style="fill: #1F407A" transform="translate(12.519299 27.772391) scale(0.05 -0.05)">
-     <defs>
-      <path id="Helvetica-77" d="M 672 3347
-L 1316 709
-L 1969 3347
-L 2600 3347
-L 3256 725
-L 3941 3347
-L 4503 3347
-L 3531 0
-L 2947 0
-L 2266 2591
-L 1606 0
-L 1022 0
-L 56 3347
-L 672 3347
-z
-" transform="scale(0.015625)"/>
-      <path id="Helvetica-6f" d="M 1741 363
-Q 2300 363 2508 786
-Q 2716 1209 2716 1728
-Q 2716 2197 2566 2491
-Q 2328 2953 1747 2953
-Q 1231 2953 997 2559
-Q 763 2166 763 1609
-Q 763 1075 997 719
-Q 1231 363 1741 363
-z
-M 1763 3444
-Q 2409 3444 2856 3012
-Q 3303 2581 3303 1744
-Q 3303 934 2909 406
-Q 2516 -122 1688 -122
-Q 997 -122 590 345
-Q 184 813 184 1600
-Q 184 2444 612 2944
-Q 1041 3444 1763 3444
-z
-M 1744 3428
-L 1744 3428
-z
-" transform="scale(0.015625)"/>
-      <path id="Helvetica-72" d="M 428 3347
-L 963 3347
-L 963 2769
-Q 1028 2938 1284 3180
-Q 1541 3422 1875 3422
-Q 1891 3422 1928 3419
-Q 1966 3416 2056 3406
-L 2056 2813
-Q 2006 2822 1964 2825
-Q 1922 2828 1872 2828
-Q 1447 2828 1219 2554
-Q 991 2281 991 1925
-L 991 0
-L 428 0
-L 428 3347
-z
-" transform="scale(0.015625)"/>
-      <path id="Helvetica-6b" d="M 400 4591
-L 941 4591
-L 941 1925
-L 2384 3347
-L 3103 3347
-L 1822 2094
-L 3175 0
-L 2456 0
-L 1413 1688
-L 941 1256
-L 941 0
-L 400 0
-L 400 4591
-z
-" transform="scale(0.015625)"/>
-     </defs>
-     <use xlink:href="#Helvetica-77"/>
-     <use xlink:href="#Helvetica-6f" transform="translate(72.216797 0)"/>
-     <use xlink:href="#Helvetica-72" transform="translate(127.832031 0)"/>
-     <use xlink:href="#Helvetica-6b" transform="translate(161.132812 0)"/>
-    </g>
-   </g>
+   <g id="text_1"><text x="12.519299" y="27.772391" font-size="5.00" fill="#1F407A" text-anchor="start">работа</text></g>
   </g>
  </g>
  <defs>

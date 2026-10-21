@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="290.52" height="399.6" viewBox="0 0 72.63 99.9" xmlns="http://www.w3.org/2000/svg" version="1.1" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 99.9
+L 72.63 99.9
+L 72.63 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 1.44 98.46
+L 71.19 98.46
+L 71.19 1.44
+L 1.44 1.44
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 1.44 31.5162
+L 63.716786 31.5162
+L 63.716786 10.1718
+L 1.44 10.1718
+z
+" clip-path="url(#p879ee31a35)" style="fill: #1F407A; opacity: 0.92"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 1.44 63.8562
+L 11.819464 63.8562
+L 11.819464 42.5118
+L 1.44 42.5118
+z
+" clip-path="url(#p879ee31a35)" style="fill: #1F407A; opacity: 0.92"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 1.44 96.1962
+L 11.819464 96.1962
+L 11.819464 74.8518
+L 1.44 74.8518
+z
+" clip-path="url(#p879ee31a35)" style="fill: #1F407A; opacity: 0.92"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+   <g id="patch_6">
+    <path d="M 1.44 98.46
+L 71.19 98.46
+" style="fill: none; stroke: #cccccc; stroke-width: 0.55; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <!-- Optimizer 2100 GB -->
+    <!-- Optimizer 2100 GB -->
+    <text x="62.673" y="22.218" font-family="'Liberation Sans', Arial, Helvetica, sans-serif" font-size="5.200" fill="#ffffff" text-anchor="end">Оптимизатор 2 100 ГБ</text>
+   </g>
+   <g id="text_2">
+    <!-- Gradients 350 -->
+    <!-- Gradients 350 -->
+    <text x="12.866" y="54.507" font-family="'Liberation Sans', Arial, Helvetica, sans-serif" font-size="5.200" fill="#333333" text-anchor="start">Градиенты 350</text>
+   </g>
+   <g id="text_3">
+    <!-- Weights 350 -->
+    <!-- Weights 350 -->
+    <text x="12.866" y="86.820" font-family="'Liberation Sans', Arial, Helvetica, sans-serif" font-size="5.200" fill="#333333" text-anchor="start">Веса 350</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p879ee31a35">
+   <rect x="1.44" y="1.44" width="69.75" height="97.02"/>
+  </clipPath>
+ </defs>
+</svg>

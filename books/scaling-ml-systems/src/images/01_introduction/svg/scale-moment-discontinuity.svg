@@ -21,13 +21,13 @@
     <!-- Header band -->
     <rect x="20" y="16" width="345" height="28" rx="4" fill="#f1f5f9" stroke="none"/>
     <line x1="20" y1="44" x2="365" y2="44" stroke="#cbd5e1" stroke-width="1"/>
-    <text x="192" y="34" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">Single Machine (Volume I)</text>
-    <text x="192" y="58" text-anchor="middle" font-size="8.5" fill="#64748b">1–8 Accelerators · Unified Cache &amp; NVLink</text>
+    <text x="192" y="34" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">Одна машина (том I)</text>
+    <text x="192" y="58" text-anchor="middle" font-size="8.5" fill="#64748b">1–8 ускорителей · единый кэш и NVLink</text>
 
     <!-- Single GPU box -->
     <rect x="132" y="78" width="120" height="56" rx="3" fill="#EAF1F8" stroke="#1F407A" stroke-width="1.5"/>
-    <text x="192" y="102" text-anchor="middle" font-size="10.5" font-weight="700" fill="#14294E">GPU / Accelerator</text>
-    <text x="192" y="118" text-anchor="middle" font-size="8.5" fill="#475569">Shared HBM · Intra-chassis</text>
+    <text x="192" y="102" text-anchor="middle" font-size="10.5" font-weight="700" fill="#14294E">GPU / ускоритель</text>
+    <text x="192" y="118" text-anchor="middle" font-size="8.5" fill="#475569">Общая HBM · внутри шасси</text>
 
     <!-- Data feed arrow -->
     <line x1="192" y1="62" x2="192" y2="78" stroke="#64748b" stroke-width="1.2" marker-end="url(#arr-gray)"/>
@@ -37,26 +37,26 @@
 
     <!-- Local memory box -->
     <rect x="132" y="148" width="120" height="40" rx="3" fill="#dcfce7" stroke="#16a34a" stroke-width="1.2"/>
-    <text x="192" y="165" text-anchor="middle" font-size="9.5" font-weight="700" fill="#15803d">Local Memory</text>
-    <text x="192" y="179" text-anchor="middle" font-size="8" fill="#475569">HBM3e · SRAM · Host DRAM</text>
+    <text x="192" y="165" text-anchor="middle" font-size="9.5" font-weight="700" fill="#15803d">Локальная память</text>
+    <text x="192" y="179" text-anchor="middle" font-size="8" fill="#475569">HBM3e · SRAM · DRAM хоста</text>
 
     <!-- Constraint box -->
     <rect x="92" y="202" width="200" height="34" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-    <text x="192" y="217" text-anchor="middle" font-size="8.5" font-weight="700" fill="#475569">Governing Constraint:</text>
-    <text x="192" y="229" text-anchor="middle" font-size="8.5" font-weight="600" fill="#0f172a">The Memory Wall (HBM Bandwidth)</text>
+    <text x="192" y="217" text-anchor="middle" font-size="8.5" font-weight="700" fill="#475569">Определяющее ограничение:</text>
+    <text x="192" y="229" text-anchor="middle" font-size="8.5" font-weight="600" fill="#0f172a">Стена памяти (пропускная способность HBM)</text>
 
     <!-- Characteristics checklist -->
     <g font-size="8.5" fill="#334155">
-      <text x="48" y="262">✓  Zero network packet drop or jitter</text>
-      <text x="48" y="280">✓  Failures are exceptional rare events</text>
-      <text x="48" y="298">✓  Single OS &amp; driver control plane</text>
-      <text x="48" y="316">✓  Deterministic synchronous execution</text>
-      <text x="48" y="334">✓  Throughput fixed by arithmetic intensity</text>
+      <text x="48" y="262">✓  Нет потерь пакетов и джиттера в сети</text>
+      <text x="48" y="280">✓  Отказы — редкие исключительные события</text>
+      <text x="48" y="298">✓  Единая ОС и плоскость управления драйверов</text>
+      <text x="48" y="316">✓  Детерминированное синхронное выполнение</text>
+      <text x="48" y="334">✓  Пропускная способность задана арифметической интенсивностью</text>
     </g>
 
     <!-- Volume I badge -->
     <rect x="112" y="372" width="160" height="28" rx="4" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
-    <text x="192" y="390" text-anchor="middle" font-size="9" font-weight="700" fill="#334155">Volume I Foundation</text>
+    <text x="192" y="390" text-anchor="middle" font-size="9" font-weight="700" fill="#334155">Основа тома I</text>
   </g>
 
   <!-- ===== Center Divider ===== -->
@@ -69,43 +69,43 @@
     <!-- Header band -->
     <rect x="395" y="16" width="345" height="28" rx="4" fill="#EAF1F8" stroke="none"/>
     <line x1="395" y1="44" x2="740" y2="44" stroke="#1F407A" stroke-width="1"/>
-    <text x="567" y="34" text-anchor="middle" font-size="11" font-weight="700" fill="#14294E">Fleet Scale (Volume II)</text>
-    <text x="567" y="58" text-anchor="middle" font-size="8.5" fill="#64748b">Thousands of Nodes · Multi-Tier Fabrics &amp; Schedulers</text>
+    <text x="567" y="34" text-anchor="middle" font-size="11" font-weight="700" fill="#14294E">Масштаб парка (том II)</text>
+    <text x="567" y="58" text-anchor="middle" font-size="8.5" fill="#64748b">Тысячи узлов · многоуровневые фабрики и планировщики</text>
 
     <!-- GPU Node Grid (4×3) -->
     <!-- Row 1 -->
     <rect x="415" y="72" width="65" height="34" rx="2" fill="#EAF1F8" stroke="#1F407A" stroke-width="1"/>
     <text x="447" y="86" text-anchor="middle" font-size="7.5" font-weight="700" fill="#14294E">GPU 0</text>
-    <text x="447" y="98" text-anchor="middle" font-size="7" fill="#64748b">Healthy</text>
+    <text x="447" y="98" text-anchor="middle" font-size="7" fill="#64748b">Исправен</text>
 
     <rect x="495" y="72" width="65" height="34" rx="2" fill="#EAF1F8" stroke="#1F407A" stroke-width="1"/>
     <text x="527" y="86" text-anchor="middle" font-size="7.5" font-weight="700" fill="#14294E">GPU 1</text>
-    <text x="527" y="98" text-anchor="middle" font-size="7" fill="#64748b">Healthy</text>
+    <text x="527" y="98" text-anchor="middle" font-size="7" fill="#64748b">Исправен</text>
 
     <rect x="575" y="72" width="65" height="34" rx="2" fill="#EAF1F8" stroke="#1F407A" stroke-width="1"/>
     <text x="607" y="86" text-anchor="middle" font-size="7.5" font-weight="700" fill="#14294E">GPU 2</text>
-    <text x="607" y="98" text-anchor="middle" font-size="7" fill="#64748b">Healthy</text>
+    <text x="607" y="98" text-anchor="middle" font-size="7" fill="#64748b">Исправен</text>
 
     <rect x="655" y="72" width="65" height="34" rx="2" fill="#fee2e2" stroke="#dc2626" stroke-width="1.2"/>
     <text x="687" y="86" text-anchor="middle" font-size="7.5" font-weight="700" fill="#dc2626">GPU 3</text>
-    <text x="687" y="98" text-anchor="middle" font-size="7" font-weight="700" fill="#dc2626">FAIL (ECC)</text>
+    <text x="687" y="98" text-anchor="middle" font-size="7" font-weight="700" fill="#dc2626">Сбой (ECC)</text>
 
     <!-- Row 2 -->
     <rect x="415" y="116" width="65" height="34" rx="2" fill="#EAF1F8" stroke="#1F407A" stroke-width="1"/>
     <text x="447" y="130" text-anchor="middle" font-size="7.5" font-weight="700" fill="#14294E">GPU 4</text>
-    <text x="447" y="142" text-anchor="middle" font-size="7" fill="#64748b">Healthy</text>
+    <text x="447" y="142" text-anchor="middle" font-size="7" fill="#64748b">Исправен</text>
 
     <rect x="495" y="116" width="65" height="34" rx="2" fill="#fee2e2" stroke="#dc2626" stroke-width="1.2"/>
     <text x="527" y="130" text-anchor="middle" font-size="7.5" font-weight="700" fill="#dc2626">GPU 5</text>
-    <text x="527" y="142" text-anchor="middle" font-size="7" font-weight="700" fill="#dc2626">STRAGGLER</text>
+    <text x="527" y="142" text-anchor="middle" font-size="7" font-weight="700" fill="#dc2626">ОТСТАЮЩИЙ</text>
 
     <rect x="575" y="116" width="65" height="34" rx="2" fill="#EAF1F8" stroke="#1F407A" stroke-width="1"/>
     <text x="607" y="130" text-anchor="middle" font-size="7.5" font-weight="700" fill="#14294E">GPU 6</text>
-    <text x="607" y="142" text-anchor="middle" font-size="7" fill="#64748b">Healthy</text>
+    <text x="607" y="142" text-anchor="middle" font-size="7" fill="#64748b">Исправен</text>
 
     <rect x="655" y="116" width="65" height="34" rx="2" fill="#EAF1F8" stroke="#1F407A" stroke-width="1"/>
     <text x="687" y="130" text-anchor="middle" font-size="7.5" font-weight="700" fill="#14294E">GPU 7</text>
-    <text x="687" y="142" text-anchor="middle" font-size="7" fill="#64748b">Healthy</text>
+    <text x="687" y="142" text-anchor="middle" font-size="7" fill="#64748b">Исправен</text>
 
     <!-- Interconnect Lines (Amber C2) -->
     <g stroke="#d97706" stroke-width="1.2" fill="none">
@@ -123,28 +123,28 @@
 
     <!-- Challenge 1: Communication Dominance (C2) -->
     <rect x="420" y="165" width="295" height="38" rx="3" fill="#fef3c7" stroke="#d97706" stroke-width="1"/>
-    <text x="567" y="180" text-anchor="middle" font-size="9" font-weight="700" fill="#b45309">Communication Dominance (C₂)</text>
-    <text x="567" y="194" text-anchor="middle" font-size="8" fill="#475569">Gradient sync: 700 GB/step; fabric jitter bounds throughput</text>
+    <text x="567" y="180" text-anchor="middle" font-size="9" font-weight="700" fill="#b45309">Доминирование коммуникации (C₂)</text>
+    <text x="567" y="194" text-anchor="middle" font-size="8" fill="#475569">Градиенты 700 ГБ/шаг; джиттер фабрики ограничивает скорость</text>
 
     <!-- Challenge 2: Routine Failure & Stragglers (Faults) -->
     <rect x="420" y="210" width="295" height="38" rx="3" fill="#fee2e2" stroke="#dc2626" stroke-width="1"/>
-    <text x="567" y="225" text-anchor="middle" font-size="9" font-weight="700" fill="#dc2626">Routine Failures &amp; Tail Latency</text>
-    <text x="567" y="239" text-anchor="middle" font-size="8" fill="#475569">10,000 GPUs: MTBF drops to hours; straggler holds barrier</text>
+    <text x="567" y="225" text-anchor="middle" font-size="9" font-weight="700" fill="#dc2626">Рутинные отказы и хвостовая задержка</text>
+    <text x="567" y="239" text-anchor="middle" font-size="8" fill="#475569">10 000 GPU: MTBF падает до часов; отстающий держит барьер</text>
 
     <!-- Challenge 3: Coordination & Schedulers (C3) -->
     <rect x="420" y="255" width="295" height="38" rx="3" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1"/>
-    <text x="567" y="270" text-anchor="middle" font-size="9" font-weight="700" fill="#6d28d9">Coordination &amp; Gang Scheduling (C₃)</text>
-    <text x="567" y="284" text-anchor="middle" font-size="8" fill="#475569">Consensus barriers, checkpoint frequency, topology awareness</text>
+    <text x="567" y="270" text-anchor="middle" font-size="9" font-weight="700" fill="#6d28d9">Координация и gang-планирование (C₃)</text>
+    <text x="567" y="284" text-anchor="middle" font-size="8" fill="#475569">Барьеры консенсуса, частота контрольных точек, учет топологии</text>
 
     <!-- Characteristics checklist -->
     <g font-size="8.5" fill="#334155">
-      <text x="425" y="312">⚠  Network contention dictates effective FLOPs</text>
-      <text x="425" y="328">⚠  Mean Time Between Failures &lt;&lt; Job runtime</text>
-      <text x="425" y="344">⚠  Multi-tenant cluster governance and preemption</text>
+      <text x="425" y="312">⚠  Конкуренция за сеть определяет эффективные FLOP</text>
+      <text x="425" y="328">⚠  Среднее время между отказами &lt;&lt; времени работы задания</text>
+      <text x="425" y="344">⚠  Управление многоарендным кластером и вытеснение</text>
     </g>
 
     <!-- Volume II badge -->
     <rect x="487" y="372" width="160" height="28" rx="4" fill="#1F407A" stroke="none"/>
-    <text x="567" y="390" text-anchor="middle" font-size="9" font-weight="700" fill="#ffffff">Volume II Focus: C³ Fleet</text>
+    <text x="567" y="390" text-anchor="middle" font-size="9" font-weight="700" fill="#ffffff">Фокус тома II: парк C³</text>
   </g>
 </svg>

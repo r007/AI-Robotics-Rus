@@ -3,8 +3,8 @@
 
 order = 7
 # in-progress | draft | complete
-status = "in-progress"
-status_label = "Главы 1–4, 6–17; часть главы 5 · в работе"
+status = "complete"
+status_label = "Полный перевод · вычитан"
 # manual: src/SUMMARY.md ведется вручную; при добавлении глав правьте его вместе с оглавлением оригинала
 summary = "manual"
 # Книга не под общей лицензией репозитория, см. NOTICE.md

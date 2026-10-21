@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="74.829533pt" height="99.9pt" viewBox="0 0 74.829533 99.9" role="img" aria-labelledby="title desc" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="299.32" height="399.6" viewBox="0 0 74.829533 99.9" role="img" aria-labelledby="title desc" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
   <title id="title">Лестница емкости батча</title>
   <desc id="desc">Лестница емкости батча: 407 запросов при базовой точности FP16 против 971 запроса с весами INT4 и KV-кэшем INT8, рост в 2,4 раза.</desc>
   <path d="M 0 99.9

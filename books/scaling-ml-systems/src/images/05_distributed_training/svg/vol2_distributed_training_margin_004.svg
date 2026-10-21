@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="290.52" height="399.6" viewBox="0 0 72.63 99.9" xmlns="http://www.w3.org/2000/svg" version="1.1" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 99.9
+L 72.63 99.9
+L 72.63 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 1.44 98.46
+L 71.19 98.46
+L 71.19 1.44
+L 1.44 1.44
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 1.44 46.5543
+L 63.716786 46.5543
+L 63.716786 14.5377
+L 1.44 14.5377
+z
+" clip-path="url(#pcc91f73753)" style="fill: #7e317b; opacity: 0.92"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 1.44 95.0643
+L 8.359643 95.0643
+L 8.359643 63.0477
+L 1.44 63.0477
+z
+" clip-path="url(#pcc91f73753)" style="fill: #7e317b; opacity: 0.92"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+   <g id="patch_5">
+    <path d="M 1.44 98.46
+L 71.19 98.46
+" style="fill: none; stroke: #cccccc; stroke-width: 0.55; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <!-- NVLink 450 GB/s -->
+    <!-- NVLink 450 GB/s -->
+    <text x="62.674" y="32.023" font-family="'Liberation Sans', Arial, Helvetica, sans-serif" font-size="5.200" fill="#ffffff" text-anchor="end">NVLink 450 ГБ/с</text>
+   </g>
+   <g id="text_2">
+    <!-- NDR 50 GB/s -->
+    <!-- NDR 50 GB/s -->
+    <text x="9.406" y="80.533" font-family="'Liberation Sans', Arial, Helvetica, sans-serif" font-size="5.200" fill="#333333" text-anchor="start">NDR 50 ГБ/с</text>
+   </g>
+   <g id="patch_6">
+    <path d="M 8.974562 54.801
+Q 36.038214 54.801 63.101867 54.801
+" style="fill: none; stroke: #777777; stroke-width: 0.55; stroke-linecap: round"/>
+    <path d="M 10.974562 55.801
+L 8.974562 54.801
+L 10.974562 53.801
+" style="fill: none; stroke: #777777; stroke-width: 0.55; stroke-linecap: round"/>
+    <path d="M 61.101867 53.801
+L 63.101867 54.801
+L 61.101867 55.801
+" style="fill: none; stroke: #777777; stroke-width: 0.55; stroke-linecap: round"/>
+   </g>
+   <g id="text_3">
+    <g id="patch_7">
+     <path d="M 33.188214 58.201
+L 38.888214 58.201
+Q 39.788214 58.201 39.788214 57.301
+L 39.788214 52.301
+Q 39.788214 51.401 38.888214 51.401
+L 33.188214 51.401
+Q 32.288214 51.401 32.288214 52.301
+L 32.288214 57.301
+Q 32.288214 58.201 33.188214 58.201
+z
+" style="fill: #ffffff; opacity: 0.94"/>
+    </g>
+    <!-- 9× -->
+    <g style="fill: #333333" transform="translate(33.188214 56.221) scale(0.05 -0.05)">
+     <defs>
+      <path id="TeXGyreHeros-Bold-4f" d="M 3302 2464
+C 3302 4051 2637 4634 1709 4634
+C 800 4634 179 4032 179 3085
+C 179 2150 730 1555 1536 1555
+C 1939 1555 2093 1651 2406 2003
+C 2406 1139 2163 710 1658 710
+C 1344 710 1126 883 1107 1152
+L 243 1152
+C 262 454 851 -58 1632 -58
+C 2771 -58 3302 858 3302 2464
+z
+M 2387 3085
+C 2387 2586 2106 2298 1696 2298
+C 1286 2298 1030 2579 1030 3098
+C 1030 3622 1286 3904 1683 3904
+C 2118 3904 2387 3616 2387 3085
+z
+" transform="scale(0.015625)"/>
+      <path id="TeXGyreHeros-Bold-1a8" d="M 3142 774
+L 2323 1600
+L 3142 2426
+L 2694 2874
+L 1869 2054
+L 1043 2874
+L 595 2426
+L 1414 1600
+L 595 774
+L 1043 326
+L 1869 1146
+L 2694 326
+L 3142 774
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#TeXGyreHeros-Bold-4f"/>
+     <use xlink:href="#TeXGyreHeros-Bold-1a8" transform="translate(55.59375 0)"/>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pcc91f73753">
+   <rect x="1.44" y="1.44" width="69.75" height="97.02"/>
+  </clipPath>
+ </defs>
+</svg>

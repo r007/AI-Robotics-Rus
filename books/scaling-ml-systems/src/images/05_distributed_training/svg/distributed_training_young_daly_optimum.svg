@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="283.82" height="178.75" viewBox="0 0 70.956 44.688462" xmlns="http://www.w3.org/2000/svg" version="1.1" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 44.688462
+L 70.956 44.688462
+L 70.956 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 1.44 42.4656
+L 69.516 42.4656
+L 69.516 1.44
+L 1.44 1.44
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+   <g id="line2d_1">
+    <path d="M 2.898771 9.64512
+L 3.29736 16.231285
+L 3.695948 20.478262
+L 4.493124 25.619251
+L 5.2903 28.603642
+L 6.087477 30.541191
+L 6.884653 31.891717
+L 7.681829 32.880135
+L 8.877594 33.93851
+L 10.073358 34.675818
+L 11.667711 35.354095
+L 13.660651 35.90381
+L 16.05218 36.305122
+L 19.240885 36.588312
+L 23.625355 36.718775
+L 29.604177 36.646006
+L 37.974528 36.307374
+L 50.729348 35.552296
+L 66.274286 34.462491
+L 66.274286 34.462491
+" clip-path="url(#pf028db4a4c)" style="fill: none; stroke: #333333; stroke-width: 1.35; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <!-- 15m -->
+    <!-- 15m -->
+    <text x="6.465" y="13.917" font-family="'Liberation Sans', Arial, Helvetica, sans-serif" font-size="4.800" fill="#DC2626" text-anchor="start">15 мин</text>
+   </g>
+   <g id="text_2">
+    <!-- 2.9h opt -->
+    <!-- 2.9h opt -->
+    <text x="15.886" y="31.385" font-family="'Liberation Sans', Arial, Helvetica, sans-serif" font-size="4.800" fill="#008f45" text-anchor="start">опт. 2,9 ч</text>
+   </g>
+   <g id="text_3">
+    <!-- 8h -->
+    <!-- 8h -->
+    <text x="63.605" y="42.248" font-family="'Liberation Sans', Arial, Helvetica, sans-serif" font-size="4.800" fill="#555555" text-anchor="start">8 ч</text>
+   </g>
+   <g id="text_4">
+    <!-- checkpoint interval -->
+    <!-- checkpoint interval -->
+    <text x="33.859" y="6.821" font-family="'Liberation Sans', Arial, Helvetica, sans-serif" font-size="5.000" fill="#333333" text-anchor="middle">интервал контрольных точек</text>
+   </g>
+   <g id="line2d_2">
+    <defs>
+     <path id="m485a256d43" d="M 0 1.75
+C 0.464105 1.75 0.909265 1.565609 1.237437 1.237437
+C 1.565609 0.909265 1.75 0.464105 1.75 0
+C 1.75 -0.464105 1.565609 -0.909265 1.237437 -1.237437
+C 0.909265 -1.565609 0.464105 -1.75 0 -1.75
+C -0.464105 -1.75 -0.909265 -1.565609 -1.237437 -1.237437
+C -1.565609 -0.909265 -1.75 -0.464105 -1.75 0
+C -1.75 0.464105 -1.565609 0.909265 -1.237437 1.237437
+C -0.909265 1.565609 -0.464105 1.75 0 1.75
+z
+" style="stroke: #DC2626"/>
+    </defs>
+    <g clip-path="url(#pf028db4a4c)">
+     <use xlink:href="#m485a256d43" x="3.466071" y="18.028918" style="fill: #DC2626; stroke: #DC2626"/>
+    </g>
+   </g>
+   <g id="line2d_3">
+    <defs>
+     <path id="m36ee7f9aab" d="M 0 1.75
+C 0.464105 1.75 0.909265 1.565609 1.237437 1.237437
+C 1.565609 0.909265 1.75 0.464105 1.75 0
+C 1.75 -0.464105 1.565609 -0.909265 1.237437 -1.237437
+C 0.909265 -1.565609 0.464105 -1.75 0 -1.75
+C -0.464105 -1.75 -0.909265 -1.565609 -1.237437 -1.237437
+C -1.565609 -0.909265 -1.75 -0.464105 -1.75 0
+C -1.75 0.464105 -1.565609 0.909265 -1.237437 1.237437
+C -0.909265 1.565609 -0.464105 1.75 0 1.75
+z
+" style="stroke: #008f45"/>
+    </defs>
+    <g clip-path="url(#pf028db4a4c)">
+     <use xlink:href="#m36ee7f9aab" x="24.559271" y="36.721955" style="fill: #008f45; stroke: #008f45"/>
+    </g>
+   </g>
+   <g id="line2d_4">
+    <defs>
+     <path id="m4aad54affd" d="M 0 1.75
+C 0.464105 1.75 0.909265 1.565609 1.237437 1.237437
+C 1.565609 0.909265 1.75 0.464105 1.75 0
+C 1.75 -0.464105 1.565609 -0.909265 1.237437 -1.237437
+C 0.909265 -1.565609 0.464105 -1.75 0 -1.75
+C -0.464105 -1.75 -0.909265 -1.565609 -1.237437 -1.237437
+C -1.565609 -0.909265 -1.75 -0.464105 -1.75 0
+C -1.75 0.464105 -1.565609 0.909265 -1.237437 1.237437
+C -0.909265 1.565609 -0.464105 1.75 0 1.75
+z
+" style="stroke: #cccccc"/>
+    </defs>
+    <g clip-path="url(#pf028db4a4c)">
+     <use xlink:href="#m4aad54affd" x="66.274286" y="34.462491" style="fill: #cccccc; stroke: #cccccc"/>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pf028db4a4c">
+   <rect x="1.44" y="1.44" width="68.076" height="41.0256"/>
+  </clipPath>
+ </defs>
+</svg>

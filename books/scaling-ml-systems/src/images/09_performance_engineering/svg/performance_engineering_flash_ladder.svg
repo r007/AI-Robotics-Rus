@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="72.63pt" height="99.9pt" viewBox="0 0 72.63 99.9" role="img" aria-labelledby="title desc" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="290.52" height="399.6" viewBox="0 0 72.63 99.9" role="img" aria-labelledby="title desc" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
   <title id="title">Лестница объема памяти внимания</title>
   <desc id="desc">Двухступенчатая лестница величин в логарифмической шкале. Наивное внимание около 35 ГБ, FlashAttention около 537 МБ.</desc>
   <path d="M 0 99.9

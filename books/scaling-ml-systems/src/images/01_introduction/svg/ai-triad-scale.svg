@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" role="img" aria-labelledby="desc" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
-  <desc id="desc">Algorithm, infrastructure, and data connected by bidirectional scale constraints.</desc>
+  <desc id="desc">Алгоритм, инфраструктура и данные, связанные двусторонними ограничениями масштаба.</desc>
   <defs>
     <style>
       .node-title { font-size: 15px; font-weight: 700; }
@@ -41,8 +41,8 @@
       <path d="M345 98 L355 86 M345 98 L355 116 M345 98 L355 146 M345 134 L355 86 M345 134 L355 116 M345 134 L355 146"/>
       <path d="M365 86 L375 98 M365 86 L375 134 M365 116 L375 98 M365 116 L375 134 M365 146 L375 98 M365 146 L375 134"/>
     </g>
-    <text x="360" y="205" text-anchor="middle" class="node-title" fill="#6d28d9">Algorithm</text>
-    <text x="360" y="222" text-anchor="middle" class="node-detail">Model architecture, objective, optimization</text>
+    <text x="360" y="205" text-anchor="middle" class="node-title" fill="#6d28d9">Алгоритм</text>
+    <text x="360" y="222" text-anchor="middle" class="node-detail">Модель, цель, оптимизация</text>
   </g>
 
   <!-- Node 2: Infrastructure (Bottom Left, Compute/Fabric) -->
@@ -61,8 +61,8 @@
       <circle cx="185" cy="334" r="1.5" fill="#1F407A"/>
       <circle cx="206" cy="334" r="1.5" fill="#1F407A"/>
     </g>
-    <text x="196" y="402" text-anchor="middle" class="node-title" fill="#14294E">Infrastructure</text>
-    <text x="196" y="419" text-anchor="middle" class="node-detail">Accelerators, fabrics, memory hierarchy</text>
+    <text x="196" y="402" text-anchor="middle" class="node-title" fill="#14294E">Инфраструктура</text>
+    <text x="196" y="419" text-anchor="middle" class="node-detail">Ускорители, фабрики, иерархия памяти</text>
   </g>
 
   <!-- Node 3: Data (Bottom Right, Storage) -->
@@ -75,21 +75,21 @@
       <ellipse cx="524" cy="316" rx="34" ry="10"/>
       <ellipse cx="524" cy="338" rx="34" ry="10"/>
     </g>
-    <text x="524" y="402" text-anchor="middle" class="node-title" fill="#15803d">Data</text>
-    <text x="524" y="419" text-anchor="middle" class="node-detail">Token volume, sharding, I/O pipeline</text>
+    <text x="524" y="402" text-anchor="middle" class="node-title" fill="#15803d">Данные</text>
+    <text x="524" y="419" text-anchor="middle" class="node-detail">Объем токенов, шардирование, конвейер I/O</text>
   </g>
 
   <!-- Edge Constraint Badges (rx=4 micro-radii) -->
   <g>
     <rect x="166" y="200" width="94" height="24" rx="4" class="edge-pill"/>
-    <text x="213" y="216" text-anchor="middle" class="edge-label">10<tspan baseline-shift="super" font-size="8">25</tspan> FLOPs</text>
+    <text x="213" y="216" text-anchor="middle" class="edge-label">10<tspan baseline-shift="super" font-size="8">25</tspan> FLOP</text>
   </g>
   <g>
     <rect x="460" y="200" width="88" height="24" rx="4" class="edge-pill"/>
-    <text x="504" y="216" text-anchor="middle" class="edge-label">Petabytes</text>
+    <text x="504" y="216" text-anchor="middle" class="edge-label">Петабайты</text>
   </g>
   <g>
     <rect x="305" y="292" width="110" height="24" rx="4" class="edge-pill"/>
-    <text x="360" y="308" text-anchor="middle" class="edge-label">25,000 GPUs</text>
+    <text x="360" y="308" text-anchor="middle" class="edge-label">25 000 GPU</text>
   </g>
 </svg>
