@@ -19,6 +19,7 @@
 - [Надежный ИИ](14_robust_ai.md)
 - [Устойчивый ИИ](15_sustainable_ai.md)
 - [Ответственный ИИ](16_responsible_ai.md)
+- [Заключение](17_conclusion.md)
 
 # Служебные разделы
 
